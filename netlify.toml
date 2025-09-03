@@ -22,10 +22,11 @@
 # Admin access control
 # ADMIN_SECRET_KEY = "your-super-secret-admin-key-here"
 
-# Scheduled function to update rankings automatically
-[[plugins]]
-  package = "@netlify/plugin-scheduled-functions"
-
-[[plugins.inputs.functions]]
-  name = "update-rankings"
-  cron = "0 */6 * * *"  # Every 6 hours
+# No plugins needed for manual rankings.json approach
+# If you want auto-scraping later, uncomment and install the plugin:
+# [[plugins]]
+#   package = "@netlify/plugin-scheduled-functions"
+# 
+# [[plugins.inputs.functions]]
+#   name = "update-rankings" 
+#   cron = "0 */6 * * *"  # Every 6 hours

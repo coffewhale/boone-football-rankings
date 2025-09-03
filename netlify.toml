@@ -1,0 +1,31 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "nft"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Environment variables (set these in Netlify dashboard)
+# QB_URL = "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-quarterbacks-for-week-1-174915206.html"
+# RB_URL = "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-running-backs-for-week-1-[ID].html"
+# WR_URL = "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-wide-receivers-for-week-1-[ID].html"
+# TE_URL = "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-tight-ends-for-week-1-[ID].html"
+# FLEX_URL = "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-flex-for-week-1-[ID].html"
+# DEF_URL = "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-defenses-for-week-1-[ID].html"
+# K_URL = "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-kickers-for-week-1-[ID].html"
+
+# Admin access control
+# ADMIN_SECRET_KEY = "your-super-secret-admin-key-here"
+
+# Scheduled function to update rankings automatically
+[[plugins]]
+  package = "@netlify/plugin-scheduled-functions"
+
+[[plugins.inputs.functions]]
+  name = "update-rankings"
+  cron = "0 */6 * * *"  # Every 6 hours

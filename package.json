@@ -1,0 +1,24 @@
+{
+  "name": "boone-rankings-app",
+  "version": "1.0.0",
+  "description": "Justin Boone Fantasy Football Rankings Tracker",
+  "main": "script.js",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "start": "python -m http.server 8000",
+    "scrape": "python scraper.py"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "keywords": [
+    "fantasy",
+    "football",
+    "rankings",
+    "yahoo",
+    "sports"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

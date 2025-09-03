@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Boone Fantasy Football Rankings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Justin Boone Fantasy Football Rankings</h1>
+            <p class="attribution">Rankings sourced from <a href="https://sports.yahoo.com" target="_blank">Yahoo Sports</a> by Justin Boone</p>
+            <p class="disclaimer">This site is for analysis purposes only. All credit goes to Yahoo Sports and Justin Boone for original rankings.</p>
+            
+            <div class="update-info">
+                <div class="article-published" id="article-published"></div>
+                <div class="last-updated" id="last-updated"></div>
+            </div>
+        </header>
+
+        <nav class="position-nav">
+            <button class="nav-btn active" data-position="qb">QB</button>
+            <button class="nav-btn" data-position="rb">RB</button>
+            <button class="nav-btn" data-position="wr">WR</button>
+            <button class="nav-btn" data-position="te">TE</button>
+            <button class="nav-btn" data-position="flex">FLEX</button>
+            <button class="nav-btn" data-position="def">DEF</button>
+            <button class="nav-btn" data-position="k">K</button>
+        </nav>
+
+        <main>
+            <div class="rankings-container">
+                <div id="loading">Loading rankings...</div>
+                
+                <div class="rankings-section" id="rankings-table" style="display: none;">
+                    <h2 id="position-title">Quarterback Rankings - Week 1</h2>
+                    <table class="rankings-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Opponent</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rankings-body">
+                            <!-- Rankings will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

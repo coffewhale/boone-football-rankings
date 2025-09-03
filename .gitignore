@@ -1,0 +1,44 @@
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+
+# Admin secrets
+admin-secret-key*
+*secret*
+
+# Private keys and certificates
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+logs/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+temp/
+
+# Build outputs (not needed for static site)
+dist/
+build/
+
+# Cache directories
+.cache/
+.parcel-cache/

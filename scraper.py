@@ -32,8 +32,17 @@ class YahooRankingsScraper:
             # Find position from title
             position = self.extract_position(title)
             
-            # Look for ranking tables or lists
-            rankings = self.extract_rankings_from_content(soup)
+            # Yahoo Sports now uses DataWrapper iframes for rankings
+            # Look for iframe src in the page source
+            iframe_url = self.extract_datawrapper_url(response.text)
+            
+            rankings = []
+            if iframe_url:
+                print(f"Found DataWrapper iframe: {iframe_url}")
+                rankings = self.scrape_datawrapper_rankings(iframe_url)
+            else:
+                # Fallback to old method
+                rankings = self.extract_rankings_from_content(soup)
             
             return {
                 'title': title,
@@ -152,21 +161,104 @@ class YahooRankingsScraper:
             }
         except:
             return None
+    
+    def extract_datawrapper_url(self, html_content):
+        """Extract DataWrapper iframe URL from HTML content"""
+        # Look for datawrapper.dwcdn.net URLs in the page source
+        import re
+        pattern = r'datawrapper\.dwcdn\.net/([^/\"]+)/\d+/'
+        match = re.search(pattern, html_content)
+        if match:
+            chart_id = match.group(1)
+            return f"https://datawrapper.dwcdn.net/{chart_id}/1/"
+        return None
+    
+    def scrape_datawrapper_rankings(self, iframe_url):
+        """Scrape rankings from DataWrapper iframe"""
+        try:
+            print(f"Scraping DataWrapper: {iframe_url}")
+            response = self.session.get(iframe_url)
+            response.raise_for_status()
+            
+            soup = BeautifulSoup(response.content, 'html.parser')
+            rankings = []
+            
+            # DataWrapper typically renders as a table or custom HTML
+            # Look for table structure first
+            tables = soup.find_all('table')
+            for table in tables:
+                rows = table.find_all('tr')[1:]  # Skip header row
+                
+                for i, row in enumerate(rows, 1):
+                    cells = row.find_all(['td', 'th'])
+                    if len(cells) >= 2:  # Need at least rank and player
+                        try:
+                            # Try different cell structures
+                            if len(cells) >= 3:
+                                # Format: Rank | Player | Opponent
+                                rank = i
+                                player = cells[1].get_text().strip()
+                                opponent = cells[2].get_text().strip() if len(cells) > 2 else ''
+                            else:
+                                # Format: Rank | Player
+                                rank = i
+                                player = cells[1].get_text().strip()
+                                opponent = ''
+                            
+                            if player and not player.lower() in ['player', 'name', 'rank']:
+                                rankings.append({
+                                    'rank': rank,
+                                    'player': player,
+                                    'opponent': opponent,
+                                    'projected': None
+                                })
+                                
+                        except:
+                            continue
+            
+            # If no table found, look for other structures
+            if not rankings:
+                # Look for divs or other elements that might contain player data
+                player_elements = soup.find_all(['div', 'span', 'p'], string=re.compile(r'[A-Z][a-z]+ [A-Z][a-z]+'))
+                for i, element in enumerate(player_elements, 1):
+                    text = element.get_text().strip()
+                    if self.looks_like_player_ranking(text):
+                        player_data = self.parse_player_text(text, i)
+                        if player_data:
+                            rankings.append(player_data)
+            
+            return rankings[:25]  # Limit to top 25
+            
+        except Exception as e:
+            print(f"Error scraping DataWrapper: {e}")
+            return []
 
 def main():
     scraper = YahooRankingsScraper()
     
-    # URLs for different positions - update these for the current week
-    # Format: https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-[position]-for-week-[X]-[ID].html
-    urls = {
-        'qb': "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-quarterbacks-for-week-1-174915206.html",
-        'rb': "https://sports.yahoo.com/fantasy/article/fantasy-football-rankings-justin-boones-top-running-backs-for-week-1-175309862.html",  # Replace [ID] with actual ID
-        'wr': "https://sports.yahoo.com/fantasy/article/fantasy-football-rankings-justin-boones-top-wide-receivers-for-week-1-175627461.html",  # Replace [ID] with actual ID
-        'te': "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-tight-ends-for-week-1-175855652.html",  # Replace [ID] with actual ID
-        'flex': "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-flex-rankings-for-week-1-180142592.html",  # Replace [ID] with actual ID
-        'def': "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-defenses-for-week-1-180545242.html",  # Replace [ID] with actual ID
-        'k': "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-kickers-for-week-1-180735633.html"  # Replace [ID] with actual ID
-    }
+    # Load URLs from config.json
+    try:
+        with open('config.json', 'r') as f:
+            config = json.load(f)
+        
+        urls = {
+            'qb': config['urls']['QB'],
+            'rb': config['urls']['RB'],
+            'wr': config['urls']['WR'],
+            'te': config['urls']['TE'],
+            'flex': config['urls']['FLEX'],
+            'def': config['urls']['DEF'],
+            'k': config['urls']['K']
+        }
+        
+        print(f"Scraping Week {config['current_week']} rankings ({config['season_year']})")
+        
+    except FileNotFoundError:
+        print("Error: config.json not found. Please create config.json with URLs.")
+        return
+    except KeyError as e:
+        print(f"Error: Missing key in config.json: {e}")
+        return
     
     all_rankings = {}
     
@@ -185,9 +277,7 @@ def main():
                 formatted_rankings.append({
                     'preGameRank': ranking.get('rank', i),
                     'player': ranking['player'],
-                    'opponent': ranking.get('opponent', ''),
-                    'actualPoints': None,
-                    'actualRank': None
+                    'opponent': ranking.get('opponent', '')
                 })
             
             all_rankings[position] = formatted_rankings

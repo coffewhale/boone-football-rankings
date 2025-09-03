@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Boone Rankings Entry</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .position-section { border: 1px solid #ddd; margin: 10px 0; padding: 15px; border-radius: 5px; }
+        .position-section h3 { margin-top: 0; color: #4a00e0; }
+        textarea { width: 100%; height: 150px; font-family: monospace; }
+        button { background: #4a00e0; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 5px; }
+        button:hover { background: #6a20e0; }
+        .output { background: #f5f5f5; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+        .instructions { background: #e8f4f8; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>📊 Justin Boone Rankings Entry</h1>
+    
+    <div class="instructions">
+        <strong>Instructions:</strong>
+        <ol>
+            <li>Copy rankings from Yahoo Sports articles (just the player names and opponents)</li>
+            <li>Paste one player per line in format: "Player Name vs OPP" or "Player Name @ OPP"</li>
+            <li>Click "Generate JSON" to create the rankings data</li>
+            <li>Copy the JSON output and save as <code>rankings.json</code> in your project</li>
+        </ol>
+        <p><strong>Example format:</strong><br>
+        Josh Allen vs ARI<br>
+        Lamar Jackson @ KC<br>
+        Patrick Mahomes vs CIN</p>
+    </div>
+
+    <div class="grid">
+        <div class="position-section">
+            <h3>Quarterbacks (QB)</h3>
+            <textarea id="qb" placeholder="Paste QB rankings here...&#10;Josh Allen vs ARI&#10;Lamar Jackson @ KC&#10;Patrick Mahomes vs CIN"></textarea>
+        </div>
+
+        <div class="position-section">
+            <h3>Running Backs (RB)</h3>
+            <textarea id="rb" placeholder="Paste RB rankings here...&#10;Christian McCaffrey vs GB&#10;Josh Jacobs @ MIN&#10;Saquon Barkley vs LAR"></textarea>
+        </div>
+
+        <div class="position-section">
+            <h3>Wide Receivers (WR)</h3>
+            <textarea id="wr" placeholder="Paste WR rankings here...&#10;Ja'Marr Chase @ KC&#10;Tyreek Hill vs BUF&#10;Cooper Kupp @ PHI"></textarea>
+        </div>
+
+        <div class="position-section">
+            <h3>Tight Ends (TE)</h3>
+            <textarea id="te" placeholder="Paste TE rankings here...&#10;Travis Kelce vs CIN&#10;Mark Andrews vs BUF&#10;George Kittle @ NYJ"></textarea>
+        </div>
+
+        <div class="position-section">
+            <h3>FLEX</h3>
+            <textarea id="flex" placeholder="Paste FLEX rankings here...&#10;Christian McCaffrey RB1 vs GB&#10;Ja'Marr Chase WR1 @ KC&#10;Tyler Lockett WR69 @ DEN"></textarea>
+        </div>
+
+        <div class="position-section">
+            <h3>Defense/ST (DEF)</h3>
+            <textarea id="def" placeholder="Paste DEF rankings here...&#10;49ers vs NYJ&#10;Bills @ ARI&#10;Ravens vs KC"></textarea>
+        </div>
+
+        <div class="position-section">
+            <h3>Kickers (K)</h3>
+            <textarea id="k" placeholder="Paste K rankings here...&#10;Justin Tucker vs KC&#10;Harrison Butker @ BAL&#10;Tyler Bass @ ARI"></textarea>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <button onclick="generateJSON()">📄 Generate JSON</button>
+        <button onclick="clearAll()">🗑️ Clear All</button>
+    </div>
+
+    <div class="output" id="output" style="display: none;">
+        <h3>Generated Rankings JSON:</h3>
+        <textarea id="json-output" style="height: 400px;" readonly></textarea>
+        <br><br>
+        <button onclick="copyJSON()">📋 Copy JSON</button>
+        <button onclick="downloadJSON()">💾 Download rankings.json</button>
+    </div>
+
+    <script>
+        function parsePlayerLine(line, rank) {
+            line = line.trim();
+            if (!line) return null;
+            
+            // Remove any leading numbers/rank
+            line = line.replace(/^\d+\.?\s*/, '');
+            
+            // Handle FLEX format: "Tyler Lockett WR69 @ DEN"
+            const flexMatch = line.match(/^(.+?)\s+([A-Z]{2}\d+)\s+(vs|@)\s+([A-Z]{2,4})$/i);
+            if (flexMatch) {
+                return {
+                    preGameRank: rank,
+                    player: flexMatch[1].trim(),
+                    opponent: `${flexMatch[3]} ${flexMatch[4]}`,
+                    positionRank: flexMatch[2]  // WR69, RB12, etc.
+                };
+            }
+            
+            // Handle standard format: "Josh Allen vs ARI"
+            const vsMatch = line.match(/^(.+?)\s+(vs|@)\s+([A-Z]{2,4})$/i);
+            if (vsMatch) {
+                return {
+                    preGameRank: rank,
+                    player: vsMatch[1].trim(),
+                    opponent: `${vsMatch[2]} ${vsMatch[3]}`
+                };
+            }
+            
+            // If no opponent found, just use the player name
+            return {
+                preGameRank: rank,
+                player: line,
+                opponent: ''
+            };
+        }
+
+        function generateJSON() {
+            const positions = ['qb', 'rb', 'wr', 'te', 'flex', 'def', 'k'];
+            const rankings = {};
+            
+            let hasData = false;
+            
+            positions.forEach(pos => {
+                const textarea = document.getElementById(pos);
+                const lines = textarea.value.split('\n').filter(line => line.trim());
+                
+                if (lines.length > 0) {
+                    hasData = true;
+                    rankings[pos] = lines.map((line, index) => parsePlayerLine(line, index + 1)).filter(Boolean);
+                }
+            });
+            
+            if (!hasData) {
+                alert('Please enter rankings for at least one position');
+                return;
+            }
+            
+            const jsonOutput = JSON.stringify(rankings, null, 2);
+            document.getElementById('json-output').value = jsonOutput;
+            document.getElementById('output').style.display = 'block';
+            document.getElementById('json-output').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function clearAll() {
+            if (confirm('Clear all entered rankings?')) {
+                const positions = ['qb', 'rb', 'wr', 'te', 'flex', 'def', 'k'];
+                positions.forEach(pos => {
+                    document.getElementById(pos).value = '';
+                });
+                document.getElementById('output').style.display = 'none';
+            }
+        }
+
+        function copyJSON() {
+            const jsonOutput = document.getElementById('json-output');
+            jsonOutput.select();
+            document.execCommand('copy');
+            alert('JSON copied to clipboard!');
+        }
+
+        function downloadJSON() {
+            const jsonContent = document.getElementById('json-output').value;
+            const blob = new Blob([jsonContent], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'rankings.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>

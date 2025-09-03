@@ -32,7 +32,27 @@ class RankingsApp {
 
     async loadRankings() {
         try {
-            // Try to fetch live data
+            // Try to fetch local rankings.json first
+            const response = await fetch('./rankings.json');
+            if (response && response.ok) {
+                const rankings = await response.json();
+                this.rankings = rankings;
+                
+                // Show last updated time (use current time for local data)
+                this.updateLastUpdatedDisplay(new Date().toISOString());
+                this.updateArticlePublishedDisplay('2025-09-02T18:16:43.000Z');
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('rankings-table').style.display = 'block';
+                this.displayRankings();
+                return;
+            }
+        } catch (error) {
+            console.log('Failed to fetch rankings.json, trying live data:', error);
+        }
+
+        try {
+            // Try to fetch live data from Netlify function
             const response = await fetch('/.netlify/functions/update-rankings');
             if (response && response.ok) {
                 const result = await response.json();
@@ -53,7 +73,7 @@ class RankingsApp {
             console.log('Failed to fetch live data, using mock data:', error);
         }
 
-        // Fallback to mock data if live fetch fails
+        // Fallback to mock data if both fail
         this.loadMockData();
         
         // Show mock timestamp info for development
@@ -146,9 +166,15 @@ class RankingsApp {
 
         rankings.forEach(player => {
             const row = document.createElement('tr');
+            
+            // For FLEX, show position rank if available
+            const playerDisplay = position === 'flex' && player.positionRank
+                ? `${player.player} <span class="position-rank">(${player.positionRank})</span>`
+                : player.player;
+            
             row.innerHTML = `
-                <td class="rank-cell">${player.rank}</td>
-                <td class="player-cell">${player.player}</td>
+                <td class="rank-cell">${player.preGameRank || player.rank}</td>
+                <td class="player-cell">${playerDisplay}</td>
                 <td>${player.opponent}</td>
             `;
             tbody.appendChild(row);

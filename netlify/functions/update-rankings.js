@@ -48,16 +48,43 @@ exports.handler = async (event, context) => {
     }
 
     try {
-        // URLs for each position - update these with real URLs
+        // Load URLs from config.json instead of environment variables
+        const fs = require('fs');
+        const path = require('path');
+        
+        let config;
+        try {
+            // Try to read config.json from the function's directory
+            const configPath = path.join(__dirname, '../../config.json');
+            const configData = fs.readFileSync(configPath, 'utf8');
+            config = JSON.parse(configData);
+        } catch (configError) {
+            console.error('Error reading config.json:', configError);
+            // Fallback to environment variables if config.json not found
+            config = {
+                urls: {
+                    QB: process.env.QB_URL,
+                    RB: process.env.RB_URL,
+                    WR: process.env.WR_URL,
+                    TE: process.env.TE_URL,
+                    FLEX: process.env.FLEX_URL,
+                    DEF: process.env.DEF_URL,
+                    K: process.env.K_URL
+                }
+            };
+        }
+        
         const urls = {
-            qb: process.env.QB_URL || "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-quarterbacks-for-week-1-174915206.html",
-            rb: process.env.RB_URL,
-            wr: process.env.WR_URL,
-            te: process.env.TE_URL,
-            flex: process.env.FLEX_URL,
-            def: process.env.DEF_URL,
-            k: process.env.K_URL
+            qb: config.urls.QB,
+            rb: config.urls.RB,
+            wr: config.urls.WR,
+            te: config.urls.TE,
+            flex: config.urls.FLEX,
+            def: config.urls.DEF,
+            k: config.urls.K
         };
+        
+        console.log(`Using config - Week ${config.current_week || 'unknown'} (${config.season_year || '2025'})`);
 
         // Check if we need to update by comparing timestamps
         const shouldUpdate = await checkIfUpdateNeeded(urls.qb); // Use QB as reference
@@ -237,9 +264,7 @@ async function scrapeRankings(url, position) {
                     rankings.push({
                         preGameRank: index + 1,
                         player: player.name,
-                        opponent: player.opponent,
-                        actualPoints: null,
-                        actualRank: null
+                        opponent: player.opponent
                     });
                 }
             }
@@ -258,9 +283,7 @@ async function scrapeRankings(url, position) {
                         rankings.push({
                             preGameRank: rank,
                             player: player.name,
-                            opponent: player.opponent,
-                            actualPoints: null,
-                            actualRank: null
+                            opponent: player.opponent
                         });
                     }
                 }

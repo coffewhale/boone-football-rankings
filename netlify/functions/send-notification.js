@@ -49,7 +49,7 @@ Time to update your rankings site!
     formData.append('message', message);
     formData.append('week', weekNumber);
     
-    const response = await fetch(`${process.env.URL || 'https://boone-football-rankings.netlify.app'}/`, {
+    const response = await fetch(`${process.env.URL || 'https://boonerankings.com'}/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formData.toString()

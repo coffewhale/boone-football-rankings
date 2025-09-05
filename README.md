@@ -4,7 +4,7 @@ A clean web app that displays Justin Boone's fantasy football rankings with **au
 
 ## 🏈 Live Site
 
-**[View Current Rankings](https://your-site-name.netlify.app)** *(update after deployment)*
+**[View Current Rankings](https://boonerankings.com)**
 
 ## Features
 

@@ -259,11 +259,15 @@
 
         async function loadMonitorStatus() {
             try {
+                console.log('Loading monitor status...');
                 const response = await fetch('/.netlify/functions/monitor-status');
                 const data = await response.json();
+                console.log('Monitor status response:', data);
                 
                 if (data.success) {
                     updateMonitorDisplay(data.monitor);
+                } else {
+                    console.error('Monitor status failed:', data);
                 }
             } catch (error) {
                 console.error('Failed to load monitor status:', error);
@@ -326,10 +330,20 @@
         }
 
         function updateMonitorDisplay(monitor) {
-            document.getElementById('status-text').textContent = monitor.active ? 'Active - Checking hourly' : 'Not monitoring';
-            document.getElementById('current-url').textContent = monitor.url || 'None set';
-            document.getElementById('last-check').textContent = monitor.lastCheck ? new Date(monitor.lastCheck).toLocaleString() : 'Never';
-            document.getElementById('article-timestamp').textContent = monitor.articleTimestamp || 'Unknown';
+            console.log('Updating display with monitor data:', monitor);
+            
+            const statusElement = document.getElementById('status-text');
+            const urlElement = document.getElementById('current-url');
+            const checkElement = document.getElementById('last-check');
+            const timestampElement = document.getElementById('article-timestamp');
+            
+            if (statusElement) statusElement.textContent = monitor.active ? 'Active - Checking hourly' : 'Not monitoring';
+            if (urlElement) urlElement.textContent = monitor.url || 'None set';
+            if (checkElement) checkElement.textContent = monitor.lastCheck ? new Date(monitor.lastCheck).toLocaleString() : 'Never';
+            if (timestampElement) timestampElement.textContent = monitor.articleTimestamp || 'Unknown';
+            
+            console.log('Display updated - Status:', monitor.active ? 'Active' : 'Not monitoring');
+            console.log('Display updated - URL:', monitor.url || 'None set');
             
             // Check for new updates for browser notifications
             checkForUpdatesInStatus(monitor);

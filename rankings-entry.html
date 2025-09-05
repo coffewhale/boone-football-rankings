@@ -201,8 +201,8 @@
             URL.revokeObjectURL(url);
         }
 
-        // Store monitor config in browser localStorage instead of server
-        function setMonitorUrl() {
+        // Store monitor config on server via API
+        async function setMonitorUrl() {
             const weekNumber = document.getElementById('monitor-week').value;
             const url = document.getElementById('monitor-url').value;
 
@@ -211,22 +211,39 @@
                 return;
             }
 
-            // Store in localStorage
-            const monitorConfig = {
-                active: true,
-                url: url,
-                weekNumber: parseInt(weekNumber),
-                lastCheck: null,
-                articleTimestamp: null,
-                updateAvailable: false,
-                setAt: new Date().toISOString()
-            };
+            try {
+                // Call backend API to store the configuration
+                const response = await fetch('/.netlify/functions/set-monitor-url', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        weekNumber: parseInt(weekNumber), 
+                        qbUrl: url 
+                    })
+                });
 
-            localStorage.setItem('boone-monitor-config', JSON.stringify(monitorConfig));
-            alert(`✅ Monitor set for Week ${weekNumber}!`);
-            
-            // Update display immediately
-            updateMonitorDisplay(monitorConfig);
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert(`✅ Monitor set for Week ${weekNumber}!`);
+                    // Also store in localStorage for immediate display
+                    const monitorConfig = {
+                        active: true,
+                        url: url,
+                        weekNumber: parseInt(weekNumber),
+                        lastCheck: null,
+                        articleTimestamp: null,
+                        updateAvailable: false,
+                        setAt: new Date().toISOString()
+                    };
+                    localStorage.setItem('boone-monitor-config', JSON.stringify(monitorConfig));
+                    updateMonitorDisplay(monitorConfig);
+                } else {
+                    alert('❌ Failed to set monitor: ' + (data.error || 'Unknown error'));
+                }
+            } catch (error) {
+                alert('❌ Network error: ' + error.message);
+            }
         }
 
         async function checkNow() {
@@ -274,17 +291,48 @@
             }
         }
 
-        function loadMonitorStatus() {
+        async function loadMonitorStatus() {
             try {
-                console.log('Loading monitor status from localStorage...');
-                const stored = localStorage.getItem('boone-monitor-config');
+                console.log('Loading monitor status from backend...');
                 
+                // First try to get from backend
+                const response = await fetch('/.netlify/functions/monitor-status');
+                const data = await response.json();
+                
+                if (data.success && data.monitor) {
+                    console.log('Monitor status loaded from backend:', data.monitor);
+                    updateMonitorDisplay(data.monitor);
+                    // Also sync to localStorage for offline viewing
+                    localStorage.setItem('boone-monitor-config', JSON.stringify(data.monitor));
+                } else {
+                    console.log('Backend has no monitor config, checking localStorage...');
+                    // Fallback to localStorage
+                    const stored = localStorage.getItem('boone-monitor-config');
+                    if (stored) {
+                        const config = JSON.parse(stored);
+                        console.log('Using localStorage fallback:', config);
+                        updateMonitorDisplay(config);
+                    } else {
+                        console.log('No monitor config found anywhere');
+                        updateMonitorDisplay({
+                            active: false,
+                            url: null,
+                            weekNumber: null,
+                            lastCheck: null,
+                            articleTimestamp: null,
+                            updateAvailable: false,
+                            error: 'No configuration found - set a URL first'
+                        });
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to load monitor status from backend, trying localStorage...', error);
+                // Fallback to localStorage if backend is unavailable
+                const stored = localStorage.getItem('boone-monitor-config');
                 if (stored) {
                     const config = JSON.parse(stored);
-                    console.log('Monitor status loaded:', config);
                     updateMonitorDisplay(config);
                 } else {
-                    console.log('No monitor config found in localStorage');
                     updateMonitorDisplay({
                         active: false,
                         url: null,
@@ -292,11 +340,9 @@
                         lastCheck: null,
                         articleTimestamp: null,
                         updateAvailable: false,
-                        error: 'No configuration found - set a URL first'
+                        error: 'Backend unavailable and no local config found'
                     });
                 }
-            } catch (error) {
-                console.error('Failed to load monitor status:', error);
             }
         }
 

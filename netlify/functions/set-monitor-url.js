@@ -48,11 +48,10 @@ exports.handler = async (event, context) => {
             };
         }
 
-        // For now, just return success - we'll implement a simple in-memory approach
         console.log(`Monitor URL set: Week ${weekNumber} - ${qbUrl}`);
         
-        // Store in a simple global variable for this session
-        global.monitorConfig = {
+        // Create monitor configuration
+        const monitorConfig = {
             active: true,
             url: qbUrl,
             weekNumber: weekNumber,
@@ -62,8 +61,11 @@ exports.handler = async (event, context) => {
             setAt: new Date().toISOString()
         };
 
-        console.log('Monitor config stored in memory:', global.monitorConfig);
+        // Store in both global variable and /tmp file
+        global.monitorConfig = monitorConfig;
+        await saveMonitorConfig(monitorConfig);
 
+        console.log('Monitor config stored in memory and file:', monitorConfig);
         console.log(`Monitor set for Week ${weekNumber}: ${qbUrl}`);
 
         return {
@@ -88,3 +90,9 @@ exports.handler = async (event, context) => {
         };
     }
 };
+
+async function saveMonitorConfig(config) {
+    const monitorPath = path.join('/tmp', 'monitor_config.json');
+    await fs.writeFile(monitorPath, JSON.stringify(config, null, 2));
+    console.log('Monitor config saved to /tmp/monitor_config.json');
+}

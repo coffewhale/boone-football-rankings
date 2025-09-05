@@ -55,8 +55,6 @@ class RankingsApp {
                 const rankings = await response.json();
                 this.rankings = rankings;
                 
-                // Show last updated time (use current time for local data)
-                this.updateLastUpdatedDisplay(new Date().toISOString());
                 
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('rankings-table').style.display = 'block';
@@ -75,8 +73,7 @@ class RankingsApp {
                 if (result.success && result.data) {
                     this.rankings = result.data;
                     
-                    // Show last updated time and article timestamp
-                    this.updateLastUpdatedDisplay(result.lastUpdated);
+                    // Show article timestamp
                     this.updateArticlePublishedDisplay(result.articleTimestamp);
                     
                     document.getElementById('loading').style.display = 'none';
@@ -92,8 +89,6 @@ class RankingsApp {
         // Fallback to mock data if both fail
         this.loadMockData();
         
-        // Show mock timestamp info for development
-        this.updateLastUpdatedDisplay(new Date().toISOString());
         
         document.getElementById('loading').style.display = 'none';
         document.getElementById('rankings-table').style.display = 'block';
@@ -204,14 +199,6 @@ class RankingsApp {
         return Math.max(1, Math.min(18, weeksDiff + 1));
     }
 
-    updateLastUpdatedDisplay(lastUpdated) {
-        const lastUpdatedEl = document.getElementById('last-updated');
-        if (lastUpdated && lastUpdatedEl) {
-            const date = new Date(lastUpdated);
-            const timeAgo = this.getTimeAgo(date);
-            lastUpdatedEl.textContent = `Checked ${timeAgo}`;
-        }
-    }
     
     updateArticlePublishedDisplay(articleTimestamp) {
         const articleEl = document.getElementById('article-published');

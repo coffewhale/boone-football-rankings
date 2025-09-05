@@ -7,6 +7,7 @@ class RankingsApp {
 
     init() {
         this.bindEvents();
+        this.loadTimestamp();
         this.loadRankings();
     }
 
@@ -17,6 +18,22 @@ class RankingsApp {
                 this.switchPosition(position);
             });
         });
+    }
+
+    async loadTimestamp() {
+        try {
+            const response = await fetch('/.netlify/functions/get-timestamp');
+            if (response && response.ok) {
+                const result = await response.json();
+                if (result.success && result.timestamp) {
+                    this.updateArticlePublishedDisplay(result.timestamp);
+                }
+            }
+        } catch (error) {
+            console.log('Failed to fetch timestamp:', error);
+            // Fallback to hardcoded timestamp if API fails
+            this.updateArticlePublishedDisplay('2025-09-02T18:16:43.000Z');
+        }
     }
 
     switchPosition(position) {
@@ -40,7 +57,6 @@ class RankingsApp {
                 
                 // Show last updated time (use current time for local data)
                 this.updateLastUpdatedDisplay(new Date().toISOString());
-                this.updateArticlePublishedDisplay('2025-09-02T18:16:43.000Z');
                 
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('rankings-table').style.display = 'block';
@@ -78,7 +94,6 @@ class RankingsApp {
         
         // Show mock timestamp info for development
         this.updateLastUpdatedDisplay(new Date().toISOString());
-        this.updateArticlePublishedDisplay('2025-09-02T18:16:43.000Z');
         
         document.getElementById('loading').style.display = 'none';
         document.getElementById('rankings-table').style.display = 'block';

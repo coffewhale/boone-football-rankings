@@ -42,14 +42,14 @@ Justin Boone has updated his Week ${weekNumber} fantasy football rankings!
 Time to update your rankings site!
     `.trim();
     
-    // Submit to a Netlify form (you'll need to create this form)
+    // Submit to a Netlify form 
     const formData = new URLSearchParams();
     formData.append('form-name', 'ranking-alerts');
     formData.append('subject', subject);
     formData.append('message', message);
     formData.append('week', weekNumber);
     
-    const response = await fetch(`${process.env.URL || 'https://your-site.netlify.app'}/?no-cache=1`, {
+    const response = await fetch(`${process.env.URL || 'https://boone-football-rankings.netlify.app'}/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formData.toString()

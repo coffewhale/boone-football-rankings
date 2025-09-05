@@ -20,5 +20,14 @@
     "sports"
   ],
   "author": "Your Name",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coffewhale/boone-football-rankings.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/coffewhale/boone-football-rankings/issues"
+  },
+  "homepage": "https://github.com/coffewhale/boone-football-rankings#readme"
 }

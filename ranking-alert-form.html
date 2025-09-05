@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking Alert Form</title>
+    <style>body { display: none; }</style>
+</head>
+<body>
+    <!-- Hidden form for Netlify form handling - enables email notifications -->
+    <form name="ranking-alerts" netlify>
+        <input type="hidden" name="form-name" value="ranking-alerts">
+        <input type="text" name="subject">
+        <textarea name="message"></textarea>
+        <input type="text" name="week">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -19,6 +19,32 @@
 <body>
     <h1>📊 Justin Boone Rankings Entry</h1>
     
+    <!-- URL Monitor Section -->
+    <div class="position-section" style="background: #fff3cd; border-color: #ffeaa7;">
+        <h3>🔍 URL Monitor - Set Weekly URL to Check</h3>
+        <p>Set the QB rankings URL to monitor for timestamp changes. The system will check every hour and notify you when Boone updates his rankings.</p>
+        
+        <div style="margin-bottom: 10px;">
+            <label>Week Number: <input type="number" id="monitor-week" min="1" max="18" value="1" style="width: 60px; margin-left: 10px;"></label>
+        </div>
+        
+        <div style="margin-bottom: 10px;">
+            <label>QB Rankings URL:</label>
+            <input type="url" id="monitor-url" placeholder="https://sports.yahoo.com/fantasy/article/..." style="width: 100%; margin-top: 5px;">
+        </div>
+        
+        <button onclick="setMonitorUrl()" style="background: #28a745;">📝 Set Monitor URL</button>
+        <button onclick="checkNow()" style="background: #007cba;">🔍 Check Now</button>
+        
+        <div id="monitor-status" style="margin-top: 15px; padding: 10px; border-radius: 4px; background: #f8f9fa;">
+            <div><strong>Status:</strong> <span id="status-text">Not monitoring</span></div>
+            <div><strong>Current URL:</strong> <span id="current-url">None set</span></div>
+            <div><strong>Last Check:</strong> <span id="last-check">Never</span></div>
+            <div><strong>Article Timestamp:</strong> <span id="article-timestamp">Unknown</span></div>
+            <div id="update-alert" style="margin-top: 10px;"></div>
+        </div>
+    </div>
+
     <div class="instructions">
         <strong>Instructions:</strong>
         <ol>
@@ -174,6 +200,163 @@
             a.click();
             URL.revokeObjectURL(url);
         }
+
+        // Monitor functions
+        async function setMonitorUrl() {
+            const weekNumber = document.getElementById('monitor-week').value;
+            const url = document.getElementById('monitor-url').value;
+
+            if (!weekNumber || !url) {
+                alert('Please enter both week number and URL');
+                return;
+            }
+
+            try {
+                const response = await fetch('/.netlify/functions/set-monitor-url', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ weekNumber: parseInt(weekNumber), qbUrl: url })
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert(`✅ Monitor set for Week ${weekNumber}!`);
+                    loadMonitorStatus();
+                } else {
+                    alert('❌ Failed to set monitor: ' + (data.error || 'Unknown error'));
+                }
+            } catch (error) {
+                alert('❌ Network error: ' + error.message);
+            }
+        }
+
+        async function checkNow() {
+            document.getElementById('status-text').textContent = 'Checking...';
+            
+            try {
+                const response = await fetch('/.netlify/functions/manual-monitor-check', {
+                    method: 'POST'
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    if (data.updateAvailable) {
+                        showUpdateAlert(`⚠️ UPDATE AVAILABLE! Boone updated rankings at ${new Date(data.articleTimestamp).toLocaleString()}. Time to copy/paste new rankings!`);
+                    } else {
+                        showUpdateAlert('✅ No update needed - you\'re current!', 'success');
+                    }
+                    loadMonitorStatus();
+                } else {
+                    alert('❌ Check failed: ' + (data.error || 'Unknown error'));
+                }
+            } catch (error) {
+                alert('❌ Network error: ' + error.message);
+            }
+        }
+
+        async function loadMonitorStatus() {
+            try {
+                const response = await fetch('/.netlify/functions/monitor-status');
+                const data = await response.json();
+                
+                if (data.success) {
+                    updateMonitorDisplay(data.monitor);
+                }
+            } catch (error) {
+                console.error('Failed to load monitor status:', error);
+            }
+        }
+
+        function updateMonitorDisplay(monitor) {
+            document.getElementById('status-text').textContent = monitor.active ? 'Active - Checking hourly' : 'Not monitoring';
+            document.getElementById('current-url').textContent = monitor.url || 'None set';
+            document.getElementById('last-check').textContent = monitor.lastCheck ? new Date(monitor.lastCheck).toLocaleString() : 'Never';
+            document.getElementById('article-timestamp').textContent = monitor.articleTimestamp || 'Unknown';
+            
+            if (monitor.updateAvailable) {
+                showUpdateAlert('⚠️ UPDATE NEEDED! Boone has updated his rankings. Time to copy/paste!');
+            } else if (monitor.active) {
+                showUpdateAlert('✅ Up to date', 'success');
+            }
+        }
+
+        function showUpdateAlert(message, type = 'warning') {
+            const alertDiv = document.getElementById('update-alert');
+            const bgColor = type === 'success' ? '#d4edda' : '#fff3cd';
+            const textColor = type === 'success' ? '#155724' : '#856404';
+            
+            alertDiv.innerHTML = `<div style="background: ${bgColor}; color: ${textColor}; padding: 10px; border-radius: 4px; font-weight: bold;">${message}</div>`;
+        }
+
+        // Browser notification support
+        let lastKnownTimestamp = null;
+        let notificationsEnabled = false;
+
+        function requestNotificationPermission() {
+            if ('Notification' in window) {
+                Notification.requestPermission().then(permission => {
+                    notificationsEnabled = permission === 'granted';
+                    if (notificationsEnabled) {
+                        showUpdateAlert('✅ Browser notifications enabled!', 'success');
+                    }
+                });
+            }
+        }
+
+        function sendBrowserNotification(weekNumber, timestamp) {
+            if (notificationsEnabled && 'Notification' in window) {
+                new Notification(`🚨 Boone Rankings Update!`, {
+                    body: `Week ${weekNumber} rankings updated at ${new Date(timestamp).toLocaleString()}`,
+                    icon: '/favicon.ico',
+                    tag: 'boone-update',
+                    requireInteraction: true
+                });
+            }
+        }
+
+        function checkForUpdatesInStatus(monitor) {
+            if (monitor.updateAvailable && monitor.articleTimestamp && monitor.articleTimestamp !== lastKnownTimestamp) {
+                // New update detected!
+                sendBrowserNotification(monitor.weekNumber || 'Unknown', monitor.articleTimestamp);
+                lastKnownTimestamp = monitor.articleTimestamp;
+            }
+        }
+
+        function updateMonitorDisplay(monitor) {
+            document.getElementById('status-text').textContent = monitor.active ? 'Active - Checking hourly' : 'Not monitoring';
+            document.getElementById('current-url').textContent = monitor.url || 'None set';
+            document.getElementById('last-check').textContent = monitor.lastCheck ? new Date(monitor.lastCheck).toLocaleString() : 'Never';
+            document.getElementById('article-timestamp').textContent = monitor.articleTimestamp || 'Unknown';
+            
+            // Check for new updates for browser notifications
+            checkForUpdatesInStatus(monitor);
+            
+            if (monitor.updateAvailable) {
+                showUpdateAlert('⚠️ UPDATE NEEDED! Boone has updated his rankings. Time to copy/paste!');
+            } else if (monitor.active) {
+                showUpdateAlert('✅ Up to date', 'success');
+            }
+        }
+
+        // Load monitor status on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMonitorStatus();
+            // Auto-refresh status every 30 seconds
+            setInterval(loadMonitorStatus, 30000);
+            
+            // Request notification permission if supported
+            if ('Notification' in window && Notification.permission === 'default') {
+                setTimeout(() => {
+                    if (confirm('Enable browser notifications for ranking updates?')) {
+                        requestNotificationPermission();
+                    }
+                }, 2000);
+            } else if (Notification.permission === 'granted') {
+                notificationsEnabled = true;
+            }
+        });
     </script>
 </body>
 </html>

@@ -23,11 +23,14 @@
 # Admin access control
 # ADMIN_SECRET_KEY = "your-super-secret-admin-key-here"
 
-# No plugins needed for manual rankings.json approach
-# If you want auto-scraping later, uncomment and install the plugin:
-# [[plugins]]
-#   package = "@netlify/plugin-scheduled-functions"
-# 
-# [[plugins.inputs.functions]]
-#   name = "update-rankings" 
-#   cron = "0 */6 * * *"  # Every 6 hours
+# Notification settings (set these in Netlify dashboard)
+# ADMIN_EMAIL = "your-email@example.com"              # For email alerts
+# DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/..." # For Discord
+# SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/..." # For Slack  
+# SENDGRID_API_KEY = "SG.xxx"                        # For SendGrid emails
+# FROM_EMAIL = "alerts@yoursite.com"                 # From address for emails
+
+# Scheduled function to monitor for Boone rankings updates
+# Only checks during active hours (6 AM - 6 PM ET)
+[functions.hourly-monitor]
+  schedule = "0 * * * *"  # Every hour (function itself handles active hours check)

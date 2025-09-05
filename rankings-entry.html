@@ -222,7 +222,8 @@
                 
                 if (data.success) {
                     alert(`✅ Monitor set for Week ${weekNumber}!`);
-                    loadMonitorStatus();
+                    // Small delay to ensure URL is saved before refreshing status
+                    setTimeout(loadMonitorStatus, 1000);
                 } else {
                     alert('❌ Failed to set monitor: ' + (data.error || 'Unknown error'));
                 }

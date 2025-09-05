@@ -92,7 +92,7 @@ exports.handler = async (event, context) => {
 
 async function getMonitorConfig() {
     try {
-        const monitorPath = path.join('/tmp', 'monitor_config.json');
+        const monitorPath = path.join(process.cwd(), 'monitor_config.json');
         const data = await fs.readFile(monitorPath, 'utf8');
         return JSON.parse(data);
     } catch (error) {
@@ -101,7 +101,7 @@ async function getMonitorConfig() {
 }
 
 async function saveMonitorConfig(config) {
-    const monitorPath = path.join('/tmp', 'monitor_config.json');
+    const monitorPath = path.join(process.cwd(), 'monitor_config.json');
     await fs.writeFile(monitorPath, JSON.stringify(config, null, 2));
 }
 

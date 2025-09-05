@@ -45,12 +45,12 @@ async function getMonitorData() {
         return global.monitorConfig;
     }
     
-    // Fallback: try to read from /tmp
+    // Fallback: try to read from persistent config file
     try {
-        const monitorPath = path.join('/tmp', 'monitor_config.json');
+        const monitorPath = path.join(process.cwd(), 'monitor_config.json');
         const data = await fs.readFile(monitorPath, 'utf8');
         const config = JSON.parse(data);
-        console.log('Successfully read monitor config from /tmp:', config);
+        console.log('Successfully read monitor config from file:', config);
         // Store in memory for next time
         global.monitorConfig = config;
         return config;

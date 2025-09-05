@@ -39,11 +39,20 @@ exports.handler = async (event, context) => {
 };
 
 async function getMonitorData() {
+    // Try to read from global variable first
+    if (global.monitorConfig) {
+        console.log('Successfully read monitor config from memory:', global.monitorConfig);
+        return global.monitorConfig;
+    }
+    
+    // Fallback: try to read from /tmp
     try {
         const monitorPath = path.join('/tmp', 'monitor_config.json');
         const data = await fs.readFile(monitorPath, 'utf8');
         const config = JSON.parse(data);
-        console.log('Successfully read monitor config:', config);
+        console.log('Successfully read monitor config from /tmp:', config);
+        // Store in memory for next time
+        global.monitorConfig = config;
         return config;
     } catch (error) {
         console.log('Could not read monitor config:', error.message);

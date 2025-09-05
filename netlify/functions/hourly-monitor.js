@@ -187,25 +187,18 @@ async function checkTimestampChange(url) {
 }
 
 async function getLastStoredTimestamp() {
-    try {
-        const timestampPath = path.join('/tmp', 'last_timestamp.txt');
-        const timestamp = await fs.readFile(timestampPath, 'utf8');
-        return timestamp.trim();
-    } catch (error) {
-        return null;
-    }
+    // Read from environment variable
+    return process.env.LAST_STORED_TIMESTAMP || null;
 }
 
 async function storeLastTimestamp(timestamp) {
     if (!timestamp) return;
     
-    try {
-        const timestampPath = path.join('/tmp', 'last_timestamp.txt');
-        await fs.writeFile(timestampPath, timestamp);
-        console.log(`💾 Stored new timestamp: ${timestamp}`);
-    } catch (error) {
-        console.error('Error storing timestamp:', error);
-    }
+    console.log(`💾 New timestamp detected: ${timestamp}`);
+    console.log('⚠️ Manual step required: Update LAST_STORED_TIMESTAMP environment variable to:', timestamp);
+    
+    // Note: You'll need to manually update the LAST_STORED_TIMESTAMP 
+    // environment variable in Netlify after each update is detected
 }
 
 async function sendUpdateNotification(monitorConfig, checkResult) {

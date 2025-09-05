@@ -25,31 +25,38 @@ exports.handler = async (event, context) => {
     }
 
     try {
-        // Get monitor configuration
-        const monitorConfig = await getMonitorConfig();
+        let qbUrl;
         
-        if (!monitorConfig || !monitorConfig.active || !monitorConfig.url) {
-            return {
-                statusCode: 400,
-                headers,
-                body: JSON.stringify({
-                    success: false,
-                    error: 'No monitor URL configured. Please set a URL first.'
-                })
-            };
+        // Try to get URL from request body first
+        if (event.body) {
+            try {
+                const body = JSON.parse(event.body);
+                qbUrl = body.qbUrl;
+            } catch (e) {
+                // Ignore parse error, try fallback
+            }
+        }
+        
+        // Fallback: Get monitor configuration from server
+        if (!qbUrl) {
+            const monitorConfig = await getMonitorConfig();
+            if (!monitorConfig || !monitorConfig.active || !monitorConfig.url) {
+                return {
+                    statusCode: 400,
+                    headers,
+                    body: JSON.stringify({
+                        success: false,
+                        error: 'No monitor URL configured. Please set a URL first.'
+                    })
+                };
+            }
+            qbUrl = monitorConfig.url;
         }
 
-        console.log(`Manual check for: ${monitorConfig.url}`);
+        console.log(`Manual check for: ${qbUrl}`);
 
         // Check for timestamp changes
-        const checkResult = await checkTimestampChange(monitorConfig.url);
-
-        // Update monitor config with results
-        monitorConfig.lastCheck = new Date().toISOString();
-        monitorConfig.articleTimestamp = checkResult.currentTimestamp;
-        monitorConfig.updateAvailable = checkResult.updateAvailable;
-
-        await saveMonitorConfig(monitorConfig);
+        const checkResult = await checkTimestampChange(qbUrl);
 
         // Log notification if update available
         if (checkResult.updateAvailable) {

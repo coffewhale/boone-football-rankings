@@ -201,8 +201,8 @@
             URL.revokeObjectURL(url);
         }
 
-        // Monitor functions
-        async function setMonitorUrl() {
+        // Store monitor config in browser localStorage instead of server
+        function setMonitorUrl() {
             const weekNumber = document.getElementById('monitor-week').value;
             const url = document.getElementById('monitor-url').value;
 
@@ -211,63 +211,89 @@
                 return;
             }
 
-            try {
-                const response = await fetch('/.netlify/functions/set-monitor-url', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ weekNumber: parseInt(weekNumber), qbUrl: url })
-                });
+            // Store in localStorage
+            const monitorConfig = {
+                active: true,
+                url: url,
+                weekNumber: parseInt(weekNumber),
+                lastCheck: null,
+                articleTimestamp: null,
+                updateAvailable: false,
+                setAt: new Date().toISOString()
+            };
 
-                const data = await response.json();
-                
-                if (data.success) {
-                    alert(`✅ Monitor set for Week ${weekNumber}!`);
-                    // Small delay to ensure URL is saved before refreshing status
-                    setTimeout(loadMonitorStatus, 1000);
-                } else {
-                    alert('❌ Failed to set monitor: ' + (data.error || 'Unknown error'));
-                }
-            } catch (error) {
-                alert('❌ Network error: ' + error.message);
-            }
+            localStorage.setItem('boone-monitor-config', JSON.stringify(monitorConfig));
+            alert(`✅ Monitor set for Week ${weekNumber}!`);
+            
+            // Update display immediately
+            updateMonitorDisplay(monitorConfig);
         }
 
         async function checkNow() {
+            const stored = localStorage.getItem('boone-monitor-config');
+            if (!stored) {
+                alert('❌ No URL configured. Please set a URL first.');
+                return;
+            }
+
+            const config = JSON.parse(stored);
             document.getElementById('status-text').textContent = 'Checking...';
             
             try {
+                // Call the manual check function with the stored URL
                 const response = await fetch('/.netlify/functions/manual-monitor-check', {
-                    method: 'POST'
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ qbUrl: config.url })
                 });
 
                 const data = await response.json();
                 
                 if (data.success) {
+                    // Update stored config with check results
+                    config.lastCheck = new Date().toISOString();
+                    config.articleTimestamp = data.articleTimestamp;
+                    config.updateAvailable = data.updateAvailable;
+                    
+                    localStorage.setItem('boone-monitor-config', JSON.stringify(config));
+                    
                     if (data.updateAvailable) {
                         showUpdateAlert(`⚠️ UPDATE AVAILABLE! Boone updated rankings at ${new Date(data.articleTimestamp).toLocaleString()}. Time to copy/paste new rankings!`);
                     } else {
                         showUpdateAlert('✅ No update needed - you\'re current!', 'success');
                     }
-                    loadMonitorStatus();
+                    
+                    updateMonitorDisplay(config);
                 } else {
                     alert('❌ Check failed: ' + (data.error || 'Unknown error'));
+                    document.getElementById('status-text').textContent = config.active ? 'Active - Checking hourly' : 'Not monitoring';
                 }
             } catch (error) {
                 alert('❌ Network error: ' + error.message);
+                document.getElementById('status-text').textContent = config.active ? 'Active - Checking hourly' : 'Not monitoring';
             }
         }
 
-        async function loadMonitorStatus() {
+        function loadMonitorStatus() {
             try {
-                console.log('Loading monitor status...');
-                const response = await fetch('/.netlify/functions/monitor-status');
-                const data = await response.json();
-                console.log('Monitor status response:', data);
+                console.log('Loading monitor status from localStorage...');
+                const stored = localStorage.getItem('boone-monitor-config');
                 
-                if (data.success) {
-                    updateMonitorDisplay(data.monitor);
+                if (stored) {
+                    const config = JSON.parse(stored);
+                    console.log('Monitor status loaded:', config);
+                    updateMonitorDisplay(config);
                 } else {
-                    console.error('Monitor status failed:', data);
+                    console.log('No monitor config found in localStorage');
+                    updateMonitorDisplay({
+                        active: false,
+                        url: null,
+                        weekNumber: null,
+                        lastCheck: null,
+                        articleTimestamp: null,
+                        updateAvailable: false,
+                        error: 'No configuration found - set a URL first'
+                    });
                 }
             } catch (error) {
                 console.error('Failed to load monitor status:', error);

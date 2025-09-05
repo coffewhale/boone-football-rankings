@@ -61,9 +61,8 @@ exports.handler = async (event, context) => {
             setAt: new Date().toISOString()
         };
 
-        // Store in global variable and persistent config file
+        // Store in global variable (only option for Netlify functions)
         global.monitorConfig = monitorConfig;
-        await saveMonitorConfig(monitorConfig);
 
         console.log('Monitor config stored in memory and file:', monitorConfig);
         console.log(`Monitor set for Week ${weekNumber}: ${qbUrl}`);
@@ -90,10 +89,3 @@ exports.handler = async (event, context) => {
         };
     }
 };
-
-async function saveMonitorConfig(config) {
-    // Save to repository root (persistent across function calls)
-    const monitorPath = path.join(process.cwd(), 'monitor_config.json');
-    await fs.writeFile(monitorPath, JSON.stringify(config, null, 2));
-    console.log('Monitor config saved to monitor_config.json');
-}

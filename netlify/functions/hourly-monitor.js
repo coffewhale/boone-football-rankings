@@ -48,12 +48,13 @@ exports.handler = async (event, context) => {
         // Check for timestamp changes
         const checkResult = await checkTimestampChange(monitorConfig.url);
 
-        // Update monitor config with results
+        // Update monitor config with results (in memory only)
         monitorConfig.lastCheck = new Date().toISOString();
         monitorConfig.articleTimestamp = checkResult.currentTimestamp;
         monitorConfig.updateAvailable = checkResult.updateAvailable;
 
-        await saveMonitorConfig(monitorConfig);
+        // Store in global variable for this session
+        global.monitorConfig = monitorConfig;
 
         if (checkResult.updateAvailable) {
             console.log('🚨 UPDATE DETECTED! Boone has updated his rankings!');
@@ -104,19 +105,36 @@ exports.handler = async (event, context) => {
 };
 
 async function getMonitorConfig() {
+    // Check global variable first
+    if (global.monitorConfig && global.monitorConfig.active) {
+        return global.monitorConfig;
+    }
+    
+    // Check environment variables as fallback
+    if (process.env.MONITOR_URL && process.env.MONITOR_WEEK) {
+        return {
+            active: true,
+            url: process.env.MONITOR_URL,
+            weekNumber: parseInt(process.env.MONITOR_WEEK),
+            lastCheck: null,
+            articleTimestamp: null,
+            updateAvailable: false
+        };
+    }
+    
+    // Try reading from deployed file as last resort
     try {
         const monitorPath = path.join(process.cwd(), 'monitor_config.json');
         const data = await fs.readFile(monitorPath, 'utf8');
-        return JSON.parse(data);
+        const config = JSON.parse(data);
+        if (config.active) return config;
     } catch (error) {
-        return null;
+        // Ignore file read errors
     }
+    
+    return null;
 }
 
-async function saveMonitorConfig(config) {
-    const monitorPath = path.join(process.cwd(), 'monitor_config.json');
-    await fs.writeFile(monitorPath, JSON.stringify(config, null, 2));
-}
 
 async function checkTimestampChange(url) {
     try {

@@ -45,17 +45,15 @@ async function getMonitorData() {
         return global.monitorConfig;
     }
     
-    // Fallback: try to read from persistent config file
+    // Fallback: try to read from deployed config file
     try {
         const monitorPath = path.join(process.cwd(), 'monitor_config.json');
         const data = await fs.readFile(monitorPath, 'utf8');
         const config = JSON.parse(data);
-        console.log('Successfully read monitor config from file:', config);
-        // Store in memory for next time
-        global.monitorConfig = config;
+        console.log('Successfully read monitor config from deployed file:', config);
         return config;
     } catch (error) {
-        console.log('Could not read monitor config:', error.message);
+        console.log('Could not read monitor config file:', error.message);
         // Return default if no config exists
         return {
             active: false,

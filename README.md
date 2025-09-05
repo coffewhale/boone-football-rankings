@@ -1,6 +1,6 @@
-# Justin Boone Fantasy Football Rankings
+# Justin Boone Fantasy Football Rankings Monitor
 
-A simple, clean web app that displays Justin Boone's current fantasy football rankings from Yahoo Sports.
+A clean web app that displays Justin Boone's fantasy football rankings with **automatic monitoring** that alerts you when he updates his Yahoo Sports articles.
 
 ## 🏈 Live Site
 
@@ -8,34 +8,38 @@ A simple, clean web app that displays Justin Boone's current fantasy football ra
 
 ## Features
 
-- **All Positions**: QB, RB, WR, TE, FLEX, DEF, K rankings
-- **Auto-Updates**: Refreshes every 6 hours when new rankings are published
-- **Smart Scraping**: Only updates when Justin publishes new content
-- **Clean Design**: Focused on essential ranking data (Rank, Player, Opponent)
-- **Mobile Responsive**: Works perfectly on all devices
-- **Fast Loading**: Efficient caching system
+- **📊 All Positions**: QB, RB, WR, TE, FLEX, DEF, K rankings
+- **🔍 Smart Monitoring**: Hourly timestamp checks during active hours (6 AM - 6 PM ET)
+- **📧 Email Alerts**: Get notified immediately when Boone updates rankings
+- **📝 Easy Updates**: Simple copy/paste interface for new rankings
+- **📱 Mobile Responsive**: Works perfectly on all devices
+- **⚡ Fast Loading**: Efficient static site performance
 
 ## Tech Stack
 
 - **Frontend**: Static HTML/CSS/JavaScript
-- **Scraper**: Python with BeautifulSoup
+- **Monitoring**: Node.js serverless functions
 - **Hosting**: Netlify with scheduled functions
-- **Deployment**: Auto-deploy from GitHub
+- **Notifications**: Email via Netlify Forms (free)
 
 ## How It Works
 
-1. **Smart Timestamp Check**: Only checks if Justin has published new rankings
-2. **Efficient Scraping**: Updates all 7 positions only when content changes
-3. **Auto-Schedule**: Runs every 6 hours via Netlify functions
-4. **Cached Data**: Serves fast responses when no updates are needed
+1. **Set Weekly URL**: Enter the QB rankings URL to monitor in admin panel
+2. **Automatic Monitoring**: System checks every hour (6 AM - 6 PM ET) for timestamp changes
+3. **Email Alert**: You get notified when Boone updates his rankings
+4. **Manual Update**: Copy/paste new rankings using the admin interface
+5. **Live Site**: Your fans see the updated rankings immediately
 
 ## For Site Owner
 
-See `DEPLOYMENT.md` for complete setup and management instructions including:
-- Environment variable configuration
-- Admin tools for manual updates
-- Weekly maintenance tasks
-- Troubleshooting guide
+### Setup
+1. Deploy to Netlify
+2. Add `ADMIN_EMAIL=your-email@example.com` to environment variables
+3. Go to `/rankings-entry.html` to set weekly URL and manage rankings
+
+### Weekly Workflow
+1. System automatically monitors your set URL
+2. Get email when Boone updates → Copy new rankings → Paste in admin panel → Done!
 
 ---
 

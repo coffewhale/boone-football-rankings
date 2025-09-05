@@ -42,8 +42,11 @@ async function getMonitorData() {
     try {
         const monitorPath = path.join('/tmp', 'monitor_config.json');
         const data = await fs.readFile(monitorPath, 'utf8');
-        return JSON.parse(data);
+        const config = JSON.parse(data);
+        console.log('Successfully read monitor config:', config);
+        return config;
     } catch (error) {
+        console.log('Could not read monitor config:', error.message);
         // Return default if no config exists
         return {
             active: false,
@@ -51,7 +54,8 @@ async function getMonitorData() {
             weekNumber: null,
             lastCheck: null,
             articleTimestamp: null,
-            updateAvailable: false
+            updateAvailable: false,
+            error: 'No configuration found - set a URL first'
         };
     }
 }

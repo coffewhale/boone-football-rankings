@@ -59,8 +59,15 @@ exports.handler = async (event, context) => {
             setAt: new Date().toISOString()
         };
 
-        const monitorPath = path.join('/tmp', 'monitor_config.json');
-        await fs.writeFile(monitorPath, JSON.stringify(monitorConfig, null, 2));
+        // Try to save to /tmp, but don't fail if it doesn't work
+        try {
+            const monitorPath = path.join('/tmp', 'monitor_config.json');
+            await fs.writeFile(monitorPath, JSON.stringify(monitorConfig, null, 2));
+            console.log('Monitor config saved to /tmp successfully');
+        } catch (tmpError) {
+            console.log('Failed to save to /tmp:', tmpError.message);
+            // Continue anyway - the function will still return success
+        }
 
         // Also clear any stored timestamp to force initial check
         const timestampPath = path.join('/tmp', 'last_timestamp.txt');

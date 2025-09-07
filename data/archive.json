@@ -1,0 +1,20 @@
+{
+  "snapshots": [
+    {
+      "week": 1,
+      "year": 2025,
+      "timestamp": "2025-09-05T18:36:27.955Z",
+      "file": "data/snapshots/2025/week-1.json"
+    },
+    {
+      "week": 1,
+      "year": 2025,
+      "timestamp": "2025-09-05T18:36:42.117Z",
+      "file": "data/snapshots/2025/week-1.json"
+    }
+  ],
+  "metadata": {
+    "created": "2025-09-05",
+    "description": "Weekly ranking snapshots for Boone performance analysis"
+  }
+}

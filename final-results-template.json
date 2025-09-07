@@ -1,0 +1,45 @@
+{
+  "week": 1,
+  "year": 2025,
+  "scoring": "Half PPR",
+  "timestamp": "2025-09-08T10:00:00.000Z",
+  "players": {
+    "Lamar Jackson": {
+      "position": "QB",
+      "team": "BAL",
+      "opponent": "@ BUF",
+      "preGameRank": 1,
+      "fantasyPoints": 24.5,
+      "actualRank": 3,
+      "stats": {
+        "passingYards": 273,
+        "passingTDs": 2,
+        "interceptions": 0,
+        "rushingYards": 45,
+        "rushingTDs": 1,
+        "fumbles": 0
+      }
+    },
+    "Saquon Barkley": {
+      "position": "RB",
+      "team": "PHI", 
+      "opponent": "vs DAL",
+      "preGameRank": 2,
+      "fantasyPoints": 31.2,
+      "actualRank": 1,
+      "stats": {
+        "rushingYards": 156,
+        "rushingTDs": 2,
+        "receptions": 4,
+        "receivingYards": 28,
+        "receivingTDs": 0,
+        "fumbles": 0
+      }
+    }
+  },
+  "metadata": {
+    "totalPlayersTracked": 150,
+    "dataSource": "ESPN/Yahoo/Manual",
+    "lastUpdated": "2025-09-08T10:00:00.000Z"
+  }
+}

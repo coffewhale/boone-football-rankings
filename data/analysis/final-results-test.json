@@ -1,0 +1,2141 @@
+{
+  "week": 1,
+  "year": 2025,
+  "scoring": "Half PPR",
+  "timestamp": "2025-09-05T18:36:42.118Z",
+  "players": {
+    "Josh Allen": {
+      "position": "QB",
+      "opponent": "vs BAL",
+      "preGameRank": 3,
+      "fantasyPoints": 28.8,
+      "actualRank": 1
+    },
+    "Jayden Daniels": {
+      "position": "QB",
+      "opponent": "vs NYG",
+      "preGameRank": 4,
+      "fantasyPoints": 27.6,
+      "actualRank": 2
+    },
+    "Brock Purdy": {
+      "position": "QB",
+      "opponent": "@ SEA",
+      "preGameRank": 9,
+      "fantasyPoints": 27.6,
+      "actualRank": 3
+    },
+    "Jalen Hurts": {
+      "position": "QB",
+      "opponent": "vs DAL",
+      "preGameRank": 2,
+      "fantasyPoints": 27.4,
+      "actualRank": 4
+    },
+    "Bo Nix": {
+      "position": "QB",
+      "opponent": "vs TEN",
+      "preGameRank": 7,
+      "fantasyPoints": 26.8,
+      "actualRank": 5
+    },
+    "Justin Herbert": {
+      "position": "QB",
+      "opponent": "vs KC",
+      "preGameRank": 16,
+      "fantasyPoints": 26,
+      "actualRank": 6
+    },
+    "Dak Prescott": {
+      "position": "QB",
+      "opponent": "@ PHI",
+      "preGameRank": 17,
+      "fantasyPoints": 25.6,
+      "actualRank": 7
+    },
+    "Kyler Murray": {
+      "position": "QB",
+      "opponent": "@ NO",
+      "preGameRank": 8,
+      "fantasyPoints": 25,
+      "actualRank": 8
+    },
+    "J.J. McCarthy": {
+      "position": "QB",
+      "opponent": "@ CHI",
+      "preGameRank": 15,
+      "fantasyPoints": 24.3,
+      "actualRank": 9
+    },
+    "Lamar Jackson": {
+      "position": "QB",
+      "opponent": "@ BUF",
+      "preGameRank": 1,
+      "fantasyPoints": 24.1,
+      "actualRank": 10
+    },
+    "Tua Tagovailoa": {
+      "position": "QB",
+      "opponent": "@ IND",
+      "preGameRank": 24,
+      "fantasyPoints": 24.1,
+      "actualRank": 11
+    },
+    "Patrick Mahomes II": {
+      "position": "QB",
+      "opponent": "@ LAC",
+      "preGameRank": 12,
+      "fantasyPoints": 24,
+      "actualRank": 12
+    },
+    "Jared Goff": {
+      "position": "QB",
+      "opponent": "@ GB",
+      "preGameRank": 23,
+      "fantasyPoints": 24,
+      "actualRank": 13
+    },
+    "Daniel Jones": {
+      "position": "QB",
+      "opponent": "vs MIA",
+      "preGameRank": 22,
+      "fantasyPoints": 23.7,
+      "actualRank": 14
+    },
+    "Drake Maye": {
+      "position": "QB",
+      "opponent": "vs LV",
+      "preGameRank": 11,
+      "fantasyPoints": 23.4,
+      "actualRank": 15
+    },
+    "Saquon Barkley": {
+      "position": "RB",
+      "opponent": "vs DAL",
+      "preGameRank": 1,
+      "fantasyPoints": 23.3,
+      "actualRank": 16
+    },
+    "Joe Burrow": {
+      "position": "QB",
+      "opponent": "@ CLE",
+      "preGameRank": 5,
+      "fantasyPoints": 23.1,
+      "actualRank": 17
+    },
+    "Baker Mayfield": {
+      "position": "QB",
+      "opponent": "@ ATL",
+      "preGameRank": 6,
+      "fantasyPoints": 23,
+      "actualRank": 18
+    },
+    "Jaxson Dart": {
+      "position": "QB",
+      "opponent": "@ WSH",
+      "preGameRank": 34,
+      "fantasyPoints": 22.8,
+      "actualRank": 19
+    },
+    "Jalen Milroe": {
+      "position": "QB",
+      "opponent": "vs SF",
+      "preGameRank": 33,
+      "fantasyPoints": 22.4,
+      "actualRank": 20
+    },
+    "Jordan Love": {
+      "position": "QB",
+      "opponent": "vs DET",
+      "preGameRank": 14,
+      "fantasyPoints": 22.2,
+      "actualRank": 21
+    },
+    "Russell Wilson": {
+      "position": "QB",
+      "opponent": "@ WSH",
+      "preGameRank": 29,
+      "fantasyPoints": 22.1,
+      "actualRank": 22
+    },
+    "Ashton Jeanty": {
+      "position": "RB",
+      "opponent": "@ NE",
+      "preGameRank": 10,
+      "fantasyPoints": 21.9,
+      "actualRank": 23
+    },
+    "Justin Fields": {
+      "position": "QB",
+      "opponent": "vs PIT",
+      "preGameRank": 13,
+      "fantasyPoints": 21.3,
+      "actualRank": 24
+    },
+    "Derrick Henry": {
+      "position": "RB",
+      "opponent": "@ BUF",
+      "preGameRank": 6,
+      "fantasyPoints": 21.1,
+      "actualRank": 25
+    },
+    "Kenneth Walker III": {
+      "position": "RB",
+      "opponent": "vs SF",
+      "preGameRank": 15,
+      "fantasyPoints": 21,
+      "actualRank": 26
+    },
+    "Omarion Hampton": {
+      "position": "RB",
+      "opponent": "vs KC",
+      "preGameRank": 18,
+      "fantasyPoints": 21,
+      "actualRank": 27
+    },
+    "Bryce Young": {
+      "position": "QB",
+      "opponent": "@ JAX",
+      "preGameRank": 18,
+      "fantasyPoints": 20.9,
+      "actualRank": 28
+    },
+    "C.J. Stroud": {
+      "position": "QB",
+      "opponent": "@ LAR",
+      "preGameRank": 20,
+      "fantasyPoints": 20.8,
+      "actualRank": 29
+    },
+    "Malik Nabers": {
+      "position": "WR",
+      "opponent": "@ WSH",
+      "preGameRank": 3,
+      "fantasyPoints": 20.7,
+      "actualRank": 30
+    },
+    "Trevor Lawrence": {
+      "position": "QB",
+      "opponent": "vs CAR",
+      "preGameRank": 10,
+      "fantasyPoints": 20.3,
+      "actualRank": 31
+    },
+    "Cam Ward": {
+      "position": "QB",
+      "opponent": "@ DEN",
+      "preGameRank": 31,
+      "fantasyPoints": 20.2,
+      "actualRank": 32
+    },
+    "Michael Penix Jr.": {
+      "position": "QB",
+      "opponent": "vs TB",
+      "preGameRank": 21,
+      "fantasyPoints": 19.9,
+      "actualRank": 33
+    },
+    "Bucky Irving": {
+      "position": "RB",
+      "opponent": "@ ATL",
+      "preGameRank": 9,
+      "fantasyPoints": 19.9,
+      "actualRank": 34
+    },
+    "Breece Hall": {
+      "position": "RB",
+      "opponent": "vs PIT",
+      "preGameRank": 23,
+      "fantasyPoints": 19.9,
+      "actualRank": 35
+    },
+    "Matthew Stafford": {
+      "position": "QB",
+      "opponent": "vs HOU",
+      "preGameRank": 26,
+      "fantasyPoints": 19.8,
+      "actualRank": 36
+    },
+    "Tony Pollard": {
+      "position": "RB",
+      "opponent": "@ DEN",
+      "preGameRank": 19,
+      "fantasyPoints": 19.7,
+      "actualRank": 37
+    },
+    "Aaron Rodgers": {
+      "position": "QB",
+      "opponent": "@ NYJ",
+      "preGameRank": 30,
+      "fantasyPoints": 19.2,
+      "actualRank": 38
+    },
+    "Jaleel McLaughlin": {
+      "position": "RB",
+      "opponent": "vs TEN",
+      "preGameRank": 77,
+      "fantasyPoints": 19,
+      "actualRank": 39
+    },
+    "Sam Darnold": {
+      "position": "QB",
+      "opponent": "vs SF",
+      "preGameRank": 28,
+      "fantasyPoints": 18.8,
+      "actualRank": 40
+    },
+    "Dare Ogunbowale": {
+      "position": "RB",
+      "opponent": "@ LAR",
+      "preGameRank": 82,
+      "fantasyPoints": 18.8,
+      "actualRank": 41
+    },
+    "Caleb Williams": {
+      "position": "QB",
+      "opponent": "vs MIN",
+      "preGameRank": 19,
+      "fantasyPoints": 18.6,
+      "actualRank": 42
+    },
+    "Christian McCaffrey": {
+      "position": "RB",
+      "opponent": "@ SEA",
+      "preGameRank": 2,
+      "fantasyPoints": 18.6,
+      "actualRank": 43
+    },
+    "James Conner": {
+      "position": "RB",
+      "opponent": "@ NO",
+      "preGameRank": 11,
+      "fantasyPoints": 18.5,
+      "actualRank": 44
+    },
+    "Bijan Robinson": {
+      "position": "RB",
+      "opponent": "vs TB",
+      "preGameRank": 3,
+      "fantasyPoints": 18.4,
+      "actualRank": 45
+    },
+    "Ray Davis": {
+      "position": "RB",
+      "opponent": "vs BAL",
+      "preGameRank": 51,
+      "fantasyPoints": 18.4,
+      "actualRank": 46
+    },
+    "Puka Nacua": {
+      "position": "WR",
+      "opponent": "vs HOU",
+      "preGameRank": 5,
+      "fantasyPoints": 18.3,
+      "actualRank": 47
+    },
+    "Terry McLaurin": {
+      "position": "WR",
+      "opponent": "vs NYG",
+      "preGameRank": 17,
+      "fantasyPoints": 18.3,
+      "actualRank": 48
+    },
+    "Jonathan Taylor": {
+      "position": "RB",
+      "opponent": "vs MIA",
+      "preGameRank": 5,
+      "fantasyPoints": 18.2,
+      "actualRank": 49
+    },
+    "Geno Smith": {
+      "position": "QB",
+      "opponent": "@ NE",
+      "preGameRank": 25,
+      "fantasyPoints": 18,
+      "actualRank": 50
+    },
+    "Kyren Williams": {
+      "position": "RB",
+      "opponent": "vs HOU",
+      "preGameRank": 13,
+      "fantasyPoints": 18,
+      "actualRank": 51
+    },
+    "Kaleb Johnson": {
+      "position": "RB",
+      "opponent": "@ NYJ",
+      "preGameRank": 43,
+      "fantasyPoints": 18,
+      "actualRank": 52
+    },
+    "Zach Charbonnet": {
+      "position": "RB",
+      "opponent": "vs SF",
+      "preGameRank": 39,
+      "fantasyPoints": 17.9,
+      "actualRank": 53
+    },
+    "Chris Rodriguez Jr.": {
+      "position": "RB",
+      "opponent": "vs NYG",
+      "preGameRank": 47,
+      "fantasyPoints": 17.9,
+      "actualRank": 54
+    },
+    "A.J. Dillon": {
+      "position": "RB",
+      "opponent": "vs DAL",
+      "preGameRank": 83,
+      "fantasyPoints": 17.9,
+      "actualRank": 55
+    },
+    "Ladd McConkey": {
+      "position": "WR",
+      "opponent": "vs KC",
+      "preGameRank": 14,
+      "fantasyPoints": 17.9,
+      "actualRank": 56
+    },
+    "Isiah Pacheco": {
+      "position": "RB",
+      "opponent": "@ LAC",
+      "preGameRank": 24,
+      "fantasyPoints": 17.8,
+      "actualRank": 57
+    },
+    "Brian Thomas Jr.": {
+      "position": "WR",
+      "opponent": "vs CAR",
+      "preGameRank": 6,
+      "fantasyPoints": 17.8,
+      "actualRank": 58
+    },
+    "Davante Adams": {
+      "position": "WR",
+      "opponent": "vs HOU",
+      "preGameRank": 16,
+      "fantasyPoints": 17.6,
+      "actualRank": 59
+    },
+    "Bhayshul Tuten": {
+      "position": "RB",
+      "opponent": "vs CAR",
+      "preGameRank": 60,
+      "fantasyPoints": 17.4,
+      "actualRank": 60
+    },
+    "Nico Collins": {
+      "position": "WR",
+      "opponent": "@ LAR",
+      "preGameRank": 4,
+      "fantasyPoints": 17.3,
+      "actualRank": 61
+    },
+    "Chase Brown": {
+      "position": "RB",
+      "opponent": "@ CLE",
+      "preGameRank": 7,
+      "fantasyPoints": 17.1,
+      "actualRank": 62
+    },
+    "Trey Benson": {
+      "position": "RB",
+      "opponent": "@ NO",
+      "preGameRank": 45,
+      "fantasyPoints": 17.1,
+      "actualRank": 63
+    },
+    "Hassan Haskins": {
+      "position": "RB",
+      "opponent": "vs KC",
+      "preGameRank": 90,
+      "fantasyPoints": 17,
+      "actualRank": 64
+    },
+    "Jarquez Hunter": {
+      "position": "RB",
+      "opponent": "vs HOU",
+      "preGameRank": 72,
+      "fantasyPoints": 16.9,
+      "actualRank": 65
+    },
+    "Mike Evans": {
+      "position": "WR",
+      "opponent": "@ ATL",
+      "preGameRank": 11,
+      "fantasyPoints": 16.9,
+      "actualRank": 66
+    },
+    "Joe Flacco": {
+      "position": "QB",
+      "opponent": "vs CIN",
+      "preGameRank": 27,
+      "fantasyPoints": 16.8,
+      "actualRank": 67
+    },
+    "Chuba Hubbard": {
+      "position": "RB",
+      "opponent": "@ JAX",
+      "preGameRank": 16,
+      "fantasyPoints": 16.7,
+      "actualRank": 68
+    },
+    "Aaron Jones Sr.": {
+      "position": "RB",
+      "opponent": "@ CHI",
+      "preGameRank": 22,
+      "fantasyPoints": 16.7,
+      "actualRank": 69
+    },
+    "Spencer Rattler": {
+      "position": "QB",
+      "opponent": "vs ARI",
+      "preGameRank": 32,
+      "fantasyPoints": 16.5,
+      "actualRank": 70
+    },
+    "Javonte Williams": {
+      "position": "RB",
+      "opponent": "@ PHI",
+      "preGameRank": 33,
+      "fantasyPoints": 16.5,
+      "actualRank": 71
+    },
+    "Rhamondre Stevenson": {
+      "position": "RB",
+      "opponent": "vs LV",
+      "preGameRank": 38,
+      "fantasyPoints": 16.5,
+      "actualRank": 72
+    },
+    "Dameon Pierce": {
+      "position": "RB",
+      "opponent": "@ LAR",
+      "preGameRank": 67,
+      "fantasyPoints": 16.4,
+      "actualRank": 73
+    },
+    "Julius Chestnut": {
+      "position": "RB",
+      "opponent": "@ DEN",
+      "preGameRank": 73,
+      "fantasyPoints": 16.4,
+      "actualRank": 74
+    },
+    "Ja'Marr Chase": {
+      "position": "WR",
+      "opponent": "@ CLE",
+      "preGameRank": 1,
+      "fantasyPoints": 16.4,
+      "actualRank": 75
+    },
+    "Emari Demercado": {
+      "position": "RB",
+      "opponent": "@ NO",
+      "preGameRank": 88,
+      "fantasyPoints": 16.3,
+      "actualRank": 76
+    },
+    "Nick Chubb": {
+      "position": "RB",
+      "opponent": "@ LAR",
+      "preGameRank": 34,
+      "fantasyPoints": 16.2,
+      "actualRank": 77
+    },
+    "Najee Harris": {
+      "position": "RB",
+      "opponent": "vs KC",
+      "preGameRank": 53,
+      "fantasyPoints": 16.2,
+      "actualRank": 78
+    },
+    "Emeka Egbuka": {
+      "position": "WR",
+      "opponent": "@ ATL",
+      "preGameRank": 20,
+      "fantasyPoints": 16.1,
+      "actualRank": 79
+    },
+    "T.J. Hockenson": {
+      "position": "TE",
+      "opponent": "@ CHI",
+      "preGameRank": 4,
+      "fantasyPoints": 16.1,
+      "actualRank": 80
+    },
+    "Isaiah Davis": {
+      "position": "RB",
+      "opponent": "vs PIT",
+      "preGameRank": 78,
+      "fantasyPoints": 16,
+      "actualRank": 81
+    },
+    "Amon-Ra St. Brown": {
+      "position": "WR",
+      "opponent": "@ GB",
+      "preGameRank": 10,
+      "fantasyPoints": 15.9,
+      "actualRank": 82
+    },
+    "Tee Higgins": {
+      "position": "WR",
+      "opponent": "@ CLE",
+      "preGameRank": 12,
+      "fantasyPoints": 15.9,
+      "actualRank": 83
+    },
+    "Luke McCaffrey": {
+      "position": "WR",
+      "opponent": "vs NYG",
+      "preGameRank": 121,
+      "fantasyPoints": 15.9,
+      "actualRank": 84
+    },
+    "Brock Bowers": {
+      "position": "TE",
+      "opponent": "@ NE",
+      "preGameRank": 2,
+      "fantasyPoints": 15.9,
+      "actualRank": 85
+    },
+    "Ollie Gordon II": {
+      "position": "RB",
+      "opponent": "@ IND",
+      "preGameRank": 42,
+      "fantasyPoints": 15.8,
+      "actualRank": 86
+    },
+    "Kalel Mullings": {
+      "position": "RB",
+      "opponent": "@ DEN",
+      "preGameRank": 87,
+      "fantasyPoints": 15.8,
+      "actualRank": 87
+    },
+    "A.J. Brown": {
+      "position": "WR",
+      "opponent": "vs DAL",
+      "preGameRank": 9,
+      "fantasyPoints": 15.8,
+      "actualRank": 88
+    },
+    "Matthew Golden": {
+      "position": "WR",
+      "opponent": "vs DET",
+      "preGameRank": 37,
+      "fantasyPoints": 15.8,
+      "actualRank": 89
+    },
+    "Cooper Kupp": {
+      "position": "WR",
+      "opponent": "vs SF",
+      "preGameRank": 45,
+      "fantasyPoints": 15.8,
+      "actualRank": 90
+    },
+    "Jalen Nailor": {
+      "position": "WR",
+      "opponent": "@ CHI",
+      "preGameRank": 87,
+      "fantasyPoints": 15.8,
+      "actualRank": 91
+    },
+    "Marquez Valdes-Scantling": {
+      "position": "WR",
+      "opponent": "@ SEA",
+      "preGameRank": 118,
+      "fantasyPoints": 15.8,
+      "actualRank": 92
+    },
+    "Chris Brooks": {
+      "position": "RB",
+      "opponent": "vs DET",
+      "preGameRank": 66,
+      "fantasyPoints": 15.7,
+      "actualRank": 93
+    },
+    "Jerry Jeudy": {
+      "position": "WR",
+      "opponent": "vs CIN",
+      "preGameRank": 26,
+      "fantasyPoints": 15.7,
+      "actualRank": 94
+    },
+    "DeMario Douglas": {
+      "position": "WR",
+      "opponent": "vs LV",
+      "preGameRank": 56,
+      "fantasyPoints": 15.7,
+      "actualRank": 95
+    },
+    "Dylan Sampson": {
+      "position": "RB",
+      "opponent": "vs CIN",
+      "preGameRank": 40,
+      "fantasyPoints": 15.6,
+      "actualRank": 96
+    },
+    "Tyler Allgeier": {
+      "position": "RB",
+      "opponent": "vs TB",
+      "preGameRank": 50,
+      "fantasyPoints": 15.6,
+      "actualRank": 97
+    },
+    "Tyquan Thornton": {
+      "position": "WR",
+      "opponent": "@ LAC",
+      "preGameRank": 115,
+      "fantasyPoints": 15.6,
+      "actualRank": 98
+    },
+    "Jahmyr Gibbs": {
+      "position": "RB",
+      "opponent": "@ GB",
+      "preGameRank": 4,
+      "fantasyPoints": 15.5,
+      "actualRank": 99
+    },
+    "Allen Lazard": {
+      "position": "WR",
+      "opponent": "vs PIT",
+      "preGameRank": 111,
+      "fantasyPoints": 15.5,
+      "actualRank": 100
+    },
+    "Will Shipley": {
+      "position": "RB",
+      "opponent": "vs DAL",
+      "preGameRank": 57,
+      "fantasyPoints": 15.3,
+      "actualRank": 101
+    },
+    "De'Von Achane": {
+      "position": "RB",
+      "opponent": "@ IND",
+      "preGameRank": 8,
+      "fantasyPoints": 15.2,
+      "actualRank": 102
+    },
+    "James Cook": {
+      "position": "RB",
+      "opponent": "vs BAL",
+      "preGameRank": 17,
+      "fantasyPoints": 15.2,
+      "actualRank": 103
+    },
+    "Courtland Sutton": {
+      "position": "WR",
+      "opponent": "vs TEN",
+      "preGameRank": 22,
+      "fantasyPoints": 15.2,
+      "actualRank": 104
+    },
+    "Travis Hunter": {
+      "position": "WR",
+      "opponent": "vs CAR",
+      "preGameRank": 27,
+      "fantasyPoints": 15.1,
+      "actualRank": 105
+    },
+    "Trey McBride": {
+      "position": "TE",
+      "opponent": "@ NO",
+      "preGameRank": 1,
+      "fantasyPoints": 15.1,
+      "actualRank": 106
+    },
+    "Kareem Hunt": {
+      "position": "RB",
+      "opponent": "@ LAC",
+      "preGameRank": 61,
+      "fantasyPoints": 15,
+      "actualRank": 107
+    },
+    "Olamide Zaccheaus": {
+      "position": "WR",
+      "opponent": "vs MIN",
+      "preGameRank": 75,
+      "fantasyPoints": 15,
+      "actualRank": 108
+    },
+    "Khalil Shakir": {
+      "position": "WR",
+      "opponent": "vs BAL",
+      "preGameRank": 40,
+      "fantasyPoints": 14.9,
+      "actualRank": 109
+    },
+    "Isaac TeSlaa": {
+      "position": "WR",
+      "opponent": "@ GB",
+      "preGameRank": 86,
+      "fantasyPoints": 14.9,
+      "actualRank": 110
+    },
+    "Brandin Cooks": {
+      "position": "WR",
+      "opponent": "vs ARI",
+      "preGameRank": 94,
+      "fantasyPoints": 14.9,
+      "actualRank": 111
+    },
+    "KhaDarel Hodge": {
+      "position": "WR",
+      "opponent": "vs TB",
+      "preGameRank": 107,
+      "fantasyPoints": 14.9,
+      "actualRank": 112
+    },
+    "Travis Etienne Jr.": {
+      "position": "RB",
+      "opponent": "vs CAR",
+      "preGameRank": 30,
+      "fantasyPoints": 14.8,
+      "actualRank": 113
+    },
+    "Drake London": {
+      "position": "WR",
+      "opponent": "vs TB",
+      "preGameRank": 8,
+      "fantasyPoints": 14.8,
+      "actualRank": 114
+    },
+    "Jaylin Noel": {
+      "position": "WR",
+      "opponent": "@ LAR",
+      "preGameRank": 76,
+      "fantasyPoints": 14.8,
+      "actualRank": 115
+    },
+    "Alvin Kamara": {
+      "position": "RB",
+      "opponent": "vs ARI",
+      "preGameRank": 14,
+      "fantasyPoints": 14.7,
+      "actualRank": 116
+    },
+    "Brashard Smith": {
+      "position": "RB",
+      "opponent": "@ LAC",
+      "preGameRank": 63,
+      "fantasyPoints": 14.7,
+      "actualRank": 117
+    },
+    "Sean Tucker": {
+      "position": "RB",
+      "opponent": "@ ATL",
+      "preGameRank": 76,
+      "fantasyPoints": 14.7,
+      "actualRank": 118
+    },
+    "Zay Flowers": {
+      "position": "WR",
+      "opponent": "@ BUF",
+      "preGameRank": 32,
+      "fantasyPoints": 14.7,
+      "actualRank": 119
+    },
+    "Dyami Brown": {
+      "position": "WR",
+      "opponent": "vs CAR",
+      "preGameRank": 81,
+      "fantasyPoints": 14.7,
+      "actualRank": 120
+    },
+    "Tai Felton": {
+      "position": "WR",
+      "opponent": "@ CHI",
+      "preGameRank": 129,
+      "fantasyPoints": 14.7,
+      "actualRank": 121
+    },
+    "David Montgomery": {
+      "position": "RB",
+      "opponent": "@ GB",
+      "preGameRank": 27,
+      "fantasyPoints": 14.6,
+      "actualRank": 122
+    },
+    "Kyle Juszczyk": {
+      "position": "RB",
+      "opponent": "@ SEA",
+      "preGameRank": 70,
+      "fantasyPoints": 14.6,
+      "actualRank": 123
+    },
+    "Rashid Shaheed": {
+      "position": "WR",
+      "opponent": "vs ARI",
+      "preGameRank": 46,
+      "fantasyPoints": 14.6,
+      "actualRank": 124
+    },
+    "Dontayvion Wicks": {
+      "position": "WR",
+      "opponent": "vs DET",
+      "preGameRank": 66,
+      "fantasyPoints": 14.6,
+      "actualRank": 125
+    },
+    "Tory Horton": {
+      "position": "WR",
+      "opponent": "vs SF",
+      "preGameRank": 73,
+      "fantasyPoints": 14.6,
+      "actualRank": 126
+    },
+    "Tyrone Tracy Jr.": {
+      "position": "RB",
+      "opponent": "@ WSH",
+      "preGameRank": 21,
+      "fantasyPoints": 14.4,
+      "actualRank": 127
+    },
+    "Rachaad White": {
+      "position": "RB",
+      "opponent": "@ ATL",
+      "preGameRank": 44,
+      "fantasyPoints": 14.3,
+      "actualRank": 128
+    },
+    "Tyreek Hill": {
+      "position": "WR",
+      "opponent": "@ IND",
+      "preGameRank": 18,
+      "fantasyPoints": 14.3,
+      "actualRank": 129
+    },
+    "Parker Washington": {
+      "position": "WR",
+      "opponent": "vs CAR",
+      "preGameRank": 103,
+      "fantasyPoints": 14.3,
+      "actualRank": 130
+    },
+    "Braelon Allen": {
+      "position": "RB",
+      "opponent": "vs PIT",
+      "preGameRank": 41,
+      "fantasyPoints": 14.2,
+      "actualRank": 131
+    },
+    "Raheim Sanders": {
+      "position": "RB",
+      "opponent": "vs CIN",
+      "preGameRank": 79,
+      "fantasyPoints": 14.2,
+      "actualRank": 132
+    },
+    "Justin Jefferson": {
+      "position": "WR",
+      "opponent": "@ CHI",
+      "preGameRank": 2,
+      "fantasyPoints": 14.1,
+      "actualRank": 133
+    },
+    "David Njoku": {
+      "position": "TE",
+      "opponent": "vs CIN",
+      "preGameRank": 6,
+      "fantasyPoints": 14.1,
+      "actualRank": 134
+    },
+    "TreVeyon Henderson": {
+      "position": "RB",
+      "opponent": "vs LV",
+      "preGameRank": 20,
+      "fantasyPoints": 14,
+      "actualRank": 135
+    },
+    "Marvin Mims Jr.": {
+      "position": "WR",
+      "opponent": "vs TEN",
+      "preGameRank": 47,
+      "fantasyPoints": 14,
+      "actualRank": 136
+    },
+    "Romeo Doubs": {
+      "position": "WR",
+      "opponent": "vs DET",
+      "preGameRank": 51,
+      "fantasyPoints": 14,
+      "actualRank": 137
+    },
+    "Dalton Kincaid": {
+      "position": "TE",
+      "opponent": "vs BAL",
+      "preGameRank": 14,
+      "fantasyPoints": 14,
+      "actualRank": 138
+    },
+    "Raheem Mostert": {
+      "position": "RB",
+      "opponent": "@ NE",
+      "preGameRank": 84,
+      "fantasyPoints": 13.9,
+      "actualRank": 139
+    },
+    "Adam Thielen": {
+      "position": "WR",
+      "opponent": "@ CHI",
+      "preGameRank": 62,
+      "fantasyPoints": 13.9,
+      "actualRank": 140
+    },
+    "Xavier Worthy": {
+      "position": "WR",
+      "opponent": "@ LAC",
+      "preGameRank": 13,
+      "fantasyPoints": 13.8,
+      "actualRank": 141
+    },
+    "Tetairoa McMillan": {
+      "position": "WR",
+      "opponent": "@ JAX",
+      "preGameRank": 19,
+      "fantasyPoints": 13.8,
+      "actualRank": 142
+    },
+    "Josh Jacobs": {
+      "position": "RB",
+      "opponent": "vs DET",
+      "preGameRank": 12,
+      "fantasyPoints": 13.7,
+      "actualRank": 143
+    },
+    "CeeDee Lamb": {
+      "position": "WR",
+      "opponent": "@ PHI",
+      "preGameRank": 7,
+      "fantasyPoints": 13.7,
+      "actualRank": 144
+    },
+    "Luther Burden III": {
+      "position": "WR",
+      "opponent": "vs MIN",
+      "preGameRank": 80,
+      "fantasyPoints": 13.7,
+      "actualRank": 145
+    },
+    "Jordan Watkins": {
+      "position": "WR",
+      "opponent": "@ SEA",
+      "preGameRank": 119,
+      "fantasyPoints": 13.7,
+      "actualRank": 146
+    },
+    "Sam LaPorta": {
+      "position": "TE",
+      "opponent": "@ GB",
+      "preGameRank": 8,
+      "fantasyPoints": 13.7,
+      "actualRank": 147
+    },
+    "Jaxon Smith-Njigba": {
+      "position": "WR",
+      "opponent": "vs SF",
+      "preGameRank": 15,
+      "fantasyPoints": 13.5,
+      "actualRank": 148
+    },
+    "Savion Williams": {
+      "position": "WR",
+      "opponent": "vs DET",
+      "preGameRank": 124,
+      "fantasyPoints": 13.5,
+      "actualRank": 149
+    },
+    "Jacory Croskey-Merritt": {
+      "position": "RB",
+      "opponent": "vs NYG",
+      "preGameRank": 35,
+      "fantasyPoints": 13.4,
+      "actualRank": 150
+    },
+    "Ty Johnson": {
+      "position": "RB",
+      "opponent": "vs BAL",
+      "preGameRank": 68,
+      "fantasyPoints": 13.4,
+      "actualRank": 151
+    },
+    "Tutu Atwell": {
+      "position": "WR",
+      "opponent": "vs HOU",
+      "preGameRank": 79,
+      "fantasyPoints": 13.3,
+      "actualRank": 152
+    },
+    "Tez Johnson": {
+      "position": "WR",
+      "opponent": "@ ATL",
+      "preGameRank": 114,
+      "fantasyPoints": 13.3,
+      "actualRank": 153
+    },
+    "George Kittle": {
+      "position": "TE",
+      "opponent": "@ SEA",
+      "preGameRank": 3,
+      "fantasyPoints": 13.2,
+      "actualRank": 154
+    },
+    "Jonnu Smith": {
+      "position": "TE",
+      "opponent": "@ NYJ",
+      "preGameRank": 21,
+      "fantasyPoints": 13.2,
+      "actualRank": 155
+    },
+    "Hunter Luepke": {
+      "position": "RB",
+      "opponent": "@ PHI",
+      "preGameRank": 80,
+      "fantasyPoints": 13.1,
+      "actualRank": 156
+    },
+    "Josh Reynolds": {
+      "position": "WR",
+      "opponent": "vs PIT",
+      "preGameRank": 84,
+      "fantasyPoints": 13.1,
+      "actualRank": 157
+    },
+    "Ja'Tavion Sanders": {
+      "position": "TE",
+      "opponent": "@ JAX",
+      "preGameRank": 23,
+      "fantasyPoints": 13.1,
+      "actualRank": 158
+    },
+    "DeVonta Smith": {
+      "position": "WR",
+      "opponent": "vs DAL",
+      "preGameRank": 23,
+      "fantasyPoints": 12.9,
+      "actualRank": 159
+    },
+    "Nick Westbrook-Ikhine": {
+      "position": "WR",
+      "opponent": "@ IND",
+      "preGameRank": 101,
+      "fantasyPoints": 12.8,
+      "actualRank": 160
+    },
+    "Van Jefferson": {
+      "position": "WR",
+      "opponent": "@ DEN",
+      "preGameRank": 122,
+      "fantasyPoints": 12.8,
+      "actualRank": 161
+    },
+    "Austin Ekeler": {
+      "position": "RB",
+      "opponent": "vs NYG",
+      "preGameRank": 32,
+      "fantasyPoints": 12.7,
+      "actualRank": 162
+    },
+    "Colston Loveland": {
+      "position": "TE",
+      "opponent": "vs MIN",
+      "preGameRank": 19,
+      "fantasyPoints": 12.7,
+      "actualRank": 163
+    },
+    "Mason Taylor": {
+      "position": "TE",
+      "opponent": "vs PIT",
+      "preGameRank": 26,
+      "fantasyPoints": 12.7,
+      "actualRank": 164
+    },
+    "Rico Dowdle": {
+      "position": "RB",
+      "opponent": "@ JAX",
+      "preGameRank": 46,
+      "fantasyPoints": 12.6,
+      "actualRank": 165
+    },
+    "Mark Andrews": {
+      "position": "TE",
+      "opponent": "@ BUF",
+      "preGameRank": 7,
+      "fantasyPoints": 12.6,
+      "actualRank": 166
+    },
+    "Tucker Kraft": {
+      "position": "TE",
+      "opponent": "vs DET",
+      "preGameRank": 9,
+      "fantasyPoints": 12.6,
+      "actualRank": 167
+    },
+    "Evan Engram": {
+      "position": "TE",
+      "opponent": "vs TEN",
+      "preGameRank": 11,
+      "fantasyPoints": 12.6,
+      "actualRank": 168
+    },
+    "KaVontae Turpin": {
+      "position": "WR",
+      "opponent": "@ PHI",
+      "preGameRank": 61,
+      "fantasyPoints": 12.5,
+      "actualRank": 169
+    },
+    "KeAndre Lambert-Smith": {
+      "position": "WR",
+      "opponent": "vs KC",
+      "preGameRank": 93,
+      "fantasyPoints": 12.5,
+      "actualRank": 170
+    },
+    "Rashod Bateman": {
+      "position": "WR",
+      "opponent": "@ BUF",
+      "preGameRank": 55,
+      "fantasyPoints": 12.4,
+      "actualRank": 171
+    },
+    "Adonai Mitchell": {
+      "position": "WR",
+      "opponent": "vs MIA",
+      "preGameRank": 67,
+      "fantasyPoints": 12.4,
+      "actualRank": 172
+    },
+    "Roman Wilson": {
+      "position": "WR",
+      "opponent": "@ NYJ",
+      "preGameRank": 98,
+      "fantasyPoints": 12.4,
+      "actualRank": 173
+    },
+    "Jordan Whittington": {
+      "position": "WR",
+      "opponent": "vs HOU",
+      "preGameRank": 113,
+      "fantasyPoints": 12.4,
+      "actualRank": 174
+    },
+    "Calvin Ridley": {
+      "position": "WR",
+      "opponent": "@ DEN",
+      "preGameRank": 34,
+      "fantasyPoints": 12.3,
+      "actualRank": 175
+    },
+    "JuJu Smith-Schuster": {
+      "position": "WR",
+      "opponent": "@ LAC",
+      "preGameRank": 100,
+      "fantasyPoints": 12.3,
+      "actualRank": 176
+    },
+    "Marvin Harrison Jr.": {
+      "position": "WR",
+      "opponent": "@ NO",
+      "preGameRank": 21,
+      "fantasyPoints": 12.2,
+      "actualRank": 177
+    },
+    "DJ Giddens": {
+      "position": "RB",
+      "opponent": "vs MIA",
+      "preGameRank": 65,
+      "fantasyPoints": 12.1,
+      "actualRank": 178
+    },
+    "Jalen Tolbert": {
+      "position": "WR",
+      "opponent": "@ PHI",
+      "preGameRank": 90,
+      "fantasyPoints": 12.1,
+      "actualRank": 179
+    },
+    "Xavier Hutchinson": {
+      "position": "WR",
+      "opponent": "@ LAR",
+      "preGameRank": 125,
+      "fantasyPoints": 12.1,
+      "actualRank": 180
+    },
+    "Jahan Dotson": {
+      "position": "WR",
+      "opponent": "vs DAL",
+      "preGameRank": 110,
+      "fantasyPoints": 12,
+      "actualRank": 181
+    },
+    "DJ Moore": {
+      "position": "WR",
+      "opponent": "vs MIN",
+      "preGameRank": 29,
+      "fantasyPoints": 11.9,
+      "actualRank": 182
+    },
+    "Wan'Dale Robinson": {
+      "position": "WR",
+      "opponent": "@ WSH",
+      "preGameRank": 59,
+      "fantasyPoints": 11.9,
+      "actualRank": 183
+    },
+    "Alec Pierce": {
+      "position": "WR",
+      "opponent": "vs MIA",
+      "preGameRank": 68,
+      "fantasyPoints": 11.9,
+      "actualRank": 184
+    },
+    "Kayshon Boutte": {
+      "position": "WR",
+      "opponent": "vs LV",
+      "preGameRank": 89,
+      "fantasyPoints": 11.8,
+      "actualRank": 185
+    },
+    "Travis Kelce": {
+      "position": "TE",
+      "opponent": "@ LAC",
+      "preGameRank": 5,
+      "fantasyPoints": 11.8,
+      "actualRank": 186
+    },
+    "Keaton Mitchell": {
+      "position": "RB",
+      "opponent": "@ BUF",
+      "preGameRank": 49,
+      "fantasyPoints": 11.7,
+      "actualRank": 187
+    },
+    "Tyler Warren": {
+      "position": "TE",
+      "opponent": "vs MIA",
+      "preGameRank": 10,
+      "fantasyPoints": 11.7,
+      "actualRank": 188
+    },
+    "Cade Otton": {
+      "position": "TE",
+      "opponent": "@ ATL",
+      "preGameRank": 22,
+      "fantasyPoints": 11.7,
+      "actualRank": 189
+    },
+    "Josh Downs": {
+      "position": "WR",
+      "opponent": "vs MIA",
+      "preGameRank": 43,
+      "fantasyPoints": 11.6,
+      "actualRank": 190
+    },
+    "Jayden Reed": {
+      "position": "WR",
+      "opponent": "vs DET",
+      "preGameRank": 60,
+      "fantasyPoints": 11.6,
+      "actualRank": 191
+    },
+    "Brian Robinson Jr.": {
+      "position": "RB",
+      "opponent": "@ SEA",
+      "preGameRank": 54,
+      "fantasyPoints": 11.5,
+      "actualRank": 192
+    },
+    "Quentin Johnston": {
+      "position": "WR",
+      "opponent": "vs KC",
+      "preGameRank": 72,
+      "fantasyPoints": 11.5,
+      "actualRank": 193
+    },
+    "Greg Dortch": {
+      "position": "WR",
+      "opponent": "@ NO",
+      "preGameRank": 117,
+      "fantasyPoints": 11.5,
+      "actualRank": 194
+    },
+    "Hunter Henry": {
+      "position": "TE",
+      "opponent": "vs LV",
+      "preGameRank": 13,
+      "fantasyPoints": 11.5,
+      "actualRank": 195
+    },
+    "Zay Jones": {
+      "position": "WR",
+      "opponent": "@ NO",
+      "preGameRank": 106,
+      "fantasyPoints": 11.4,
+      "actualRank": 196
+    },
+    "Stefon Diggs": {
+      "position": "WR",
+      "opponent": "vs LV",
+      "preGameRank": 38,
+      "fantasyPoints": 11.3,
+      "actualRank": 197
+    },
+    "Isaiah Bond": {
+      "position": "WR",
+      "opponent": "vs CIN",
+      "preGameRank": 127,
+      "fantasyPoints": 11.3,
+      "actualRank": 198
+    },
+    "Kenneth Gainwell": {
+      "position": "RB",
+      "opponent": "@ NYJ",
+      "preGameRank": 64,
+      "fantasyPoints": 11.2,
+      "actualRank": 199
+    },
+    "Antonio Gibson": {
+      "position": "RB",
+      "opponent": "vs LV",
+      "preGameRank": 86,
+      "fantasyPoints": 11.2,
+      "actualRank": 200
+    },
+    "Garrett Wilson": {
+      "position": "WR",
+      "opponent": "vs PIT",
+      "preGameRank": 24,
+      "fantasyPoints": 11.2,
+      "actualRank": 201
+    },
+    "Calvin Austin III": {
+      "position": "WR",
+      "opponent": "@ NYJ",
+      "preGameRank": 78,
+      "fantasyPoints": 11.2,
+      "actualRank": 202
+    },
+    "David Moore": {
+      "position": "WR",
+      "opponent": "@ JAX",
+      "preGameRank": 128,
+      "fantasyPoints": 11.2,
+      "actualRank": 203
+    },
+    "RJ Harvey": {
+      "position": "RB",
+      "opponent": "vs TEN",
+      "preGameRank": 25,
+      "fantasyPoints": 11.1,
+      "actualRank": 204
+    },
+    "Troy Franklin": {
+      "position": "WR",
+      "opponent": "vs TEN",
+      "preGameRank": 88,
+      "fantasyPoints": 11.1,
+      "actualRank": 205
+    },
+    "Jordan Mason": {
+      "position": "RB",
+      "opponent": "@ CHI",
+      "preGameRank": 31,
+      "fantasyPoints": 11,
+      "actualRank": 206
+    },
+    "Keenan Allen": {
+      "position": "WR",
+      "opponent": "vs KC",
+      "preGameRank": 50,
+      "fantasyPoints": 11,
+      "actualRank": 207
+    },
+    "Malik Washington": {
+      "position": "WR",
+      "opponent": "@ IND",
+      "preGameRank": 74,
+      "fantasyPoints": 11,
+      "actualRank": 208
+    },
+    "Luke Musgrave": {
+      "position": "TE",
+      "opponent": "vs DET",
+      "preGameRank": 47,
+      "fantasyPoints": 11,
+      "actualRank": 209
+    },
+    "Trevor Etienne": {
+      "position": "RB",
+      "opponent": "@ JAX",
+      "preGameRank": 85,
+      "fantasyPoints": 10.9,
+      "actualRank": 210
+    },
+    "Jauan Jennings": {
+      "position": "WR",
+      "opponent": "@ SEA",
+      "preGameRank": 42,
+      "fantasyPoints": 10.9,
+      "actualRank": 211
+    },
+    "Jack Bech": {
+      "position": "WR",
+      "opponent": "@ NE",
+      "preGameRank": 99,
+      "fantasyPoints": 10.9,
+      "actualRank": 212
+    },
+    "Zach Ertz": {
+      "position": "TE",
+      "opponent": "vs NYG",
+      "preGameRank": 16,
+      "fantasyPoints": 10.9,
+      "actualRank": 213
+    },
+    "Kyle Pitts Sr.": {
+      "position": "TE",
+      "opponent": "vs TB",
+      "preGameRank": 17,
+      "fantasyPoints": 10.9,
+      "actualRank": 214
+    },
+    "Cedric Tillman": {
+      "position": "WR",
+      "opponent": "vs CIN",
+      "preGameRank": 54,
+      "fantasyPoints": 10.8,
+      "actualRank": 215
+    },
+    "Tre Tucker": {
+      "position": "WR",
+      "opponent": "@ NE",
+      "preGameRank": 95,
+      "fantasyPoints": 10.8,
+      "actualRank": 216
+    },
+    "Charlie Kolar": {
+      "position": "TE",
+      "opponent": "@ BUF",
+      "preGameRank": 46,
+      "fantasyPoints": 10.8,
+      "actualRank": 217
+    },
+    "Devin Singletary": {
+      "position": "RB",
+      "opponent": "@ WSH",
+      "preGameRank": 75,
+      "fantasyPoints": 10.7,
+      "actualRank": 218
+    },
+    "George Pickens": {
+      "position": "WR",
+      "opponent": "@ PHI",
+      "preGameRank": 31,
+      "fantasyPoints": 10.7,
+      "actualRank": 219
+    },
+    "Ricky Pearsall": {
+      "position": "WR",
+      "opponent": "@ SEA",
+      "preGameRank": 35,
+      "fantasyPoints": 10.7,
+      "actualRank": 220
+    },
+    "Xavier Legette": {
+      "position": "WR",
+      "opponent": "@ JAX",
+      "preGameRank": 57,
+      "fantasyPoints": 10.6,
+      "actualRank": 221
+    },
+    "Dallas Goedert": {
+      "position": "TE",
+      "opponent": "vs DAL",
+      "preGameRank": 12,
+      "fantasyPoints": 10.6,
+      "actualRank": 222
+    },
+    "Brenton Strange": {
+      "position": "TE",
+      "opponent": "vs CAR",
+      "preGameRank": 18,
+      "fantasyPoints": 10.6,
+      "actualRank": 223
+    },
+    "Noah Gray": {
+      "position": "TE",
+      "opponent": "@ LAC",
+      "preGameRank": 35,
+      "fantasyPoints": 10.6,
+      "actualRank": 224
+    },
+    "Zamir White": {
+      "position": "RB",
+      "opponent": "@ NE",
+      "preGameRank": 69,
+      "fantasyPoints": 10.5,
+      "actualRank": 225
+    },
+    "Keon Coleman": {
+      "position": "WR",
+      "opponent": "vs BAL",
+      "preGameRank": 48,
+      "fantasyPoints": 10.5,
+      "actualRank": 226
+    },
+    "Dont'e Thornton Jr.": {
+      "position": "WR",
+      "opponent": "@ NE",
+      "preGameRank": 63,
+      "fantasyPoints": 10.5,
+      "actualRank": 227
+    },
+    "Gage Larvadain": {
+      "position": "WR",
+      "opponent": "vs CIN",
+      "preGameRank": 130,
+      "fantasyPoints": 10.5,
+      "actualRank": 228
+    },
+    "Rome Odunze": {
+      "position": "WR",
+      "opponent": "vs MIN",
+      "preGameRank": 25,
+      "fantasyPoints": 10.4,
+      "actualRank": 229
+    },
+    "Curtis Samuel": {
+      "position": "WR",
+      "opponent": "vs BAL",
+      "preGameRank": 123,
+      "fantasyPoints": 10.4,
+      "actualRank": 230
+    },
+    "Jaylen Warren": {
+      "position": "RB",
+      "opponent": "@ NYJ",
+      "preGameRank": 26,
+      "fantasyPoints": 10.3,
+      "actualRank": 231
+    },
+    "Woody Marks": {
+      "position": "RB",
+      "opponent": "@ LAR",
+      "preGameRank": 55,
+      "fantasyPoints": 10.3,
+      "actualRank": 232
+    },
+    "Alec Ingold": {
+      "position": "RB",
+      "opponent": "@ IND",
+      "preGameRank": 89,
+      "fantasyPoints": 10.3,
+      "actualRank": 233
+    },
+    "Ray-Ray McCloud III": {
+      "position": "WR",
+      "opponent": "vs TB",
+      "preGameRank": 64,
+      "fantasyPoints": 10.3,
+      "actualRank": 234
+    },
+    "Pat Bryant": {
+      "position": "WR",
+      "opponent": "vs TEN",
+      "preGameRank": 85,
+      "fantasyPoints": 10.3,
+      "actualRank": 235
+    },
+    "Tim Patrick": {
+      "position": "WR",
+      "opponent": "vs CAR",
+      "preGameRank": 108,
+      "fantasyPoints": 10.3,
+      "actualRank": 236
+    },
+    "Arian Smith": {
+      "position": "WR",
+      "opponent": "vs PIT",
+      "preGameRank": 116,
+      "fantasyPoints": 10.3,
+      "actualRank": 237
+    },
+    "Kyle Monangai": {
+      "position": "RB",
+      "opponent": "vs MIN",
+      "preGameRank": 52,
+      "fantasyPoints": 10.2,
+      "actualRank": 238
+    },
+    "J.K. Dobbins": {
+      "position": "RB",
+      "opponent": "vs TEN",
+      "preGameRank": 29,
+      "fantasyPoints": 10.1,
+      "actualRank": 239
+    },
+    "Cam Skattebo": {
+      "position": "RB",
+      "opponent": "@ WSH",
+      "preGameRank": 48,
+      "fantasyPoints": 10.1,
+      "actualRank": 240
+    },
+    "Elic Ayomanor": {
+      "position": "WR",
+      "opponent": "@ DEN",
+      "preGameRank": 82,
+      "fantasyPoints": 10.1,
+      "actualRank": 241
+    },
+    "Tyler Lockett": {
+      "position": "WR",
+      "opponent": "@ DEN",
+      "preGameRank": 70,
+      "fantasyPoints": 10,
+      "actualRank": 242
+    },
+    "Sterling Shepard": {
+      "position": "WR",
+      "opponent": "@ ATL",
+      "preGameRank": 96,
+      "fantasyPoints": 10,
+      "actualRank": 243
+    },
+    "Jaylin Lane": {
+      "position": "WR",
+      "opponent": "vs NYG",
+      "preGameRank": 104,
+      "fantasyPoints": 10,
+      "actualRank": 244
+    },
+    "Justice Hill": {
+      "position": "RB",
+      "opponent": "@ BUF",
+      "preGameRank": 59,
+      "fantasyPoints": 9.9,
+      "actualRank": 245
+    },
+    "Jameson Williams": {
+      "position": "WR",
+      "opponent": "@ GB",
+      "preGameRank": 30,
+      "fantasyPoints": 9.9,
+      "actualRank": 246
+    },
+    "Chris Olave": {
+      "position": "WR",
+      "opponent": "vs ARI",
+      "preGameRank": 36,
+      "fantasyPoints": 9.9,
+      "actualRank": 247
+    },
+    "Darius Slayton": {
+      "position": "WR",
+      "opponent": "@ WSH",
+      "preGameRank": 65,
+      "fantasyPoints": 9.9,
+      "actualRank": 248
+    },
+    "Jamari Thrash": {
+      "position": "WR",
+      "opponent": "vs CIN",
+      "preGameRank": 105,
+      "fantasyPoints": 9.9,
+      "actualRank": 249
+    },
+    "Blake Corum": {
+      "position": "RB",
+      "opponent": "vs HOU",
+      "preGameRank": 58,
+      "fantasyPoints": 9.8,
+      "actualRank": 250
+    },
+    "Emanuel Wilson": {
+      "position": "RB",
+      "opponent": "vs DET",
+      "preGameRank": 74,
+      "fantasyPoints": 9.8,
+      "actualRank": 251
+    },
+    "D'Andre Swift": {
+      "position": "RB",
+      "opponent": "vs MIN",
+      "preGameRank": 28,
+      "fantasyPoints": 9.7,
+      "actualRank": 252
+    },
+    "Miles Sanders": {
+      "position": "RB",
+      "opponent": "@ PHI",
+      "preGameRank": 56,
+      "fantasyPoints": 9.7,
+      "actualRank": 253
+    },
+    "Marquise Brown": {
+      "position": "WR",
+      "opponent": "@ LAC",
+      "preGameRank": 52,
+      "fantasyPoints": 9.7,
+      "actualRank": 254
+    },
+    "Jalin Hyatt": {
+      "position": "WR",
+      "opponent": "@ WSH",
+      "preGameRank": 120,
+      "fantasyPoints": 9.7,
+      "actualRank": 255
+    },
+    "Tyler Conklin": {
+      "position": "TE",
+      "opponent": "vs KC",
+      "preGameRank": 37,
+      "fantasyPoints": 9.7,
+      "actualRank": 256
+    },
+    "Jaylen Waddle": {
+      "position": "WR",
+      "opponent": "@ IND",
+      "preGameRank": 28,
+      "fantasyPoints": 9.6,
+      "actualRank": 257
+    },
+    "Jakobi Meyers": {
+      "position": "WR",
+      "opponent": "@ NE",
+      "preGameRank": 41,
+      "fantasyPoints": 9.6,
+      "actualRank": 258
+    },
+    "DeAndre Hopkins": {
+      "position": "WR",
+      "opponent": "@ BUF",
+      "preGameRank": 69,
+      "fantasyPoints": 9.6,
+      "actualRank": 259
+    },
+    "AJ Barner": {
+      "position": "TE",
+      "opponent": "vs SF",
+      "preGameRank": 31,
+      "fantasyPoints": 9.6,
+      "actualRank": 260
+    },
+    "Kendre Miller": {
+      "position": "RB",
+      "opponent": "vs ARI",
+      "preGameRank": 62,
+      "fantasyPoints": 9.5,
+      "actualRank": 261
+    },
+    "Jayden Higgins": {
+      "position": "WR",
+      "opponent": "@ LAR",
+      "preGameRank": 53,
+      "fantasyPoints": 9.5,
+      "actualRank": 262
+    },
+    "Jake Ferguson": {
+      "position": "TE",
+      "opponent": "@ PHI",
+      "preGameRank": 15,
+      "fantasyPoints": 9.5,
+      "actualRank": 263
+    },
+    "Tank Bigsby": {
+      "position": "RB",
+      "opponent": "vs CAR",
+      "preGameRank": 37,
+      "fantasyPoints": 9.4,
+      "actualRank": 264
+    },
+    "Michael Wilson": {
+      "position": "WR",
+      "opponent": "@ NO",
+      "preGameRank": 83,
+      "fantasyPoints": 9.4,
+      "actualRank": 265
+    },
+    "Kalif Raymond": {
+      "position": "WR",
+      "opponent": "@ GB",
+      "preGameRank": 126,
+      "fantasyPoints": 9.4,
+      "actualRank": 266
+    },
+    "Tahj Brooks": {
+      "position": "RB",
+      "opponent": "@ CLE",
+      "preGameRank": 81,
+      "fantasyPoints": 9.3,
+      "actualRank": 267
+    },
+    "Samaje Perine": {
+      "position": "RB",
+      "opponent": "@ CLE",
+      "preGameRank": 71,
+      "fantasyPoints": 9.2,
+      "actualRank": 268
+    },
+    "Deebo Samuel Sr.": {
+      "position": "WR",
+      "opponent": "vs NYG",
+      "preGameRank": 39,
+      "fantasyPoints": 9.2,
+      "actualRank": 269
+    },
+    "Darnell Mooney": {
+      "position": "WR",
+      "opponent": "vs TB",
+      "preGameRank": 49,
+      "fantasyPoints": 9.2,
+      "actualRank": 270
+    },
+    "Hunter Renfrow": {
+      "position": "WR",
+      "opponent": "@ JAX",
+      "preGameRank": 91,
+      "fantasyPoints": 9.2,
+      "actualRank": 271
+    },
+    "Kyle Williams": {
+      "position": "WR",
+      "opponent": "vs LV",
+      "preGameRank": 92,
+      "fantasyPoints": 9.1,
+      "actualRank": 272
+    },
+    "Jerome Ford": {
+      "position": "RB",
+      "opponent": "vs CIN",
+      "preGameRank": 36,
+      "fantasyPoints": 9,
+      "actualRank": 273
+    },
+    "DK Metcalf": {
+      "position": "WR",
+      "opponent": "@ NYJ",
+      "preGameRank": 33,
+      "fantasyPoints": 8.9,
+      "actualRank": 274
+    },
+    "Noah Brown": {
+      "position": "WR",
+      "opponent": "vs NYG",
+      "preGameRank": 97,
+      "fantasyPoints": 8.9,
+      "actualRank": 275
+    },
+    "Chig Okonkwo": {
+      "position": "TE",
+      "opponent": "@ DEN",
+      "preGameRank": 20,
+      "fantasyPoints": 8.9,
+      "actualRank": 276
+    },
+    "Theo Johnson": {
+      "position": "TE",
+      "opponent": "@ WSH",
+      "preGameRank": 27,
+      "fantasyPoints": 8.8,
+      "actualRank": 277
+    },
+    "Cole Kmet": {
+      "position": "TE",
+      "opponent": "vs MIN",
+      "preGameRank": 36,
+      "fantasyPoints": 8.8,
+      "actualRank": 278
+    },
+    "Tre' Harris": {
+      "position": "WR",
+      "opponent": "vs KC",
+      "preGameRank": 71,
+      "fantasyPoints": 8.7,
+      "actualRank": 279
+    },
+    "Elijah Arroyo": {
+      "position": "TE",
+      "opponent": "vs SF",
+      "preGameRank": 32,
+      "fantasyPoints": 8.7,
+      "actualRank": 280
+    },
+    "Harold Fannin Jr.": {
+      "position": "TE",
+      "opponent": "vs CIN",
+      "preGameRank": 33,
+      "fantasyPoints": 8.7,
+      "actualRank": 281
+    },
+    "Terrance Ferguson": {
+      "position": "TE",
+      "opponent": "vs HOU",
+      "preGameRank": 48,
+      "fantasyPoints": 8.7,
+      "actualRank": 282
+    },
+    "Michael Pittman Jr.": {
+      "position": "WR",
+      "opponent": "vs MIA",
+      "preGameRank": 44,
+      "fantasyPoints": 8.5,
+      "actualRank": 283
+    },
+    "Mack Hollins": {
+      "position": "WR",
+      "opponent": "vs LV",
+      "preGameRank": 109,
+      "fantasyPoints": 8.5,
+      "actualRank": 284
+    },
+    "Mike Gesicki": {
+      "position": "TE",
+      "opponent": "@ CLE",
+      "preGameRank": 28,
+      "fantasyPoints": 8.5,
+      "actualRank": 285
+    },
+    "Austin Hooper": {
+      "position": "TE",
+      "opponent": "vs LV",
+      "preGameRank": 39,
+      "fantasyPoints": 8.5,
+      "actualRank": 286
+    },
+    "Devaughn Vele": {
+      "position": "WR",
+      "opponent": "vs ARI",
+      "preGameRank": 102,
+      "fantasyPoints": 8.4,
+      "actualRank": 287
+    },
+    "Elijah Moore": {
+      "position": "WR",
+      "opponent": "vs BAL",
+      "preGameRank": 112,
+      "fantasyPoints": 8.4,
+      "actualRank": 288
+    },
+    "Joshua Palmer": {
+      "position": "WR",
+      "opponent": "vs BAL",
+      "preGameRank": 58,
+      "fantasyPoints": 8.3,
+      "actualRank": 289
+    },
+    "Andrei Iosivas": {
+      "position": "WR",
+      "opponent": "@ CLE",
+      "preGameRank": 77,
+      "fantasyPoints": 8.2,
+      "actualRank": 290
+    },
+    "Tommy Tremble": {
+      "position": "TE",
+      "opponent": "@ JAX",
+      "preGameRank": 43,
+      "fantasyPoints": 8.2,
+      "actualRank": 291
+    },
+    "Julian Hill": {
+      "position": "TE",
+      "opponent": "@ IND",
+      "preGameRank": 49,
+      "fantasyPoints": 8.2,
+      "actualRank": 292
+    },
+    "Pat Freiermuth": {
+      "position": "TE",
+      "opponent": "@ NYJ",
+      "preGameRank": 24,
+      "fantasyPoints": 8,
+      "actualRank": 293
+    },
+    "Cade Stover": {
+      "position": "TE",
+      "opponent": "@ LAR",
+      "preGameRank": 45,
+      "fantasyPoints": 7.9,
+      "actualRank": 294
+    },
+    "Juwan Johnson": {
+      "position": "TE",
+      "opponent": "vs ARI",
+      "preGameRank": 25,
+      "fantasyPoints": 7.3,
+      "actualRank": 295
+    },
+    "Tyler Higbee": {
+      "position": "TE",
+      "opponent": "vs HOU",
+      "preGameRank": 29,
+      "fantasyPoints": 7.1,
+      "actualRank": 296
+    },
+    "Dalton Schultz": {
+      "position": "TE",
+      "opponent": "@ LAR",
+      "preGameRank": 34,
+      "fantasyPoints": 6.9,
+      "actualRank": 297
+    },
+    "Darren Waller": {
+      "position": "TE",
+      "opponent": "@ IND",
+      "preGameRank": 30,
+      "fantasyPoints": 6.8,
+      "actualRank": 298
+    },
+    "Dawson Knox": {
+      "position": "TE",
+      "opponent": "vs BAL",
+      "preGameRank": 38,
+      "fantasyPoints": 6.6,
+      "actualRank": 299
+    },
+    "Michael Mayer": {
+      "position": "TE",
+      "opponent": "@ NE",
+      "preGameRank": 40,
+      "fantasyPoints": 6.6,
+      "actualRank": 300
+    },
+    "Gunnar Helm": {
+      "position": "TE",
+      "opponent": "@ DEN",
+      "preGameRank": 42,
+      "fantasyPoints": 6.3,
+      "actualRank": 301
+    },
+    "Josh Oliver": {
+      "position": "TE",
+      "opponent": "@ CHI",
+      "preGameRank": 44,
+      "fantasyPoints": 6.3,
+      "actualRank": 302
+    },
+    "Will Dissly": {
+      "position": "TE",
+      "opponent": "vs KC",
+      "preGameRank": 41,
+      "fantasyPoints": 6.1,
+      "actualRank": 303
+    },
+    "Oronde Gadsden II": {
+      "position": "TE",
+      "opponent": "vs KC",
+      "preGameRank": 50,
+      "fantasyPoints": 6.1,
+      "actualRank": 304
+    }
+  },
+  "metadata": {
+    "totalPlayersTracked": 304,
+    "dataSource": "Dummy Data (Testing)",
+    "lastUpdated": "2025-09-05T18:36:42.118Z"
+  }
+}

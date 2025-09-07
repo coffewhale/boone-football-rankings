@@ -38,17 +38,24 @@ When Boone updates his rankings, you'll receive an email with:
 4. **Click "Generate JSON"** button
 5. **Copy the generated JSON output**
 
-### Step 3: Update Site Files
+### Step 3: Save Weekly Snapshot (NEW)
+1. **Before updating rankings.json**, save the current data as a snapshot:
+   ```bash
+   node -e "require('./snapshot-utility').saveWeeklySnapshot([WEEK_NUMBER])"
+   ```
+   Replace `[WEEK_NUMBER]` with the current NFL week (e.g., 1, 2, 3...)
+
+### Step 4: Update Site Files
 1. **Open `rankings.json`** in your code editor
 2. **Replace entire contents** with the copied JSON
 3. **Save the file**
 
-### Step 4: Update Environment Variable
+### Step 5: Update Environment Variable
 1. **Go to Netlify site settings** → Environment Variables
 2. **Update `LAST_STORED_TIMESTAMP`** with the new timestamp from the notification
 3. **Save and redeploy**
 
-### Step 5: Deploy Changes
+### Step 6: Deploy Changes
 ```bash
 git add rankings.json
 git commit -m "Update Week X rankings - [timestamp]"
@@ -64,6 +71,14 @@ Your site will automatically update within a few minutes.
 ├── rankings-entry.html     # Rankings entry tool
 ├── script.js              # Site logic (reads rankings.json)
 ├── index.html             # Main site
+├── analysis.html          # NEW: Performance analysis page
+├── snapshot-utility.js    # NEW: Weekly snapshot management
+├── analysis-utils.js      # NEW: Data analysis and CSV export
+├── data/                  # NEW: Historical data storage
+│   ├── snapshots/
+│   │   └── 2025/          # Weekly snapshots by year
+│   ├── analysis/          # Analysis results
+│   └── archive.json       # Snapshot metadata
 └── netlify/functions/     # Monitoring functions
     ├── hourly-monitor.js     # Automatic monitoring
     ├── get-timestamp.js      # Provides timestamp to frontend
@@ -127,4 +142,27 @@ Tyler Lockett WR69 @ DEN
 2025-09-04T23:46:25.000Z
 ```
 
-This workflow ensures your site always displays the most current rankings while minimizing manual work through automation.
+## NEW: Performance Analysis Features
+
+### Weekly Snapshots
+- **Purpose**: Store each week's rankings before updating for later analysis
+- **Storage**: Automatically organized by year and week in `data/snapshots/`
+- **Usage**: Run snapshot command before updating `rankings.json`
+
+### Analysis Page
+- **URL**: `analysis.html` (visit after deploying)
+- **Features**: View historical snapshots, compare weekly changes
+- **Future**: Will include accuracy analysis when final results are integrated
+
+### CSV Export (Coming Soon)
+- Export weekly rankings for external analysis
+- Compare week-to-week player movement
+- Generate season-long performance reports
+
+### Integration with Final Results (Future Phase)
+When you're ready to add final results analysis:
+1. Create `final-results.json` with actual game performance data
+2. Use `analysis-utils.js` to calculate accuracy metrics
+3. Generate reports comparing Boone's predictions to actual outcomes
+
+This enhanced workflow maintains your current process while building the foundation for comprehensive performance analysis.

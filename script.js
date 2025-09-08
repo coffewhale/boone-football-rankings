@@ -55,6 +55,13 @@ class RankingsApp {
                 const rankings = await response.json();
                 this.rankings = rankings;
                 
+                // Update published timestamp and week from rankings.json
+                if (rankings.lastUpdated) {
+                    this.updateArticlePublishedDisplay(rankings.lastUpdated);
+                }
+                if (rankings.week) {
+                    this.currentWeek = rankings.week;
+                }
                 
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('rankings-table').style.display = 'block';
@@ -192,6 +199,11 @@ class RankingsApp {
     }
     
     getCurrentWeekNumber() {
+        // Use week from rankings.json if available, otherwise calculate
+        if (this.currentWeek) {
+            return this.currentWeek;
+        }
+        
         // Calculate current NFL week based on season start
         const seasonStart = new Date('2025-09-05'); // Adjust for actual season start
         const now = new Date();

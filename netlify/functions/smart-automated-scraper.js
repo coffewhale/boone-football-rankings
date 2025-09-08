@@ -424,9 +424,17 @@ async function updateRankingsFile(results) {
             console.log('📄 No existing file to backup');
         }
         
+        // Add metadata to results
+        const outputData = {
+            ...results,
+            lastUpdated: timestampResult.currentTimestamp || new Date().toISOString(),
+            week: process.env.MONITOR_WEEK || getCurrentWeekNumber(),
+            scrapedAt: new Date().toISOString()
+        };
+        
         // Write new rankings
         const rankingsPath = path.join(process.cwd(), 'rankings.json');
-        const formattedResults = JSON.stringify(results, null, 2);
+        const formattedResults = JSON.stringify(outputData, null, 2);
         await fs.writeFile(rankingsPath, formattedResults);
         
         console.log('✅ rankings.json updated successfully');
@@ -582,4 +590,12 @@ function getETHour(date) {
     if (etHour >= 24) etHour -= 24;
     
     return etHour;
+}
+
+function getCurrentWeekNumber() {
+    // Calculate current NFL week based on season start
+    const seasonStart = new Date('2025-09-05'); // Adjust for actual season start
+    const now = new Date();
+    const weeksDiff = Math.floor((now - seasonStart) / (7 * 24 * 60 * 60 * 1000));
+    return Math.max(1, Math.min(18, weeksDiff + 1));
 }

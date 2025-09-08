@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "cheerio": "^1.1.2",
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "playwright-chromium": "^1.40.0"
   },
   "keywords": [
     "fantasy",

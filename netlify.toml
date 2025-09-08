@@ -34,3 +34,7 @@
 # Only checks during active hours (6 AM - 6 PM ET)
 [functions.hourly-monitor]
   schedule = "0 * * * *"  # Every hour (function itself handles active hours check)
+
+# Smart Automated Scraper with FLEX-based change detection
+[functions."smart-automated-scraper"]
+  schedule = "0 6-18 * * *"  # Every hour from 6 AM to 6 PM ET

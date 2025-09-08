@@ -1,0 +1,76 @@
+{
+  "scraping_configs": [
+    {
+      "position": "qb",
+      "name": "Quarterbacks",
+      "urls": [
+        "https://datawrapper.dwcdn.net/bqgx9/"
+      ],
+      "enabled": true
+    },
+    {
+      "position": "rb",
+      "name": "Running Backs", 
+      "urls": [
+        "https://datawrapper.dwcdn.net/REPLACE_WITH_RB_ID/"
+      ],
+      "enabled": false,
+      "note": "Replace REPLACE_WITH_RB_ID with actual Datawrapper ID"
+    },
+    {
+      "position": "wr",
+      "name": "Wide Receivers",
+      "urls": [
+        "https://datawrapper.dwcdn.net/REPLACE_WITH_WR_ID/"
+      ],
+      "enabled": false,
+      "note": "Replace REPLACE_WITH_WR_ID with actual Datawrapper ID"
+    },
+    {
+      "position": "te", 
+      "name": "Tight Ends",
+      "urls": [
+        "https://datawrapper.dwcdn.net/REPLACE_WITH_TE_ID/"
+      ],
+      "enabled": false,
+      "note": "Replace REPLACE_WITH_TE_ID with actual Datawrapper ID"
+    },
+    {
+      "position": "flex",
+      "name": "FLEX",
+      "urls": [
+        "https://datawrapper.dwcdn.net/REPLACE_WITH_FLEX_ID/"
+      ],
+      "enabled": false,
+      "note": "Replace REPLACE_WITH_FLEX_ID with actual Datawrapper ID"
+    },
+    {
+      "position": "def",
+      "name": "Defense/ST", 
+      "urls": [
+        "https://datawrapper.dwcdn.net/REPLACE_WITH_DEF_ID/"
+      ],
+      "enabled": false,
+      "note": "Replace REPLACE_WITH_DEF_ID with actual Datawrapper ID"
+    },
+    {
+      "position": "k",
+      "name": "Kickers",
+      "urls": [
+        "https://datawrapper.dwcdn.net/REPLACE_WITH_K_ID/"
+      ],
+      "enabled": false,
+      "note": "Replace REPLACE_WITH_K_ID with actual Datawrapper ID"
+    }
+  ],
+  "scraper_settings": {
+    "headless": true,
+    "timeout": 30000,
+    "wait_between_positions": 2,
+    "max_retries": 3
+  },
+  "output_settings": {
+    "backup_existing": true,
+    "output_file": "rankings.json"
+  }
+}

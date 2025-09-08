@@ -1,0 +1,21 @@
+{
+  "monitor_url": "https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-quarterbacks-for-week-1-174915206.html",
+  "last_stored_timestamp": null,
+  "week_number": 1,
+  "datawrapper_urls": {
+    "qb": ["https://datawrapper.dwcdn.net/bqgx9/"],
+    "rb": ["https://www.datawrapper.de/_/hPdJB/"],
+    "wr": ["https://www.datawrapper.de/_/LBvt2/"],
+    "te": ["https://www.datawrapper.de/_/fDdoY/"],
+    "flex": ["https://www.datawrapper.de/_/FpqPP"],
+    "def": ["https://www.datawrapper.de/_/V27sf"],
+    "k": ["https://www.datawrapper.de/_/t1sdx"]
+  },
+  "backup_existing": true,
+  "output_file": "rankings.json",
+  "scraper_settings": {
+    "headless": true,
+    "timeout": 30000,
+    "max_retries": 3
+  }
+}

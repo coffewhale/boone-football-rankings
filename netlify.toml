@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "echo 'Static site - no build needed'"
+  command = "npm install && npx playwright install chromium"
   functions = "netlify/functions"
 
 [functions]
@@ -38,3 +38,7 @@
 # Smart Automated Scraper with FLEX-based change detection
 [functions."smart-automated-scraper"]
   schedule = "0 6-18 * * *"  # Every hour from 6 AM to 6 PM ET
+
+# Archive weekly rankings every Monday at 11:59 PM ET
+[functions."archive-weekly-rankings"]
+  schedule = "59 23 * * MON"  # Monday nights at 11:59 PM ET

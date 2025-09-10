@@ -6,6 +6,23 @@ exports.handler = async (event, context) => {
     console.log('⏰ Working timestamp-based updater starting...');
     
     try {
+        // Check environment variables first
+        const monitorUrl = process.env.MONITOR_URL;
+        const lastTimestamp = process.env.LAST_STORED_TIMESTAMP;
+        const githubToken = process.env.GITHUB_TOKEN;
+        
+        console.log('🔍 Environment check:');
+        console.log(`  MONITOR_URL: ${monitorUrl ? 'exists' : 'missing'}`);
+        console.log(`  LAST_STORED_TIMESTAMP: ${lastTimestamp ? 'exists' : 'missing'}`);
+        console.log(`  GITHUB_TOKEN: ${githubToken ? 'exists' : 'missing'}`);
+        
+        if (!monitorUrl) {
+            throw new Error('MONITOR_URL environment variable is required');
+        }
+        if (!githubToken) {
+            throw new Error('GITHUB_TOKEN environment variable is required');
+        }
+        
         // Step 1: Check timestamp (we know this works)
         const timestampResult = await checkTimestamp();
         

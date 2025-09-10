@@ -1,5 +1,4 @@
-// Smart Automated Scraper with Forgiveness and FLEX-based Change Detection
-const { chromium } = require('playwright-chromium');
+// Smart Automated Scraper with CSV-based scraping (faster than Playwright)
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 const fs = require('fs').promises;
@@ -451,107 +450,183 @@ async function updateRankingsFile(results) {
     }
 }
 
-// Include all the scraping functions from previous implementation
+// CSV-based scraping functions (much faster than Playwright)
 async function scrapeAllPositions(datawrapperUrls) {
     const results = {};
-    const browser = await chromium.launch();
     
-    try {
-        for (const [position, urls] of Object.entries(datawrapperUrls)) {
-            if (!urls || urls.length === 0) {
-                results[position] = [];
-                continue;
-            }
-            
-            console.log(`🔍 Scraping ${position.toUpperCase()} from ${urls.length} URL(s)`);
-            const rankings = await scrapePosition(browser, position, urls);
-            results[position] = rankings;
-            console.log(`  ✅ ${rankings.length} players`);
-            
-            // Brief pause between positions
-            await new Promise(resolve => setTimeout(resolve, 1000));
+    for (const [position, urls] of Object.entries(datawrapperUrls)) {
+        if (!urls || urls.length === 0) {
+            results[position] = [];
+            continue;
         }
         
-        return results;
-        
-    } finally {
-        await browser.close();
+        console.log(`🔍 Scraping ${position.toUpperCase()} from ${urls.length} CSV URL(s)`);
+        const rankings = await scrapePositionCSV(position, urls);
+        results[position] = rankings;
+        console.log(`  ✅ ${rankings.length} players`);
     }
+    
+    return results;
 }
 
-async function scrapePosition(browser, position, urls) {
+async function scrapePositionCSV(position, urls) {
     for (let i = 0; i < urls.length; i++) {
         const url = urls[i];
-        let page;
         
         try {
-            console.log(`  Attempting URL ${i + 1}/${urls.length}`);
+            console.log(`  Attempting CSV URL ${i + 1}/${urls.length}`);
             
-            page = await browser.newPage();
-            await page.goto(url, { timeout: 20000 });
-            await page.waitForSelector('table', { timeout: 15000 });
-            await page.waitForTimeout(3000);
+            // Convert Datawrapper URL to CSV endpoint
+            const csvUrl = convertToCSVEndpoint(url);
+            console.log(`  CSV endpoint: ${csvUrl}`);
             
-            const rankings = [];
-            const rows = await page.locator('tbody tr[class*="svelte"]').all();
+            const response = await fetch(csvUrl, {
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+                },
+                timeout: 15000
+            });
             
-            for (const row of rows) {
-                try {
-                    const rankingData = await extractRowData(row, position);
-                    if (rankingData) {
-                        rankings.push(rankingData);
-                    }
-                } catch (e) {
-                    // Skip invalid rows
-                }
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
             }
             
+            const csvText = await response.text();
+            const rankings = parseCSVData(csvText, position);
+            
             if (rankings.length > 0) {
-                console.log(`    ✅ ${rankings.length} players scraped`);
+                console.log(`    ✅ ${rankings.length} players parsed from CSV`);
                 return rankings;
             }
             
         } catch (error) {
             console.log(`    ❌ Error: ${error.message}`);
-        } finally {
-            if (page) await page.close();
         }
     }
     
     return [];
 }
 
-async function extractRowData(row, position) {
-    try {
-        const rankElem = row.locator('th[class*="svelte"]').first();
-        const rank = await rankElem.innerText();
-        const rankNum = rank.trim();
-        
-        const tdElements = await row.locator('td[class*="svelte"]').all();
-        
-        if (tdElements.length < 2 || !rankNum.match(/^\d+$/)) {
-            return null;
+function convertToCSVEndpoint(datawrapperUrl) {
+    // Convert various Datawrapper URL formats to CSV endpoint
+    
+    // Format 1: https://datawrapper.dwcdn.net/bqgx9/ -> https://datawrapper.dwcdn.net/bqgx9/1/dataset.csv
+    if (datawrapperUrl.includes('datawrapper.dwcdn.net')) {
+        const match = datawrapperUrl.match(/datawrapper\.dwcdn\.net\/([^\/]+)/);
+        if (match) {
+            return `https://datawrapper.dwcdn.net/${match[1]}/1/dataset.csv`;
         }
-        
-        const player = await tdElements[0].innerText();
-        const opponent = await tdElements[tdElements.length - 1].innerText();
-        
-        const rankingData = {
-            preGameRank: parseInt(rankNum),
-            player: player.trim(),
-            opponent: opponent.trim()
-        };
-        
-        if (position === 'flex') {
-            const guessedPosition = guessPosition(player.trim());
-            rankingData.positionRank = `${guessedPosition}${rankNum}`;
-        }
-        
-        return rankingData;
-        
-    } catch (error) {
-        return null;
     }
+    
+    // Format 2: https://www.datawrapper.de/_/hPdJB/ -> https://datawrapper.dwcdn.net/hPdJB/1/dataset.csv
+    if (datawrapperUrl.includes('www.datawrapper.de/_/')) {
+        const match = datawrapperUrl.match(/www\.datawrapper\.de\/_\/([^\/]+)/);
+        if (match) {
+            return `https://datawrapper.dwcdn.net/${match[1]}/1/dataset.csv`;
+        }
+    }
+    
+    // Fallback: try to extract chart ID
+    const chartIdMatch = datawrapperUrl.match(/([a-zA-Z0-9]{5,})/);
+    if (chartIdMatch) {
+        return `https://datawrapper.dwcdn.net/${chartIdMatch[1]}/1/dataset.csv`;
+    }
+    
+    throw new Error(`Cannot convert URL to CSV endpoint: ${datawrapperUrl}`);
+}
+
+function parseCSVData(csvText, position) {
+    const lines = csvText.trim().split('\n');
+    if (lines.length < 2) return [];
+    
+    const rankings = [];
+    
+    // Skip header row (index 0)
+    for (let i = 1; i < lines.length; i++) {
+        try {
+            const line = lines[i];
+            if (!line.trim()) continue;
+            
+            // Parse CSV line - handle quotes and commas properly
+            const fields = parseCSVLine(line);
+            
+            if (fields.length < 5) continue;
+            
+            // Expected format: ,Abbrev Tm,Rank,Player,Team,Opp
+            // fields[0] = empty, fields[1] = team abbrev, fields[2] = rank, fields[3] = player, fields[4] = team logo, fields[5] = opponent
+            
+            const rank = parseInt(fields[2]);
+            const player = cleanPlayerName(fields[3]);
+            const opponent = cleanOpponent(fields[5] || fields[4]); // Try both positions for opponent
+            
+            if (!rank || !player || rank < 1 || rank > 100) continue;
+            
+            const rankingData = {
+                preGameRank: rank,
+                player: player,
+                opponent: opponent
+            };
+            
+            // Add position rank for FLEX
+            if (position === 'flex') {
+                const guessedPosition = guessPosition(player);
+                rankingData.positionRank = `${guessedPosition}${rank}`;
+            }
+            
+            rankings.push(rankingData);
+            
+        } catch (e) {
+            // Skip invalid rows
+            continue;
+        }
+    }
+    
+    // Sort by rank to ensure proper order
+    rankings.sort((a, b) => a.preGameRank - b.preGameRank);
+    
+    return rankings;
+}
+
+function parseCSVLine(line) {
+    const fields = [];
+    let currentField = '';
+    let inQuotes = false;
+    
+    for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+        
+        if (char === '"') {
+            inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+            fields.push(currentField);
+            currentField = '';
+        } else {
+            currentField += char;
+        }
+    }
+    
+    fields.push(currentField); // Add the last field
+    return fields;
+}
+
+function cleanPlayerName(player) {
+    if (!player) return '';
+    
+    // Remove HTML img tags and other markup
+    return player
+        .replace(/!\[.*?\]\(.*?\)/g, '') // Remove markdown images
+        .replace(/<[^>]*>/g, '') // Remove HTML tags
+        .trim();
+}
+
+function cleanOpponent(opponent) {
+    if (!opponent) return '';
+    
+    // Extract opponent from various formats
+    return opponent
+        .replace(/!\[.*?\]\(.*?\)/g, '') // Remove markdown images
+        .replace(/<[^>]*>/g, '') // Remove HTML tags
+        .trim();
 }
 
 function guessPosition(playerName) {

@@ -30,12 +30,7 @@
 # SENDGRID_API_KEY = "SG.xxx"                        # For SendGrid emails
 # FROM_EMAIL = "alerts@yoursite.com"                 # From address for emails
 
-# Scheduled function to monitor for Boone rankings updates
-# Only checks during active hours (6 AM - 6 PM ET)
-[functions.hourly-monitor]
-  schedule = "0 * * * *"  # Every hour (function itself handles active hours check)
-
-# Smart Automated Scraper with FLEX-based change detection
-[functions."smart-automated-scraper"]
-  schedule = "0 6-18 * * *"  # Every hour from 6 AM to 6 PM ET
+# Timestamp-based updater (runs every 3 hours during active period)
+[functions."timestamp-updater"]
+  schedule = "0 6,9,12,15,18 * * *"  # Every 3 hours from 6 AM to 6 PM ET
 

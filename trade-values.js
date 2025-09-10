@@ -94,7 +94,7 @@ class TradeValuesApp {
         const lines = csvText.trim().split('\n');
         if (lines.length < 2) return [];
         
-        const players = [];
+        const dataRows = [];
         
         // Parse header to get all column names
         const headerFields = this.parseCSVLine(lines[0]);
@@ -102,45 +102,30 @@ class TradeValuesApp {
         
         console.log(`📋 CSV Headers: ${cleanedHeaders.join(', ')}`);
         
-        // Find key columns with flexible matching
-        const fieldMap = {
-            rank: this.findFieldIndex(cleanedHeaders, ['rank', '#', 'ranking']),
-            player: this.findFieldIndex(cleanedHeaders, ['player', 'name', 'team']),
-            value: this.findFieldIndex(cleanedHeaders, ['value', 'trade value', 'points', 'score'])
-        };
-        
+        // Parse all data rows - no filtering, no ranking logic
         for (let i = 1; i < lines.length; i++) {
             try {
                 const fields = this.parseCSVLine(lines[i]);
-                if (fields.length < 2) continue;
+                if (fields.length === 0) continue;
                 
-                // Create player object with all available data
-                const playerData = {
-                    rank: null,
-                    player: null,
+                // Create row object with all columns exactly as they appear
+                const rowData = {
+                    rowIndex: i,
                     allColumns: {}
                 };
                 
-                // Map all columns to the player object
+                // Map every column to the row object
                 fields.forEach((field, index) => {
                     const cleanField = this.cleanText(field);
                     const columnName = cleanedHeaders[index] || `Column${index}`;
-                    playerData.allColumns[columnName] = cleanField;
+                    rowData.allColumns[columnName] = cleanField;
                 });
                 
-                // Extract key fields
-                let rank = this.extractField(fields, fieldMap.rank) || this.extractField(fields, [0, 1, 2]);
-                let player = this.extractField(fields, fieldMap.player) || this.extractField(fields, [1, 2, 3]);
-                
-                rank = parseInt(rank);
-                player = this.cleanText(player);
-                
-                if (!rank || !player || rank < 1 || rank > 500) continue;
-                
-                playerData.rank = rank;
-                playerData.player = player;
-                
-                players.push(playerData);
+                // Only skip completely empty rows
+                const hasData = Object.values(rowData.allColumns).some(val => val && val.trim() !== '');
+                if (hasData) {
+                    dataRows.push(rowData);
+                }
                 
             } catch (e) {
                 console.log(`Parse error on line ${i}:`, e);
@@ -148,7 +133,8 @@ class TradeValuesApp {
             }
         }
         
-        return players.sort((a, b) => a.rank - b.rank);
+        console.log(`📊 Parsed ${dataRows.length} data rows`);
+        return dataRows; // Return in original order, no sorting
     }
 
     parseCSVLine(line) {
@@ -226,38 +212,26 @@ class TradeValuesApp {
             return;
         }
         
-        // Get all available columns from first player
-        const firstPlayer = values[0];
-        const availableColumns = Object.keys(firstPlayer.allColumns || {});
+        // Get all available columns from first row
+        const firstRow = values[0];
+        const availableColumns = Object.keys(firstRow.allColumns || {});
         
-        // Update table headers dynamically
-        thead.innerHTML = `
-            <th>Rank</th>
-            <th>Player</th>
-            ${availableColumns
-                .filter(col => !['rank', 'player', 'name'].some(excluded => col.toLowerCase().includes(excluded)))
-                .map(col => `<th>${col}</th>`)
-                .join('')}
-        `;
+        // Update table headers to show ALL columns exactly as they appear in CSV
+        thead.innerHTML = availableColumns.map(col => `<th>${col}</th>`).join('');
         
-        // Populate table with all columns
-        values.forEach(player => {
-            const row = document.createElement('tr');
+        // Populate table with ALL columns in original order
+        values.forEach(row => {
+            const tableRow = document.createElement('tr');
             
-            const additionalColumns = availableColumns
-                .filter(col => !['rank', 'player', 'name'].some(excluded => col.toLowerCase().includes(excluded)))
-                .map(col => `<td class="data-cell">${player.allColumns[col] || ''}</td>`)
+            const allColumns = availableColumns
+                .map(col => `<td class="data-cell">${row.allColumns[col] || ''}</td>`)
                 .join('');
             
-            row.innerHTML = `
-                <td class="rank-cell">${player.rank}</td>
-                <td class="player-cell">${player.player}</td>
-                ${additionalColumns}
-            `;
-            tbody.appendChild(row);
+            tableRow.innerHTML = allColumns;
+            tbody.appendChild(tableRow);
         });
         
-        console.log(`📊 Displayed ${values.length} ${positionName} trade values with columns:`, availableColumns);
+        console.log(`📊 Displayed ${values.length} rows for ${positionName} with columns:`, availableColumns);
     }
 }
 

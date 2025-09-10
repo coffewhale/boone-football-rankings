@@ -1,0 +1,172 @@
+{
+  "summary": {
+    "TE": {
+      "matched": 8,
+      "averageError": 9.5,
+      "accuracy": "Good"
+    }
+  },
+  "detailed": {
+    "TE": {
+      "totalPredicted": 50,
+      "totalActual": 8,
+      "matched": 8,
+      "averageRankError": 9.5,
+      "topPerformers": [
+        {
+          "name": "Brock Bowers",
+          "predicted_rank": 2,
+          "actual_rank": 3,
+          "rank_error": 1,
+          "fantasy_points": 10.3
+        },
+        {
+          "name": "George Kittle",
+          "predicted_rank": 3,
+          "actual_rank": 6,
+          "rank_error": 3,
+          "fantasy_points": 8.5
+        },
+        {
+          "name": "Travis Kelce",
+          "predicted_rank": 4,
+          "actual_rank": 2,
+          "rank_error": 2,
+          "fantasy_points": 10.7
+        },
+        {
+          "name": "Sam LaPorta",
+          "predicted_rank": 8,
+          "actual_rank": 7,
+          "rank_error": 1,
+          "fantasy_points": 7.9
+        },
+        {
+          "name": "Tucker Kraft",
+          "predicted_rank": 9,
+          "actual_rank": 8,
+          "rank_error": 1,
+          "fantasy_points": 7.9
+        }
+      ],
+      "bigMisses": [
+        {
+          "name": "Noah Fant",
+          "predicted_rank": 49,
+          "actual_rank": 4,
+          "rank_error": 45,
+          "fantasy_points": 8.6
+        }
+      ],
+      "allComparisons": [
+        {
+          "name": "Brock Bowers",
+          "predicted_rank": 2,
+          "actual_rank": 3,
+          "rank_error": 1,
+          "fantasy_points": 10.3
+        },
+        {
+          "name": "George Kittle",
+          "predicted_rank": 3,
+          "actual_rank": 6,
+          "rank_error": 3,
+          "fantasy_points": 8.5
+        },
+        {
+          "name": "Travis Kelce",
+          "predicted_rank": 4,
+          "actual_rank": 2,
+          "rank_error": 2,
+          "fantasy_points": 10.7
+        },
+        {
+          "name": "Sam LaPorta",
+          "predicted_rank": 8,
+          "actual_rank": 7,
+          "rank_error": 1,
+          "fantasy_points": 7.9
+        },
+        {
+          "name": "Tucker Kraft",
+          "predicted_rank": 9,
+          "actual_rank": 8,
+          "rank_error": 1,
+          "fantasy_points": 7.9
+        },
+        {
+          "name": "Dalton Kincaid",
+          "predicted_rank": 13,
+          "actual_rank": 1,
+          "rank_error": 12,
+          "fantasy_points": 10.8
+        },
+        {
+          "name": "Zach Ertz",
+          "predicted_rank": 16,
+          "actual_rank": 5,
+          "rank_error": 11,
+          "fantasy_points": 8.6
+        },
+        {
+          "name": "Noah Fant",
+          "predicted_rank": 49,
+          "actual_rank": 4,
+          "rank_error": 45,
+          "fantasy_points": 8.6
+        }
+      ]
+    }
+  },
+  "topMisses": [
+    {
+      "name": "Noah Fant",
+      "predicted_rank": 49,
+      "actual_rank": 4,
+      "rank_error": 45,
+      "fantasy_points": 8.6
+    }
+  ],
+  "topHits": [
+    {
+      "name": "Brock Bowers",
+      "predicted_rank": 2,
+      "actual_rank": 3,
+      "rank_error": 1,
+      "fantasy_points": 10.3
+    },
+    {
+      "name": "Sam LaPorta",
+      "predicted_rank": 8,
+      "actual_rank": 7,
+      "rank_error": 1,
+      "fantasy_points": 7.9
+    },
+    {
+      "name": "Tucker Kraft",
+      "predicted_rank": 9,
+      "actual_rank": 8,
+      "rank_error": 1,
+      "fantasy_points": 7.9
+    },
+    {
+      "name": "Travis Kelce",
+      "predicted_rank": 4,
+      "actual_rank": 2,
+      "rank_error": 2,
+      "fantasy_points": 10.7
+    },
+    {
+      "name": "George Kittle",
+      "predicted_rank": 3,
+      "actual_rank": 6,
+      "rank_error": 3,
+      "fantasy_points": 8.5
+    }
+  ],
+  "overall": {
+    "totalPlayers": 8,
+    "averageError": 9.5,
+    "positionsAnalyzed": 1
+  }
+}

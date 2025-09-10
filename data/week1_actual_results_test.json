@@ -1,0 +1,62 @@
+{
+  "week": 1,
+  "scraped_at": "2025-09-09T13:03:55.409Z",
+  "source": "fantasypros",
+  "data": {
+    "QB": [],
+    "RB": [],
+    "WR": [],
+    "TE": [
+      {
+        "rank": 1,
+        "name": "Dalton Kincaid",
+        "team": "",
+        "fantasyPoints": 10.8
+      },
+      {
+        "rank": 2,
+        "name": "Travis Kelce",
+        "team": "",
+        "fantasyPoints": 10.7
+      },
+      {
+        "rank": 3,
+        "name": "Brock Bowers",
+        "team": "",
+        "fantasyPoints": 10.3
+      },
+      {
+        "rank": 4,
+        "name": "Noah Fant",
+        "team": "",
+        "fantasyPoints": 8.6
+      },
+      {
+        "rank": 5,
+        "name": "Zach Ertz",
+        "team": "",
+        "fantasyPoints": 8.6
+      },
+      {
+        "rank": 6,
+        "name": "George Kittle",
+        "team": "",
+        "fantasyPoints": 8.5
+      },
+      {
+        "rank": 7,
+        "name": "Sam LaPorta",
+        "team": "",
+        "fantasyPoints": 7.9
+      },
+      {
+        "rank": 8,
+        "name": "Tucker Kraft",
+        "team": "",
+        "fantasyPoints": 7.9
+      }
+    ],
+    "K": [],
+    "DEF": []
+  }
+}

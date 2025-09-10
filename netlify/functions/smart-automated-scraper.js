@@ -121,7 +121,7 @@ exports.handler = async (event, context) => {
         
         // STEP 5: Update files (only when real changes exist)
         console.log('💾 STEP 5: Updating rankings.json with new data...');
-        await updateRankingsFile(results);
+        const updateResult = await updateRankingsFile(results, timestampResult.currentTimestamp);
         
         console.log('🎉 SUCCESS! Rankings updated with real changes');
         
@@ -133,7 +133,8 @@ exports.handler = async (event, context) => {
                 totalPlayers: totalPlayers,
                 currentTimestamp: timestampResult.currentTimestamp,
                 changesDetected: comparisonResult.changesSummary,
-                message: 'Rankings successfully updated with new data!',
+                commitInfo: updateResult,
+                message: 'Rankings successfully updated via GitHub commit!',
                 manualStep: 'Update LAST_STORED_TIMESTAMP environment variable to: ' + timestampResult.currentTimestamp
             })
         };
@@ -409,34 +410,72 @@ function createDataHash(data) {
     return crypto.createHash('md5').update(JSON.stringify(essentialData)).digest('hex');
 }
 
-async function updateRankingsFile(results) {
+async function updateRankingsFile(results, currentTimestamp) {
     try {
-        // Create backup
-        const timestamp = Date.now();
-        const backupPath = path.join(process.cwd(), `rankings.json.backup.${timestamp}`);
+        console.log('💾 Updating rankings.json via GitHub API...');
         
-        try {
-            const existingData = await fs.readFile(path.join(process.cwd(), 'rankings.json'), 'utf8');
-            await fs.writeFile(backupPath, existingData);
-            console.log(`📄 Backup created: rankings.json.backup.${timestamp}`);
-        } catch (e) {
-            console.log('📄 No existing file to backup');
+        const githubToken = process.env.GITHUB_TOKEN;
+        const repo = process.env.GITHUB_REPO || 'coffewhale/boone-football-rankings';
+        
+        if (!githubToken) {
+            throw new Error('GITHUB_TOKEN environment variable not set');
         }
         
         // Add metadata to results
         const outputData = {
             ...results,
-            lastUpdated: timestampResult.currentTimestamp || new Date().toISOString(),
-            week: process.env.MONITOR_WEEK || getCurrentWeekNumber(),
-            scrapedAt: new Date().toISOString()
+            lastUpdated: currentTimestamp || new Date().toISOString(),
+            week: getCurrentWeekNumber(),
+            scrapedAt: new Date().toISOString(),
+            scrapingMethod: 'Timestamp-Triggered-CSV',
+            totalPlayers: Object.values(results).reduce((sum, rankings) => sum + rankings.length, 0)
         };
         
-        // Write new rankings
-        const rankingsPath = path.join(process.cwd(), 'rankings.json');
-        const formattedResults = JSON.stringify(outputData, null, 2);
-        await fs.writeFile(rankingsPath, formattedResults);
+        // Get current file SHA (if it exists)
+        let sha = null;
+        try {
+            const getCurrentFile = await fetch(`https://api.github.com/repos/${repo}/contents/rankings.json`, {
+                headers: {
+                    'Authorization': `token ${githubToken}`,
+                    'User-Agent': 'Boone-Rankings-Bot'
+                }
+            });
+            
+            if (getCurrentFile.ok) {
+                const currentFileData = await getCurrentFile.json();
+                sha = currentFileData.sha;
+            }
+        } catch (e) {
+            console.log('📄 No existing rankings.json found, will create new file');
+        }
         
-        console.log('✅ rankings.json updated successfully');
+        // Prepare the new content
+        const content = JSON.stringify(outputData, null, 2);
+        const encodedContent = Buffer.from(content).toString('base64');
+        
+        // Update the file via GitHub API
+        const updateResponse = await fetch(`https://api.github.com/repos/${repo}/contents/rankings.json`, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `token ${githubToken}`,
+                'User-Agent': 'Boone-Rankings-Bot',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: `Update Week ${outputData.week} rankings - ${outputData.totalPlayers} players\n\n🤖 Triggered by timestamp change: ${currentTimestamp}`,
+                content: encodedContent,
+                ...(sha && { sha }) // Include SHA only if file exists
+            })
+        });
+        
+        if (!updateResponse.ok) {
+            const errorData = await updateResponse.text();
+            throw new Error(`GitHub API error: ${updateResponse.status} - ${errorData}`);
+        }
+        
+        const result = await updateResponse.json();
+        console.log('✅ rankings.json updated successfully via GitHub API');
+        console.log(`🔗 Commit: ${result.commit.html_url}`);
         
         // Log summary
         const summary = Object.entries(results).map(([position, rankings]) => 
@@ -444,8 +483,14 @@ async function updateRankingsFile(results) {
         ).join(', ');
         console.log(`📊 Updated rankings: ${summary}`);
         
+        return {
+            commitSha: result.commit.sha,
+            commitUrl: result.commit.html_url,
+            totalPlayers: outputData.totalPlayers
+        };
+        
     } catch (error) {
-        console.error('❌ Error updating rankings file:', error);
+        console.error('❌ Error updating rankings via GitHub:', error);
         throw error;
     }
 }

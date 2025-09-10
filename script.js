@@ -49,8 +49,8 @@ class RankingsApp {
 
     async loadRankings() {
         try {
-            // Try to fetch live data first
-            const response = await fetch('/.netlify/functions/scrape-and-serve');
+            // Try to fetch static rankings.json first (fast!)
+            const response = await fetch('./rankings.json');
             if (response && response.ok) {
                 const rankings = await response.json();
                 this.rankings = rankings;

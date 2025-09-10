@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justin Boone Fantasy Football Rankings</title>
+    <title>Rest of Season Trade Value Charts</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Justin Boone Fantasy Football Rankings (Half PPR)</h1>
-            <p class="attribution">Rankings sourced from <a href="https://sports.yahoo.com" target="_blank">Yahoo Sports</a> by Justin Boone</p>
-            <p class="disclaimer">This site is for analysis purposes only. All credit goes to Yahoo Sports and Justin Boone for original rankings.</p>
-            
-            <div class="update-info">
-                <div class="article-published" id="article-published"></div>
-            </div>
+            <h1>Rest of Season Trade Value Charts</h1>
+            <p class="attribution">Trade values for fantasy football player evaluation</p>
+            <p class="disclaimer">Use these charts to evaluate trade opportunities and player values for the remainder of the season.</p>
             
             <!-- Navigation between pages -->
             <div class="page-navigation" style="margin: 15px 0; text-align: center;">
-                <a href="trade-values.html" class="nav-link">📊 View Trade Values →</a>
+                <a href="index.html" class="nav-link">← Back to Weekly Rankings</a>
             </div>
         </header>
 
@@ -28,9 +24,6 @@
             <button class="nav-btn" data-position="rb">RB</button>
             <button class="nav-btn" data-position="wr">WR</button>
             <button class="nav-btn" data-position="te">TE</button>
-            <button class="nav-btn" data-position="flex">FLEX</button>
-            <button class="nav-btn" data-position="def">DEF</button>
-            <button class="nav-btn" data-position="k">K</button>
         </nav>
 
         <main>
@@ -40,29 +33,28 @@
             </div>
             
             <div class="rankings-container">
-                <div id="loading">Loading rankings...</div>
+                <div id="loading">Loading trade values...</div>
                 
                 <div class="rankings-section" id="rankings-table" style="display: none;">
-                    <h2 id="position-title">Quarterback Rankings - Week 1</h2>
+                    <h2 id="position-title">Quarterback Trade Values</h2>
                     <table class="rankings-table">
                         <thead>
                             <tr>
                                 <th>Rank</th>
                                 <th>Player</th>
-                                <th>Opponent</th>
+                                <th>Trade Value</th>
                             </tr>
                         </thead>
                         <tbody id="rankings-body">
-                            <!-- Rankings will be populated here -->
+                            <!-- Trade values will be populated here -->
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="trade-values.js"></script>
     
     <!-- 100% privacy-first analytics -->
     <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>

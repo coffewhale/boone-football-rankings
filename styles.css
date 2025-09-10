@@ -269,3 +269,25 @@ header h1 {
         display: none;
     }
 }
+
+/* Page Navigation Links */
+.page-navigation {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}

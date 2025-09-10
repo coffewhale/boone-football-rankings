@@ -2600,7 +2600,8 @@
   ],
   "lastUpdated": "2025-09-09T21:09:04.000Z",
   "week": 2,
-  "scrapedAt": "2025-09-10T03:20:00.769Z",
-  "scrapingMethod": "Live-CSV-Discovery",
-  "totalPlayers": 487
+  "scrapedAt": "2025-09-10T13:08:44.727Z",
+  "scrapingMethod": "JSON-Timestamp-Triggered",
+  "totalPlayers": 487,
+  "triggeredAt": "2025-09-10T13:08:44.760Z"
 }

@@ -215,11 +215,11 @@ async function findCSVUrls(datawrapperUrl) {
             }
             
             if (chartId) {
-                // Hardcoded for Week 2 - use /2/ version
-                console.log(`  📅 Using hardcoded week 2 version: /2/`);
+                const weekNumber = getCurrentWeekNumber();
+                console.log(`  📅 Using week ${weekNumber} version: /${weekNumber}/`);
                 
                 csvUrls.push(
-                    `https://datawrapper.dwcdn.net/${chartId}/2/dataset.csv`,
+                    `https://datawrapper.dwcdn.net/${chartId}/${weekNumber}/dataset.csv`,
                     `https://datawrapper.dwcdn.net/${chartId}/dataset.csv`
                 );
             }
@@ -449,7 +449,10 @@ function createPlayerRankMap(players) {
 }
 
 function getCurrentWeekNumber() {
-    // Hardcoded for Week 2 - use /2/ version
-    console.log(`  📅 Using hardcoded week 2 version: /2/`);
-    return 2;
+    // Use MONITOR_WEEK environment variable, defaulting to 2
+    const weekFromEnv = process.env.MONITOR_WEEK;
+    const weekNumber = weekFromEnv ? parseInt(weekFromEnv) : 2;
+    
+    console.log(`  📅 Using week ${weekNumber} (from env: ${weekFromEnv || 'default'})`);
+    return weekNumber;
 }

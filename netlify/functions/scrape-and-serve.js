@@ -57,6 +57,7 @@ exports.handler = async (event, context) => {
             }
             
             console.log(`🔍 Scraping ${position.toUpperCase()}...`);
+            console.log(`  📍 Using URL: ${urls[0]}`);
             const rankings = await scrapePositionWithDiscovery(position, urls[0]);
             results[position] = rankings;
             totalPlayers += rankings.length;
@@ -119,14 +120,21 @@ async function scrapePositionWithDiscovery(position, datawrapperUrl) {
                     timeout: 15000
                 });
                 
-                if (!response.ok) continue;
+                if (!response.ok) {
+                    console.log(`    ❌ HTTP ${response.status}: ${csvUrl}`);
+                    continue;
+                }
                 
                 const csvText = await response.text();
+                console.log(`    📄 CSV length: ${csvText.length} chars`);
                 const rankings = parseFlexibleCSV(csvText, position);
                 
                 if (rankings.length > 0) {
                     console.log(`    ✅ ${rankings.length} players from CSV`);
+                    console.log(`    🎯 SUCCESS with: ${csvUrl}`);
                     return rankings;
+                } else {
+                    console.log(`    ❌ No valid data parsed from: ${csvUrl}`);
                 }
                 
             } catch (error) {
@@ -154,41 +162,67 @@ async function findCSVUrls(datawrapperUrl) {
         if (!response.ok) return [];
         
         const html = await response.text();
-        const $ = cheerio.load(html);
         
-        // Extract chart ID
-        let chartId = null;
+        // Look for actual CSV URLs in the HTML/JavaScript
+        const csvUrlPatterns = [
+            // Direct CSV URL references
+            /https:\/\/datawrapper\.dwcdn\.net\/[a-zA-Z0-9]+\/\d*\/?dataset\.csv/g,
+            // JSON config with CSV URLs
+            /"csvUrl":\s*"([^"]*dataset\.csv[^"]*)"/g,
+            /"dataUrl":\s*"([^"]*dataset\.csv[^"]*)"/g,
+            // Script tags with CSV references
+            /datawrapper\.dwcdn\.net\/([a-zA-Z0-9]+)\/(\d+)\/dataset\.csv/g
+        ];
         
-        const urlMatch = datawrapperUrl.match(/\/([a-zA-Z0-9]{5,})\/?\??/);
-        if (urlMatch) {
-            chartId = urlMatch[1];
-        }
-        
-        if (!chartId) {
-            const patterns = [
-                /"chartId":\s*"([a-zA-Z0-9]{5,})"/,
-                /"id":\s*"([a-zA-Z0-9]{5,})"/,
-                /chart\/([a-zA-Z0-9]{5,})/
-            ];
-            
-            for (const pattern of patterns) {
-                const match = html.match(pattern);
-                if (match) {
-                    chartId = match[1];
-                    break;
+        for (const pattern of csvUrlPatterns) {
+            let match;
+            while ((match = pattern.exec(html)) !== null) {
+                if (match[0].startsWith('http')) {
+                    csvUrls.push(match[0]);
+                } else if (match[1]) {
+                    csvUrls.push(match[1]);
                 }
             }
         }
         
-        if (chartId) {
-            csvUrls.push(
-                `https://datawrapper.dwcdn.net/${chartId}/dataset.csv`,
-                `https://datawrapper.dwcdn.net/${chartId}/1/dataset.csv`,
-                `https://datawrapper.dwcdn.net/${chartId}/2/dataset.csv`
-            );
+        // If no direct URLs found, extract chart ID and try common patterns
+        if (csvUrls.length === 0) {
+            let chartId = null;
+            const urlMatch = datawrapperUrl.match(/\/([a-zA-Z0-9]{5,})\/?\??/);
+            if (urlMatch) {
+                chartId = urlMatch[1];
+            }
+            
+            if (!chartId) {
+                const patterns = [
+                    /"chartId":\s*"([a-zA-Z0-9]{5,})"/,
+                    /"id":\s*"([a-zA-Z0-9]{5,})"/,
+                    /chart\/([a-zA-Z0-9]{5,})/
+                ];
+                
+                for (const pattern of patterns) {
+                    const match = html.match(pattern);
+                    if (match) {
+                        chartId = match[1];
+                        break;
+                    }
+                }
+            }
+            
+            if (chartId) {
+                // Hardcoded for Week 2 - use /2/ version
+                console.log(`  📅 Using hardcoded week 2 version: /2/`);
+                
+                csvUrls.push(
+                    `https://datawrapper.dwcdn.net/${chartId}/2/dataset.csv`,
+                    `https://datawrapper.dwcdn.net/${chartId}/dataset.csv`
+                );
+            }
         }
         
-        return [...new Set(csvUrls)];
+        const uniqueUrls = [...new Set(csvUrls)];
+        console.log(`  🔍 Found CSV URLs: ${uniqueUrls.join(', ')}`);
+        return uniqueUrls;
         
     } catch (error) {
         return [];
@@ -207,7 +241,8 @@ function parseFlexibleCSV(csvText, position) {
     const fieldMap = {
         rank: findFieldIndex(headerFields, ['rank', '#']),
         player: findFieldIndex(headerFields, ['player', 'name', 'team']), // Add 'team' for defense
-        opponent: findFieldIndex(headerFields, ['opp', 'opponent', 'vs'])
+        opponent: findFieldIndex(headerFields, ['opp', 'opponent', 'vs']),
+        position: findFieldIndex(headerFields, ['position', 'pos']) // For FLEX position detection
     };
     
     for (let i = 1; i < lines.length; i++) {
@@ -242,8 +277,14 @@ function parseFlexibleCSV(csvText, position) {
             };
             
             if (position === 'flex') {
-                const guessedPosition = guessPosition(player);
-                rankingData.positionRank = `${guessedPosition}${rank}`;
+                // Use actual position from CSV if available, otherwise guess
+                let actualPosition = extractField(fields, fieldMap.position);
+                if (!actualPosition) {
+                    actualPosition = guessPosition(player);
+                } else {
+                    actualPosition = cleanText(actualPosition).toUpperCase();
+                }
+                rankingData.positionRank = `${actualPosition}${rank}`;
             }
             
             rankings.push(rankingData);
@@ -314,28 +355,69 @@ function cleanText(text) {
 }
 
 function guessPosition(playerName) {
-    const rbKeywords = ['McCaffrey', 'Barkley', 'Henry', 'Cook', 'Kamara'];
-    const wrKeywords = ['Chase', 'Jefferson', 'Hill', 'Adams', 'Evans'];
-    const teKeywords = ['Kelce', 'Andrews', 'Kittle', 'Waller'];
-    
     const playerUpper = playerName.toUpperCase();
     
+    // Comprehensive RB keywords
+    const rbKeywords = [
+        'MCCAFFREY', 'BARKLEY', 'HENRY', 'COOK', 'KAMARA', 'TAYLOR', 'ROBINSON', 'GIBBS',
+        'CONNER', 'MIXON', 'JACOBS', 'POLLARD', 'WHITE', 'WALKER', 'ETIENNE', 'HARRIS',
+        'MONTGOMERY', 'SWIFT', 'PIERCE', 'DOBBINS', 'WARREN', 'SINGLETARY', 'FOREMAN',
+        'MOSTERT', 'HUNT', 'MITCHELL', 'DILLON', 'SPEARS', 'MASON', 'IRVING', 'HUBBARD',
+        'JOHNSON', 'WILLIAMS', 'BROWN', 'JONES', 'DAVIS', 'GAINWELL', 'HERBERT',
+        'MATTISON', 'ROBINSON', 'STRONG', 'DOWDLE', 'WILSON'
+    ];
+    
+    // Comprehensive WR keywords  
+    const wrKeywords = [
+        'CHASE', 'JEFFERSON', 'HILL', 'ADAMS', 'EVANS', 'LAMB', 'DIGGS', 'HOPKINS',
+        'KUPP', 'THOMAS', 'BROWN', 'METCALF', 'MCLAURIN', 'JOHNSON', 'SMITH',
+        'COLLINS', 'WADDLE', 'COOPER', 'WILSON', 'MOORE', 'HIGGINS', 'RIDLEY',
+        'LONDON', 'OLAVE', 'WILLIAMS', 'PUKA', 'DELL', 'FLORES', 'RICE', 'ADDISON',
+        'PITTMAN', 'GODWIN', 'AIYUK', 'SAMUEL', 'ROBINSON', 'WATSON', 'PALMER',
+        'NABERS', 'ODUNZE', 'HARRISON', 'FRANKLIN', 'MITCHELL', 'COOKS', 'LOCKETT'
+    ];
+    
+    // Comprehensive TE keywords
+    const teKeywords = [
+        'KELCE', 'ANDREWS', 'KITTLE', 'WALLER', 'LAPORTE', 'HOCKENSON', 'PITTS',
+        'GOEDERT', 'ERTZ', 'HENRY', 'NJOKU', 'SCHULTZ', 'ENGRAM', 'FERGUSON',
+        'FREIERMUTH', 'KMET', 'TUCKER', 'KRAFT', 'STRANGE', 'CONKLIN', 'THOMAS'
+    ];
+    
+    // Check each position
     for (const keyword of teKeywords) {
-        if (playerUpper.includes(keyword.toUpperCase())) return 'TE';
+        if (playerUpper.includes(keyword)) return 'TE';
     }
     for (const keyword of wrKeywords) {
-        if (playerUpper.includes(keyword.toUpperCase())) return 'WR';
+        if (playerUpper.includes(keyword)) return 'WR';
     }
     for (const keyword of rbKeywords) {
-        if (playerUpper.includes(keyword.toUpperCase())) return 'RB';
+        if (playerUpper.includes(keyword)) return 'RB';
     }
     
-    return 'RB';
+    // If no match found, try to detect by common RB/WR patterns
+    if (playerUpper.includes('JR.') || playerUpper.includes(' III') || playerUpper.includes(' II')) {
+        // These are often WRs
+        return 'WR';
+    }
+    
+    // Default to WR instead of RB (more FLEX players are WRs than RBs typically)
+    return 'WR';
 }
 
 function getCurrentWeekNumber() {
+    // Use MONITOR_WEEK environment variable if set
+    if (process.env.MONITOR_WEEK) {
+        console.log(`Using MONITOR_WEEK: ${process.env.MONITOR_WEEK}`);
+        return parseInt(process.env.MONITOR_WEEK);
+    }
+    
+    // Fallback to calculated week
+    console.log('No MONITOR_WEEK set, calculating from date');
     const seasonStart = new Date('2025-09-05');
     const now = new Date();
     const weeksDiff = Math.floor((now - seasonStart) / (7 * 24 * 60 * 60 * 1000));
-    return Math.max(1, Math.min(18, weeksDiff + 1));
+    const calculatedWeek = Math.max(1, Math.min(18, weeksDiff + 1));
+    console.log(`Calculated week: ${calculatedWeek}`);
+    return calculatedWeek;
 }

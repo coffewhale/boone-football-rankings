@@ -64,6 +64,11 @@ exports.handler = async (event, context) => {
             console.log(`  ✅ ${rankings.length} players`);
         }
         
+        // Fix FLEX position ranks by looking up actual position ranks
+        if (results.flex && results.flex.length > 0) {
+            results.flex = calculateCorrectFlexRanks(results.flex, results);
+        }
+
         // Create final data structure
         const outputData = {
             ...results,
@@ -405,19 +410,46 @@ function guessPosition(playerName) {
     return 'WR';
 }
 
-function getCurrentWeekNumber() {
-    // Use MONITOR_WEEK environment variable if set
-    if (process.env.MONITOR_WEEK) {
-        console.log(`Using MONITOR_WEEK: ${process.env.MONITOR_WEEK}`);
-        return parseInt(process.env.MONITOR_WEEK);
-    }
+function calculateCorrectFlexRanks(flexPlayers, allResults) {
+    console.log('🔧 Fixing FLEX position ranks...');
     
-    // Fallback to calculated week
-    console.log('No MONITOR_WEEK set, calculating from date');
-    const seasonStart = new Date('2025-09-05');
-    const now = new Date();
-    const weeksDiff = Math.floor((now - seasonStart) / (7 * 24 * 60 * 60 * 1000));
-    const calculatedWeek = Math.max(1, Math.min(18, weeksDiff + 1));
-    console.log(`Calculated week: ${calculatedWeek}`);
-    return calculatedWeek;
+    // Create lookup maps for actual position ranks
+    const positionRanks = {
+        WR: createPlayerRankMap(allResults.wr || []),
+        RB: createPlayerRankMap(allResults.rb || []),
+        TE: createPlayerRankMap(allResults.te || [])
+    };
+    
+    return flexPlayers.map(flexPlayer => {
+        // Get the position from existing positionRank (e.g., "WR1026" -> "WR")
+        const posMatch = flexPlayer.positionRank?.match(/^([A-Z]+)/);
+        if (!posMatch) return flexPlayer;
+        
+        const position = posMatch[1];
+        const actualRank = positionRanks[position]?.[flexPlayer.player];
+        
+        if (actualRank) {
+            flexPlayer.positionRank = `${position}${actualRank}`;
+            console.log(`  📝 Fixed: ${flexPlayer.player} -> ${flexPlayer.positionRank}`);
+        } else {
+            console.log(`  ❌ No rank found for ${flexPlayer.player} in ${position}`);
+        }
+        
+        return flexPlayer;
+    });
+}
+
+function createPlayerRankMap(players) {
+    const map = {};
+    players.forEach((player, index) => {
+        // Use preGameRank if available, otherwise use array index + 1
+        map[player.player] = player.preGameRank || (index + 1);
+    });
+    return map;
+}
+
+function getCurrentWeekNumber() {
+    // Hardcoded for Week 2 - use /2/ version
+    console.log(`  📅 Using hardcoded week 2 version: /2/`);
+    return 2;
 }

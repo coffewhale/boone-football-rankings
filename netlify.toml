@@ -30,7 +30,7 @@
 # SENDGRID_API_KEY = "SG.xxx"                        # For SendGrid emails
 # FROM_EMAIL = "alerts@yoursite.com"                 # From address for emails
 
-# Timestamp-based updater (runs every 3 hours during active period)
-[functions."timestamp-updater"]
+# Working timestamp-based updater (runs every 3 hours during active period)
+[functions."working-timestamp-updater"]
   schedule = "0 6,9,12,15,18 * * *"  # Every 3 hours from 6 AM to 6 PM ET
 

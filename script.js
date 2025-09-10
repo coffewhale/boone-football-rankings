@@ -49,8 +49,8 @@ class RankingsApp {
 
     async loadRankings() {
         try {
-            // Try to fetch live data first (until timestamp system is working)
-            const response = await fetch('/.netlify/functions/scrape-and-serve');
+            // Try to fetch updated static rankings.json first (fast!)
+            const response = await fetch('./rankings.json?v=' + Date.now()); // Cache busting
             if (response && response.ok) {
                 const rankings = await response.json();
                 this.rankings = rankings;

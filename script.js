@@ -184,11 +184,10 @@ class RankingsApp {
         rankings.forEach(player => {
             const row = document.createElement('tr');
             
-            // For FLEX, show position rank if available (temporarily disabled due to parsing issue)
-            const playerDisplay = player.player;
-            // const playerDisplay = position === 'flex' && player.positionRank
-            //     ? `${player.player} <span class="position-rank">(${player.positionRank})</span>`
-            //     : player.player;
+            // For FLEX, show position rank if available
+            const playerDisplay = position === 'flex' && player.positionRank
+                ? `${player.player} <span class="position-rank">(${player.positionRank})</span>`
+                : player.player;
             
             row.innerHTML = `
                 <td class="rank-cell">${player.preGameRank || player.rank}</td>

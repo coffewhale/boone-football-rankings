@@ -74,9 +74,17 @@ class TradeValuesApp {
 
     async fetchCSVData(csvUrl) {
         try {
-            console.log(`📊 Fetching CSV: ${csvUrl}`);
+            // Add timestamp to bypass cache - ensures fresh data every page load
+            const urlWithCacheBust = `${csvUrl}?t=${Date.now()}`;
+            console.log(`📊 Fetching CSV: ${urlWithCacheBust}`);
             
-            const response = await fetch(csvUrl);
+            const response = await fetch(urlWithCacheBust, {
+                cache: 'no-store', // Forces browser to bypass cache
+                headers: {
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    'Pragma': 'no-cache'
+                }
+            });
             if (!response.ok) {
                 throw new Error(`HTTP ${response.status}: ${csvUrl}`);
             }

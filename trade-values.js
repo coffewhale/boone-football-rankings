@@ -5,10 +5,10 @@ class TradeValuesApp {
         
         // CSV URLs for trade values (update these URLs as needed)
         this.csvUrls = {
-            qb: 'https://datawrapper.dwcdn.net/1z4ZP/2/dataset.csv',
-            rb: 'https://datawrapper.dwcdn.net/ADD_RB_ID/2/dataset.csv', // Replace ADD_RB_ID
-            wr: 'https://datawrapper.dwcdn.net/ADD_WR_ID/2/dataset.csv', // Replace ADD_WR_ID  
-            te: 'https://datawrapper.dwcdn.net/ADD_TE_ID/2/dataset.csv'  // Replace ADD_TE_ID
+            qb: 'https://datawrapper.dwcdn.net/55HXy/2/dataset.csv',
+            rb: 'https://datawrapper.dwcdn.net/NDAon/3/dataset.csv', // Replace ADD_RB_ID
+            wr: 'https://datawrapper.dwcdn.net/1z4ZP/2/dataset.csv', // Replace ADD_WR_ID  
+            te: 'https://datawrapper.dwcdn.net/6w0UZ/3/dataset.csv'
         };
         
         this.init();
@@ -95,38 +95,55 @@ class TradeValuesApp {
         if (lines.length < 2) return [];
         
         const players = [];
-        const header = lines[0].toLowerCase();
         
-        // Parse header to find column positions
-        const headerFields = this.parseCSVLine(header);
+        // Parse header to get all column names
+        const headerFields = this.parseCSVLine(lines[0]);
+        const cleanedHeaders = headerFields.map(h => this.cleanText(h));
+        
+        console.log(`📋 CSV Headers: ${cleanedHeaders.join(', ')}`);
+        
+        // Find key columns with flexible matching
         const fieldMap = {
-            rank: this.findFieldIndex(headerFields, ['rank', '#']),
-            player: this.findFieldIndex(headerFields, ['player', 'name']),
-            value: this.findFieldIndex(headerFields, ['value', 'trade value', 'points']),
+            rank: this.findFieldIndex(cleanedHeaders, ['rank', '#', 'ranking']),
+            player: this.findFieldIndex(cleanedHeaders, ['player', 'name', 'team']),
+            value: this.findFieldIndex(cleanedHeaders, ['value', 'trade value', 'points', 'score'])
         };
         
         for (let i = 1; i < lines.length; i++) {
             try {
                 const fields = this.parseCSVLine(lines[i]);
-                if (fields.length < 3) continue;
+                if (fields.length < 2) continue;
                 
+                // Create player object with all available data
+                const playerData = {
+                    rank: null,
+                    player: null,
+                    allColumns: {}
+                };
+                
+                // Map all columns to the player object
+                fields.forEach((field, index) => {
+                    const cleanField = this.cleanText(field);
+                    const columnName = cleanedHeaders[index] || `Column${index}`;
+                    playerData.allColumns[columnName] = cleanField;
+                });
+                
+                // Extract key fields
                 let rank = this.extractField(fields, fieldMap.rank) || this.extractField(fields, [0, 1, 2]);
                 let player = this.extractField(fields, fieldMap.player) || this.extractField(fields, [1, 2, 3]);
-                let value = this.extractField(fields, fieldMap.value) || this.extractField(fields, [-1, -2]);
                 
                 rank = parseInt(rank);
                 player = this.cleanText(player);
-                value = this.cleanText(value);
                 
-                if (!rank || !player || rank < 1 || rank > 200) continue;
+                if (!rank || !player || rank < 1 || rank > 500) continue;
                 
-                players.push({
-                    rank: rank,
-                    player: player,
-                    value: value || 'N/A'
-                });
+                playerData.rank = rank;
+                playerData.player = player;
+                
+                players.push(playerData);
                 
             } catch (e) {
+                console.log(`Parse error on line ${i}:`, e);
                 continue;
             }
         }
@@ -194,6 +211,7 @@ class TradeValuesApp {
     displayTradeValues() {
         const values = this.tradeValues[this.currentPosition] || [];
         const tbody = document.getElementById('rankings-body');
+        const thead = document.querySelector('.rankings-table thead tr');
         const positionTitle = document.getElementById('position-title');
         
         // Update title
@@ -204,22 +222,42 @@ class TradeValuesApp {
         tbody.innerHTML = '';
         
         if (values.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="3" style="text-align: center;">No trade values available for this position</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="10" style="text-align: center;">No trade values available for this position</td></tr>';
             return;
         }
         
-        // Populate table
+        // Get all available columns from first player
+        const firstPlayer = values[0];
+        const availableColumns = Object.keys(firstPlayer.allColumns || {});
+        
+        // Update table headers dynamically
+        thead.innerHTML = `
+            <th>Rank</th>
+            <th>Player</th>
+            ${availableColumns
+                .filter(col => !['rank', 'player', 'name'].some(excluded => col.toLowerCase().includes(excluded)))
+                .map(col => `<th>${col}</th>`)
+                .join('')}
+        `;
+        
+        // Populate table with all columns
         values.forEach(player => {
             const row = document.createElement('tr');
+            
+            const additionalColumns = availableColumns
+                .filter(col => !['rank', 'player', 'name'].some(excluded => col.toLowerCase().includes(excluded)))
+                .map(col => `<td class="data-cell">${player.allColumns[col] || ''}</td>`)
+                .join('');
+            
             row.innerHTML = `
                 <td class="rank-cell">${player.rank}</td>
                 <td class="player-cell">${player.player}</td>
-                <td class="opponent-cell">${player.value}</td>
+                ${additionalColumns}
             `;
             tbody.appendChild(row);
         });
         
-        console.log(`📊 Displayed ${values.length} ${positionName} trade values`);
+        console.log(`📊 Displayed ${values.length} ${positionName} trade values with columns:`, availableColumns);
     }
 }
 

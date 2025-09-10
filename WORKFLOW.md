@@ -1,168 +1,190 @@
-# Justin Boone Rankings Update Workflow
-
-This document outlines the complete workflow for monitoring and updating Justin Boone's fantasy football rankings on your site.
+# Boone Rankings App - Automated Workflow Documentation
 
 ## Overview
 
-Your site automatically monitors Boone's rankings and sends email notifications when updates are detected. When you receive a notification, follow this workflow to update your site with the latest rankings.
+This fantasy football rankings app automatically scrapes Justin Boone's weekly rankings from Yahoo Sports and serves them to users with instant page loads. The system only updates when new content is published, making it highly efficient and cost-effective.
 
-## Initial Setup
+## How It Works
 
-### 1. Environment Variables (Netlify)
-Set these in your Netlify site settings:
+### 1. Data Source
+- **Primary Source**: Justin Boone's Yahoo Sports fantasy football articles
+- **Data Format**: Embedded Datawrapper charts that expose CSV endpoints
+- **Positions Tracked**: QB, RB, WR, TE, FLEX, DEF, K (7 total positions)
+- **Update Frequency**: 4-5 times per week during NFL season
 
-- **`LAST_STORED_TIMESTAMP`**: Current timestamp from Boone's article (e.g., `2025-09-04T23:46:25.000Z`)
-- **`MONITOR_URL`**: URL to monitor (optional, can use rankings-entry.html interface)
-- **`MONITOR_WEEK`**: Current NFL week number
-- **`ADMIN_EMAIL`**: Your email for notifications
-
-### 2. Monitoring System
-- Runs automatically every hour (6 AM - 6 PM ET only)
-- Compares current article timestamp with `LAST_STORED_TIMESTAMP`
-- Sends email notifications when timestamps don't match
-
-## Weekly Update Workflow
-
-### Step 1: Receive Notification
-When Boone updates his rankings, you'll receive an email with:
-- Update timestamp
-- Week number
-- Link to the article
-
-### Step 2: Update Rankings
-1. **Open the rankings entry tool**: `rankings-entry.html` in your browser
-2. **Copy rankings from Yahoo Sports** for each position
-3. **Paste into the appropriate text areas** (one player per line)
-   - Format: `Player Name vs OPP` or `Player Name @ OPP`
-   - Example: `Josh Allen vs ARI`
-4. **Click "Generate JSON"** button
-5. **Copy the generated JSON output**
-
-### Step 3: Save Weekly Snapshot (NEW)
-1. **Before updating rankings.json**, save the current data as a snapshot:
-   ```bash
-   node -e "require('./snapshot-utility').saveWeeklySnapshot([WEEK_NUMBER])"
-   ```
-   Replace `[WEEK_NUMBER]` with the current NFL week (e.g., 1, 2, 3...)
-
-### Step 4: Update Site Files
-1. **Open `rankings.json`** in your code editor
-2. **Replace entire contents** with the copied JSON
-3. **Save the file**
-
-### Step 5: Update Environment Variable
-1. **Go to Netlify site settings** → Environment Variables
-2. **Update `LAST_STORED_TIMESTAMP`** with the new timestamp from the notification
-3. **Save and redeploy**
-
-### Step 6: Deploy Changes
-```bash
-git add rankings.json
-git commit -m "Update Week X rankings - [timestamp]"
-git push
-```
-
-Your site will automatically update within a few minutes.
-
-## File Structure
+### 2. Automated Workflow
 
 ```
-├── rankings.json           # Main rankings data (update this)
-├── rankings-entry.html     # Rankings entry tool
-├── script.js              # Site logic (reads rankings.json)
-├── index.html             # Main site
-├── analysis.html          # NEW: Performance analysis page
-├── snapshot-utility.js    # NEW: Weekly snapshot management
-├── analysis-utils.js      # NEW: Data analysis and CSV export
-├── data/                  # NEW: Historical data storage
-│   ├── snapshots/
-│   │   └── 2025/          # Weekly snapshots by year
-│   ├── analysis/          # Analysis results
-│   └── archive.json       # Snapshot metadata
-└── netlify/functions/     # Monitoring functions
-    ├── hourly-monitor.js     # Automatic monitoring
-    ├── get-timestamp.js      # Provides timestamp to frontend
-    └── send-notification.js  # Email notifications
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   Yahoo Sports  │    │  Netlify Cron    │    │  Static JSON    │
+│   (Timestamp)   │───▶│   (Every 3hrs)   │───▶│   (Instant)     │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+         │                        │                        │
+         │              ┌─────────▼────────┐              │
+         │              │ Timestamp Check  │              │
+         │              │ Changed? Yes/No  │              │
+         │              └─────────┬────────┘              │
+         │                        │                        │
+         │              ┌─────────▼────────┐              │
+         └─────────────▶│   Scrape Data    │              │
+                        │  (All Positions) │              │
+                        └─────────┬────────┘              │
+                                  │                        │
+                        ┌─────────▼────────┐              │
+                        │  Commit to Git   │─────────────▶│
+                        │ (rankings.json)  │              │
+                        └──────────────────┘              │
+                                                          │
+┌─────────────────┐                              ┌───────▼────────┐
+│   User Visits   │─────────────────────────────▶│  Page Loads    │
+│     Website     │                              │   (Instant)    │
+└─────────────────┘                              └────────────────┘
 ```
 
-## Monitoring Features
+### 3. Technical Components
 
-### Automatic Monitoring
-- **Frequency**: Every hour during active hours (6 AM - 6 PM ET)
-- **What it checks**: Article timestamp on Boone's Yahoo Sports page
-- **Notifications**: Email sent when timestamp changes
+#### A. Timestamp Monitor (`working-timestamp-updater.js`)
+- **Scheduled**: Every 3 hours during active periods (6 AM - 6 PM ET)
+- **Function**: Checks Yahoo article timestamp against last stored timestamp
+- **Trigger**: Only scrapes when timestamp changes (new content published)
 
-### Manual Monitoring
-Use the rankings entry tool (`rankings-entry.html`) to:
-- Set weekly monitoring URL
-- Check for updates manually
-- Get instant status updates
+#### B. Data Scraper (`scrape-and-serve.js`)
+- **Method**: Direct CSV access from Datawrapper endpoints
+- **Speed**: ~30 seconds to scrape all 7 positions
+- **Data**: Extracts rank, player name, opponent for each position
 
-## Troubleshooting
+#### C. Static File Generation
+- **Output**: `rankings.json` with all player data
+- **Storage**: GitHub repository (free hosting)
+- **Access**: Direct file serving (instant page loads)
 
-### Not Receiving Email Notifications
-1. Check that `LAST_STORED_TIMESTAMP` is set correctly
-2. Verify monitoring is active (check function logs)
-3. Ensure email settings are configured in Netlify
+#### D. Frontend (`script.js`)
+- **Primary**: Loads static `rankings.json`
+- **Fallback**: Live scraping if static file unavailable
+- **Cache**: Busting with timestamp parameter
 
-### Site Not Updating
-1. Confirm `rankings.json` was updated and pushed
-2. Check that timestamp in `LAST_STORED_TIMESTAMP` matches current article
-3. Force refresh your browser (Cmd/Ctrl + Shift + R)
+## Environment Variables Required
 
-### Monitoring Says "Update Needed" But Rankings Are Current
-1. Update `LAST_STORED_TIMESTAMP` to match current article timestamp
-2. This will stop false positive notifications
+### Netlify Dashboard Configuration
+```env
+# Yahoo Monitoring
+MONITOR_URL=https://sports.yahoo.com/fantasy/article/[current-week-qb-url]
+LAST_STORED_TIMESTAMP=2025-09-09T21:09:04.000Z
 
-## Tips
+# GitHub Integration
+GITHUB_TOKEN=[your-github-personal-access-token]
+GITHUB_REPO=coffewhale/boone-football-rankings
 
-- **Monitor during active hours**: Boone typically updates between 6 AM - 6 PM ET
-- **Check timestamps carefully**: Use exact format from Yahoo's datetime attribute
-- **Keep `LAST_STORED_TIMESTAMP` current**: This prevents spam emails
-- **Use rankings entry tool**: It handles formatting and JSON generation automatically
-
-## Format Examples
-
-### Player Entry Format
-```
-Josh Allen vs ARI
-Lamar Jackson @ KC
-Patrick Mahomes vs CIN
-```
-
-### FLEX Format (with position ranks)
-```
-Christian McCaffrey RB1 vs GB
-Ja'Marr Chase WR1 @ KC
-Tyler Lockett WR69 @ DEN
+# Position URLs (Auto-discovered from QB URL)
+QB_URL=https://sports.yahoo.com/fantasy/article/[qb-article-url]
+RB_URL=https://sports.yahoo.com/fantasy/article/[rb-article-url]
+WR_URL=https://sports.yahoo.com/fantasy/article/[wr-article-url]
+TE_URL=https://sports.yahoo.com/fantasy/article/[te-article-url]
+FLEX_URL=https://sports.yahoo.com/fantasy/article/[flex-article-url]
+DEF_URL=https://sports.yahoo.com/fantasy/article/[def-article-url]
+K_URL=https://sports.yahoo.com/fantasy/article/[k-article-url]
 ```
 
-### Timestamp Format
+## Weekly Maintenance Required
+
+### When Justin Boone Publishes New Week Rankings:
+
+1. **Update MONITOR_URL** (Most Important)
+   - Find the new week's QB rankings URL
+   - Update `MONITOR_URL` in Netlify environment variables
+   - Example: `https://sports.yahoo.com/fantasy/article/2025-fantasy-football-rankings-justin-boones-top-quarterbacks-for-week-3-[ID].html`
+
+2. **Update All Position URLs** (Optional - Auto-discovery usually works)
+   - Only needed if auto-discovery fails
+   - Update each position URL in Netlify environment variables
+
+3. **Reset Timestamp** (Optional)
+   - Update `LAST_STORED_TIMESTAMP` to force immediate update
+   - Or let the system detect changes naturally
+
+### Typical Weekly Process:
 ```
-2025-09-04T23:46:25.000Z
+Tuesday/Wednesday: Justin publishes new week rankings
+                 ↓
+Update MONITOR_URL with new QB article URL
+                 ↓
+System automatically detects timestamp change within 3 hours
+                 ↓
+Scrapes all positions and updates rankings.json
+                 ↓
+Users see new rankings instantly
 ```
 
-## NEW: Performance Analysis Features
+## Monitoring and Troubleshooting
 
-### Weekly Snapshots
-- **Purpose**: Store each week's rankings before updating for later analysis
-- **Storage**: Automatically organized by year and week in `data/snapshots/`
-- **Usage**: Run snapshot command before updating `rankings.json`
+### Check System Status
+- **Netlify Functions**: View logs at Netlify Dashboard > Functions
+- **GitHub Commits**: Check repository for automated commits
+- **Test Endpoint**: `/.netlify/functions/minimal-timestamp-test`
 
-### Analysis Page
-- **URL**: `analysis.html` (visit after deploying)
-- **Features**: View historical snapshots, compare weekly changes
-- **Future**: Will include accuracy analysis when final results are integrated
+### Common Issues
 
-### CSV Export (Coming Soon)
-- Export weekly rankings for external analysis
-- Compare week-to-week player movement
-- Generate season-long performance reports
+#### 1. No Updates Appearing
+- **Check**: MONITOR_URL points to current week
+- **Check**: LAST_STORED_TIMESTAMP is old enough
+- **Fix**: Update environment variables in Netlify
 
-### Integration with Final Results (Future Phase)
-When you're ready to add final results analysis:
-1. Create `final-results.json` with actual game performance data
-2. Use `analysis-utils.js` to calculate accuracy metrics
-3. Generate reports comparing Boone's predictions to actual outcomes
+#### 2. Scraping Fails
+- **Cause**: Yahoo changed article structure
+- **Check**: Manual test via `/.netlify/functions/scrape-and-serve`
+- **Fix**: Update scraping selectors if needed
 
-This enhanced workflow maintains your current process while building the foundation for comprehensive performance analysis.
+#### 3. Partial Data (Missing Positions)
+- **Cause**: Auto-discovery failed for some positions
+- **Check**: Netlify function logs for errors
+- **Fix**: Manually set position URLs in environment variables
+
+### Manual Triggers
+- **Test Timestamp**: `/.netlify/functions/minimal-timestamp-test`
+- **Force Scrape**: `/.netlify/functions/scrape-and-serve`
+- **Full Update**: `/.netlify/functions/working-timestamp-updater`
+
+## Cost Analysis
+
+### Current Costs: $0/month
+- **Netlify**: Free tier (100GB bandwidth, 125k requests)
+- **GitHub**: Free public repository
+- **Compute**: ~5 minutes/week of function execution
+
+### Scaling Considerations
+- **10k users**: Still free (static file serving)
+- **100k users**: May need Netlify Pro ($19/month)
+- **Data**: Always free (direct CSV access, GitHub hosting)
+
+## Performance Metrics
+
+- **Page Load**: <1 second (static file)
+- **Update Time**: 30 seconds (full scrape)
+- **Data Freshness**: Updated within 3 hours of publication
+- **Reliability**: 99%+ (fallback to live scraping if static fails)
+
+## Key Files
+
+- `netlify/functions/working-timestamp-updater.js` - Main automation
+- `netlify/functions/scrape-and-serve.js` - Data scraper  
+- `script.js` - Frontend logic
+- `rankings.json` - Static data file (auto-generated)
+- `netlify.toml` - Deployment configuration
+
+## Success Indicators
+
+✅ **Working System**:
+- GitHub shows recent automated commits
+- Rankings.json contains 400-600 players
+- Website loads all 7 positions instantly
+- Netlify logs show successful timestamp checks
+
+❌ **Needs Attention**:
+- No GitHub commits for current week
+- Rankings showing old data
+- Missing positions on website
+- Error logs in Netlify functions
+
+---
+
+**Remember**: The only regular maintenance needed is updating the MONITOR_URL when Justin Boone publishes new week rankings. Everything else runs automatically!

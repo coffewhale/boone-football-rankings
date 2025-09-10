@@ -5,6 +5,12 @@
 
 [functions]
   node_bundler = "nft"
+  
+[dev]
+  functions = "netlify/functions"
+  port = 8888
+  # Increase timeout for local testing
+  timeout = 60
 
 [[redirects]]
   from = "/api/*"

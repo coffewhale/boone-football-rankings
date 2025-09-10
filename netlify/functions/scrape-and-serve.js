@@ -206,7 +206,7 @@ function parseFlexibleCSV(csvText, position) {
     const headerFields = parseCSVLine(header);
     const fieldMap = {
         rank: findFieldIndex(headerFields, ['rank', '#']),
-        player: findFieldIndex(headerFields, ['player', 'name']),
+        player: findFieldIndex(headerFields, ['player', 'name', 'team']), // Add 'team' for defense
         opponent: findFieldIndex(headerFields, ['opp', 'opponent', 'vs'])
     };
     
@@ -215,13 +215,23 @@ function parseFlexibleCSV(csvText, position) {
             const fields = parseCSVLine(lines[i]);
             if (fields.length < 3) continue;
             
-            let rank = extractField(fields, fieldMap.rank) || extractField(fields, [0, 1, 2]);
-            let player = extractField(fields, fieldMap.player) || extractField(fields, [1, 2, 3]);
-            let opponent = extractField(fields, fieldMap.opponent) || extractField(fields, [-1, -2]);
+            let rank, player, opponent;
             
-            rank = parseInt(rank);
-            player = cleanText(player);
-            opponent = cleanText(opponent);
+            // Special handling for defense CSV format: ,,Rank,Team,Opp
+            if (position === 'def' && fields.length >= 5) {
+                rank = parseInt(fields[2]); // Column 2: Rank
+                player = cleanText(fields[3]); // Column 3: Team 
+                opponent = cleanText(fields[4]); // Column 4: Opp
+            } else {
+                // Standard logic for other positions
+                rank = extractField(fields, fieldMap.rank) || extractField(fields, [0, 1, 2]);
+                player = extractField(fields, fieldMap.player) || extractField(fields, [1, 2, 3]);
+                opponent = extractField(fields, fieldMap.opponent) || extractField(fields, [-1, -2]);
+                
+                rank = parseInt(rank);
+                player = cleanText(player);
+                opponent = cleanText(opponent);
+            }
             
             if (!rank || !player || rank < 1 || rank > 200) continue;
             

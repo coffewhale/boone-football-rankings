@@ -170,8 +170,10 @@ async function findCSVUrls(datawrapperUrl) {
         
         // Look for actual CSV URLs in the HTML/JavaScript
         const csvUrlPatterns = [
-            // Direct CSV URL references
-            /https:\/\/datawrapper\.dwcdn\.net\/[a-zA-Z0-9]+\/\d*\/?dataset\.csv/g,
+            // Direct CSV URL references - updated pattern to catch version numbers
+            /https:\/\/datawrapper\.dwcdn\.net\/[a-zA-Z0-9]+\/\d+\/dataset\.csv/g,
+            // Also try without version
+            /https:\/\/datawrapper\.dwcdn\.net\/[a-zA-Z0-9]+\/dataset\.csv/g,
             // JSON config with CSV URLs
             /"csvUrl":\s*"([^"]*dataset\.csv[^"]*)"/g,
             /"dataUrl":\s*"([^"]*dataset\.csv[^"]*)"/g,
@@ -215,13 +217,16 @@ async function findCSVUrls(datawrapperUrl) {
             }
             
             if (chartId) {
-                const weekNumber = getCurrentWeekNumber();
-                console.log(`  📅 Using week ${weekNumber} version: /${weekNumber}/`);
+                // If no direct URLs found, try common version patterns
+                // Datawrapper uses incremental version numbers (not week numbers)
+                console.log(`  📅 Trying multiple versions for chart ${chartId}`);
                 
-                csvUrls.push(
-                    `https://datawrapper.dwcdn.net/${chartId}/${weekNumber}/dataset.csv`,
-                    `https://datawrapper.dwcdn.net/${chartId}/dataset.csv`
-                );
+                // Try recent version numbers first (most likely to have fresh data)
+                for (let v = 10; v >= 1; v--) {
+                    csvUrls.push(`https://datawrapper.dwcdn.net/${chartId}/${v}/dataset.csv`);
+                }
+                // Also try without version
+                csvUrls.push(`https://datawrapper.dwcdn.net/${chartId}/dataset.csv`);
             }
         }
         

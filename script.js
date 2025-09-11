@@ -7,7 +7,7 @@ class RankingsApp {
 
     init() {
         this.bindEvents();
-        this.loadTimestamp();
+        // Removed loadTimestamp() - we'll use the timestamp from rankings.json instead
         this.loadRankings();
     }
 

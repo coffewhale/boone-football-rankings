@@ -113,11 +113,14 @@ async function getFileSha(repo, path, githubToken) {
 async function commitBothFiles(rankingsData, timestamp, githubToken, repo) {
     console.log('🔑 Committing both rankings.json and timestamp.json...');
     
-    // Get current SHAs for both files
+    // Get current SHAs for both files RIGHT BEFORE committing
+    // This ensures we have the latest version even if another process just updated
     const [rankingsSha, timestampSha] = await Promise.all([
         getFileSha(repo, 'rankings.json', githubToken),
         getFileSha(repo, 'timestamp.json', githubToken)
     ]);
+    
+    console.log(`📄 Current SHAs - rankings: ${rankingsSha?.substring(0,7)}, timestamp: ${timestampSha?.substring(0,7)}`);
     
     // Prepare new timestamp.json content
     const newTimestampData = {
@@ -127,24 +130,45 @@ async function commitBothFiles(rankingsData, timestamp, githubToken, repo) {
         week: rankingsData.week || 2
     };
     
-    // Commit rankings.json
+    // Commit rankings.json with retry logic
     const rankingsContent = JSON.stringify(rankingsData, null, 2);
-    const rankingsResponse = await fetch(`https://api.github.com/repos/${repo}/contents/rankings.json`, {
-        method: 'PUT',
-        headers: {
-            'Authorization': `token ${githubToken}`,
-            'User-Agent': 'Boone-Rankings-Bot',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            message: `Force update: ${rankingsData.totalPlayers} players - Week ${rankingsData.week || '?'}`,
-            content: Buffer.from(rankingsContent).toString('base64'),
-            ...(rankingsSha && { sha: rankingsSha })
-        })
-    });
+    let rankingsResponse;
+    let retries = 0;
+    const maxRetries = 2;
+    
+    while (retries <= maxRetries) {
+        // Get fresh SHA if retrying
+        const currentRankingsSha = retries > 0 ? await getFileSha(repo, 'rankings.json', githubToken) : rankingsSha;
+        
+        rankingsResponse = await fetch(`https://api.github.com/repos/${repo}/contents/rankings.json`, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `token ${githubToken}`,
+                'User-Agent': 'Boone-Rankings-Bot',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: `Force update: ${rankingsData.totalPlayers} players - Week ${rankingsData.week || '?'}`,
+                content: Buffer.from(rankingsContent).toString('base64'),
+                ...(currentRankingsSha && { sha: currentRankingsSha })
+            })
+        });
+        
+        if (rankingsResponse.ok) {
+            break;
+        }
+        
+        if (rankingsResponse.status === 409 || rankingsResponse.status === 422) {
+            console.log(`⚠️ Conflict detected, retrying with fresh SHA (attempt ${retries + 1}/${maxRetries})...`);
+            retries++;
+            await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second
+        } else {
+            throw new Error(`Failed to commit rankings.json: ${rankingsResponse.status}`);
+        }
+    }
     
     if (!rankingsResponse.ok) {
-        throw new Error(`Failed to commit rankings.json: ${rankingsResponse.status}`);
+        throw new Error(`Failed to commit rankings.json after ${maxRetries} retries`);
     }
     
     // Commit timestamp.json

@@ -2598,10 +2598,10 @@
       "opponent": "@ ARI"
     }
   ],
-  "lastUpdated": "2025-09-09T21:09:04.000Z",
+  "lastUpdated": "2025-09-10T19:40:56.000Z",
   "week": 2,
-  "scrapedAt": "2025-09-10T13:08:44.727Z",
-  "scrapingMethod": "JSON-Timestamp-Triggered",
+  "scrapedAt": "2025-09-11T00:46:59.717Z",
+  "scrapingMethod": "Timestamp-Triggered",
   "totalPlayers": 487,
-  "triggeredAt": "2025-09-10T13:08:44.760Z"
+  "triggeredAt": "2025-09-11T00:46:59.747Z"
 }

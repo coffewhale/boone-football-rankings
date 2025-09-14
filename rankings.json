@@ -721,48 +721,48 @@
     },
     {
       "preGameRank": 52,
-      "player": "Josh Downs",
-      "opponent": "vs DEN"
-    },
-    {
-      "preGameRank": 53,
-      "player": "Calvin Austin III",
-      "opponent": "vs SEA"
-    },
-    {
-      "preGameRank": 54,
-      "player": "Cooper Kupp",
-      "opponent": "@ PIT"
-    },
-    {
-      "preGameRank": 55,
-      "player": "Joshua Palmer",
-      "opponent": "@ NYJ"
-    },
-    {
-      "preGameRank": 56,
-      "player": "Marvin Mims Jr.",
-      "opponent": "@ IND"
-    },
-    {
-      "preGameRank": 57,
-      "player": "Rashod Bateman",
-      "opponent": "vs CLE"
-    },
-    {
-      "preGameRank": 58,
-      "player": "DeMario Douglas",
-      "opponent": "@ MIA"
-    },
-    {
-      "preGameRank": 59,
       "player": "Jauan Jennings",
       "opponent": "@ NO"
     },
     {
-      "preGameRank": 60,
+      "preGameRank": 53,
       "player": "Wan'Dale Robinson",
       "opponent": "@ DAL"
+    },
+    {
+      "preGameRank": 54,
+      "player": "Josh Downs",
+      "opponent": "vs DEN"
+    },
+    {
+      "preGameRank": 55,
+      "player": "Calvin Austin III",
+      "opponent": "vs SEA"
+    },
+    {
+      "preGameRank": 56,
+      "player": "Cooper Kupp",
+      "opponent": "@ PIT"
+    },
+    {
+      "preGameRank": 57,
+      "player": "Joshua Palmer",
+      "opponent": "@ NYJ"
+    },
+    {
+      "preGameRank": 58,
+      "player": "Marvin Mims Jr.",
+      "opponent": "@ IND"
+    },
+    {
+      "preGameRank": 59,
+      "player": "Rashod Bateman",
+      "opponent": "vs CLE"
+    },
+    {
+      "preGameRank": 60,
+      "player": "DeMario Douglas",
+      "opponent": "@ MIA"
     },
     {
       "preGameRank": 61,
@@ -771,18 +771,18 @@
     },
     {
       "preGameRank": 62,
-      "player": "Jayden Higgins",
-      "opponent": "vs TB"
-    },
-    {
-      "preGameRank": 63,
       "player": "Dyami Brown",
       "opponent": "@ CIN"
     },
     {
-      "preGameRank": 64,
+      "preGameRank": 63,
       "player": "JuJu Smith-Schuster",
       "opponent": "vs PHI"
+    },
+    {
+      "preGameRank": 64,
+      "player": "Jayden Higgins",
+      "opponent": "vs TB"
     },
     {
       "preGameRank": 65,
@@ -801,13 +801,13 @@
     },
     {
       "preGameRank": 68,
-      "player": "Alec Pierce",
-      "opponent": "vs DEN"
+      "player": "Dont'e Thornton Jr.",
+      "opponent": "vs LAC"
     },
     {
       "preGameRank": 69,
-      "player": "Dont'e Thornton Jr.",
-      "opponent": "vs LAC"
+      "player": "Jalen Nailor",
+      "opponent": "vs ATL"
     },
     {
       "preGameRank": 70,
@@ -1138,15 +1138,15 @@
     },
     {
       "preGameRank": 29,
-      "player": "Alvin Kamara",
-      "opponent": "vs SF",
-      "positionRank": "RB19"
-    },
-    {
-      "preGameRank": 30,
       "player": "Tony Pollard",
       "opponent": "vs LAR",
       "positionRank": "RB20"
+    },
+    {
+      "preGameRank": 30,
+      "player": "Javonte Williams",
+      "opponent": "vs NYG",
+      "positionRank": "RB21"
     },
     {
       "preGameRank": 31,
@@ -1186,9 +1186,9 @@
     },
     {
       "preGameRank": 37,
-      "player": "Javonte Williams",
-      "opponent": "vs NYG",
-      "positionRank": "RB21"
+      "player": "Alvin Kamara",
+      "opponent": "vs SF",
+      "positionRank": "RB19"
     },
     {
       "preGameRank": 38,
@@ -1558,20 +1558,20 @@
     },
     {
       "preGameRank": 99,
-      "player": "Josh Downs",
-      "opponent": "vs DEN",
+      "player": "Jauan Jennings",
+      "opponent": "@ NO",
       "positionRank": "WR52"
     },
     {
       "preGameRank": 100,
-      "player": "Calvin Austin III",
-      "opponent": "vs SEA",
+      "player": "Wan'Dale Robinson",
+      "opponent": "@ DAL",
       "positionRank": "WR53"
     },
     {
       "preGameRank": 101,
-      "player": "Cooper Kupp",
-      "opponent": "@ PIT",
+      "player": "Josh Downs",
+      "opponent": "vs DEN",
       "positionRank": "WR54"
     },
     {
@@ -1582,8 +1582,8 @@
     },
     {
       "preGameRank": 103,
-      "player": "Joshua Palmer",
-      "opponent": "@ NYJ",
+      "player": "Calvin Austin III",
+      "opponent": "vs SEA",
       "positionRank": "WR55"
     },
     {
@@ -1594,14 +1594,14 @@
     },
     {
       "preGameRank": 105,
-      "player": "Marvin Mims Jr.",
-      "opponent": "@ IND",
+      "player": "Cooper Kupp",
+      "opponent": "@ PIT",
       "positionRank": "WR56"
     },
     {
       "preGameRank": 106,
-      "player": "Rashod Bateman",
-      "opponent": "vs CLE",
+      "player": "Joshua Palmer",
+      "opponent": "@ NYJ",
       "positionRank": "WR57"
     },
     {
@@ -1612,14 +1612,14 @@
     },
     {
       "preGameRank": 108,
-      "player": "DeMario Douglas",
-      "opponent": "@ MIA",
+      "player": "Marvin Mims Jr.",
+      "opponent": "@ IND",
       "positionRank": "WR58"
     },
     {
       "preGameRank": 109,
-      "player": "Jauan Jennings",
-      "opponent": "@ NO",
+      "player": "Rashod Bateman",
+      "opponent": "vs CLE",
       "positionRank": "WR59"
     },
     {
@@ -1648,8 +1648,8 @@
     },
     {
       "preGameRank": 114,
-      "player": "Wan'Dale Robinson",
-      "opponent": "@ DAL",
+      "player": "DeMario Douglas",
+      "opponent": "@ MIA",
       "positionRank": "WR60"
     },
     {
@@ -1672,8 +1672,8 @@
     },
     {
       "preGameRank": 118,
-      "player": "Jayden Higgins",
-      "opponent": "vs TB",
+      "player": "Dyami Brown",
+      "opponent": "@ CIN",
       "positionRank": "WR62"
     },
     {
@@ -1684,14 +1684,14 @@
     },
     {
       "preGameRank": 120,
-      "player": "Dyami Brown",
-      "opponent": "@ CIN",
+      "player": "JuJu Smith-Schuster",
+      "opponent": "vs PHI",
       "positionRank": "WR63"
     },
     {
       "preGameRank": 121,
-      "player": "JuJu Smith-Schuster",
-      "opponent": "vs PHI",
+      "player": "Jayden Higgins",
+      "opponent": "vs TB",
       "positionRank": "WR64"
     },
     {
@@ -1726,9 +1726,9 @@
     },
     {
       "preGameRank": 127,
-      "player": "Dalton Schultz",
-      "opponent": "vs TB",
-      "positionRank": "TE20"
+      "player": "Evan Engram",
+      "opponent": "@ IND",
+      "positionRank": "TE21"
     },
     {
       "preGameRank": 128,
@@ -1738,20 +1738,20 @@
     },
     {
       "preGameRank": 129,
-      "player": "Evan Engram",
-      "opponent": "@ IND",
-      "positionRank": "TE21"
+      "player": "Dalton Schultz",
+      "opponent": "vs TB",
+      "positionRank": "TE20"
     },
     {
       "preGameRank": 130,
-      "player": "Alec Pierce",
-      "opponent": "vs DEN",
+      "player": "Dont'e Thornton Jr.",
+      "opponent": "vs LAC",
       "positionRank": "WR68"
     },
     {
       "preGameRank": 131,
-      "player": "Dont'e Thornton Jr.",
-      "opponent": "vs LAC",
+      "player": "Jalen Nailor",
+      "opponent": "vs ATL",
       "positionRank": "WR69"
     },
     {
@@ -1774,9 +1774,9 @@
     },
     {
       "preGameRank": 135,
-      "player": "Ja'Tavion Sanders",
-      "opponent": "@ ARI",
-      "positionRank": "TE23"
+      "player": "Pat Freiermuth",
+      "opponent": "vs SEA",
+      "positionRank": "TE24"
     },
     {
       "preGameRank": 136,
@@ -1786,8 +1786,8 @@
     },
     {
       "preGameRank": 137,
-      "player": "Jalen Nailor",
-      "opponent": "vs ATL",
+      "player": "Tre Tucker",
+      "opponent": "vs LAC",
       "positionRank": "WR71137"
     },
     {
@@ -1798,15 +1798,15 @@
     },
     {
       "preGameRank": 139,
-      "player": "Tre Tucker",
-      "opponent": "vs LAC",
+      "player": "Tyquan Thornton",
+      "opponent": "vs PHI",
       "positionRank": "WR72139"
     },
     {
       "preGameRank": 140,
-      "player": "Pat Freiermuth",
-      "opponent": "vs SEA",
-      "positionRank": "TE24"
+      "player": "Cade Otton",
+      "opponent": "@ HOU",
+      "positionRank": "TE25"
     },
     {
       "preGameRank": 141,
@@ -1828,9 +1828,9 @@
     },
     {
       "preGameRank": 144,
-      "player": "Cade Otton",
-      "opponent": "@ HOU",
-      "positionRank": "TE25"
+      "player": "Ja'Tavion Sanders",
+      "opponent": "@ ARI",
+      "positionRank": "TE23"
     },
     {
       "preGameRank": 145,
@@ -1852,8 +1852,8 @@
     },
     {
       "preGameRank": 148,
-      "player": "Tyquan Thornton",
-      "opponent": "vs PHI",
+      "player": "Alec Pierce",
+      "opponent": "vs DEN",
       "positionRank": "WR74148"
     },
     {
@@ -2193,10 +2193,10 @@
       "opponent": "@ BAL"
     }
   ],
-  "lastUpdated": "2025-09-14T12:57:38.000Z",
+  "lastUpdated": "2025-09-14T16:05:23.000Z",
   "week": 2,
-  "scrapedAt": "2025-09-14T15:00:17.554Z",
+  "scrapedAt": "2025-09-14T18:00:18.611Z",
   "scrapingMethod": "Timestamp-Triggered",
   "totalPlayers": 406,
-  "triggeredAt": "2025-09-14T15:00:17.590Z"
+  "triggeredAt": "2025-09-14T18:00:18.644Z"
 }

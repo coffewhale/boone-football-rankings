@@ -305,43 +305,19 @@ function parseFlexibleCSV(csvText, position) {
             };
             
             if (position === 'flex') {
-                // For FLEX, look for position rank in the fields between player and opponent
-                let positionData = null;
-
-                // First try the position field if mapped
-                if (fieldMap.position >= 0) {
-                    positionData = extractField(fields, fieldMap.position);
-                }
-
-                // If not found or invalid, check fields that look like position ranks
-                if (!positionData || !positionData.trim()) {
-                    // Look through all fields for something that looks like "RB1", "WR12", etc.
-                    for (let i = 2; i < fields.length - 1; i++) {
-                        const field = cleanText(fields[i]).toUpperCase();
-                        if (/^(RB|WR|TE)\d+$/.test(field)) {
-                            positionData = field;
-                            break;
-                        }
-                    }
-                }
-
+                // Simply grab the position rank from the position column
+                const positionData = extractField(fields, fieldMap.position);
                 if (positionData) {
-                    positionData = cleanText(positionData).toUpperCase();
-                    // Check if it's already in format like "RB1" or "WR12"
-                    if (/^(RB|WR|TE)\d+$/.test(positionData)) {
-                        rankingData.positionRank = positionData;
-                    } else if (/^(RB|WR|TE)$/.test(positionData)) {
-                        // If it's just the position without rank, we'll fix later
-                        rankingData.positionRank = `${positionData}${rank}`;
+                    // Just use it as-is if it looks like a position rank
+                    const cleaned = cleanText(positionData).toUpperCase();
+                    if (/^(RB|WR|TE)\d+$/.test(cleaned)) {
+                        rankingData.positionRank = cleaned;
                     } else {
-                        // Fallback to guessing
-                        const guessedPos = guessPosition(player);
-                        rankingData.positionRank = `${guessedPos}${rank}`;
+                        // Fallback to calculating from actual position rankings
+                        rankingData.positionRank = null; // Will be fixed by calculateCorrectFlexRanks
                     }
                 } else {
-                    // Fallback: guess position and we'll fix later with calculateCorrectFlexRanks
-                    const guessedPos = guessPosition(player);
-                    rankingData.positionRank = `${guessedPos}${rank}`;
+                    rankingData.positionRank = null; // Will be fixed by calculateCorrectFlexRanks
                 }
             }
             

@@ -265,14 +265,24 @@ function parseFlexibleCSV(csvText, position) {
             // Special handling for defense CSV format: ,,Rank,Team,Opp
             if (position === 'def' && fields.length >= 5) {
                 rank = parseInt(fields[2]); // Column 2: Rank
-                player = cleanText(fields[3]); // Column 3: Team 
+                player = cleanText(fields[3]); // Column 3: Team
                 opponent = cleanText(fields[4]); // Column 4: Opp
+            } else if (position === 'flex') {
+                // FLEX has format: Rank, Player, Team, Position (RB1/WR12), Opp
+                rank = extractField(fields, fieldMap.rank) || extractField(fields, [0, 1]);
+                player = extractField(fields, fieldMap.player) || extractField(fields, [1, 2]);
+                // Skip position field for opponent - it's typically the last field
+                opponent = extractField(fields, [-1]) || 'TBD';
+
+                rank = parseInt(rank);
+                player = cleanText(player);
+                opponent = cleanText(opponent);
             } else {
                 // Standard logic for other positions
                 rank = extractField(fields, fieldMap.rank) || extractField(fields, [0, 1, 2]);
                 player = extractField(fields, fieldMap.player) || extractField(fields, [1, 2, 3]);
                 opponent = extractField(fields, fieldMap.opponent) || extractField(fields, [-1, -2]);
-                
+
                 rank = parseInt(rank);
                 player = cleanText(player);
                 opponent = cleanText(opponent);
@@ -287,14 +297,22 @@ function parseFlexibleCSV(csvText, position) {
             };
             
             if (position === 'flex') {
-                // Use actual position from CSV if available, otherwise guess
-                let actualPosition = extractField(fields, fieldMap.position);
-                if (!actualPosition) {
-                    actualPosition = guessPosition(player);
+                // For FLEX, the position column contains the actual position rank (e.g., "RB1", "WR12")
+                let positionData = extractField(fields, fieldMap.position);
+                if (positionData) {
+                    positionData = cleanText(positionData).toUpperCase();
+                    // Check if it's already in format like "RB1" or "WR12"
+                    if (/^[A-Z]{2}\d+$/.test(positionData)) {
+                        rankingData.positionRank = positionData;
+                    } else {
+                        // If it's just the position without rank, we'll fix later
+                        rankingData.positionRank = `${positionData}${rank}`;
+                    }
                 } else {
-                    actualPosition = cleanText(actualPosition).toUpperCase();
+                    // Fallback: guess position and we'll fix later with calculateCorrectFlexRanks
+                    const guessedPos = guessPosition(player);
+                    rankingData.positionRank = `${guessedPos}${rank}`;
                 }
-                rankingData.positionRank = `${actualPosition}${rank}`;
             }
             
             rankings.push(rankingData);

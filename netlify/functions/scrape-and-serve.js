@@ -268,23 +268,13 @@ function parseFlexibleCSV(csvText, position) {
                 player = cleanText(fields[3]); // Column 3: Team
                 opponent = cleanText(fields[4]); // Column 4: Opp
             } else if (position === 'flex') {
-                // FLEX CSV typically has: Rank, Player, Team, Position (RB1/WR12), Opp
-                // Try to be more specific about field positions
-                rank = extractField(fields, fieldMap.rank) || extractField(fields, [0, 1]);
-                player = extractField(fields, fieldMap.player) || extractField(fields, [1, 2]);
-
-                // For opponent, it should be the last field, but NOT the position field
-                // Position field should be after player/team but before opponent
-                if (fieldMap.position >= 0 && fieldMap.opponent >= 0) {
-                    opponent = extractField(fields, fieldMap.opponent);
-                } else {
-                    // Fallback: last field is usually opponent
-                    opponent = extractField(fields, [-1]) || 'TBD';
-                }
-
-                rank = parseInt(rank);
-                player = cleanText(player);
-                opponent = cleanText(opponent);
+                // FLEX has columns like: ,Rank,Player,Team,Position,Pos.,Opp
+                // Just use hardcoded positions since we know the format
+                rank = parseInt(fields[1] || fields[0]); // Rank is usually column 1
+                player = cleanText(fields[2] || fields[1]); // Player is column 2
+                // Position rank (like "RB1") should be in column 4 or 5
+                // Opponent is the last column
+                opponent = cleanText(fields[fields.length - 1]);
             } else {
                 // Standard logic for other positions
                 rank = extractField(fields, fieldMap.rank) || extractField(fields, [0, 1, 2]);
@@ -305,19 +295,17 @@ function parseFlexibleCSV(csvText, position) {
             };
             
             if (position === 'flex') {
-                // Simply grab the position rank from the position column
-                const positionData = extractField(fields, fieldMap.position);
-                if (positionData) {
-                    // Just use it as-is if it looks like a position rank
-                    const cleaned = cleanText(positionData).toUpperCase();
-                    if (/^(RB|WR|TE)\d+$/.test(cleaned)) {
-                        rankingData.positionRank = cleaned;
-                    } else {
-                        // Fallback to calculating from actual position rankings
-                        rankingData.positionRank = null; // Will be fixed by calculateCorrectFlexRanks
-                    }
+                // For FLEX, position rank is in column 4 or 5 (like "RB1", "WR12")
+                // Try column 4 first, then 5
+                let positionRank = cleanText(fields[4] || '').toUpperCase();
+                if (!positionRank || !/^(RB|WR|TE)\d+$/.test(positionRank)) {
+                    positionRank = cleanText(fields[5] || '').toUpperCase();
+                }
+                if (/^(RB|WR|TE)\d+$/.test(positionRank)) {
+                    rankingData.positionRank = positionRank;
                 } else {
-                    rankingData.positionRank = null; // Will be fixed by calculateCorrectFlexRanks
+                    // Will be fixed by calculateCorrectFlexRanks if needed
+                    rankingData.positionRank = null;
                 }
             }
             

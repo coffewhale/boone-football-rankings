@@ -295,20 +295,20 @@ function parseFlexibleCSV(csvText, position) {
             };
             
             if (position === 'flex') {
-                // Debug: log first few rows to understand structure
-                if (i <= 3) {
-                    console.log(`FLEX row ${i}: [${fields.map(f => `"${f}"`).join(', ')}]`);
-                }
-                // For FLEX, look for position rank pattern in any field
+                // FLEX CSV has Position column with values like "RB1", "WR12", etc.
+                // Try to find it by checking each field for the pattern
                 let positionRank = null;
-                for (let j = 3; j < fields.length - 1; j++) {
+
+                // Check each field for position rank pattern
+                for (let j = 0; j < fields.length; j++) {
                     const field = cleanText(fields[j]).toUpperCase();
                     if (/^(RB|WR|TE)\d+$/.test(field)) {
                         positionRank = field;
-                        if (i <= 3) console.log(`  Found position rank in column ${j}: ${positionRank}`);
                         break;
                     }
                 }
+
+                // If we still don't have it, we'll let calculateCorrectFlexRanks handle it
                 rankingData.positionRank = positionRank;
             }
             
@@ -432,29 +432,44 @@ function guessPosition(playerName) {
 
 function calculateCorrectFlexRanks(flexPlayers, allResults) {
     console.log('🔧 Fixing FLEX position ranks...');
-    
+
     // Create lookup maps for actual position ranks
     const positionRanks = {
         WR: createPlayerRankMap(allResults.wr || []),
         RB: createPlayerRankMap(allResults.rb || []),
         TE: createPlayerRankMap(allResults.te || [])
     };
-    
+
     return flexPlayers.map(flexPlayer => {
-        // Get the position from existing positionRank (e.g., "WR1026" -> "WR")
-        const posMatch = flexPlayer.positionRank?.match(/^([A-Z]+)/);
-        if (!posMatch) return flexPlayer;
-        
-        const position = posMatch[1];
-        const actualRank = positionRanks[position]?.[flexPlayer.player];
-        
-        if (actualRank) {
-            flexPlayer.positionRank = `${position}${actualRank}`;
-            console.log(`  📝 Fixed: ${flexPlayer.player} -> ${flexPlayer.positionRank}`);
-        } else {
-            console.log(`  ❌ No rank found for ${flexPlayer.player} in ${position}`);
+        // If positionRank already exists and is valid, keep it
+        if (flexPlayer.positionRank && /^(RB|WR|TE)\d+$/.test(flexPlayer.positionRank)) {
+            console.log(`  ✅ ${flexPlayer.player} already has ${flexPlayer.positionRank}`);
+            return flexPlayer;
         }
-        
+
+        // Otherwise, look up the player in each position list
+        let foundRank = null;
+
+        // Check RB rankings
+        if (positionRanks.RB[flexPlayer.player]) {
+            foundRank = `RB${positionRanks.RB[flexPlayer.player]}`;
+        }
+        // Check WR rankings
+        else if (positionRanks.WR[flexPlayer.player]) {
+            foundRank = `WR${positionRanks.WR[flexPlayer.player]}`;
+        }
+        // Check TE rankings
+        else if (positionRanks.TE[flexPlayer.player]) {
+            foundRank = `TE${positionRanks.TE[flexPlayer.player]}`;
+        }
+
+        if (foundRank) {
+            flexPlayer.positionRank = foundRank;
+            console.log(`  📝 Fixed: ${flexPlayer.player} -> ${foundRank}`);
+        } else {
+            console.log(`  ⚠️ ${flexPlayer.player} not found in any position list`);
+        }
+
         return flexPlayer;
     });
 }

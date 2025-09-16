@@ -295,18 +295,21 @@ function parseFlexibleCSV(csvText, position) {
             };
             
             if (position === 'flex') {
-                // For FLEX, position rank is in column 4 or 5 (like "RB1", "WR12")
-                // Try column 4 first, then 5
-                let positionRank = cleanText(fields[4] || '').toUpperCase();
-                if (!positionRank || !/^(RB|WR|TE)\d+$/.test(positionRank)) {
-                    positionRank = cleanText(fields[5] || '').toUpperCase();
+                // Debug: log first few rows to understand structure
+                if (i <= 3) {
+                    console.log(`FLEX row ${i}: [${fields.map(f => `"${f}"`).join(', ')}]`);
                 }
-                if (/^(RB|WR|TE)\d+$/.test(positionRank)) {
-                    rankingData.positionRank = positionRank;
-                } else {
-                    // Will be fixed by calculateCorrectFlexRanks if needed
-                    rankingData.positionRank = null;
+                // For FLEX, look for position rank pattern in any field
+                let positionRank = null;
+                for (let j = 3; j < fields.length - 1; j++) {
+                    const field = cleanText(fields[j]).toUpperCase();
+                    if (/^(RB|WR|TE)\d+$/.test(field)) {
+                        positionRank = field;
+                        if (i <= 3) console.log(`  Found position rank in column ${j}: ${positionRank}`);
+                        break;
+                    }
                 }
+                rankingData.positionRank = positionRank;
             }
             
             rankings.push(rankingData);

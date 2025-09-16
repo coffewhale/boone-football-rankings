@@ -1447,361 +1447,361 @@
       "preGameRank": 1,
       "player": "Bijan Robinson",
       "opponent": "@ CAR",
-      "positionRank": "@ CAR1"
+      "positionRank": null
     },
     {
       "preGameRank": 2,
       "player": "Christian McCaffrey",
       "opponent": "vs ARI",
-      "positionRank": "VS ARI2"
+      "positionRank": null
     },
     {
       "preGameRank": 3,
       "player": "Jonathan Taylor",
       "opponent": "@ TEN",
-      "positionRank": "@ TEN3"
+      "positionRank": null
     },
     {
       "preGameRank": 4,
       "player": "Saquon Barkley",
       "opponent": "vs LAR",
-      "positionRank": "VS LAR4"
+      "positionRank": null
     },
     {
       "preGameRank": 5,
       "player": "Jahmyr Gibbs",
       "opponent": "@ BAL",
-      "positionRank": "@ BAL5"
+      "positionRank": null
     },
     {
       "preGameRank": 6,
       "player": "Derrick Henry",
       "opponent": "vs DET",
-      "positionRank": "VS DET6"
+      "positionRank": null
     },
     {
       "preGameRank": 7,
       "player": "James Cook",
       "opponent": "vs MIA",
-      "positionRank": "VS MIA7"
+      "positionRank": null
     },
     {
       "preGameRank": 8,
       "player": "Bucky Irving",
       "opponent": "vs NYJ",
-      "positionRank": "VS NYJ8"
+      "positionRank": null
     },
     {
       "preGameRank": 9,
       "player": "De'Von Achane",
       "opponent": "@ BUF",
-      "positionRank": "@ BUF9"
+      "positionRank": null
     },
     {
       "preGameRank": 10,
       "player": "Josh Jacobs",
       "opponent": "@ CLE",
-      "positionRank": "@ CLE10"
+      "positionRank": null
     },
     {
       "preGameRank": 11,
       "player": "Jordan Mason",
       "opponent": "vs CIN",
-      "positionRank": "VS CIN11"
+      "positionRank": null
     },
     {
       "preGameRank": 12,
       "player": "Chase Brown",
       "opponent": "@ MIN",
-      "positionRank": "@ MIN12"
+      "positionRank": null
     },
     {
       "preGameRank": 13,
       "player": "Travis Etienne Jr.",
       "opponent": "vs HOU",
-      "positionRank": "VS HOU13"
+      "positionRank": null
     },
     {
       "preGameRank": 14,
       "player": "Ashton Jeanty",
       "opponent": "@ WSH",
-      "positionRank": "@ WSH14"
+      "positionRank": null
     },
     {
       "preGameRank": 15,
       "player": "Kyren Williams",
       "opponent": "@ PHI",
-      "positionRank": "@ PHI15"
+      "positionRank": null
     },
     {
       "preGameRank": 16,
       "player": "Alvin Kamara",
       "opponent": "@ SEA",
-      "positionRank": "@ SEA16"
+      "positionRank": null
     },
     {
       "preGameRank": 17,
       "player": "Kenneth Walker III",
       "opponent": "vs NO",
-      "positionRank": "VS NO17"
+      "positionRank": null
     },
     {
       "preGameRank": 18,
       "player": "Breece Hall",
       "opponent": "@ TB",
-      "positionRank": "@ TB18"
+      "positionRank": null
     },
     {
       "preGameRank": 19,
       "player": "Javonte Williams",
       "opponent": "@ CHI",
-      "positionRank": "@ CHI19"
+      "positionRank": null
     },
     {
       "preGameRank": 20,
       "player": "James Conner",
       "opponent": "@ SF",
-      "positionRank": "@ SF20"
+      "positionRank": null
     },
     {
       "preGameRank": 21,
       "player": "Chuba Hubbard",
       "opponent": "vs ATL",
-      "positionRank": "VS ATL21"
+      "positionRank": null
     },
     {
       "preGameRank": 22,
       "player": "Tony Pollard",
       "opponent": "vs IND",
-      "positionRank": "VS IND22"
+      "positionRank": null
     },
     {
       "preGameRank": 23,
       "player": "Omarion Hampton",
       "opponent": "vs DEN",
-      "positionRank": "VS DEN23"
+      "positionRank": null
     },
     {
       "preGameRank": 24,
       "player": "J.K. Dobbins",
       "opponent": "@ LAC",
-      "positionRank": "@ LAC24"
+      "positionRank": null
     },
     {
       "preGameRank": 25,
       "player": "Jacory Croskey-Merritt",
       "opponent": "vs LV",
-      "positionRank": "VS LV25"
+      "positionRank": null
     },
     {
       "preGameRank": 26,
       "player": "D'Andre Swift",
       "opponent": "vs DAL",
-      "positionRank": "VS DAL26"
+      "positionRank": null
     },
     {
       "preGameRank": 27,
       "player": "Jaylen Warren",
       "opponent": "@ NE",
-      "positionRank": "@ NE27"
+      "positionRank": null
     },
     {
       "preGameRank": 28,
       "player": "David Montgomery",
       "opponent": "@ BAL",
-      "positionRank": "@ BAL28"
+      "positionRank": null
     },
     {
       "preGameRank": 29,
       "player": "Nick Chubb",
       "opponent": "@ JAX",
-      "positionRank": "@ JAX29"
+      "positionRank": null
     },
     {
       "preGameRank": 30,
       "player": "Isiah Pacheco",
       "opponent": "@ NYG",
-      "positionRank": "@ NYG30"
+      "positionRank": null
     },
     {
       "preGameRank": 31,
       "player": "Rhamondre Stevenson",
       "opponent": "vs PIT",
-      "positionRank": "VS PIT31"
+      "positionRank": null
     },
     {
       "preGameRank": 32,
       "player": "Quinshon Judkins",
       "opponent": "vs GB",
-      "positionRank": "VS GB32"
+      "positionRank": null
     },
     {
       "preGameRank": 33,
       "player": "Tyler Allgeier",
       "opponent": "@ CAR",
-      "positionRank": "@ CAR33"
+      "positionRank": null
     },
     {
       "preGameRank": 34,
       "player": "Bhayshul Tuten",
       "opponent": "vs HOU",
-      "positionRank": "VS HOU34"
+      "positionRank": null
     },
     {
       "preGameRank": 35,
       "player": "Zach Charbonnet",
       "opponent": "vs NO",
-      "positionRank": "VS NO35"
+      "positionRank": null
     },
     {
       "preGameRank": 36,
       "player": "Cam Skattebo",
       "opponent": "vs KC",
-      "positionRank": "VS KC36"
+      "positionRank": null
     },
     {
       "preGameRank": 37,
       "player": "TreVeyon Henderson",
       "opponent": "vs PIT",
-      "positionRank": "VS PIT37"
+      "positionRank": null
     },
     {
       "preGameRank": 38,
       "player": "Trey Benson",
       "opponent": "@ SF",
-      "positionRank": "@ SF38"
+      "positionRank": null
     },
     {
       "preGameRank": 39,
       "player": "Tyrone Tracy Jr.",
       "opponent": "vs KC",
-      "positionRank": "VS KC39"
+      "positionRank": null
     },
     {
       "preGameRank": 40,
       "player": "RJ Harvey",
       "opponent": "@ LAC",
-      "positionRank": "@ LAC40"
+      "positionRank": null
     },
     {
       "preGameRank": 41,
       "player": "Rachaad White",
       "opponent": "vs NYJ",
-      "positionRank": "VS NYJ41"
+      "positionRank": null
     },
     {
       "preGameRank": 42,
       "player": "Jerome Ford",
       "opponent": "vs GB",
-      "positionRank": "VS GB42"
+      "positionRank": null
     },
     {
       "preGameRank": 43,
       "player": "Najee Harris",
       "opponent": "vs DEN",
-      "positionRank": "VS DEN43"
+      "positionRank": null
     },
     {
       "preGameRank": 44,
       "player": "Kenneth Gainwell",
       "opponent": "@ NE",
-      "positionRank": "@ NE44"
+      "positionRank": null
     },
     {
       "preGameRank": 45,
       "player": "Kareem Hunt",
       "opponent": "@ NYG",
-      "positionRank": "@ NYG45"
+      "positionRank": null
     },
     {
       "preGameRank": 46,
       "player": "Brian Robinson Jr.",
       "opponent": "vs ARI",
-      "positionRank": "VS ARI46"
+      "positionRank": null
     },
     {
       "preGameRank": 47,
       "player": "Braelon Allen",
       "opponent": "@ TB",
-      "positionRank": "@ TB47"
+      "positionRank": null
     },
     {
       "preGameRank": 48,
       "player": "Dylan Sampson",
       "opponent": "vs GB",
-      "positionRank": "VS GB48"
+      "positionRank": null
     },
     {
       "preGameRank": 49,
       "player": "Rico Dowdle",
       "opponent": "vs ATL",
-      "positionRank": "VS ATL49"
+      "positionRank": null
     },
     {
       "preGameRank": 50,
       "player": "Miles Sanders",
       "opponent": "@ CHI",
-      "positionRank": "@ CHI50"
+      "positionRank": null
     },
     {
       "preGameRank": 51,
       "player": "Justice Hill",
       "opponent": "vs DET",
-      "positionRank": "VS DET51"
+      "positionRank": null
     },
     {
       "preGameRank": 52,
       "player": "Ray Davis",
       "opponent": "vs MIA",
-      "positionRank": "VS MIA52"
+      "positionRank": null
     },
     {
       "preGameRank": 53,
       "player": "Jeremy McNichols",
       "opponent": "vs LV",
-      "positionRank": "VS LV53"
+      "positionRank": null
     },
     {
       "preGameRank": 54,
       "player": "Blake Corum",
       "opponent": "@ PHI",
-      "positionRank": "@ PHI54"
+      "positionRank": null
     },
     {
       "preGameRank": 55,
       "player": "Kyle Monangai",
       "opponent": "vs DAL",
-      "positionRank": "VS DAL55"
+      "positionRank": null
     },
     {
       "preGameRank": 56,
       "player": "A.J. Dillon",
       "opponent": "vs LAR",
-      "positionRank": "VS LAR56"
+      "positionRank": null
     },
     {
       "preGameRank": 57,
       "player": "Ollie Gordon II",
       "opponent": "@ BUF",
-      "positionRank": "@ BUF57"
+      "positionRank": null
     },
     {
       "preGameRank": 58,
       "player": "Woody Marks",
       "opponent": "@ JAX",
-      "positionRank": "@ JAX58"
+      "positionRank": null
     },
     {
       "preGameRank": 59,
       "player": "Kaleb Johnson",
       "opponent": "@ NE",
-      "positionRank": "@ NE59"
+      "positionRank": null
     },
     {
       "preGameRank": 60,
       "player": "Kendre Miller",
       "opponent": "@ SEA",
-      "positionRank": "@ SEA60"
+      "positionRank": null
     }
   ],
   "def": [
@@ -2130,8 +2130,8 @@
   ],
   "lastUpdated": "2025-09-16T19:22:03.000Z",
   "week": 3,
-  "scrapedAt": "2025-09-16T22:07:11.410Z",
+  "scrapedAt": "2025-09-16T22:12:36.632Z",
   "scrapingMethod": "Force-Update",
   "totalPlayers": 411,
-  "forcedAt": "2025-09-16T22:07:11.454Z"
+  "forcedAt": "2025-09-16T22:12:36.658Z"
 }

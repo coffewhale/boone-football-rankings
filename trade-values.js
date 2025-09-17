@@ -253,7 +253,7 @@ class TradeValuesApp {
         // Since trade values update weekly and don't need automation,
         // we can just hardcode the date and update it manually
         // Update this date when new trade values are published
-        const hardcodedDate = '2025-09-10T12:00:00Z'; // Update this date weekly
+        const hardcodedDate = '2025-09-17T17:22:09.000Z'; // Week 3 publish date
 
         this.articleTimestamp = hardcodedDate;
         this.displayPublishedDate(hardcodedDate);

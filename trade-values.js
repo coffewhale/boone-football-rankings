@@ -5,14 +5,14 @@ class TradeValuesApp {
         this.articleTimestamp = null;
 
         // Yahoo article URL for timestamp
-        this.articleUrl = 'https://sports.yahoo.com/fantasy/article/rest-of-season-trade-value-charts--justin-boones-fantasy-football-quarterback-breakdown-180401789.html';
+        this.articleUrl = 'https://sports.yahoo.com/fantasy/article/rest-of-season-trade-value-charts--justin-boones-fantasy-football-quarterback-breakdown-prior-to-week-3-171149861.html';
 
         // CSV URLs for trade values (update these URLs as needed)
         this.csvUrls = {
-            qb: 'https://datawrapper.dwcdn.net/55HXy/2/dataset.csv',
-            rb: 'https://datawrapper.dwcdn.net/NDAon/3/dataset.csv', // Replace ADD_RB_ID
-            wr: 'https://datawrapper.dwcdn.net/1z4ZP/2/dataset.csv', // Replace ADD_WR_ID
-            te: 'https://datawrapper.dwcdn.net/6w0UZ/3/dataset.csv'
+            qb: 'https://datawrapper.dwcdn.net/55HXy/4/dataset.csv',
+            rb: 'https://datawrapper.dwcdn.net/NDAon/5/dataset.csv', // Replace ADD_RB_ID
+            wr: 'https://datawrapper.dwcdn.net/1z4ZP/5/dataset.csv', // Replace ADD_WR_ID
+            te: 'https://datawrapper.dwcdn.net/6w0UZ/5/dataset.csv'
         };
 
         this.init();

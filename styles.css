@@ -253,16 +253,6 @@ header h1 {
     .analysis-stats {
         grid-template-columns: 1fr;
     }
-
-    /* Make table scrollable horizontally to preserve all columns */
-    .rankings-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .rankings-table {
-        min-width: 600px; /* Ensure minimum width for all columns */
-    }
 }
 
 @media (max-width: 480px) {

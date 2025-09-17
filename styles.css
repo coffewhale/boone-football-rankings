@@ -256,17 +256,40 @@ header h1 {
 }
 
 @media (max-width: 480px) {
+    /* More aggressive spacing for mobile */
+    .rankings-table {
+        table-layout: fixed; /* Better column control */
+        width: 100%;
+        font-size: 0.75rem; /* Smaller font */
+    }
+
     .rankings-table th,
     .rankings-table td {
-        padding: 6px 8px;
-        font-size: 0.8rem;
+        padding: 4px 3px; /* Minimal padding */
+        font-size: 0.75rem;
     }
-    
+
+    /* Make rank column narrower */
+    .rankings-table th:first-child,
+    .rankings-table td:first-child {
+        width: 15%; /* Rank takes less space */
+        text-align: center;
+    }
+
+    /* Player name gets more space */
+    .rankings-table th:nth-child(2),
+    .rankings-table td:nth-child(2) {
+        width: 45%; /* Player name gets most space */
+        padding-right: 5px; /* Small gap to next column */
+    }
+
+    /* Value columns share remaining space */
+    .rankings-table th:nth-child(3),
+    .rankings-table td:nth-child(3),
     .rankings-table th:nth-child(4),
-    .rankings-table td:nth-child(4),
-    .rankings-table th:nth-child(5),
-    .rankings-table td:nth-child(5) {
-        display: none;
+    .rankings-table td:nth-child(4) {
+        width: 20%;
+        text-align: center;
     }
 }
 

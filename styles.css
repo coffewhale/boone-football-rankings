@@ -227,31 +227,41 @@ header h1 {
     .container {
         padding: 10px;
     }
-    
+
     header h1 {
         font-size: 2rem;
     }
-    
+
     .position-nav {
         flex-wrap: wrap;
     }
-    
+
     .nav-btn {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
-    
+
     .rankings-table {
         font-size: 0.9rem;
     }
-    
+
     .rankings-table th,
     .rankings-table td {
         padding: 8px 10px;
     }
-    
+
     .analysis-stats {
         grid-template-columns: 1fr;
+    }
+
+    /* Make table scrollable horizontally to preserve all columns */
+    .rankings-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .rankings-table {
+        min-width: 600px; /* Ensure minimum width for all columns */
     }
 }
 

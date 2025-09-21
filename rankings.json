@@ -2320,8 +2320,8 @@
   ],
   "lastUpdated": "2025-09-21T12:40:21.000Z",
   "week": 3,
-  "scrapedAt": "2025-09-21T13:31:49.810Z",
-  "scrapingMethod": "JSON-Timestamp-Triggered",
+  "scrapedAt": "2025-09-21T15:00:17.833Z",
+  "scrapingMethod": "Timestamp-Triggered",
   "totalPlayers": 431,
-  "triggeredAt": "2025-09-21T13:31:49.839Z"
+  "triggeredAt": "2025-09-21T15:00:17.863Z"
 }

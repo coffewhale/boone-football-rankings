@@ -175,25 +175,55 @@ class RankingsApp {
         };
 
         const weekNumber = this.getCurrentWeekNumber();
-        document.getElementById('position-title').textContent = 
+        document.getElementById('position-title').textContent =
             `${positionNames[position]} Rankings - Week ${weekNumber}`;
-        
+
         const tbody = document.getElementById('rankings-body');
+        const thead = document.querySelector('.rankings-table thead tr');
+
+        // Update header based on position
+        if (position === 'def') {
+            thead.innerHTML = `
+                <th>Rank</th>
+                <th>Team Defense</th>
+                <th>Opponent</th>
+            `;
+        } else if (position === 'flex') {
+            thead.innerHTML = `
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Position Rank</th>
+            `;
+        } else {
+            thead.innerHTML = `
+                <th>Rank</th>
+                <th>Player</th>
+            `;
+        }
+
         tbody.innerHTML = '';
 
         rankings.forEach(player => {
             const row = document.createElement('tr');
-            
-            // For FLEX, show position rank if available
-            const playerDisplay = position === 'flex' && player.positionRank
-                ? `${player.player} <span class="position-rank">(${player.positionRank})</span>`
-                : player.player;
-            
-            row.innerHTML = `
-                <td class="rank-cell">${player.preGameRank || player.rank}</td>
-                <td class="player-cell">${playerDisplay}</td>
-                <td>${player.opponent}</td>
-            `;
+
+            if (position === 'def') {
+                row.innerHTML = `
+                    <td class="rank-cell">${player.preGameRank || player.rank}</td>
+                    <td class="player-cell">${player.player}</td>
+                    <td>${player.opponent || ''}</td>
+                `;
+            } else if (position === 'flex') {
+                row.innerHTML = `
+                    <td class="rank-cell">${player.preGameRank || player.rank}</td>
+                    <td class="player-cell">${player.player}</td>
+                    <td class="position-rank">${player.positionRank || ''}</td>
+                `;
+            } else {
+                row.innerHTML = `
+                    <td class="rank-cell">${player.preGameRank || player.rank}</td>
+                    <td class="player-cell">${player.player}</td>
+                `;
+            }
             tbody.appendChild(row);
         });
     }

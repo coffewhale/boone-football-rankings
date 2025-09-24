@@ -1,0 +1,1998 @@
+{
+  "qb": [
+    {
+      "preGameRank": 1,
+      "player": "Lamar Jackson",
+      "opponent": "Team BAL"
+    },
+    {
+      "preGameRank": 2,
+      "player": "Josh Allen",
+      "opponent": "Team BUF"
+    },
+    {
+      "preGameRank": 3,
+      "player": "Jalen Hurts",
+      "opponent": "Team PHI"
+    },
+    {
+      "preGameRank": 4,
+      "player": "Justin Herbert",
+      "opponent": "Team LAC"
+    },
+    {
+      "preGameRank": 5,
+      "player": "Jayden Daniels",
+      "opponent": "Team WAS"
+    },
+    {
+      "preGameRank": 6,
+      "player": "Caleb Williams",
+      "opponent": "Team CHI"
+    },
+    {
+      "preGameRank": 7,
+      "player": "Drake Maye",
+      "opponent": "Team NE"
+    },
+    {
+      "preGameRank": 8,
+      "player": "Jordan Love",
+      "opponent": "Team GB"
+    },
+    {
+      "preGameRank": 9,
+      "player": "Patrick Mahomes II",
+      "opponent": "Team KC"
+    },
+    {
+      "preGameRank": 10,
+      "player": "Brock Purdy",
+      "opponent": "Team SF"
+    },
+    {
+      "preGameRank": 11,
+      "player": "Daniel Jones",
+      "opponent": "Team IND"
+    },
+    {
+      "preGameRank": 12,
+      "player": "Bo Nix",
+      "opponent": "Team DEN"
+    },
+    {
+      "preGameRank": 13,
+      "player": "Justin Fields",
+      "opponent": "Team NYJ"
+    },
+    {
+      "preGameRank": 14,
+      "player": "Kyler Murray",
+      "opponent": "Team ARI"
+    },
+    {
+      "preGameRank": 15,
+      "player": "Geno Smith",
+      "opponent": "Team LV"
+    },
+    {
+      "preGameRank": 16,
+      "player": "Baker Mayfield",
+      "opponent": "Team TB"
+    },
+    {
+      "preGameRank": 17,
+      "player": "Jared Goff",
+      "opponent": "Team DET"
+    },
+    {
+      "preGameRank": 18,
+      "player": "Matthew Stafford",
+      "opponent": "Team LAR"
+    },
+    {
+      "preGameRank": 19,
+      "player": "Dak Prescott",
+      "opponent": "Team DAL"
+    },
+    {
+      "preGameRank": 20,
+      "player": "Jaxson Dart",
+      "opponent": "Team NYG"
+    },
+    {
+      "preGameRank": 21,
+      "player": "C.J. Stroud",
+      "opponent": "Team HOU"
+    },
+    {
+      "preGameRank": 22,
+      "player": "Sam Darnold",
+      "opponent": "Team SEA"
+    },
+    {
+      "preGameRank": 23,
+      "player": "Michael Penix Jr.",
+      "opponent": "Team ATL"
+    },
+    {
+      "preGameRank": 24,
+      "player": "Carson Wentz",
+      "opponent": "Team MIN"
+    },
+    {
+      "preGameRank": 25,
+      "player": "Tua Tagovailoa",
+      "opponent": "Team MIA"
+    },
+    {
+      "preGameRank": 26,
+      "player": "Trevor Lawrence",
+      "opponent": "Team JAC"
+    },
+    {
+      "preGameRank": 27,
+      "player": "Bryce Young",
+      "opponent": "Team CAR"
+    },
+    {
+      "preGameRank": 28,
+      "player": "Joe Flacco",
+      "opponent": "Team CLE"
+    },
+    {
+      "preGameRank": 29,
+      "player": "Cam Ward",
+      "opponent": "Team TEN"
+    },
+    {
+      "preGameRank": 30,
+      "player": "Aaron Rodgers",
+      "opponent": "Team PIT"
+    },
+    {
+      "preGameRank": 31,
+      "player": "Jake Browning",
+      "opponent": "Team CIN"
+    },
+    {
+      "preGameRank": 32,
+      "player": "Spencer Rattler",
+      "opponent": "Team NO"
+    }
+  ],
+  "rb": [
+    {
+      "preGameRank": 1,
+      "player": "Christian McCaffrey",
+      "opponent": "Team SF"
+    },
+    {
+      "preGameRank": 2,
+      "player": "Bijan Robinson",
+      "opponent": "Team ATL"
+    },
+    {
+      "preGameRank": 3,
+      "player": "Jonathan Taylor",
+      "opponent": "Team IND"
+    },
+    {
+      "preGameRank": 4,
+      "player": "James Cook III",
+      "opponent": "Team BUF"
+    },
+    {
+      "preGameRank": 5,
+      "player": "Saquon Barkley",
+      "opponent": "Team PHI"
+    },
+    {
+      "preGameRank": 6,
+      "player": "Josh Jacobs",
+      "opponent": "Team GB"
+    },
+    {
+      "preGameRank": 7,
+      "player": "Derrick Henry",
+      "opponent": "Team BAL"
+    },
+    {
+      "preGameRank": 8,
+      "player": "Jahmyr Gibbs",
+      "opponent": "Team DET"
+    },
+    {
+      "preGameRank": 9,
+      "player": "De'Von Achane",
+      "opponent": "Team MIA"
+    },
+    {
+      "preGameRank": 10,
+      "player": "Jordan Mason",
+      "opponent": "Team MIN"
+    },
+    {
+      "preGameRank": 11,
+      "player": "Omarion Hampton",
+      "opponent": "Team LAC"
+    },
+    {
+      "preGameRank": 12,
+      "player": "Bucky Irving",
+      "opponent": "Team TB"
+    },
+    {
+      "preGameRank": 13,
+      "player": "Kyren Williams",
+      "opponent": "Team LAR"
+    },
+    {
+      "preGameRank": 14,
+      "player": "Kenneth Walker III",
+      "opponent": "Team SEA"
+    },
+    {
+      "preGameRank": 15,
+      "player": "Breece Hall",
+      "opponent": "Team NYJ"
+    },
+    {
+      "preGameRank": 16,
+      "player": "Chuba Hubbard",
+      "opponent": "Team CAR"
+    },
+    {
+      "preGameRank": 17,
+      "player": "Ashton Jeanty",
+      "opponent": "Team LV"
+    },
+    {
+      "preGameRank": 18,
+      "player": "J.K. Dobbins",
+      "opponent": "Team DEN"
+    },
+    {
+      "preGameRank": 19,
+      "player": "Trey Benson",
+      "opponent": "Team ARI"
+    },
+    {
+      "preGameRank": 20,
+      "player": "Travis Etienne Jr.",
+      "opponent": "Team JAC"
+    },
+    {
+      "preGameRank": 21,
+      "player": "Alvin Kamara",
+      "opponent": "Team NO"
+    },
+    {
+      "preGameRank": 22,
+      "player": "Cam Skattebo",
+      "opponent": "Team NYG"
+    },
+    {
+      "preGameRank": 23,
+      "player": "Javonte Williams",
+      "opponent": "Team DAL"
+    },
+    {
+      "preGameRank": 24,
+      "player": "Chase Brown",
+      "opponent": "Team CIN"
+    },
+    {
+      "preGameRank": 25,
+      "player": "Quinshon Judkins",
+      "opponent": "Team CLE"
+    },
+    {
+      "preGameRank": 26,
+      "player": "Jaylen Warren",
+      "opponent": "Team PIT"
+    },
+    {
+      "preGameRank": 27,
+      "player": "D'Andre Swift",
+      "opponent": "Team CHI"
+    },
+    {
+      "preGameRank": 28,
+      "player": "TreVeyon Henderson",
+      "opponent": "Team NE"
+    },
+    {
+      "preGameRank": 29,
+      "player": "Tony Pollard",
+      "opponent": "Team TEN"
+    },
+    {
+      "preGameRank": 30,
+      "player": "David Montgomery",
+      "opponent": "Team DET"
+    },
+    {
+      "preGameRank": 31,
+      "player": "Jacory Croskey-Merritt",
+      "opponent": "Team WAS"
+    },
+    {
+      "preGameRank": 32,
+      "player": "Nick Chubb",
+      "opponent": "Team HOU"
+    },
+    {
+      "preGameRank": 33,
+      "player": "Rhamondre Stevenson",
+      "opponent": "Team NE"
+    },
+    {
+      "preGameRank": 34,
+      "player": "Bhayshul Tuten",
+      "opponent": "Team JAC"
+    },
+    {
+      "preGameRank": 35,
+      "player": "Isiah Pacheco",
+      "opponent": "Team KC"
+    },
+    {
+      "preGameRank": 36,
+      "player": "RJ Harvey",
+      "opponent": "Team DEN"
+    },
+    {
+      "preGameRank": 37,
+      "player": "Ollie Gordon II",
+      "opponent": "Team MIA"
+    },
+    {
+      "preGameRank": 38,
+      "player": "Kareem Hunt",
+      "opponent": "Team KC"
+    },
+    {
+      "preGameRank": 39,
+      "player": "Zach Charbonnet",
+      "opponent": "Team SEA"
+    },
+    {
+      "preGameRank": 40,
+      "player": "Jeremy McNichols",
+      "opponent": "Team WAS"
+    },
+    {
+      "preGameRank": 41,
+      "player": "Chris Rodriguez Jr.",
+      "opponent": "Team WAS"
+    },
+    {
+      "preGameRank": 42,
+      "player": "Kenneth Gainwell",
+      "opponent": "Team PIT"
+    },
+    {
+      "preGameRank": 43,
+      "player": "Woody Marks",
+      "opponent": "Team HOU"
+    },
+    {
+      "preGameRank": 44,
+      "player": "Braelon Allen",
+      "opponent": "Team NYJ"
+    },
+    {
+      "preGameRank": 45,
+      "player": "Blake Corum",
+      "opponent": "Team LAR"
+    },
+    {
+      "preGameRank": 46,
+      "player": "Miles Sanders",
+      "opponent": "Team DAL"
+    },
+    {
+      "preGameRank": 47,
+      "player": "Rachaad White",
+      "opponent": "Team TB"
+    },
+    {
+      "preGameRank": 48,
+      "player": "Tyler Allgeier",
+      "opponent": "Team ATL"
+    },
+    {
+      "preGameRank": 49,
+      "player": "Brian Robinson Jr.",
+      "opponent": "Team SF"
+    },
+    {
+      "preGameRank": 50,
+      "player": "Kyle Monangai",
+      "opponent": "Team CHI"
+    },
+    {
+      "preGameRank": 51,
+      "player": "Jerome Ford",
+      "opponent": "Team CLE"
+    },
+    {
+      "preGameRank": 52,
+      "player": "Rico Dowdle",
+      "opponent": "Team CAR"
+    },
+    {
+      "preGameRank": 53,
+      "player": "Ray Davis",
+      "opponent": "Team BUF"
+    },
+    {
+      "preGameRank": 54,
+      "player": "Ty Johnson",
+      "opponent": "Team BUF"
+    },
+    {
+      "preGameRank": 55,
+      "player": "Justice Hill",
+      "opponent": "Team BAL"
+    },
+    {
+      "preGameRank": 56,
+      "player": "Kendre Miller",
+      "opponent": "Team NO"
+    },
+    {
+      "preGameRank": 57,
+      "player": "Emari Demercado",
+      "opponent": "Team ARI"
+    },
+    {
+      "preGameRank": 58,
+      "player": "Devin Singletary",
+      "opponent": "Team NYG"
+    },
+    {
+      "preGameRank": 59,
+      "player": "Antonio Gibson",
+      "opponent": "Team NE"
+    },
+    {
+      "preGameRank": 60,
+      "player": "Dylan Sampson",
+      "opponent": "Team CLE"
+    }
+  ],
+  "wr": [
+    {
+      "preGameRank": 1,
+      "player": "Puka Nacua",
+      "opponent": "Team LAR"
+    },
+    {
+      "preGameRank": 2,
+      "player": "Jaxon Smith-Njigba",
+      "opponent": "Team SEA"
+    },
+    {
+      "preGameRank": 3,
+      "player": "Amon-Ra St. Brown",
+      "opponent": "Team DET"
+    },
+    {
+      "preGameRank": 4,
+      "player": "Malik Nabers",
+      "opponent": "Team NYG"
+    },
+    {
+      "preGameRank": 5,
+      "player": "Justin Jefferson",
+      "opponent": "Team MIN"
+    },
+    {
+      "preGameRank": 6,
+      "player": "Garrett Wilson",
+      "opponent": "Team NYJ"
+    },
+    {
+      "preGameRank": 7,
+      "player": "Davante Adams",
+      "opponent": "Team LAR"
+    },
+    {
+      "preGameRank": 8,
+      "player": "Rome Odunze",
+      "opponent": "Team CHI"
+    },
+    {
+      "preGameRank": 9,
+      "player": "Ja'Marr Chase",
+      "opponent": "Team CIN"
+    },
+    {
+      "preGameRank": 10,
+      "player": "Nico Collins",
+      "opponent": "Team HOU"
+    },
+    {
+      "preGameRank": 11,
+      "player": "A.J. Brown",
+      "opponent": "Team PHI"
+    },
+    {
+      "preGameRank": 12,
+      "player": "Drake London",
+      "opponent": "Team ATL"
+    },
+    {
+      "preGameRank": 13,
+      "player": "Emeka Egbuka",
+      "opponent": "Team TB"
+    },
+    {
+      "preGameRank": 14,
+      "player": "Tetairoa McMillan",
+      "opponent": "Team CAR"
+    },
+    {
+      "preGameRank": 15,
+      "player": "Ricky Pearsall",
+      "opponent": "Team SF"
+    },
+    {
+      "preGameRank": 16,
+      "player": "Zay Flowers",
+      "opponent": "Team BAL"
+    },
+    {
+      "preGameRank": 17,
+      "player": "George Pickens",
+      "opponent": "Team DAL"
+    },
+    {
+      "preGameRank": 18,
+      "player": "Ladd McConkey",
+      "opponent": "Team LAC"
+    },
+    {
+      "preGameRank": 19,
+      "player": "Courtland Sutton",
+      "opponent": "Team DEN"
+    },
+    {
+      "preGameRank": 20,
+      "player": "Tyreek Hill",
+      "opponent": "Team MIA"
+    },
+    {
+      "preGameRank": 21,
+      "player": "Keenan Allen",
+      "opponent": "Team LAC"
+    },
+    {
+      "preGameRank": 22,
+      "player": "Brian Thomas Jr.",
+      "opponent": "Team JAC"
+    },
+    {
+      "preGameRank": 23,
+      "player": "Deebo Samuel Sr.",
+      "opponent": "Team WAS"
+    },
+    {
+      "preGameRank": 24,
+      "player": "Jakobi Meyers",
+      "opponent": "Team LV"
+    },
+    {
+      "preGameRank": 25,
+      "player": "DeVonta Smith",
+      "opponent": "Team PHI"
+    },
+    {
+      "preGameRank": 26,
+      "player": "DK Metcalf",
+      "opponent": "Team PIT"
+    },
+    {
+      "preGameRank": 27,
+      "player": "Jameson Williams",
+      "opponent": "Team DET"
+    },
+    {
+      "preGameRank": 28,
+      "player": "Michael Pittman Jr.",
+      "opponent": "Team IND"
+    },
+    {
+      "preGameRank": 29,
+      "player": "Marvin Harrison Jr.",
+      "opponent": "Team ARI"
+    },
+    {
+      "preGameRank": 30,
+      "player": "DJ Moore",
+      "opponent": "Team CHI"
+    },
+    {
+      "preGameRank": 31,
+      "player": "Quentin Johnston",
+      "opponent": "Team LAC"
+    },
+    {
+      "preGameRank": 32,
+      "player": "Chris Olave",
+      "opponent": "Team NO"
+    },
+    {
+      "preGameRank": 33,
+      "player": "Jaylen Waddle",
+      "opponent": "Team MIA"
+    },
+    {
+      "preGameRank": 34,
+      "player": "Jordan Addison",
+      "opponent": "Team MIN"
+    },
+    {
+      "preGameRank": 35,
+      "player": "Tee Higgins",
+      "opponent": "Team CIN"
+    },
+    {
+      "preGameRank": 36,
+      "player": "Terry McLaurin",
+      "opponent": "Team WAS"
+    },
+    {
+      "preGameRank": 37,
+      "player": "Xavier Worthy",
+      "opponent": "Team KC"
+    },
+    {
+      "preGameRank": 38,
+      "player": "Khalil Shakir",
+      "opponent": "Team BUF"
+    },
+    {
+      "preGameRank": 39,
+      "player": "Jauan Jennings",
+      "opponent": "Team SF"
+    },
+    {
+      "preGameRank": 40,
+      "player": "Calvin Ridley",
+      "opponent": "Team TEN"
+    },
+    {
+      "preGameRank": 41,
+      "player": "Jerry Jeudy",
+      "opponent": "Team CLE"
+    },
+    {
+      "preGameRank": 42,
+      "player": "Cedric Tillman",
+      "opponent": "Team CLE"
+    },
+    {
+      "preGameRank": 43,
+      "player": "Matthew Golden",
+      "opponent": "Team GB"
+    },
+    {
+      "preGameRank": 44,
+      "player": "Keon Coleman",
+      "opponent": "Team BUF"
+    },
+    {
+      "preGameRank": 45,
+      "player": "Wan'Dale Robinson",
+      "opponent": "Team NYG"
+    },
+    {
+      "preGameRank": 46,
+      "player": "Romeo Doubs",
+      "opponent": "Team GB"
+    },
+    {
+      "preGameRank": 47,
+      "player": "Darnell Mooney",
+      "opponent": "Team ATL"
+    },
+    {
+      "preGameRank": 48,
+      "player": "Marquise Brown",
+      "opponent": "Team KC"
+    },
+    {
+      "preGameRank": 49,
+      "player": "Kayshon Boutte",
+      "opponent": "Team NE"
+    },
+    {
+      "preGameRank": 50,
+      "player": "Tre Tucker",
+      "opponent": "Team LV"
+    },
+    {
+      "preGameRank": 51,
+      "player": "Elic Ayomanor",
+      "opponent": "Team TEN"
+    },
+    {
+      "preGameRank": 52,
+      "player": "Tyquan Thornton",
+      "opponent": "Team KC"
+    },
+    {
+      "preGameRank": 53,
+      "player": "Travis Hunter",
+      "opponent": "Team JAC"
+    },
+    {
+      "preGameRank": 54,
+      "player": "Stefon Diggs",
+      "opponent": "Team NE"
+    },
+    {
+      "preGameRank": 55,
+      "player": "Josh Downs",
+      "opponent": "Team IND"
+    },
+    {
+      "preGameRank": 56,
+      "player": "Troy Franklin",
+      "opponent": "Team DEN"
+    },
+    {
+      "preGameRank": 57,
+      "player": "Christian Kirk",
+      "opponent": "Team HOU"
+    },
+    {
+      "preGameRank": 58,
+      "player": "Rashid Shaheed",
+      "opponent": "Team NO"
+    },
+    {
+      "preGameRank": 59,
+      "player": "Cooper Kupp",
+      "opponent": "Team SEA"
+    },
+    {
+      "preGameRank": 60,
+      "player": "Chris Godwin Jr.",
+      "opponent": "Team TB"
+    },
+    {
+      "preGameRank": 61,
+      "player": "Tory Horton",
+      "opponent": "Team SEA"
+    },
+    {
+      "preGameRank": 62,
+      "player": "Dontayvion Wicks",
+      "opponent": "Team GB"
+    },
+    {
+      "preGameRank": 63,
+      "player": "Calvin Austin III",
+      "opponent": "Team PIT"
+    },
+    {
+      "preGameRank": 64,
+      "player": "Marvin Mims Jr.",
+      "opponent": "Team DEN"
+    },
+    {
+      "preGameRank": 65,
+      "player": "DeAndre Hopkins",
+      "opponent": "Team BAL"
+    },
+    {
+      "preGameRank": 66,
+      "player": "Sterling Shepard",
+      "opponent": "Team TB"
+    },
+    {
+      "preGameRank": 67,
+      "player": "KaVontae Turpin",
+      "opponent": "Team DAL"
+    },
+    {
+      "preGameRank": 68,
+      "player": "Jalen Tolbert",
+      "opponent": "Team DAL"
+    },
+    {
+      "preGameRank": 69,
+      "player": "JuJu Smith-Schuster",
+      "opponent": "Team KC"
+    },
+    {
+      "preGameRank": 70,
+      "player": "Parker Washington",
+      "opponent": "Team JAC"
+    },
+    {
+      "preGameRank": 71,
+      "player": "Luther Burden III",
+      "opponent": "Team CHI"
+    },
+    {
+      "preGameRank": 72,
+      "player": "Adonai Mitchell",
+      "opponent": "Team IND"
+    },
+    {
+      "preGameRank": 73,
+      "player": "Joshua Palmer",
+      "opponent": "Team BUF"
+    },
+    {
+      "preGameRank": 74,
+      "player": "Michael Wilson",
+      "opponent": "Team ARI"
+    },
+    {
+      "preGameRank": 75,
+      "player": "Rashod Bateman",
+      "opponent": "Team BAL"
+    },
+    {
+      "preGameRank": 76,
+      "player": "Hunter Renfrow",
+      "opponent": "Team CAR"
+    },
+    {
+      "preGameRank": 77,
+      "player": "DeMario Douglas",
+      "opponent": "Team NE"
+    },
+    {
+      "preGameRank": 78,
+      "player": "Dont'e Thornton Jr.",
+      "opponent": "Team LV"
+    },
+    {
+      "preGameRank": 79,
+      "player": "Kendrick Bourne",
+      "opponent": "Team SF"
+    },
+    {
+      "preGameRank": 80,
+      "player": "Darius Slayton",
+      "opponent": "Team NYG"
+    },
+    {
+      "preGameRank": 81,
+      "player": "Devontez Walker",
+      "opponent": "Team BAL"
+    },
+    {
+      "preGameRank": 82,
+      "player": "Olamide Zaccheaus",
+      "opponent": "Team CHI"
+    },
+    {
+      "preGameRank": 83,
+      "player": "Malik Washington",
+      "opponent": "Team MIA"
+    },
+    {
+      "preGameRank": 84,
+      "player": "Isaiah Bond",
+      "opponent": "Team CLE"
+    },
+    {
+      "preGameRank": 85,
+      "player": "Jalen Nailor",
+      "opponent": "Team MIN"
+    },
+    {
+      "preGameRank": 86,
+      "player": "Demarcus Robinson",
+      "opponent": "Team SF"
+    },
+    {
+      "preGameRank": 87,
+      "player": "Luke McCaffrey",
+      "opponent": "Team WAS"
+    },
+    {
+      "preGameRank": 88,
+      "player": "Adam Thielen",
+      "opponent": "Team MIN"
+    },
+    {
+      "preGameRank": 89,
+      "player": "Brandin Cooks",
+      "opponent": "Team NO"
+    },
+    {
+      "preGameRank": 90,
+      "player": "Ray-Ray McCloud III",
+      "opponent": "Team ATL"
+    }
+  ],
+  "te": [
+    {
+      "preGameRank": 1,
+      "player": "Trey McBride",
+      "opponent": "Team ARI"
+    },
+    {
+      "preGameRank": 2,
+      "player": "Brock Bowers",
+      "opponent": "Team LV"
+    },
+    {
+      "preGameRank": 3,
+      "player": "Tucker Kraft",
+      "opponent": "Team GB"
+    },
+    {
+      "preGameRank": 4,
+      "player": "Tyler Warren",
+      "opponent": "Team IND"
+    },
+    {
+      "preGameRank": 5,
+      "player": "Jake Ferguson",
+      "opponent": "Team DAL"
+    },
+    {
+      "preGameRank": 6,
+      "player": "Sam LaPorta",
+      "opponent": "Team DET"
+    },
+    {
+      "preGameRank": 7,
+      "player": "Dalton Kincaid",
+      "opponent": "Team BUF"
+    },
+    {
+      "preGameRank": 8,
+      "player": "Hunter Henry",
+      "opponent": "Team NE"
+    },
+    {
+      "preGameRank": 9,
+      "player": "T.J. Hockenson",
+      "opponent": "Team MIN"
+    },
+    {
+      "preGameRank": 10,
+      "player": "Juwan Johnson",
+      "opponent": "Team NO"
+    },
+    {
+      "preGameRank": 11,
+      "player": "Travis Kelce",
+      "opponent": "Team KC"
+    },
+    {
+      "preGameRank": 12,
+      "player": "Kyle Pitts Sr.",
+      "opponent": "Team ATL"
+    },
+    {
+      "preGameRank": 13,
+      "player": "Mark Andrews",
+      "opponent": "Team BAL"
+    },
+    {
+      "preGameRank": 14,
+      "player": "Zach Ertz",
+      "opponent": "Team WAS"
+    },
+    {
+      "preGameRank": 15,
+      "player": "Harold Fannin Jr.",
+      "opponent": "Team CLE"
+    },
+    {
+      "preGameRank": 16,
+      "player": "David Njoku",
+      "opponent": "Team CLE"
+    },
+    {
+      "preGameRank": 17,
+      "player": "Dallas Goedert",
+      "opponent": "Team PHI"
+    },
+    {
+      "preGameRank": 18,
+      "player": "Brenton Strange",
+      "opponent": "Team JAC"
+    },
+    {
+      "preGameRank": 19,
+      "player": "Chig Okonkwo",
+      "opponent": "Team TEN"
+    },
+    {
+      "preGameRank": 20,
+      "player": "Cade Otton",
+      "opponent": "Team TB"
+    },
+    {
+      "preGameRank": 21,
+      "player": "Jonnu Smith",
+      "opponent": "Team PIT"
+    },
+    {
+      "preGameRank": 22,
+      "player": "Dalton Schultz",
+      "opponent": "Team HOU"
+    },
+    {
+      "preGameRank": 23,
+      "player": "Jake Tonges",
+      "opponent": "Team SF"
+    },
+    {
+      "preGameRank": 24,
+      "player": "Cole Kmet",
+      "opponent": "Team CHI"
+    },
+    {
+      "preGameRank": 25,
+      "player": "Pat Freiermuth",
+      "opponent": "Team PIT"
+    },
+    {
+      "preGameRank": 26,
+      "player": "Mike Gesicki",
+      "opponent": "Team CIN"
+    },
+    {
+      "preGameRank": 27,
+      "player": "Theo Johnson",
+      "opponent": "Team NYG"
+    },
+    {
+      "preGameRank": 28,
+      "player": "Mason Taylor",
+      "opponent": "Team NYJ"
+    },
+    {
+      "preGameRank": 29,
+      "player": "AJ Barner",
+      "opponent": "Team SEA"
+    },
+    {
+      "preGameRank": 30,
+      "player": "Noah Gray",
+      "opponent": "Team KC"
+    }
+  ],
+  "flex": [
+    {
+      "player": "Christian McCaffrey",
+      "opponent": "Team SF"
+    },
+    {
+      "player": "Bijan Robinson",
+      "opponent": "Team ATL"
+    },
+    {
+      "player": "Jonathan Taylor",
+      "opponent": "Team IND"
+    },
+    {
+      "player": "James Cook III",
+      "opponent": "Team BUF"
+    },
+    {
+      "player": "Puka Nacua",
+      "opponent": "Team LAR"
+    },
+    {
+      "player": "Saquon Barkley",
+      "opponent": "Team PHI"
+    },
+    {
+      "player": "Josh Jacobs",
+      "opponent": "Team GB"
+    },
+    {
+      "player": "Jaxon Smith-Njigba",
+      "opponent": "Team SEA"
+    },
+    {
+      "player": "Amon-Ra St. Brown",
+      "opponent": "Team DET"
+    },
+    {
+      "player": "Derrick Henry",
+      "opponent": "Team BAL"
+    },
+    {
+      "player": "Malik Nabers",
+      "opponent": "Team NYG"
+    },
+    {
+      "player": "Jahmyr Gibbs",
+      "opponent": "Team DET"
+    },
+    {
+      "player": "Justin Jefferson",
+      "opponent": "Team MIN"
+    },
+    {
+      "player": "De'Von Achane",
+      "opponent": "Team MIA"
+    },
+    {
+      "player": "Garrett Wilson",
+      "opponent": "Team NYJ"
+    },
+    {
+      "player": "Jordan Mason",
+      "opponent": "Team MIN"
+    },
+    {
+      "player": "Omarion Hampton",
+      "opponent": "Team LAC"
+    },
+    {
+      "player": "Davante Adams",
+      "opponent": "Team LAR"
+    },
+    {
+      "player": "Bucky Irving",
+      "opponent": "Team TB"
+    },
+    {
+      "player": "Kyren Williams",
+      "opponent": "Team LAR"
+    },
+    {
+      "player": "Kenneth Walker III",
+      "opponent": "Team SEA"
+    },
+    {
+      "player": "Breece Hall",
+      "opponent": "Team NYJ"
+    },
+    {
+      "player": "Rome Odunze",
+      "opponent": "Team CHI"
+    },
+    {
+      "player": "Chuba Hubbard",
+      "opponent": "Team CAR"
+    },
+    {
+      "player": "Ja'Marr Chase",
+      "opponent": "Team CIN"
+    },
+    {
+      "player": "Ashton Jeanty",
+      "opponent": "Team LV"
+    },
+    {
+      "player": "J.K. Dobbins",
+      "opponent": "Team DEN"
+    },
+    {
+      "player": "Trey McBride",
+      "opponent": "Team ARI"
+    },
+    {
+      "player": "Trey Benson",
+      "opponent": "Team ARI"
+    },
+    {
+      "player": "Nico Collins",
+      "opponent": "Team HOU"
+    },
+    {
+      "player": "A.J. Brown",
+      "opponent": "Team PHI"
+    },
+    {
+      "player": "Drake London",
+      "opponent": "Team ATL"
+    },
+    {
+      "player": "Travis Etienne Jr.",
+      "opponent": "Team JAC"
+    },
+    {
+      "player": "Brock Bowers",
+      "opponent": "Team LV"
+    },
+    {
+      "player": "Emeka Egbuka",
+      "opponent": "Team TB"
+    },
+    {
+      "player": "Tetairoa McMillan",
+      "opponent": "Team CAR"
+    },
+    {
+      "player": "Ricky Pearsall",
+      "opponent": "Team SF"
+    },
+    {
+      "player": "Zay Flowers",
+      "opponent": "Team BAL"
+    },
+    {
+      "player": "George Pickens",
+      "opponent": "Team DAL"
+    },
+    {
+      "player": "Ladd McConkey",
+      "opponent": "Team LAC"
+    },
+    {
+      "player": "Courtland Sutton",
+      "opponent": "Team DEN"
+    },
+    {
+      "player": "Tyreek Hill",
+      "opponent": "Team MIA"
+    },
+    {
+      "player": "Alvin Kamara",
+      "opponent": "Team NO"
+    },
+    {
+      "player": "Keenan Allen",
+      "opponent": "Team LAC"
+    },
+    {
+      "player": "Cam Skattebo",
+      "opponent": "Team NYG"
+    },
+    {
+      "player": "Brian Thomas Jr.",
+      "opponent": "Team JAC"
+    },
+    {
+      "player": "Deebo Samuel Sr.",
+      "opponent": "Team WAS"
+    },
+    {
+      "player": "Javonte Williams",
+      "opponent": "Team DAL"
+    },
+    {
+      "player": "Jakobi Meyers",
+      "opponent": "Team LV"
+    },
+    {
+      "player": "Tucker Kraft",
+      "opponent": "Team GB"
+    },
+    {
+      "player": "DeVonta Smith",
+      "opponent": "Team PHI"
+    },
+    {
+      "player": "Tyler Warren",
+      "opponent": "Team IND"
+    },
+    {
+      "player": "Chase Brown",
+      "opponent": "Team CIN"
+    },
+    {
+      "player": "DK Metcalf",
+      "opponent": "Team PIT"
+    },
+    {
+      "player": "Jameson Williams",
+      "opponent": "Team DET"
+    },
+    {
+      "player": "Michael Pittman Jr.",
+      "opponent": "Team IND"
+    },
+    {
+      "player": "Quinshon Judkins",
+      "opponent": "Team CLE"
+    },
+    {
+      "player": "Marvin Harrison Jr.",
+      "opponent": "Team ARI"
+    },
+    {
+      "player": "DJ Moore",
+      "opponent": "Team CHI"
+    },
+    {
+      "player": "Jaylen Warren",
+      "opponent": "Team PIT"
+    },
+    {
+      "player": "Quentin Johnston",
+      "opponent": "Team LAC"
+    },
+    {
+      "player": "Jake Ferguson",
+      "opponent": "Team DAL"
+    },
+    {
+      "player": "Chris Olave",
+      "opponent": "Team NO"
+    },
+    {
+      "player": "Jaylen Waddle",
+      "opponent": "Team MIA"
+    },
+    {
+      "player": "Jordan Addison",
+      "opponent": "Team MIN"
+    },
+    {
+      "player": "Tee Higgins",
+      "opponent": "Team CIN"
+    },
+    {
+      "player": "Terry McLaurin",
+      "opponent": "Team WAS"
+    },
+    {
+      "player": "Xavier Worthy",
+      "opponent": "Team KC"
+    },
+    {
+      "player": "Khalil Shakir",
+      "opponent": "Team BUF"
+    },
+    {
+      "player": "Jauan Jennings",
+      "opponent": "Team SF"
+    },
+    {
+      "player": "Sam LaPorta",
+      "opponent": "Team DET"
+    },
+    {
+      "player": "D'Andre Swift",
+      "opponent": "Team CHI"
+    },
+    {
+      "player": "Calvin Ridley",
+      "opponent": "Team TEN"
+    },
+    {
+      "player": "Dalton Kincaid",
+      "opponent": "Team BUF"
+    },
+    {
+      "player": "TreVeyon Henderson",
+      "opponent": "Team NE"
+    },
+    {
+      "player": "Tony Pollard",
+      "opponent": "Team TEN"
+    },
+    {
+      "player": "Jerry Jeudy",
+      "opponent": "Team CLE"
+    },
+    {
+      "player": "Cedric Tillman",
+      "opponent": "Team CLE"
+    },
+    {
+      "player": "Matthew Golden",
+      "opponent": "Team GB"
+    },
+    {
+      "player": "Keon Coleman",
+      "opponent": "Team BUF"
+    },
+    {
+      "player": "Hunter Henry",
+      "opponent": "Team NE"
+    },
+    {
+      "player": "Wan'Dale Robinson",
+      "opponent": "Team NYG"
+    },
+    {
+      "player": "Romeo Doubs",
+      "opponent": "Team GB"
+    },
+    {
+      "player": "Darnell Mooney",
+      "opponent": "Team ATL"
+    },
+    {
+      "player": "David Montgomery",
+      "opponent": "Team DET"
+    },
+    {
+      "player": "Marquise Brown",
+      "opponent": "Team KC"
+    },
+    {
+      "player": "Jacory Croskey-Merritt",
+      "opponent": "Team WAS"
+    },
+    {
+      "player": "Nick Chubb",
+      "opponent": "Team HOU"
+    },
+    {
+      "player": "Kayshon Boutte",
+      "opponent": "Team NE"
+    },
+    {
+      "player": "Tre Tucker",
+      "opponent": "Team LV"
+    },
+    {
+      "player": "Rhamondre Stevenson",
+      "opponent": "Team NE"
+    },
+    {
+      "player": "Bhayshul Tuten",
+      "opponent": "Team JAC"
+    },
+    {
+      "player": "T.J. Hockenson",
+      "opponent": "Team MIN"
+    },
+    {
+      "player": "Elic Ayomanor",
+      "opponent": "Team TEN"
+    },
+    {
+      "player": "Tyquan Thornton",
+      "opponent": "Team KC"
+    },
+    {
+      "player": "Juwan Johnson",
+      "opponent": "Team NO"
+    },
+    {
+      "player": "Isiah Pacheco",
+      "opponent": "Team KC"
+    },
+    {
+      "player": "Travis Hunter",
+      "opponent": "Team JAC"
+    },
+    {
+      "player": "Stefon Diggs",
+      "opponent": "Team NE"
+    },
+    {
+      "player": "Josh Downs",
+      "opponent": "Team IND"
+    },
+    {
+      "player": "Troy Franklin",
+      "opponent": "Team DEN"
+    },
+    {
+      "player": "RJ Harvey",
+      "opponent": "Team DEN"
+    },
+    {
+      "player": "Travis Kelce",
+      "opponent": "Team KC"
+    },
+    {
+      "player": "Ollie Gordon II",
+      "opponent": "Team MIA"
+    },
+    {
+      "player": "Christian Kirk",
+      "opponent": "Team HOU"
+    },
+    {
+      "player": "Kyle Pitts Sr.",
+      "opponent": "Team ATL"
+    },
+    {
+      "player": "Rashid Shaheed",
+      "opponent": "Team NO"
+    },
+    {
+      "player": "Kareem Hunt",
+      "opponent": "Team KC"
+    },
+    {
+      "player": "Mark Andrews",
+      "opponent": "Team BAL"
+    },
+    {
+      "player": "Cooper Kupp",
+      "opponent": "Team SEA"
+    },
+    {
+      "player": "Chris Godwin Jr.",
+      "opponent": "Team TB"
+    },
+    {
+      "player": "Tory Horton",
+      "opponent": "Team SEA"
+    },
+    {
+      "player": "Zach Ertz",
+      "opponent": "Team WAS"
+    },
+    {
+      "player": "Zach Charbonnet",
+      "opponent": "Team SEA"
+    },
+    {
+      "player": "Harold Fannin Jr.",
+      "opponent": "Team CLE"
+    },
+    {
+      "player": "Dontayvion Wicks",
+      "opponent": "Team GB"
+    },
+    {
+      "player": "Calvin Austin III",
+      "opponent": "Team PIT"
+    },
+    {
+      "player": "Marvin Mims Jr.",
+      "opponent": "Team DEN"
+    },
+    {
+      "player": "Jeremy McNichols",
+      "opponent": "Team WAS"
+    },
+    {
+      "player": "Chris Rodriguez Jr.",
+      "opponent": "Team WAS"
+    },
+    {
+      "player": "David Njoku",
+      "opponent": "Team CLE"
+    },
+    {
+      "player": "Kenneth Gainwell",
+      "opponent": "Team PIT"
+    },
+    {
+      "player": "DeAndre Hopkins",
+      "opponent": "Team BAL"
+    },
+    {
+      "player": "Woody Marks",
+      "opponent": "Team HOU"
+    },
+    {
+      "player": "Dallas Goedert",
+      "opponent": "Team PHI"
+    },
+    {
+      "player": "Sterling Shepard",
+      "opponent": "Team TB"
+    },
+    {
+      "player": "KaVontae Turpin",
+      "opponent": "Team DAL"
+    },
+    {
+      "player": "Braelon Allen",
+      "opponent": "Team NYJ"
+    },
+    {
+      "player": "Brenton Strange",
+      "opponent": "Team JAC"
+    },
+    {
+      "player": "Chig Okonkwo",
+      "opponent": "Team TEN"
+    },
+    {
+      "player": "Jalen Tolbert",
+      "opponent": "Team DAL"
+    },
+    {
+      "player": "Blake Corum",
+      "opponent": "Team LAR"
+    },
+    {
+      "player": "Miles Sanders",
+      "opponent": "Team DAL"
+    },
+    {
+      "player": "Cade Otton",
+      "opponent": "Team TB"
+    },
+    {
+      "player": "JuJu Smith-Schuster",
+      "opponent": "Team KC"
+    },
+    {
+      "player": "Parker Washington",
+      "opponent": "Team JAC"
+    },
+    {
+      "player": "Jonnu Smith",
+      "opponent": "Team PIT"
+    },
+    {
+      "player": "Dalton Schultz",
+      "opponent": "Team HOU"
+    },
+    {
+      "player": "Jake Tonges",
+      "opponent": "Team SF"
+    },
+    {
+      "player": "Luther Burden III",
+      "opponent": "Team CHI"
+    },
+    {
+      "player": "Cole Kmet",
+      "opponent": "Team CHI"
+    },
+    {
+      "player": "Pat Freiermuth",
+      "opponent": "Team PIT"
+    },
+    {
+      "player": "Mike Gesicki",
+      "opponent": "Team CIN"
+    },
+    {
+      "player": "Rachaad White",
+      "opponent": "Team TB"
+    },
+    {
+      "player": "Tyler Allgeier",
+      "opponent": "Team ATL"
+    },
+    {
+      "player": "Adonai Mitchell",
+      "opponent": "Team IND"
+    },
+    {
+      "player": "Brian Robinson Jr.",
+      "opponent": "Team SF"
+    },
+    {
+      "player": "Joshua Palmer",
+      "opponent": "Team BUF"
+    },
+    {
+      "player": "Kyle Monangai",
+      "opponent": "Team CHI"
+    },
+    {
+      "player": "Jerome Ford",
+      "opponent": "Team CLE"
+    }
+  ],
+  "def": [
+    {
+      "preGameRank": 1,
+      "player": "Cameron Dicker",
+      "opponent": "Team LAC"
+    },
+    {
+      "preGameRank": 2,
+      "player": "Matt Prater",
+      "opponent": "Team BUF"
+    },
+    {
+      "preGameRank": 3,
+      "player": "Brandon Aubrey",
+      "opponent": "Team DAL"
+    },
+    {
+      "preGameRank": 4,
+      "player": "Tyler Loop",
+      "opponent": "Team BAL"
+    },
+    {
+      "preGameRank": 5,
+      "player": "Brandon McManus",
+      "opponent": "Team GB"
+    },
+    {
+      "preGameRank": 6,
+      "player": "Spencer Shrader",
+      "opponent": "Team IND"
+    },
+    {
+      "preGameRank": 7,
+      "player": "Chris Boswell",
+      "opponent": "Team PIT"
+    },
+    {
+      "preGameRank": 8,
+      "player": "Ka'imi Fairbairn",
+      "opponent": "Team HOU"
+    },
+    {
+      "preGameRank": 9,
+      "player": "Jake Elliott",
+      "opponent": "Team PHI"
+    },
+    {
+      "preGameRank": 10,
+      "player": "Jake Bates",
+      "opponent": "Team DET"
+    },
+    {
+      "preGameRank": 11,
+      "player": "Eddy Pineiro",
+      "opponent": "Team SF"
+    },
+    {
+      "preGameRank": 12,
+      "player": "Cam Little",
+      "opponent": "Team JAC"
+    },
+    {
+      "preGameRank": 13,
+      "player": "Harrison Butker",
+      "opponent": "Team KC"
+    },
+    {
+      "preGameRank": 14,
+      "player": "Jason Myers",
+      "opponent": "Team SEA"
+    },
+    {
+      "preGameRank": 15,
+      "player": "Chad Ryland",
+      "opponent": "Team ARI"
+    },
+    {
+      "preGameRank": 16,
+      "player": "Will Reichard",
+      "opponent": "Team MIN"
+    },
+    {
+      "preGameRank": 17,
+      "player": "Wil Lutz",
+      "opponent": "Team DEN"
+    },
+    {
+      "preGameRank": 18,
+      "player": "Joshua Karty",
+      "opponent": "Team LAR"
+    },
+    {
+      "preGameRank": 19,
+      "player": "Chase McLaughlin",
+      "opponent": "Team TB"
+    },
+    {
+      "preGameRank": 20,
+      "player": "Cairo Santos",
+      "opponent": "Team CHI"
+    },
+    {
+      "preGameRank": 21,
+      "player": "Matt Gay",
+      "opponent": "Team WAS"
+    },
+    {
+      "preGameRank": 22,
+      "player": "Daniel Carlson",
+      "opponent": "Team LV"
+    },
+    {
+      "preGameRank": 23,
+      "player": "Joey Slye",
+      "opponent": "Team TEN"
+    },
+    {
+      "preGameRank": 24,
+      "player": "Andy Borregales",
+      "opponent": "Team NE"
+    },
+    {
+      "preGameRank": 25,
+      "player": "Nick Folk",
+      "opponent": "Team NYJ"
+    },
+    {
+      "preGameRank": 26,
+      "player": "Parker Romo",
+      "opponent": "Team ATL"
+    },
+    {
+      "preGameRank": 27,
+      "player": "Evan McPherson",
+      "opponent": "Team CIN"
+    },
+    {
+      "preGameRank": 28,
+      "player": "Riley Patterson",
+      "opponent": "Team MIA"
+    },
+    {
+      "preGameRank": 29,
+      "player": "Ryan Fitzgerald",
+      "opponent": "Team CAR"
+    },
+    {
+      "preGameRank": 30,
+      "player": "Blake Grupe",
+      "opponent": "Team NO"
+    },
+    {
+      "preGameRank": 31,
+      "player": "Graham Gano",
+      "opponent": "Team NYG"
+    },
+    {
+      "preGameRank": 32,
+      "player": "Andre Szmyt",
+      "opponent": "Team CLE"
+    }
+  ],
+  "k": [
+    {
+      "preGameRank": 1,
+      "player": "Denver Broncos",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 2,
+      "player": "Buffalo Bills",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 3,
+      "player": "Houston Texans",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 4,
+      "player": "Los Angeles Chargers",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 5,
+      "player": "Detroit Lions",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 6,
+      "player": "New England Patriots",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 7,
+      "player": "Green Bay Packers",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 8,
+      "player": "Minnesota Vikings",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 9,
+      "player": "Philadelphia Eagles",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 10,
+      "player": "Washington Commanders",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 11,
+      "player": "Seattle Seahawks",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 12,
+      "player": "San Francisco 49ers",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 13,
+      "player": "New York Jets",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 14,
+      "player": "Baltimore Ravens",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 15,
+      "player": "Chicago Bears",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 16,
+      "player": "Carolina Panthers",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 17,
+      "player": "Arizona Cardinals",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 18,
+      "player": "Tennessee Titans",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 19,
+      "player": "Indianapolis Colts",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 20,
+      "player": "Pittsburgh Steelers",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 21,
+      "player": "Cleveland Browns",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 22,
+      "player": "Atlanta Falcons",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 23,
+      "player": "Los Angeles Rams",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 24,
+      "player": "Miami Dolphins",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 25,
+      "player": "Kansas City Chiefs",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 26,
+      "player": "New York Giants",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 27,
+      "player": "Jacksonville Jaguars",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 28,
+      "player": "Cincinnati Bengals",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 29,
+      "player": "Tampa Bay Buccaneers",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 30,
+      "player": "Las Vegas Raiders",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 31,
+      "player": "Dallas Cowboys",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 32,
+      "player": "New Orleans Saints",
+      "opponent": ""
+    }
+  ],
+  "lastUpdated": "2025-09-23T20:59:25.621Z",
+  "week": "Week 3"
+}

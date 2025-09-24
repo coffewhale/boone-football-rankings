@@ -1,0 +1,1904 @@
+{
+  "qb": [
+    {
+      "preGameRank": 1,
+      "player": "Lamar Jackson"
+    },
+    {
+      "preGameRank": 2,
+      "player": "Josh Allen"
+    },
+    {
+      "preGameRank": 3,
+      "player": "Jalen Hurts"
+    },
+    {
+      "preGameRank": 4,
+      "player": "Justin Herbert"
+    },
+    {
+      "preGameRank": 5,
+      "player": "Jayden Daniels"
+    },
+    {
+      "preGameRank": 6,
+      "player": "Caleb Williams"
+    },
+    {
+      "preGameRank": 7,
+      "player": "Drake Maye"
+    },
+    {
+      "preGameRank": 8,
+      "player": "Jordan Love"
+    },
+    {
+      "preGameRank": 9,
+      "player": "Patrick Mahomes II"
+    },
+    {
+      "preGameRank": 10,
+      "player": "Brock Purdy"
+    },
+    {
+      "preGameRank": 11,
+      "player": "Daniel Jones"
+    },
+    {
+      "preGameRank": 12,
+      "player": "Bo Nix"
+    },
+    {
+      "preGameRank": 13,
+      "player": "Justin Fields"
+    },
+    {
+      "preGameRank": 14,
+      "player": "Kyler Murray"
+    },
+    {
+      "preGameRank": 15,
+      "player": "Geno Smith"
+    },
+    {
+      "preGameRank": 16,
+      "player": "Baker Mayfield"
+    },
+    {
+      "preGameRank": 17,
+      "player": "Jared Goff"
+    },
+    {
+      "preGameRank": 18,
+      "player": "Matthew Stafford"
+    },
+    {
+      "preGameRank": 19,
+      "player": "Dak Prescott"
+    },
+    {
+      "preGameRank": 20,
+      "player": "Jaxson Dart"
+    },
+    {
+      "preGameRank": 21,
+      "player": "C.J. Stroud"
+    },
+    {
+      "preGameRank": 22,
+      "player": "Sam Darnold"
+    },
+    {
+      "preGameRank": 23,
+      "player": "Michael Penix Jr."
+    },
+    {
+      "preGameRank": 24,
+      "player": "Carson Wentz"
+    },
+    {
+      "preGameRank": 25,
+      "player": "Tua Tagovailoa"
+    },
+    {
+      "preGameRank": 26,
+      "player": "Trevor Lawrence"
+    },
+    {
+      "preGameRank": 27,
+      "player": "Bryce Young"
+    },
+    {
+      "preGameRank": 28,
+      "player": "Joe Flacco"
+    },
+    {
+      "preGameRank": 29,
+      "player": "Cam Ward"
+    },
+    {
+      "preGameRank": 30,
+      "player": "Aaron Rodgers"
+    },
+    {
+      "preGameRank": 31,
+      "player": "Jake Browning"
+    },
+    {
+      "preGameRank": 32,
+      "player": "Spencer Rattler"
+    }
+  ],
+  "rb": [
+    {
+      "preGameRank": 1,
+      "player": "Christian McCaffrey"
+    },
+    {
+      "preGameRank": 2,
+      "player": "Bijan Robinson"
+    },
+    {
+      "preGameRank": 3,
+      "player": "Jonathan Taylor"
+    },
+    {
+      "preGameRank": 4,
+      "player": "James Cook III"
+    },
+    {
+      "preGameRank": 5,
+      "player": "Saquon Barkley"
+    },
+    {
+      "preGameRank": 6,
+      "player": "Josh Jacobs"
+    },
+    {
+      "preGameRank": 7,
+      "player": "Derrick Henry"
+    },
+    {
+      "preGameRank": 8,
+      "player": "Jahmyr Gibbs"
+    },
+    {
+      "preGameRank": 9,
+      "player": "De'Von Achane"
+    },
+    {
+      "preGameRank": 10,
+      "player": "Jordan Mason"
+    },
+    {
+      "preGameRank": 11,
+      "player": "Omarion Hampton"
+    },
+    {
+      "preGameRank": 12,
+      "player": "Bucky Irving"
+    },
+    {
+      "preGameRank": 13,
+      "player": "Kyren Williams"
+    },
+    {
+      "preGameRank": 14,
+      "player": "Kenneth Walker III"
+    },
+    {
+      "preGameRank": 15,
+      "player": "Breece Hall"
+    },
+    {
+      "preGameRank": 16,
+      "player": "Chuba Hubbard"
+    },
+    {
+      "preGameRank": 17,
+      "player": "Ashton Jeanty"
+    },
+    {
+      "preGameRank": 18,
+      "player": "J.K. Dobbins"
+    },
+    {
+      "preGameRank": 19,
+      "player": "Trey Benson"
+    },
+    {
+      "preGameRank": 20,
+      "player": "Travis Etienne Jr."
+    },
+    {
+      "preGameRank": 21,
+      "player": "Alvin Kamara"
+    },
+    {
+      "preGameRank": 22,
+      "player": "Cam Skattebo"
+    },
+    {
+      "preGameRank": 23,
+      "player": "Javonte Williams"
+    },
+    {
+      "preGameRank": 24,
+      "player": "Chase Brown"
+    },
+    {
+      "preGameRank": 25,
+      "player": "Quinshon Judkins"
+    },
+    {
+      "preGameRank": 26,
+      "player": "Jaylen Warren"
+    },
+    {
+      "preGameRank": 27,
+      "player": "D'Andre Swift"
+    },
+    {
+      "preGameRank": 28,
+      "player": "TreVeyon Henderson"
+    },
+    {
+      "preGameRank": 29,
+      "player": "Tony Pollard"
+    },
+    {
+      "preGameRank": 30,
+      "player": "David Montgomery"
+    },
+    {
+      "preGameRank": 31,
+      "player": "Jacory Croskey-Merritt"
+    },
+    {
+      "preGameRank": 32,
+      "player": "Nick Chubb"
+    },
+    {
+      "preGameRank": 33,
+      "player": "Rhamondre Stevenson"
+    },
+    {
+      "preGameRank": 34,
+      "player": "Bhayshul Tuten"
+    },
+    {
+      "preGameRank": 35,
+      "player": "Isiah Pacheco"
+    },
+    {
+      "preGameRank": 36,
+      "player": "RJ Harvey"
+    },
+    {
+      "preGameRank": 37,
+      "player": "Ollie Gordon II"
+    },
+    {
+      "preGameRank": 38,
+      "player": "Kareem Hunt"
+    },
+    {
+      "preGameRank": 39,
+      "player": "Zach Charbonnet"
+    },
+    {
+      "preGameRank": 40,
+      "player": "Jeremy McNichols"
+    },
+    {
+      "preGameRank": 41,
+      "player": "Chris Rodriguez Jr."
+    },
+    {
+      "preGameRank": 42,
+      "player": "Kenneth Gainwell"
+    },
+    {
+      "preGameRank": 43,
+      "player": "Woody Marks"
+    },
+    {
+      "preGameRank": 44,
+      "player": "Braelon Allen"
+    },
+    {
+      "preGameRank": 45,
+      "player": "Blake Corum"
+    },
+    {
+      "preGameRank": 46,
+      "player": "Miles Sanders"
+    },
+    {
+      "preGameRank": 47,
+      "player": "Rachaad White"
+    },
+    {
+      "preGameRank": 48,
+      "player": "Tyler Allgeier"
+    },
+    {
+      "preGameRank": 49,
+      "player": "Brian Robinson Jr."
+    },
+    {
+      "preGameRank": 50,
+      "player": "Kyle Monangai"
+    },
+    {
+      "preGameRank": 51,
+      "player": "Jerome Ford"
+    },
+    {
+      "preGameRank": 52,
+      "player": "Rico Dowdle"
+    },
+    {
+      "preGameRank": 53,
+      "player": "Ray Davis"
+    },
+    {
+      "preGameRank": 54,
+      "player": "Ty Johnson"
+    },
+    {
+      "preGameRank": 55,
+      "player": "Justice Hill"
+    },
+    {
+      "preGameRank": 56,
+      "player": "Kendre Miller"
+    },
+    {
+      "preGameRank": 57,
+      "player": "Emari Demercado"
+    },
+    {
+      "preGameRank": 58,
+      "player": "Devin Singletary"
+    },
+    {
+      "preGameRank": 59,
+      "player": "Antonio Gibson"
+    },
+    {
+      "preGameRank": 60,
+      "player": "Dylan Sampson"
+    }
+  ],
+  "wr": [
+    {
+      "preGameRank": 1,
+      "player": "Puka Nacua"
+    },
+    {
+      "preGameRank": 2,
+      "player": "Jaxon Smith-Njigba"
+    },
+    {
+      "preGameRank": 3,
+      "player": "Amon-Ra St. Brown"
+    },
+    {
+      "preGameRank": 4,
+      "player": "Malik Nabers"
+    },
+    {
+      "preGameRank": 5,
+      "player": "Justin Jefferson"
+    },
+    {
+      "preGameRank": 6,
+      "player": "Garrett Wilson"
+    },
+    {
+      "preGameRank": 7,
+      "player": "Davante Adams"
+    },
+    {
+      "preGameRank": 8,
+      "player": "Rome Odunze"
+    },
+    {
+      "preGameRank": 9,
+      "player": "Ja'Marr Chase"
+    },
+    {
+      "preGameRank": 10,
+      "player": "Nico Collins"
+    },
+    {
+      "preGameRank": 11,
+      "player": "A.J. Brown"
+    },
+    {
+      "preGameRank": 12,
+      "player": "Drake London"
+    },
+    {
+      "preGameRank": 13,
+      "player": "Emeka Egbuka"
+    },
+    {
+      "preGameRank": 14,
+      "player": "Tetairoa McMillan"
+    },
+    {
+      "preGameRank": 15,
+      "player": "Ricky Pearsall"
+    },
+    {
+      "preGameRank": 16,
+      "player": "Zay Flowers"
+    },
+    {
+      "preGameRank": 17,
+      "player": "George Pickens"
+    },
+    {
+      "preGameRank": 18,
+      "player": "Ladd McConkey"
+    },
+    {
+      "preGameRank": 19,
+      "player": "Courtland Sutton"
+    },
+    {
+      "preGameRank": 20,
+      "player": "Tyreek Hill"
+    },
+    {
+      "preGameRank": 21,
+      "player": "Keenan Allen"
+    },
+    {
+      "preGameRank": 22,
+      "player": "Brian Thomas Jr."
+    },
+    {
+      "preGameRank": 23,
+      "player": "Deebo Samuel Sr."
+    },
+    {
+      "preGameRank": 24,
+      "player": "Jakobi Meyers"
+    },
+    {
+      "preGameRank": 25,
+      "player": "DeVonta Smith"
+    },
+    {
+      "preGameRank": 26,
+      "player": "DK Metcalf"
+    },
+    {
+      "preGameRank": 27,
+      "player": "Jameson Williams"
+    },
+    {
+      "preGameRank": 28,
+      "player": "Michael Pittman Jr."
+    },
+    {
+      "preGameRank": 29,
+      "player": "Marvin Harrison Jr."
+    },
+    {
+      "preGameRank": 30,
+      "player": "DJ Moore"
+    },
+    {
+      "preGameRank": 31,
+      "player": "Quentin Johnston"
+    },
+    {
+      "preGameRank": 32,
+      "player": "Chris Olave"
+    },
+    {
+      "preGameRank": 33,
+      "player": "Jaylen Waddle"
+    },
+    {
+      "preGameRank": 34,
+      "player": "Jordan Addison"
+    },
+    {
+      "preGameRank": 35,
+      "player": "Tee Higgins"
+    },
+    {
+      "preGameRank": 36,
+      "player": "Terry McLaurin"
+    },
+    {
+      "preGameRank": 37,
+      "player": "Xavier Worthy"
+    },
+    {
+      "preGameRank": 38,
+      "player": "Khalil Shakir"
+    },
+    {
+      "preGameRank": 39,
+      "player": "Jauan Jennings"
+    },
+    {
+      "preGameRank": 40,
+      "player": "Calvin Ridley"
+    },
+    {
+      "preGameRank": 41,
+      "player": "Jerry Jeudy"
+    },
+    {
+      "preGameRank": 42,
+      "player": "Cedric Tillman"
+    },
+    {
+      "preGameRank": 43,
+      "player": "Matthew Golden"
+    },
+    {
+      "preGameRank": 44,
+      "player": "Keon Coleman"
+    },
+    {
+      "preGameRank": 45,
+      "player": "Wan'Dale Robinson"
+    },
+    {
+      "preGameRank": 46,
+      "player": "Romeo Doubs"
+    },
+    {
+      "preGameRank": 47,
+      "player": "Darnell Mooney"
+    },
+    {
+      "preGameRank": 48,
+      "player": "Marquise Brown"
+    },
+    {
+      "preGameRank": 49,
+      "player": "Kayshon Boutte"
+    },
+    {
+      "preGameRank": 50,
+      "player": "Tre Tucker"
+    },
+    {
+      "preGameRank": 51,
+      "player": "Elic Ayomanor"
+    },
+    {
+      "preGameRank": 52,
+      "player": "Tyquan Thornton"
+    },
+    {
+      "preGameRank": 53,
+      "player": "Travis Hunter"
+    },
+    {
+      "preGameRank": 54,
+      "player": "Stefon Diggs"
+    },
+    {
+      "preGameRank": 55,
+      "player": "Josh Downs"
+    },
+    {
+      "preGameRank": 56,
+      "player": "Troy Franklin"
+    },
+    {
+      "preGameRank": 57,
+      "player": "Christian Kirk"
+    },
+    {
+      "preGameRank": 58,
+      "player": "Rashid Shaheed"
+    },
+    {
+      "preGameRank": 59,
+      "player": "Cooper Kupp"
+    },
+    {
+      "preGameRank": 60,
+      "player": "Chris Godwin Jr."
+    },
+    {
+      "preGameRank": 61,
+      "player": "Tory Horton"
+    },
+    {
+      "preGameRank": 62,
+      "player": "Dontayvion Wicks"
+    },
+    {
+      "preGameRank": 63,
+      "player": "Calvin Austin III"
+    },
+    {
+      "preGameRank": 64,
+      "player": "Marvin Mims Jr."
+    },
+    {
+      "preGameRank": 65,
+      "player": "DeAndre Hopkins"
+    },
+    {
+      "preGameRank": 66,
+      "player": "Sterling Shepard"
+    },
+    {
+      "preGameRank": 67,
+      "player": "KaVontae Turpin"
+    },
+    {
+      "preGameRank": 68,
+      "player": "Jalen Tolbert"
+    },
+    {
+      "preGameRank": 69,
+      "player": "JuJu Smith-Schuster"
+    },
+    {
+      "preGameRank": 70,
+      "player": "Parker Washington"
+    },
+    {
+      "preGameRank": 71,
+      "player": "Luther Burden III"
+    },
+    {
+      "preGameRank": 72,
+      "player": "Adonai Mitchell"
+    },
+    {
+      "preGameRank": 73,
+      "player": "Joshua Palmer"
+    },
+    {
+      "preGameRank": 74,
+      "player": "Michael Wilson"
+    },
+    {
+      "preGameRank": 75,
+      "player": "Rashod Bateman"
+    },
+    {
+      "preGameRank": 76,
+      "player": "Hunter Renfrow"
+    },
+    {
+      "preGameRank": 77,
+      "player": "DeMario Douglas"
+    },
+    {
+      "preGameRank": 78,
+      "player": "Dont'e Thornton Jr."
+    },
+    {
+      "preGameRank": 79,
+      "player": "Kendrick Bourne"
+    },
+    {
+      "preGameRank": 80,
+      "player": "Darius Slayton"
+    },
+    {
+      "preGameRank": 81,
+      "player": "Devontez Walker"
+    },
+    {
+      "preGameRank": 82,
+      "player": "Olamide Zaccheaus"
+    },
+    {
+      "preGameRank": 83,
+      "player": "Malik Washington"
+    },
+    {
+      "preGameRank": 84,
+      "player": "Isaiah Bond"
+    },
+    {
+      "preGameRank": 85,
+      "player": "Jalen Nailor"
+    },
+    {
+      "preGameRank": 86,
+      "player": "Demarcus Robinson"
+    },
+    {
+      "preGameRank": 87,
+      "player": "Luke McCaffrey"
+    },
+    {
+      "preGameRank": 88,
+      "player": "Adam Thielen"
+    },
+    {
+      "preGameRank": 89,
+      "player": "Brandin Cooks"
+    },
+    {
+      "preGameRank": 90,
+      "player": "Ray-Ray McCloud III"
+    }
+  ],
+  "te": [
+    {
+      "preGameRank": 1,
+      "player": "Trey McBride"
+    },
+    {
+      "preGameRank": 2,
+      "player": "Brock Bowers"
+    },
+    {
+      "preGameRank": 3,
+      "player": "Tucker Kraft"
+    },
+    {
+      "preGameRank": 4,
+      "player": "Tyler Warren"
+    },
+    {
+      "preGameRank": 5,
+      "player": "Jake Ferguson"
+    },
+    {
+      "preGameRank": 6,
+      "player": "Sam LaPorta"
+    },
+    {
+      "preGameRank": 7,
+      "player": "Dalton Kincaid"
+    },
+    {
+      "preGameRank": 8,
+      "player": "Hunter Henry"
+    },
+    {
+      "preGameRank": 9,
+      "player": "T.J. Hockenson"
+    },
+    {
+      "preGameRank": 10,
+      "player": "Juwan Johnson"
+    },
+    {
+      "preGameRank": 11,
+      "player": "Travis Kelce"
+    },
+    {
+      "preGameRank": 12,
+      "player": "Kyle Pitts Sr."
+    },
+    {
+      "preGameRank": 13,
+      "player": "Mark Andrews"
+    },
+    {
+      "preGameRank": 14,
+      "player": "Zach Ertz"
+    },
+    {
+      "preGameRank": 15,
+      "player": "Harold Fannin Jr."
+    },
+    {
+      "preGameRank": 16,
+      "player": "David Njoku"
+    },
+    {
+      "preGameRank": 17,
+      "player": "Dallas Goedert"
+    },
+    {
+      "preGameRank": 18,
+      "player": "Brenton Strange"
+    },
+    {
+      "preGameRank": 19,
+      "player": "Chig Okonkwo"
+    },
+    {
+      "preGameRank": 20,
+      "player": "Cade Otton"
+    },
+    {
+      "preGameRank": 21,
+      "player": "Jonnu Smith"
+    },
+    {
+      "preGameRank": 22,
+      "player": "Dalton Schultz"
+    },
+    {
+      "preGameRank": 23,
+      "player": "Jake Tonges"
+    },
+    {
+      "preGameRank": 24,
+      "player": "Cole Kmet"
+    },
+    {
+      "preGameRank": 25,
+      "player": "Pat Freiermuth"
+    },
+    {
+      "preGameRank": 26,
+      "player": "Mike Gesicki"
+    },
+    {
+      "preGameRank": 27,
+      "player": "Theo Johnson"
+    },
+    {
+      "preGameRank": 28,
+      "player": "Mason Taylor"
+    },
+    {
+      "preGameRank": 29,
+      "player": "AJ Barner"
+    },
+    {
+      "preGameRank": 30,
+      "player": "Noah Gray"
+    }
+  ],
+  "flex": [
+    {
+      "preGameRank": 1,
+      "player": "Christian McCaffrey",
+      "positionRank": "RB1"
+    },
+    {
+      "preGameRank": 2,
+      "player": "Bijan Robinson",
+      "positionRank": "RB2"
+    },
+    {
+      "preGameRank": 3,
+      "player": "Jonathan Taylor",
+      "positionRank": "RB3"
+    },
+    {
+      "preGameRank": 4,
+      "player": "James Cook III",
+      "positionRank": "RB4"
+    },
+    {
+      "preGameRank": 5,
+      "player": "Puka Nacua",
+      "positionRank": "WR1"
+    },
+    {
+      "preGameRank": 6,
+      "player": "Saquon Barkley",
+      "positionRank": "RB5"
+    },
+    {
+      "preGameRank": 7,
+      "player": "Josh Jacobs",
+      "positionRank": "RB6"
+    },
+    {
+      "preGameRank": 8,
+      "player": "Jaxon Smith-Njigba",
+      "positionRank": "WR2"
+    },
+    {
+      "preGameRank": 9,
+      "player": "Amon-Ra St. Brown",
+      "positionRank": "WR3"
+    },
+    {
+      "preGameRank": 10,
+      "player": "Derrick Henry",
+      "positionRank": "RB7"
+    },
+    {
+      "preGameRank": 11,
+      "player": "Malik Nabers",
+      "positionRank": "WR4"
+    },
+    {
+      "preGameRank": 12,
+      "player": "Jahmyr Gibbs",
+      "positionRank": "RB8"
+    },
+    {
+      "preGameRank": 13,
+      "player": "Justin Jefferson",
+      "positionRank": "WR5"
+    },
+    {
+      "preGameRank": 14,
+      "player": "De'Von Achane",
+      "positionRank": "RB9"
+    },
+    {
+      "preGameRank": 15,
+      "player": "Garrett Wilson",
+      "positionRank": "WR6"
+    },
+    {
+      "preGameRank": 16,
+      "player": "Jordan Mason",
+      "positionRank": "RB10"
+    },
+    {
+      "preGameRank": 17,
+      "player": "Omarion Hampton",
+      "positionRank": "RB11"
+    },
+    {
+      "preGameRank": 18,
+      "player": "Davante Adams",
+      "positionRank": "WR7"
+    },
+    {
+      "preGameRank": 19,
+      "player": "Bucky Irving",
+      "positionRank": "RB12"
+    },
+    {
+      "preGameRank": 20,
+      "player": "Kyren Williams",
+      "positionRank": "RB13"
+    },
+    {
+      "preGameRank": 21,
+      "player": "Kenneth Walker III",
+      "positionRank": "RB14"
+    },
+    {
+      "preGameRank": 22,
+      "player": "Breece Hall",
+      "positionRank": "RB15"
+    },
+    {
+      "preGameRank": 23,
+      "player": "Rome Odunze",
+      "positionRank": "WR8"
+    },
+    {
+      "preGameRank": 24,
+      "player": "Chuba Hubbard",
+      "positionRank": "RB16"
+    },
+    {
+      "preGameRank": 25,
+      "player": "Ja'Marr Chase",
+      "positionRank": "WR9"
+    },
+    {
+      "preGameRank": 26,
+      "player": "Ashton Jeanty",
+      "positionRank": "RB17"
+    },
+    {
+      "preGameRank": 27,
+      "player": "J.K. Dobbins",
+      "positionRank": "RB18"
+    },
+    {
+      "preGameRank": 28,
+      "player": "Trey McBride",
+      "positionRank": "TE1"
+    },
+    {
+      "preGameRank": 29,
+      "player": "Trey Benson",
+      "positionRank": "RB19"
+    },
+    {
+      "preGameRank": 30,
+      "player": "Nico Collins",
+      "positionRank": "WR10"
+    },
+    {
+      "preGameRank": 31,
+      "player": "A.J. Brown",
+      "positionRank": "WR11"
+    },
+    {
+      "preGameRank": 32,
+      "player": "Drake London",
+      "positionRank": "WR12"
+    },
+    {
+      "preGameRank": 33,
+      "player": "Travis Etienne Jr.",
+      "positionRank": "RB20"
+    },
+    {
+      "preGameRank": 34,
+      "player": "Brock Bowers",
+      "positionRank": "TE2"
+    },
+    {
+      "preGameRank": 35,
+      "player": "Emeka Egbuka",
+      "positionRank": "WR13"
+    },
+    {
+      "preGameRank": 36,
+      "player": "Tetairoa McMillan",
+      "positionRank": "WR14"
+    },
+    {
+      "preGameRank": 37,
+      "player": "Ricky Pearsall",
+      "positionRank": "WR15"
+    },
+    {
+      "preGameRank": 38,
+      "player": "Zay Flowers",
+      "positionRank": "WR16"
+    },
+    {
+      "preGameRank": 39,
+      "player": "George Pickens",
+      "positionRank": "WR17"
+    },
+    {
+      "preGameRank": 40,
+      "player": "Ladd McConkey",
+      "positionRank": "WR18"
+    },
+    {
+      "preGameRank": 41,
+      "player": "Courtland Sutton",
+      "positionRank": "WR19"
+    },
+    {
+      "preGameRank": 42,
+      "player": "Tyreek Hill",
+      "positionRank": "WR20"
+    },
+    {
+      "preGameRank": 43,
+      "player": "Alvin Kamara",
+      "positionRank": "RB21"
+    },
+    {
+      "preGameRank": 44,
+      "player": "Keenan Allen",
+      "positionRank": "WR21"
+    },
+    {
+      "preGameRank": 45,
+      "player": "Cam Skattebo",
+      "positionRank": "RB22"
+    },
+    {
+      "preGameRank": 46,
+      "player": "Brian Thomas Jr.",
+      "positionRank": "WR22"
+    },
+    {
+      "preGameRank": 47,
+      "player": "Deebo Samuel Sr.",
+      "positionRank": "WR23"
+    },
+    {
+      "preGameRank": 48,
+      "player": "Javonte Williams",
+      "positionRank": "RB23"
+    },
+    {
+      "preGameRank": 49,
+      "player": "Jakobi Meyers",
+      "positionRank": "WR24"
+    },
+    {
+      "preGameRank": 50,
+      "player": "Tucker Kraft",
+      "positionRank": "TE3"
+    },
+    {
+      "preGameRank": 51,
+      "player": "DeVonta Smith",
+      "positionRank": "WR25"
+    },
+    {
+      "preGameRank": 52,
+      "player": "Tyler Warren",
+      "positionRank": "TE4"
+    },
+    {
+      "preGameRank": 53,
+      "player": "Chase Brown",
+      "positionRank": "RB24"
+    },
+    {
+      "preGameRank": 54,
+      "player": "DK Metcalf",
+      "positionRank": "WR26"
+    },
+    {
+      "preGameRank": 55,
+      "player": "Jameson Williams",
+      "positionRank": "WR27"
+    },
+    {
+      "preGameRank": 56,
+      "player": "Michael Pittman Jr.",
+      "positionRank": "WR28"
+    },
+    {
+      "preGameRank": 57,
+      "player": "Quinshon Judkins",
+      "positionRank": "RB25"
+    },
+    {
+      "preGameRank": 58,
+      "player": "Marvin Harrison Jr.",
+      "positionRank": "WR29"
+    },
+    {
+      "preGameRank": 59,
+      "player": "DJ Moore",
+      "positionRank": "WR30"
+    },
+    {
+      "preGameRank": 60,
+      "player": "Jaylen Warren",
+      "positionRank": "RB26"
+    },
+    {
+      "preGameRank": 61,
+      "player": "Quentin Johnston",
+      "positionRank": "WR31"
+    },
+    {
+      "preGameRank": 62,
+      "player": "Jake Ferguson",
+      "positionRank": "TE5"
+    },
+    {
+      "preGameRank": 63,
+      "player": "Chris Olave",
+      "positionRank": "WR32"
+    },
+    {
+      "preGameRank": 64,
+      "player": "Jaylen Waddle",
+      "positionRank": "WR33"
+    },
+    {
+      "preGameRank": 65,
+      "player": "Jordan Addison",
+      "positionRank": "WR34"
+    },
+    {
+      "preGameRank": 66,
+      "player": "Tee Higgins",
+      "positionRank": "WR35"
+    },
+    {
+      "preGameRank": 67,
+      "player": "Terry McLaurin",
+      "positionRank": "WR36"
+    },
+    {
+      "preGameRank": 68,
+      "player": "Xavier Worthy",
+      "positionRank": "WR37"
+    },
+    {
+      "preGameRank": 69,
+      "player": "Khalil Shakir",
+      "positionRank": "WR38"
+    },
+    {
+      "preGameRank": 70,
+      "player": "Jauan Jennings",
+      "positionRank": "WR39"
+    },
+    {
+      "preGameRank": 71,
+      "player": "Sam LaPorta",
+      "positionRank": "TE6"
+    },
+    {
+      "preGameRank": 72,
+      "player": "D'Andre Swift",
+      "positionRank": "RB27"
+    },
+    {
+      "preGameRank": 73,
+      "player": "Calvin Ridley",
+      "positionRank": "WR40"
+    },
+    {
+      "preGameRank": 74,
+      "player": "Dalton Kincaid",
+      "positionRank": "TE7"
+    },
+    {
+      "preGameRank": 75,
+      "player": "TreVeyon Henderson",
+      "positionRank": "RB28"
+    },
+    {
+      "preGameRank": 76,
+      "player": "Tony Pollard",
+      "positionRank": "RB29"
+    },
+    {
+      "preGameRank": 77,
+      "player": "Jerry Jeudy",
+      "positionRank": "WR41"
+    },
+    {
+      "preGameRank": 78,
+      "player": "Cedric Tillman",
+      "positionRank": "WR42"
+    },
+    {
+      "preGameRank": 79,
+      "player": "Matthew Golden",
+      "positionRank": "WR43"
+    },
+    {
+      "preGameRank": 80,
+      "player": "Keon Coleman",
+      "positionRank": "WR44"
+    },
+    {
+      "preGameRank": 81,
+      "player": "Hunter Henry",
+      "positionRank": "TE8"
+    },
+    {
+      "preGameRank": 82,
+      "player": "Wan'Dale Robinson",
+      "positionRank": "WR45"
+    },
+    {
+      "preGameRank": 83,
+      "player": "Romeo Doubs",
+      "positionRank": "WR46"
+    },
+    {
+      "preGameRank": 84,
+      "player": "Darnell Mooney",
+      "positionRank": "WR47"
+    },
+    {
+      "preGameRank": 85,
+      "player": "David Montgomery",
+      "positionRank": "RB30"
+    },
+    {
+      "preGameRank": 86,
+      "player": "Marquise Brown",
+      "positionRank": "WR48"
+    },
+    {
+      "preGameRank": 87,
+      "player": "Jacory Croskey-Merritt",
+      "positionRank": "RB31"
+    },
+    {
+      "preGameRank": 88,
+      "player": "Nick Chubb",
+      "positionRank": "RB32"
+    },
+    {
+      "preGameRank": 89,
+      "player": "Kayshon Boutte",
+      "positionRank": "WR49"
+    },
+    {
+      "preGameRank": 90,
+      "player": "Tre Tucker",
+      "positionRank": "WR50"
+    },
+    {
+      "preGameRank": 91,
+      "player": "Rhamondre Stevenson",
+      "positionRank": "RB33"
+    },
+    {
+      "preGameRank": 92,
+      "player": "Bhayshul Tuten",
+      "positionRank": "RB34"
+    },
+    {
+      "preGameRank": 93,
+      "player": "T.J. Hockenson",
+      "positionRank": "TE9"
+    },
+    {
+      "preGameRank": 94,
+      "player": "Elic Ayomanor",
+      "positionRank": "WR51"
+    },
+    {
+      "preGameRank": 95,
+      "player": "Tyquan Thornton",
+      "positionRank": "WR52"
+    },
+    {
+      "preGameRank": 96,
+      "player": "Juwan Johnson",
+      "positionRank": "TE10"
+    },
+    {
+      "preGameRank": 97,
+      "player": "Isiah Pacheco",
+      "positionRank": "RB35"
+    },
+    {
+      "preGameRank": 98,
+      "player": "Travis Hunter",
+      "positionRank": "WR53"
+    },
+    {
+      "preGameRank": 99,
+      "player": "Stefon Diggs",
+      "positionRank": "WR54"
+    },
+    {
+      "preGameRank": 100,
+      "player": "Josh Downs",
+      "positionRank": "WR55"
+    },
+    {
+      "preGameRank": 101,
+      "player": "Troy Franklin",
+      "positionRank": "WR56"
+    },
+    {
+      "preGameRank": 102,
+      "player": "RJ Harvey",
+      "positionRank": "RB36"
+    },
+    {
+      "preGameRank": 103,
+      "player": "Travis Kelce",
+      "positionRank": "TE11"
+    },
+    {
+      "preGameRank": 104,
+      "player": "Ollie Gordon II",
+      "positionRank": "RB37"
+    },
+    {
+      "preGameRank": 105,
+      "player": "Christian Kirk",
+      "positionRank": "WR57"
+    },
+    {
+      "preGameRank": 106,
+      "player": "Kyle Pitts Sr.",
+      "positionRank": "TE12"
+    },
+    {
+      "preGameRank": 107,
+      "player": "Rashid Shaheed",
+      "positionRank": "WR58"
+    },
+    {
+      "preGameRank": 108,
+      "player": "Kareem Hunt",
+      "positionRank": "RB38"
+    },
+    {
+      "preGameRank": 109,
+      "player": "Mark Andrews",
+      "positionRank": "TE13"
+    },
+    {
+      "preGameRank": 110,
+      "player": "Cooper Kupp",
+      "positionRank": "WR59"
+    },
+    {
+      "preGameRank": 111,
+      "player": "Chris Godwin Jr.",
+      "positionRank": "WR60"
+    },
+    {
+      "preGameRank": 112,
+      "player": "Tory Horton",
+      "positionRank": "WR61"
+    },
+    {
+      "preGameRank": 113,
+      "player": "Zach Ertz",
+      "positionRank": "TE14"
+    },
+    {
+      "preGameRank": 114,
+      "player": "Zach Charbonnet",
+      "positionRank": "RB39"
+    },
+    {
+      "preGameRank": 115,
+      "player": "Harold Fannin Jr.",
+      "positionRank": "TE15"
+    },
+    {
+      "preGameRank": 116,
+      "player": "Dontayvion Wicks",
+      "positionRank": "WR62"
+    },
+    {
+      "preGameRank": 117,
+      "player": "Calvin Austin III",
+      "positionRank": "WR63"
+    },
+    {
+      "preGameRank": 118,
+      "player": "Marvin Mims Jr.",
+      "positionRank": "WR64"
+    },
+    {
+      "preGameRank": 119,
+      "player": "Jeremy McNichols",
+      "positionRank": "RB40"
+    },
+    {
+      "preGameRank": 120,
+      "player": "Chris Rodriguez Jr.",
+      "positionRank": "RB41"
+    },
+    {
+      "preGameRank": 121,
+      "player": "David Njoku",
+      "positionRank": "TE16"
+    },
+    {
+      "preGameRank": 122,
+      "player": "Kenneth Gainwell",
+      "positionRank": "RB42"
+    },
+    {
+      "preGameRank": 123,
+      "player": "DeAndre Hopkins",
+      "positionRank": "WR65"
+    },
+    {
+      "preGameRank": 124,
+      "player": "Woody Marks",
+      "positionRank": "RB43"
+    },
+    {
+      "preGameRank": 125,
+      "player": "Dallas Goedert",
+      "positionRank": "TE17"
+    },
+    {
+      "preGameRank": 126,
+      "player": "Sterling Shepard",
+      "positionRank": "WR66"
+    },
+    {
+      "preGameRank": 127,
+      "player": "KaVontae Turpin",
+      "positionRank": "WR67"
+    },
+    {
+      "preGameRank": 128,
+      "player": "Braelon Allen",
+      "positionRank": "RB44"
+    },
+    {
+      "preGameRank": 129,
+      "player": "Brenton Strange",
+      "positionRank": "TE18"
+    },
+    {
+      "preGameRank": 130,
+      "player": "Chig Okonkwo",
+      "positionRank": "TE19"
+    },
+    {
+      "preGameRank": 131,
+      "player": "Jalen Tolbert",
+      "positionRank": "WR68"
+    },
+    {
+      "preGameRank": 132,
+      "player": "Blake Corum",
+      "positionRank": "RB45"
+    },
+    {
+      "preGameRank": 133,
+      "player": "Miles Sanders",
+      "positionRank": "RB46"
+    },
+    {
+      "preGameRank": 134,
+      "player": "Cade Otton",
+      "positionRank": "TE20"
+    },
+    {
+      "preGameRank": 135,
+      "player": "JuJu Smith-Schuster",
+      "positionRank": "WR69"
+    },
+    {
+      "preGameRank": 136,
+      "player": "Parker Washington",
+      "positionRank": "WR70"
+    },
+    {
+      "preGameRank": 137,
+      "player": "Jonnu Smith",
+      "positionRank": "TE21"
+    },
+    {
+      "preGameRank": 138,
+      "player": "Dalton Schultz",
+      "positionRank": "TE22"
+    },
+    {
+      "preGameRank": 139,
+      "player": "Jake Tonges",
+      "positionRank": "TE23"
+    },
+    {
+      "preGameRank": 140,
+      "player": "Luther Burden III",
+      "positionRank": "WR71"
+    },
+    {
+      "preGameRank": 141,
+      "player": "Cole Kmet",
+      "positionRank": "TE24"
+    },
+    {
+      "preGameRank": 142,
+      "player": "Pat Freiermuth",
+      "positionRank": "TE25"
+    },
+    {
+      "preGameRank": 143,
+      "player": "Mike Gesicki",
+      "positionRank": "TE26"
+    },
+    {
+      "preGameRank": 144,
+      "player": "Rachaad White",
+      "positionRank": "RB47"
+    },
+    {
+      "preGameRank": 145,
+      "player": "Tyler Allgeier",
+      "positionRank": "RB48"
+    },
+    {
+      "preGameRank": 146,
+      "player": "Adonai Mitchell",
+      "positionRank": "WR72"
+    },
+    {
+      "preGameRank": 147,
+      "player": "Brian Robinson Jr.",
+      "positionRank": "RB49"
+    },
+    {
+      "preGameRank": 148,
+      "player": "Joshua Palmer",
+      "positionRank": "WR73"
+    },
+    {
+      "preGameRank": 149,
+      "player": "Kyle Monangai",
+      "positionRank": "RB50"
+    },
+    {
+      "preGameRank": 150,
+      "player": "Jerome Ford",
+      "positionRank": "RB51"
+    }
+  ],
+  "def": [
+    {
+      "preGameRank": 1,
+      "player": "Cameron Dicker",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 2,
+      "player": "Matt Prater",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 3,
+      "player": "Brandon Aubrey",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 4,
+      "player": "Tyler Loop",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 5,
+      "player": "Brandon McManus",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 6,
+      "player": "Spencer Shrader",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 7,
+      "player": "Chris Boswell",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 8,
+      "player": "Ka'imi Fairbairn",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 9,
+      "player": "Jake Elliott",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 10,
+      "player": "Jake Bates",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 11,
+      "player": "Eddy Pineiro",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 12,
+      "player": "Cam Little",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 13,
+      "player": "Harrison Butker",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 14,
+      "player": "Jason Myers",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 15,
+      "player": "Chad Ryland",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 16,
+      "player": "Will Reichard",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 17,
+      "player": "Wil Lutz",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 18,
+      "player": "Joshua Karty",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 19,
+      "player": "Chase McLaughlin",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 20,
+      "player": "Cairo Santos",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 21,
+      "player": "Matt Gay",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 22,
+      "player": "Daniel Carlson",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 23,
+      "player": "Joey Slye",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 24,
+      "player": "Andy Borregales",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 25,
+      "player": "Nick Folk",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 26,
+      "player": "Parker Romo",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 27,
+      "player": "Evan McPherson",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 28,
+      "player": "Riley Patterson",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 29,
+      "player": "Ryan Fitzgerald",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 30,
+      "player": "Blake Grupe",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 31,
+      "player": "Graham Gano",
+      "opponent": ""
+    },
+    {
+      "preGameRank": 32,
+      "player": "Andre Szmyt",
+      "opponent": ""
+    }
+  ],
+  "k": [
+    {
+      "preGameRank": 1,
+      "player": "Denver Broncos"
+    },
+    {
+      "preGameRank": 2,
+      "player": "Buffalo Bills"
+    },
+    {
+      "preGameRank": 3,
+      "player": "Houston Texans"
+    },
+    {
+      "preGameRank": 4,
+      "player": "Los Angeles Chargers"
+    },
+    {
+      "preGameRank": 5,
+      "player": "Detroit Lions"
+    },
+    {
+      "preGameRank": 6,
+      "player": "New England Patriots"
+    },
+    {
+      "preGameRank": 7,
+      "player": "Green Bay Packers"
+    },
+    {
+      "preGameRank": 8,
+      "player": "Minnesota Vikings"
+    },
+    {
+      "preGameRank": 9,
+      "player": "Philadelphia Eagles"
+    },
+    {
+      "preGameRank": 10,
+      "player": "Washington Commanders"
+    },
+    {
+      "preGameRank": 11,
+      "player": "Seattle Seahawks"
+    },
+    {
+      "preGameRank": 12,
+      "player": "San Francisco 49ers"
+    },
+    {
+      "preGameRank": 13,
+      "player": "New York Jets"
+    },
+    {
+      "preGameRank": 14,
+      "player": "Baltimore Ravens"
+    },
+    {
+      "preGameRank": 15,
+      "player": "Chicago Bears"
+    },
+    {
+      "preGameRank": 16,
+      "player": "Carolina Panthers"
+    },
+    {
+      "preGameRank": 17,
+      "player": "Arizona Cardinals"
+    },
+    {
+      "preGameRank": 18,
+      "player": "Tennessee Titans"
+    },
+    {
+      "preGameRank": 19,
+      "player": "Indianapolis Colts"
+    },
+    {
+      "preGameRank": 20,
+      "player": "Pittsburgh Steelers"
+    },
+    {
+      "preGameRank": 21,
+      "player": "Cleveland Browns"
+    },
+    {
+      "preGameRank": 22,
+      "player": "Atlanta Falcons"
+    },
+    {
+      "preGameRank": 23,
+      "player": "Los Angeles Rams"
+    },
+    {
+      "preGameRank": 24,
+      "player": "Miami Dolphins"
+    },
+    {
+      "preGameRank": 25,
+      "player": "Kansas City Chiefs"
+    },
+    {
+      "preGameRank": 26,
+      "player": "New York Giants"
+    },
+    {
+      "preGameRank": 27,
+      "player": "Jacksonville Jaguars"
+    },
+    {
+      "preGameRank": 28,
+      "player": "Cincinnati Bengals"
+    },
+    {
+      "preGameRank": 29,
+      "player": "Tampa Bay Buccaneers"
+    },
+    {
+      "preGameRank": 30,
+      "player": "Las Vegas Raiders"
+    },
+    {
+      "preGameRank": 31,
+      "player": "Dallas Cowboys"
+    },
+    {
+      "preGameRank": 32,
+      "player": "New Orleans Saints"
+    }
+  ],
+  "lastUpdated": "2025-09-23T21:09:18.106Z",
+  "week": "Week 3"
+}

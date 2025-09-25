@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rest of Season Trade Value Charts</title>
+    <title>Justin Boone Fantasy Football Rankings - PPR</title>
     <link rel="stylesheet" href="styles.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1447485394638100"
      crossorigin="anonymous"></script>
 </head>
-<body class="trade-values-page">
+<body>
     <div class="container">
         <header>
-            <h1>Rest of Season Trade Value Charts</h1>
-            <p id="article-published" class="article-date" style="text-align: center; margin: 10px 0px; color: rgb(102, 102, 102); font-size: 14px;">📝 Published: September 24, 2025</p>
-            <p class="attribution">Trade values for fantasy football player evaluation</p>
-            
+            <h1>Justin Boone Fantasy Football Rankings (PPR)</h1>
+            <p class="disclaimer">This site is for analysis purposes only. All credit goes to Yahoo Sports and Justin Boone for original rankings.</p>
+            <p class="yahoo-love" style="margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px; text-align: center;">
+                ❤️ We love <a href="https://sports.yahoo.com/fantasy/news/" target="_blank" style="color: #6001d2; font-weight: bold;">Yahoo Sports</a>!
+                Check out their amazing fantasy football content and analysis.
+            </p>
+
             <!-- Support Section -->
             <div style="text-align: center; margin: 10px 0; padding: 10px; background: #e8f4fd; border-radius: 5px;">
                 <p style="margin: 0 0 8px 0;">If you appreciate this site and want to support this free resource:</p>
                 <p style="margin: 0;">
-                    💰 Donate via PayPal: <a href="https://paypal.me/joelchoi" target="_blank" style="color: #0070ba; font-weight: bold;">paypal.me/joelchoi</a> | 
+                    💰 Donate via PayPal: <a href="https://paypal.me/joelchoi" target="_blank" style="color: #0070ba; font-weight: bold;">paypal.me/joelchoi</a> |
                     ☕ Buy me a coffee: <a href="https://buymeacoffee.com/joelchoi" target="_blank" style="color: #5f7c8a; font-weight: bold;">buymeacoffee.com/joelchoi</a>
                 </p>
             </div>
-            
+
+            <div class="update-info">
+                <div class="article-published" id="article-published"></div>
+            </div>
+
             <!-- Navigation between pages -->
             <div class="page-navigation" style="margin: 15px 0; text-align: center;">
                 <a href="index.html" class="nav-link">📊 Half-PPR Rankings</a>
                 <span class="nav-separator" style="margin: 0 10px; color: #999;">|</span>
-                <a href="ppr-rankings.html" class="nav-link">📊 PPR Rankings</a>
+                <span class="nav-link active-page" style="font-weight: bold; color: #333;">📊 PPR Rankings</span>
                 <span class="nav-separator" style="margin: 0 10px; color: #999;">|</span>
-                <span class="nav-link active-page" style="font-weight: bold; color: #333;">💹 Trade Values</span>
+                <a href="trade-values.html" class="nav-link">💹 Trade Values</a>
             </div>
         </header>
 
@@ -39,34 +46,36 @@
             <button class="nav-btn" data-position="rb">RB</button>
             <button class="nav-btn" data-position="wr">WR</button>
             <button class="nav-btn" data-position="te">TE</button>
+            <button class="nav-btn" data-position="flex">FLEX</button>
+            <button class="nav-btn" data-position="def">DEF</button>
+            <button class="nav-btn" data-position="k">K</button>
         </nav>
 
         <main>
             <div class="rankings-container">
-                <div id="loading">Loading trade values...</div>
-                
+                <div id="loading">Loading PPR rankings...</div>
+
                 <div class="rankings-section" id="rankings-table" style="display: none;">
-                    <h2 id="position-title">Quarterback Trade Values</h2>
+                    <h2 id="position-title">Quarterback Rankings - Week 1</h2>
                     <table class="rankings-table">
                         <thead>
                             <tr>
                                 <th>Rank</th>
                                 <th>Player</th>
-                                <th>Trade Value</th>
                             </tr>
                         </thead>
                         <tbody id="rankings-body">
-                            <!-- Trade values will be populated here -->
+                            <!-- Rankings will be populated here -->
                         </tbody>
                     </table>
                 </div>
+
             </div>
         </main>
     </div>
 
-    <script src="trade-values-csv.js"></script>
-    
-    
+    <script src="ppr-script.js"></script>
+
     <!-- 100% privacy-first analytics -->
     <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>

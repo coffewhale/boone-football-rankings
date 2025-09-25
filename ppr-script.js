@@ -55,6 +55,14 @@ class PPRRankingsApp {
                     });
                 }
 
+                // Update published timestamp and week from PPR data if available
+                if (data.lastUpdated) {
+                    this.updateArticlePublishedDisplay(data.lastUpdated);
+                }
+                if (data.week) {
+                    this.currentWeek = data.week;
+                }
+
                 // Get QB, DEF, K from regular rankings since they're not in PPR data yet
                 try {
                     const halfPprResponse = await fetch('./rankings.json?v=' + Date.now());
@@ -64,11 +72,11 @@ class PPRRankingsApp {
                         this.rankings.def = halfPprData.def || [];
                         this.rankings.k = halfPprData.k || [];
 
-                        // Use timestamp from half-PPR if not available in PPR data
-                        if (halfPprData.lastUpdated) {
+                        // Use timestamp from half-PPR only if not available in PPR data
+                        if (!data.lastUpdated && halfPprData.lastUpdated) {
                             this.updateArticlePublishedDisplay(halfPprData.lastUpdated);
                         }
-                        if (halfPprData.week) {
+                        if (!data.week && halfPprData.week) {
                             this.currentWeek = halfPprData.week;
                         }
                     }

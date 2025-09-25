@@ -312,20 +312,69 @@ header h1 {
 .page-navigation {
     margin: 15px 0;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .nav-link {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 10px 16px;
     background-color: #007bff;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: 500;
-    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
     background-color: #0056b3;
     text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.active-page {
+    background-color: #28a745 !important;
+    color: white !important;
+}
+
+.nav-separator {
+    margin: 0 5px;
+    color: #999;
+    font-weight: normal;
+}
+
+/* Mobile Responsive Navigation */
+@media (max-width: 768px) {
+    .page-navigation {
+        flex-direction: column;
+        gap: 8px;
+        margin: 20px 0;
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .nav-separator {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link {
+        padding: 14px 20px;
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
 }

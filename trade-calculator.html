@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Football Trade Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .trade-calculator-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .settings-panel {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .setting-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .setting-group label {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .setting-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .setting-btn {
+            background: white;
+            border: 2px solid #ddd;
+            color: #666;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .setting-btn.active {
+            background: #4a00e0;
+            color: white;
+            border-color: #4a00e0;
+        }
+
+        .trade-sides {
+            display: grid;
+            grid-template-columns: 1fr 80px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .trade-side {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            min-height: 400px;
+        }
+
+        .trade-side h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .vs-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #999;
+            padding-top: 50px;
+        }
+
+        .player-search {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #4a00e0;
+        }
+
+        .search-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            max-height: 300px;
+            overflow-y: auto;
+            background: white;
+            border: 2px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            z-index: 100;
+            display: none;
+        }
+
+        .search-dropdown.active {
+            display: block;
+        }
+
+        .search-result {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-result:hover {
+            background: #f8f9fa;
+        }
+
+        .player-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .player-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .player-position {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .player-value {
+            font-weight: bold;
+            color: #4a00e0;
+        }
+
+        .selected-players {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .selected-player {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .remove-player {
+            background: #ff4444;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .remove-player:hover {
+            background: #dd3333;
+        }
+
+        .trade-total {
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .total-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #4a00e0;
+        }
+
+        .total-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .trade-result {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .result-summary {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .winning-trade {
+            color: #28a745;
+        }
+
+        .losing-trade {
+            color: #dc3545;
+        }
+
+        .even-trade {
+            color: #ffc107;
+        }
+
+        .percentage-diff {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .empty-state {
+            color: #999;
+            font-style: italic;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .trade-sides {
+                grid-template-columns: 1fr;
+            }
+
+            .vs-divider {
+                padding: 20px 0;
+            }
+
+            .settings-panel {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1447485394638100"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fantasy Football Trade Calculator</h1>
+            <p class="attribution">Compare trade values to evaluate your fantasy football trades</p>
+
+            <!-- Support Section -->
+            <div style="text-align: center; margin: 10px 0; padding: 10px; background: #e8f4fd; border-radius: 5px;">
+                <p style="margin: 0 0 8px 0;">If you appreciate this site and want to support this free resource:</p>
+                <p style="margin: 0;">
+                    💰 Donate via PayPal: <a href="https://paypal.me/joelchoi" target="_blank" style="color: #0070ba; font-weight: bold;">paypal.me/joelchoi</a> |
+                    ☕ Buy me a coffee: <a href="https://buymeacoffee.com/joelchoi" target="_blank" style="color: #5f7c8a; font-weight: bold;">buymeacoffee.com/joelchoi</a>
+                </p>
+            </div>
+
+            <!-- Navigation between pages -->
+            <div class="page-navigation" style="margin: 15px 0; text-align: center;">
+                <a href="index.html" class="nav-link">📊 Half-PPR Rankings</a>
+                <span class="nav-separator" style="margin: 0 10px; color: #999;">|</span>
+                <a href="ppr-rankings.html" class="nav-link">📊 PPR Rankings</a>
+                <span class="nav-separator" style="margin: 0 10px; color: #999;">|</span>
+                <a href="trade-values.html" class="nav-link">💹 Trade Values</a>
+                <span class="nav-separator" style="margin: 0 10px; color: #999;">|</span>
+                <span class="nav-link active-page" style="font-weight: bold; color: #333;">🔄 Trade Calculator</span>
+            </div>
+        </header>
+
+        <div class="trade-calculator-container">
+            <!-- Settings Panel -->
+            <div class="settings-panel">
+                <div class="setting-group">
+                    <label>Scoring Format:</label>
+                    <div class="setting-buttons">
+                        <button class="setting-btn" data-scoring="half" id="half-ppr-btn">Half-PPR</button>
+                        <button class="setting-btn active" data-scoring="ppr" id="ppr-btn">PPR</button>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <label>League Type:</label>
+                    <div class="setting-buttons">
+                        <button class="setting-btn active" data-league="1qb" id="1qb-btn">1 QB</button>
+                        <button class="setting-btn" data-league="2qb" id="2qb-btn">2 QB / Superflex</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trade Sides -->
+            <div class="trade-sides">
+                <!-- Team A (Giving) -->
+                <div class="trade-side" id="team-a-side">
+                    <h3>Players I'm Trading Away</h3>
+                    <div class="player-search">
+                        <input type="text" class="search-input" id="search-giving" placeholder="Search for players to trade away (max 4)...">
+                        <div class="search-dropdown" id="dropdown-giving"></div>
+                    </div>
+                    <div class="selected-players" id="giving-players">
+                        <div class="empty-state">No players selected</div>
+                    </div>
+                    <div class="trade-total">
+                        <div class="total-value" id="giving-total">0</div>
+                        <div class="total-label">Total Trade Value</div>
+                    </div>
+                </div>
+
+                <!-- VS Divider -->
+                <div class="vs-divider">VS</div>
+
+                <!-- Team B (Receiving) -->
+                <div class="trade-side" id="team-b-side">
+                    <h3>Players I'm Receiving</h3>
+                    <div class="player-search">
+                        <input type="text" class="search-input" id="search-receiving" placeholder="Search for players to receive (max 4)...">
+                        <div class="search-dropdown" id="dropdown-receiving"></div>
+                    </div>
+                    <div class="selected-players" id="receiving-players">
+                        <div class="empty-state">No players selected</div>
+                    </div>
+                    <div class="trade-total">
+                        <div class="total-value" id="receiving-total">0</div>
+                        <div class="total-label">Total Trade Value</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trade Result -->
+            <div class="trade-result" id="trade-result" style="display: none;">
+                <div class="result-summary" id="result-summary"></div>
+                <div class="percentage-diff" id="percentage-diff"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="trade-values-csv.js"></script>
+    <script src="trade-calculator.js"></script>
+
+    <!-- 100% privacy-first analytics -->
+    <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+</html>

@@ -161,9 +161,8 @@ header h1 {
 }
 
 .position-rank {
-    color: #888;
-    font-size: 0.9em;
-    font-weight: normal;
+    color: #333;
+    font-weight: 500;
 }
 
 .player-cell {

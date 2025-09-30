@@ -1,2887 +1,2455 @@
 {
   "summary": {
-    "total_players": 446,
+    "total_players": 404,
     "position_counts": {
-      "QB": 32,
-      "RB": 70,
-      "WR": 90,
-      "TE": 40,
-      "FLEX": 150,
-      "DST": 32,
-      "K": 32
+      "WR": 70,
+      "QB": 28,
+      "FLEX": 160,
+      "RB": 60,
+      "DST": 28,
+      "TE": 30,
+      "K": 28
     },
-    "generated_date": "2025-09-25"
+    "generated_date": "2025-09-30",
+    "week": "Week 5",
+    "rankings_type": "Half-PPR"
   },
   "rankings": {
-    "QB": [
-      {
-        "rank": 1,
-        "name": "Josh Allen",
-        "team": "BUF",
-        "position": "QB"
-      },
-      {
-        "rank": 2,
-        "name": "Lamar Jackson",
-        "team": "BAL",
-        "position": "QB"
-      },
-      {
-        "rank": 3,
-        "name": "Jalen Hurts",
-        "team": "PHI",
-        "position": "QB"
-      },
-      {
-        "rank": 4,
-        "name": "Justin Herbert",
-        "team": "LAC",
-        "position": "QB"
-      },
-      {
-        "rank": 5,
-        "name": "Jayden Daniels",
-        "team": "WAS",
-        "position": "QB"
-      },
-      {
-        "rank": 6,
-        "name": "Caleb Williams",
-        "team": "CHI",
-        "position": "QB"
-      },
-      {
-        "rank": 7,
-        "name": "Jordan Love",
-        "team": "GB",
-        "position": "QB"
-      },
-      {
-        "rank": 8,
-        "name": "Patrick Mahomes II",
-        "team": "KC",
-        "position": "QB"
-      },
-      {
-        "rank": 9,
-        "name": "Drake Maye",
-        "team": "NE",
-        "position": "QB"
-      },
-      {
-        "rank": 10,
-        "name": "Daniel Jones",
-        "team": "IND",
-        "position": "QB"
-      },
-      {
-        "rank": 11,
-        "name": "Bo Nix",
-        "team": "DEN",
-        "position": "QB"
-      },
-      {
-        "rank": 12,
-        "name": "Brock Purdy",
-        "team": "SF",
-        "position": "QB"
-      },
-      {
-        "rank": 13,
-        "name": "Justin Fields",
-        "team": "NYJ",
-        "position": "QB"
-      },
-      {
-        "rank": 14,
-        "name": "Kyler Murray",
-        "team": "ARI",
-        "position": "QB"
-      },
-      {
-        "rank": 15,
-        "name": "Geno Smith",
-        "team": "LV",
-        "position": "QB"
-      },
-      {
-        "rank": 16,
-        "name": "Jared Goff",
-        "team": "DET",
-        "position": "QB"
-      },
-      {
-        "rank": 17,
-        "name": "Baker Mayfield",
-        "team": "TB",
-        "position": "QB"
-      },
-      {
-        "rank": 18,
-        "name": "Matthew Stafford",
-        "team": "LAR",
-        "position": "QB"
-      },
-      {
-        "rank": 19,
-        "name": "Dak Prescott",
-        "team": "DAL",
-        "position": "QB"
-      },
-      {
-        "rank": 20,
-        "name": "Jaxson Dart",
-        "team": "NYG",
-        "position": "QB"
-      },
-      {
-        "rank": 21,
-        "name": "Sam Darnold",
-        "team": "SEA",
-        "position": "QB"
-      },
-      {
-        "rank": 22,
-        "name": "C.J. Stroud",
-        "team": "HOU",
-        "position": "QB"
-      },
-      {
-        "rank": 23,
-        "name": "Michael Penix Jr.",
-        "team": "ATL",
-        "position": "QB"
-      },
-      {
-        "rank": 24,
-        "name": "Carson Wentz",
-        "team": "MIN",
-        "position": "QB"
-      },
-      {
-        "rank": 25,
-        "name": "Tua Tagovailoa",
-        "team": "MIA",
-        "position": "QB"
-      },
-      {
-        "rank": 26,
-        "name": "Trevor Lawrence",
-        "team": "JAC",
-        "position": "QB"
-      },
-      {
-        "rank": 27,
-        "name": "Bryce Young",
-        "team": "CAR",
-        "position": "QB"
-      },
-      {
-        "rank": 28,
-        "name": "Joe Flacco",
-        "team": "CLE",
-        "position": "QB"
-      },
-      {
-        "rank": 29,
-        "name": "Jake Browning",
-        "team": "CIN",
-        "position": "QB"
-      },
-      {
-        "rank": 30,
-        "name": "Cam Ward",
-        "team": "TEN",
-        "position": "QB"
-      },
-      {
-        "rank": 31,
-        "name": "Spencer Rattler",
-        "team": "NO",
-        "position": "QB"
-      },
-      {
-        "rank": 32,
-        "name": "Aaron Rodgers",
-        "team": "PIT",
-        "position": "QB"
-      }
-    ],
-    "RB": [
-      {
-        "rank": 1,
-        "name": "Christian McCaffrey",
-        "team": "SF",
-        "position": "RB"
-      },
-      {
-        "rank": 2,
-        "name": "Bijan Robinson",
-        "team": "ATL",
-        "position": "RB"
-      },
-      {
-        "rank": 3,
-        "name": "Jonathan Taylor",
-        "team": "IND",
-        "position": "RB"
-      },
-      {
-        "rank": 4,
-        "name": "James Cook III",
-        "team": "BUF",
-        "position": "RB"
-      },
-      {
-        "rank": 5,
-        "name": "Saquon Barkley",
-        "team": "PHI",
-        "position": "RB"
-      },
-      {
-        "rank": 6,
-        "name": "Josh Jacobs",
-        "team": "GB",
-        "position": "RB"
-      },
-      {
-        "rank": 7,
-        "name": "Jahmyr Gibbs",
-        "team": "DET",
-        "position": "RB"
-      },
-      {
-        "rank": 8,
-        "name": "De'Von Achane",
-        "team": "MIA",
-        "position": "RB"
-      },
-      {
-        "rank": 9,
-        "name": "Derrick Henry",
-        "team": "BAL",
-        "position": "RB"
-      },
-      {
-        "rank": 10,
-        "name": "Jordan Mason",
-        "team": "MIN",
-        "position": "RB"
-      },
-      {
-        "rank": 11,
-        "name": "Omarion Hampton",
-        "team": "LAC",
-        "position": "RB"
-      },
-      {
-        "rank": 12,
-        "name": "Bucky Irving",
-        "team": "TB",
-        "position": "RB"
-      },
-      {
-        "rank": 13,
-        "name": "Kyren Williams",
-        "team": "LAR",
-        "position": "RB"
-      },
-      {
-        "rank": 14,
-        "name": "Kenneth Walker III",
-        "team": "SEA",
-        "position": "RB"
-      },
-      {
-        "rank": 15,
-        "name": "J.K. Dobbins",
-        "team": "DEN",
-        "position": "RB"
-      },
-      {
-        "rank": 16,
-        "name": "Breece Hall",
-        "team": "NYJ",
-        "position": "RB"
-      },
-      {
-        "rank": 17,
-        "name": "Chuba Hubbard",
-        "team": "CAR",
-        "position": "RB"
-      },
-      {
-        "rank": 18,
-        "name": "Ashton Jeanty",
-        "team": "LV",
-        "position": "RB"
-      },
-      {
-        "rank": 19,
-        "name": "Trey Benson",
-        "team": "ARI",
-        "position": "RB"
-      },
-      {
-        "rank": 20,
-        "name": "Cam Skattebo",
-        "team": "NYG",
-        "position": "RB"
-      },
-      {
-        "rank": 21,
-        "name": "Travis Etienne Jr.",
-        "team": "JAC",
-        "position": "RB"
-      },
-      {
-        "rank": 22,
-        "name": "Alvin Kamara",
-        "team": "NO",
-        "position": "RB"
-      },
-      {
-        "rank": 23,
-        "name": "Javonte Williams",
-        "team": "DAL",
-        "position": "RB"
-      },
-      {
-        "rank": 24,
-        "name": "Quinshon Judkins",
-        "team": "CLE",
-        "position": "RB"
-      },
-      {
-        "rank": 25,
-        "name": "Jaylen Warren",
-        "team": "PIT",
-        "position": "RB"
-      },
-      {
-        "rank": 26,
-        "name": "Chase Brown",
-        "team": "CIN",
-        "position": "RB"
-      },
-      {
-        "rank": 27,
-        "name": "D'Andre Swift",
-        "team": "CHI",
-        "position": "RB"
-      },
-      {
-        "rank": 28,
-        "name": "Tony Pollard",
-        "team": "TEN",
-        "position": "RB"
-      },
-      {
-        "rank": 29,
-        "name": "TreVeyon Henderson",
-        "team": "NE",
-        "position": "RB"
-      },
-      {
-        "rank": 30,
-        "name": "David Montgomery",
-        "team": "DET",
-        "position": "RB"
-      },
-      {
-        "rank": 31,
-        "name": "Nick Chubb",
-        "team": "HOU",
-        "position": "RB"
-      },
-      {
-        "rank": 32,
-        "name": "Jacory Croskey-Merritt",
-        "team": "WAS",
-        "position": "RB"
-      },
-      {
-        "rank": 33,
-        "name": "Rhamondre Stevenson",
-        "team": "NE",
-        "position": "RB"
-      },
-      {
-        "rank": 34,
-        "name": "Bhayshul Tuten",
-        "team": "JAC",
-        "position": "RB"
-      },
-      {
-        "rank": 35,
-        "name": "Isiah Pacheco",
-        "team": "KC",
-        "position": "RB"
-      },
-      {
-        "rank": 36,
-        "name": "RJ Harvey",
-        "team": "DEN",
-        "position": "RB"
-      },
-      {
-        "rank": 37,
-        "name": "Kareem Hunt",
-        "team": "KC",
-        "position": "RB"
-      },
-      {
-        "rank": 38,
-        "name": "Ollie Gordon II",
-        "team": "MIA",
-        "position": "RB"
-      },
-      {
-        "rank": 39,
-        "name": "Chris Rodriguez Jr.",
-        "team": "WAS",
-        "position": "RB"
-      },
-      {
-        "rank": 40,
-        "name": "Zach Charbonnet",
-        "team": "SEA",
-        "position": "RB"
-      },
-      {
-        "rank": 41,
-        "name": "Jeremy McNichols",
-        "team": "WAS",
-        "position": "RB"
-      },
-      {
-        "rank": 42,
-        "name": "Woody Marks",
-        "team": "HOU",
-        "position": "RB"
-      },
-      {
-        "rank": 43,
-        "name": "Kenneth Gainwell",
-        "team": "PIT",
-        "position": "RB"
-      },
-      {
-        "rank": 44,
-        "name": "Braelon Allen",
-        "team": "NYJ",
-        "position": "RB"
-      },
-      {
-        "rank": 45,
-        "name": "Blake Corum",
-        "team": "LAR",
-        "position": "RB"
-      },
-      {
-        "rank": 46,
-        "name": "Miles Sanders",
-        "team": "DAL",
-        "position": "RB"
-      },
-      {
-        "rank": 47,
-        "name": "Rachaad White",
-        "team": "TB",
-        "position": "RB"
-      },
-      {
-        "rank": 48,
-        "name": "Tyler Allgeier",
-        "team": "ATL",
-        "position": "RB"
-      },
-      {
-        "rank": 49,
-        "name": "Kyle Monangai",
-        "team": "CHI",
-        "position": "RB"
-      },
-      {
-        "rank": 50,
-        "name": "Brian Robinson Jr.",
-        "team": "SF",
-        "position": "RB"
-      },
-      {
-        "rank": 51,
-        "name": "Jerome Ford",
-        "team": "CLE",
-        "position": "RB"
-      },
-      {
-        "rank": 52,
-        "name": "Rico Dowdle",
-        "team": "CAR",
-        "position": "RB"
-      },
-      {
-        "rank": 53,
-        "name": "Ray Davis",
-        "team": "BUF",
-        "position": "RB"
-      },
-      {
-        "rank": 54,
-        "name": "Ty Johnson",
-        "team": "BUF",
-        "position": "RB"
-      },
-      {
-        "rank": 55,
-        "name": "Justice Hill",
-        "team": "BAL",
-        "position": "RB"
-      },
-      {
-        "rank": 56,
-        "name": "Kendre Miller",
-        "team": "NO",
-        "position": "RB"
-      },
-      {
-        "rank": 57,
-        "name": "Emari Demercado",
-        "team": "ARI",
-        "position": "RB"
-      },
-      {
-        "rank": 58,
-        "name": "Devin Singletary",
-        "team": "NYG",
-        "position": "RB"
-      },
-      {
-        "rank": 59,
-        "name": "Antonio Gibson",
-        "team": "NE",
-        "position": "RB"
-      },
-      {
-        "rank": 60,
-        "name": "Dylan Sampson",
-        "team": "CLE",
-        "position": "RB"
-      },
-      {
-        "rank": 61,
-        "name": "Chris Brooks",
-        "team": "GB",
-        "position": "RB"
-      },
-      {
-        "rank": 62,
-        "name": "Zamir White",
-        "team": "LV",
-        "position": "RB"
-      },
-      {
-        "rank": 63,
-        "name": "LeQuint Allen Jr.",
-        "team": "JAC",
-        "position": "RB"
-      },
-      {
-        "rank": 64,
-        "name": "DJ Giddens",
-        "team": "IND",
-        "position": "RB"
-      },
-      {
-        "rank": 65,
-        "name": "Tyler Badie",
-        "team": "DEN",
-        "position": "RB"
-      },
-      {
-        "rank": 66,
-        "name": "A.J. Dillon",
-        "team": "PHI",
-        "position": "RB"
-      },
-      {
-        "rank": 67,
-        "name": "Zavier Scott",
-        "team": "MIN",
-        "position": "RB"
-      },
-      {
-        "rank": 68,
-        "name": "Isaiah Davis",
-        "team": "NYJ",
-        "position": "RB"
-      },
-      {
-        "rank": 69,
-        "name": "Brashard Smith",
-        "team": "KC",
-        "position": "RB"
-      },
-      {
-        "rank": 70,
-        "name": "Emanuel Wilson",
-        "team": "GB",
-        "position": "RB"
-      }
-    ],
     "WR": [
       {
         "rank": 1,
         "name": "Puka Nacua",
-        "team": "LAR",
+        "opponent": "vs. SF",
         "position": "WR"
       },
       {
         "rank": 2,
-        "name": "Jaxon Smith-Njigba",
-        "team": "SEA",
+        "name": "Amon-Ra St. Brown",
+        "opponent": "at CIN",
         "position": "WR"
       },
       {
         "rank": 3,
-        "name": "Amon-Ra St. Brown",
-        "team": "DET",
+        "name": "Jaxon Smith-Njigba",
+        "opponent": "vs. TB",
         "position": "WR"
       },
       {
         "rank": 4,
-        "name": "Malik Nabers",
-        "team": "NYG",
+        "name": "Garrett Wilson",
+        "opponent": "vs. DAL",
         "position": "WR"
       },
       {
         "rank": 5,
-        "name": "Justin Jefferson",
-        "team": "MIN",
+        "name": "Nico Collins",
+        "opponent": "at BAL",
         "position": "WR"
       },
       {
         "rank": 6,
-        "name": "Garrett Wilson",
-        "team": "NYJ",
+        "name": "Justin Jefferson",
+        "opponent": "at CLE",
         "position": "WR"
       },
       {
         "rank": 7,
         "name": "Davante Adams",
-        "team": "LAR",
+        "opponent": "vs. SF",
         "position": "WR"
       },
       {
         "rank": 8,
-        "name": "Rome Odunze",
-        "team": "CHI",
+        "name": "George Pickens",
+        "opponent": "at NYJ",
         "position": "WR"
       },
       {
         "rank": 9,
-        "name": "Ja'Marr Chase",
-        "team": "CIN",
+        "name": "Emeka Egbuka",
+        "opponent": "at SEA",
         "position": "WR"
       },
       {
         "rank": 10,
-        "name": "Nico Collins",
-        "team": "HOU",
+        "name": "Deebo Samuel Sr.",
+        "opponent": "at LAC",
         "position": "WR"
       },
       {
         "rank": 11,
-        "name": "A.J. Brown",
-        "team": "PHI",
+        "name": "Quentin Johnston",
+        "opponent": "vs. WAS",
         "position": "WR"
       },
       {
         "rank": 12,
-        "name": "Drake London",
-        "team": "ATL",
+        "name": "Xavier Worthy",
+        "opponent": "at JAC",
         "position": "WR"
       },
       {
         "rank": 13,
-        "name": "Emeka Egbuka",
-        "team": "TB",
+        "name": "Ja'Marr Chase",
+        "opponent": "vs. DET",
         "position": "WR"
       },
       {
         "rank": 14,
         "name": "Zay Flowers",
-        "team": "BAL",
+        "opponent": "vs. HOU",
         "position": "WR"
       },
       {
         "rank": 15,
-        "name": "George Pickens",
-        "team": "DAL",
+        "name": "Courtland Sutton",
+        "opponent": "at PHI",
         "position": "WR"
       },
       {
         "rank": 16,
-        "name": "Courtland Sutton",
-        "team": "DEN",
+        "name": "Jaylen Waddle",
+        "opponent": "at CAR",
         "position": "WR"
       },
       {
         "rank": 17,
-        "name": "Ladd McConkey",
-        "team": "LAC",
+        "name": "Keenan Allen",
+        "opponent": "vs. WAS",
         "position": "WR"
       },
       {
         "rank": 18,
-        "name": "Tyreek Hill",
-        "team": "MIA",
+        "name": "Michael Pittman Jr.",
+        "opponent": "vs. LV",
         "position": "WR"
       },
       {
         "rank": 19,
         "name": "Tetairoa McMillan",
-        "team": "CAR",
+        "opponent": "vs. MIA",
         "position": "WR"
       },
       {
         "rank": 20,
-        "name": "Ricky Pearsall",
-        "team": "SF",
+        "name": "A.J. Brown",
+        "opponent": "vs. DEN",
         "position": "WR"
       },
       {
         "rank": 21,
-        "name": "Keenan Allen",
-        "team": "LAC",
+        "name": "Chris Olave",
+        "opponent": "vs. NYG",
         "position": "WR"
       },
       {
         "rank": 22,
-        "name": "Brian Thomas Jr.",
-        "team": "JAC",
+        "name": "Marvin Harrison Jr.",
+        "opponent": "vs. TEN",
         "position": "WR"
       },
       {
         "rank": 23,
-        "name": "Deebo Samuel Sr.",
-        "team": "WAS",
+        "name": "Jakobi Meyers",
+        "opponent": "at IND",
         "position": "WR"
       },
       {
         "rank": 24,
-        "name": "Jakobi Meyers",
-        "team": "LV",
+        "name": "Brian Thomas Jr.",
+        "opponent": "vs. KC",
         "position": "WR"
       },
       {
         "rank": 25,
-        "name": "DeVonta Smith",
-        "team": "PHI",
+        "name": "Ladd McConkey",
+        "opponent": "vs. WAS",
         "position": "WR"
       },
       {
         "rank": 26,
-        "name": "DK Metcalf",
-        "team": "PIT",
+        "name": "Jameson Williams",
+        "opponent": "at CIN",
         "position": "WR"
       },
       {
         "rank": 27,
-        "name": "Quentin Johnston",
-        "team": "LAC",
+        "name": "DeVonta Smith",
+        "opponent": "vs. DEN",
         "position": "WR"
       },
       {
         "rank": 28,
-        "name": "Marvin Harrison Jr.",
-        "team": "ARI",
+        "name": "Jauan Jennings",
+        "opponent": "at LAR",
         "position": "WR"
       },
       {
         "rank": 29,
-        "name": "Jameson Williams",
-        "team": "DET",
+        "name": "Wan'Dale Robinson",
+        "opponent": "at NO",
         "position": "WR"
       },
       {
         "rank": 30,
-        "name": "Michael Pittman Jr.",
-        "team": "IND",
+        "name": "Jordan Addison",
+        "opponent": "at CLE",
         "position": "WR"
       },
       {
         "rank": 31,
-        "name": "DJ Moore",
-        "team": "CHI",
+        "name": "Tee Higgins",
+        "opponent": "vs. DET",
         "position": "WR"
       },
       {
         "rank": 32,
-        "name": "Chris Olave",
-        "team": "NO",
+        "name": "Stefon Diggs",
+        "opponent": "at BUF",
         "position": "WR"
       },
       {
         "rank": 33,
-        "name": "Jaylen Waddle",
-        "team": "MIA",
+        "name": "Khalil Shakir",
+        "opponent": "vs. NE",
         "position": "WR"
       },
       {
         "rank": 34,
-        "name": "Jordan Addison",
-        "team": "MIN",
+        "name": "Keon Coleman",
+        "opponent": "vs. NE",
         "position": "WR"
       },
       {
         "rank": 35,
-        "name": "Tee Higgins",
-        "team": "CIN",
+        "name": "Tre Tucker",
+        "opponent": "at IND",
         "position": "WR"
       },
       {
         "rank": 36,
-        "name": "Xavier Worthy",
-        "team": "KC",
+        "name": "Elic Ayomanor",
+        "opponent": "at ARI",
         "position": "WR"
       },
       {
         "rank": 37,
-        "name": "Khalil Shakir",
-        "team": "BUF",
+        "name": "Troy Franklin",
+        "opponent": "at PHI",
         "position": "WR"
       },
       {
         "rank": 38,
-        "name": "Jerry Jeudy",
-        "team": "CLE",
+        "name": "Chris Godwin Jr.",
+        "opponent": "at SEA",
         "position": "WR"
       },
       {
         "rank": 39,
-        "name": "Calvin Ridley",
-        "team": "TEN",
+        "name": "Darius Slayton",
+        "opponent": "at NO",
         "position": "WR"
       },
       {
         "rank": 40,
-        "name": "Matthew Golden",
-        "team": "GB",
+        "name": "Jerry Jeudy",
+        "opponent": "vs. MIN",
         "position": "WR"
       },
       {
         "rank": 41,
-        "name": "Keon Coleman",
-        "team": "BUF",
+        "name": "Calvin Ridley",
+        "opponent": "at ARI",
         "position": "WR"
       },
       {
         "rank": 42,
-        "name": "Cedric Tillman",
-        "team": "CLE",
+        "name": "Rashid Shaheed",
+        "opponent": "vs. NYG",
         "position": "WR"
       },
       {
         "rank": 43,
-        "name": "Romeo Doubs",
-        "team": "GB",
+        "name": "Christian Kirk",
+        "opponent": "at BAL",
         "position": "WR"
       },
       {
         "rank": 44,
-        "name": "Darnell Mooney",
-        "team": "ATL",
+        "name": "Marquise Brown",
+        "opponent": "at JAC",
         "position": "WR"
       },
       {
         "rank": 45,
-        "name": "Wan'Dale Robinson",
-        "team": "NYG",
+        "name": "Travis Hunter",
+        "opponent": "vs. KC",
         "position": "WR"
       },
       {
         "rank": 46,
-        "name": "Marquise Brown",
-        "team": "KC",
+        "name": "Cooper Kupp",
+        "opponent": "vs. TB",
         "position": "WR"
       },
       {
         "rank": 47,
-        "name": "Kayshon Boutte",
-        "team": "NE",
+        "name": "Jalen Tolbert",
+        "opponent": "at NYJ",
         "position": "WR"
       },
       {
         "rank": 48,
-        "name": "Tre Tucker",
-        "team": "LV",
+        "name": "Josh Downs",
+        "opponent": "vs. LV",
         "position": "WR"
       },
       {
         "rank": 49,
-        "name": "Elic Ayomanor",
-        "team": "TEN",
+        "name": "Marvin Mims Jr.",
+        "opponent": "at PHI",
         "position": "WR"
       },
       {
         "rank": 50,
-        "name": "Tyquan Thornton",
-        "team": "KC",
+        "name": "Malik Washington",
+        "opponent": "at CAR",
         "position": "WR"
       },
       {
         "rank": 51,
-        "name": "Travis Hunter",
-        "team": "JAC",
+        "name": "Rashod Bateman",
+        "opponent": "vs. HOU",
         "position": "WR"
       },
       {
         "rank": 52,
-        "name": "Stefon Diggs",
-        "team": "NE",
+        "name": "Tory Horton",
+        "opponent": "vs. TB",
         "position": "WR"
       },
       {
         "rank": 53,
-        "name": "Josh Downs",
-        "team": "IND",
+        "name": "Tyquan Thornton",
+        "opponent": "at JAC",
         "position": "WR"
       },
       {
         "rank": 54,
-        "name": "Troy Franklin",
-        "team": "DEN",
+        "name": "Kayshon Boutte",
+        "opponent": "at BUF",
         "position": "WR"
       },
       {
         "rank": 55,
-        "name": "Christian Kirk",
-        "team": "HOU",
+        "name": "Sterling Shepard",
+        "opponent": "at SEA",
         "position": "WR"
       },
       {
         "rank": 56,
-        "name": "Cooper Kupp",
-        "team": "SEA",
+        "name": "JuJu Smith-Schuster",
+        "opponent": "at JAC",
         "position": "WR"
       },
       {
         "rank": 57,
-        "name": "Rashid Shaheed",
-        "team": "NO",
+        "name": "Alec Pierce",
+        "opponent": "vs. LV",
         "position": "WR"
       },
       {
         "rank": 58,
-        "name": "Chris Godwin Jr.",
-        "team": "TB",
+        "name": "KaVontae Turpin",
+        "opponent": "at NYJ",
         "position": "WR"
       },
       {
         "rank": 59,
-        "name": "Tory Horton",
-        "team": "SEA",
+        "name": "Isaiah Bond",
+        "opponent": "vs. MIN",
         "position": "WR"
       },
       {
         "rank": 60,
-        "name": "Dontayvion Wicks",
-        "team": "GB",
+        "name": "Kendrick Bourne",
+        "opponent": "at LAR",
         "position": "WR"
       },
       {
         "rank": 61,
-        "name": "Calvin Austin III",
-        "team": "PIT",
+        "name": "Joshua Palmer",
+        "opponent": "vs. NE",
         "position": "WR"
       },
       {
         "rank": 62,
-        "name": "Marvin Mims Jr.",
-        "team": "DEN",
+        "name": "Hunter Renfrow",
+        "opponent": "vs. MIA",
         "position": "WR"
       },
       {
         "rank": 63,
-        "name": "DeAndre Hopkins",
-        "team": "BAL",
+        "name": "Michael Wilson",
+        "opponent": "vs. TEN",
         "position": "WR"
       },
       {
         "rank": 64,
-        "name": "Sterling Shepard",
-        "team": "TB",
+        "name": "DeAndre Hopkins",
+        "opponent": "vs. HOU",
         "position": "WR"
       },
       {
         "rank": 65,
-        "name": "KaVontae Turpin",
-        "team": "DAL",
+        "name": "Luke McCaffrey",
+        "opponent": "at LAC",
         "position": "WR"
       },
       {
         "rank": 66,
-        "name": "Jalen Tolbert",
-        "team": "DAL",
+        "name": "Parker Washington",
+        "opponent": "vs. KC",
         "position": "WR"
       },
       {
         "rank": 67,
-        "name": "JuJu Smith-Schuster",
-        "team": "KC",
+        "name": "Nick Westbrook-Ikhine",
+        "opponent": "at CAR",
         "position": "WR"
       },
       {
         "rank": 68,
-        "name": "Parker Washington",
-        "team": "JAC",
+        "name": "Brandin Cooks",
+        "opponent": "vs. NYG",
         "position": "WR"
       },
       {
         "rank": 69,
-        "name": "Luther Burden III",
-        "team": "CHI",
+        "name": "Jalen Nailor",
+        "opponent": "at CLE",
         "position": "WR"
       },
       {
         "rank": 70,
-        "name": "Adonai Mitchell",
-        "team": "IND",
+        "name": "Demarcus Robinson",
+        "opponent": "at LAR",
         "position": "WR"
+      }
+    ],
+    "QB": [
+      {
+        "rank": 1,
+        "name": "Josh Allen",
+        "opponent": "vs. NE",
+        "position": "QB"
+      },
+      {
+        "rank": 2,
+        "name": "Jalen Hurts",
+        "opponent": "vs. DEN",
+        "position": "QB"
+      },
+      {
+        "rank": 3,
+        "name": "Patrick Mahomes II",
+        "opponent": "at JAC",
+        "position": "QB"
+      },
+      {
+        "rank": 4,
+        "name": "Jayden Daniels",
+        "opponent": "at LAC",
+        "position": "QB"
+      },
+      {
+        "rank": 5,
+        "name": "Justin Herbert",
+        "opponent": "vs. WAS",
+        "position": "QB"
+      },
+      {
+        "rank": 6,
+        "name": "Justin Fields",
+        "opponent": "vs. DAL",
+        "position": "QB"
+      },
+      {
+        "rank": 7,
+        "name": "Daniel Jones",
+        "opponent": "vs. LV",
+        "position": "QB"
+      },
+      {
+        "rank": 8,
+        "name": "Drake Maye",
+        "opponent": "at BUF",
+        "position": "QB"
+      },
+      {
+        "rank": 9,
+        "name": "Jared Goff",
+        "opponent": "at CIN",
+        "position": "QB"
+      },
+      {
+        "rank": 10,
+        "name": "Kyler Murray",
+        "opponent": "vs. TEN",
+        "position": "QB"
+      },
+      {
+        "rank": 11,
+        "name": "Baker Mayfield",
+        "opponent": "at SEA",
+        "position": "QB"
+      },
+      {
+        "rank": 12,
+        "name": "Dak Prescott",
+        "opponent": "at NYJ",
+        "position": "QB"
+      },
+      {
+        "rank": 13,
+        "name": "Jaxson Dart",
+        "opponent": "at NO",
+        "position": "QB"
+      },
+      {
+        "rank": 14,
+        "name": "Brock Purdy",
+        "opponent": "at LAR",
+        "position": "QB"
+      },
+      {
+        "rank": 15,
+        "name": "Bo Nix",
+        "opponent": "at PHI",
+        "position": "QB"
+      },
+      {
+        "rank": 16,
+        "name": "Matthew Stafford",
+        "opponent": "vs. SF",
+        "position": "QB"
+      },
+      {
+        "rank": 17,
+        "name": "Sam Darnold",
+        "opponent": "vs. TB",
+        "position": "QB"
+      },
+      {
+        "rank": 18,
+        "name": "Geno Smith",
+        "opponent": "at IND",
+        "position": "QB"
+      },
+      {
+        "rank": 19,
+        "name": "C.J. Stroud",
+        "opponent": "at BAL",
+        "position": "QB"
+      },
+      {
+        "rank": 20,
+        "name": "Tua Tagovailoa",
+        "opponent": "at CAR",
+        "position": "QB"
+      },
+      {
+        "rank": 21,
+        "name": "Trevor Lawrence",
+        "opponent": "vs. KC",
+        "position": "QB"
+      },
+      {
+        "rank": 22,
+        "name": "Spencer Rattler",
+        "opponent": "vs. NYG",
+        "position": "QB"
+      },
+      {
+        "rank": 23,
+        "name": "Bryce Young",
+        "opponent": "vs. MIA",
+        "position": "QB"
+      },
+      {
+        "rank": 24,
+        "name": "Cooper Rush",
+        "opponent": "vs. HOU",
+        "position": "QB"
+      },
+      {
+        "rank": 25,
+        "name": "Carson Wentz",
+        "opponent": "at CLE",
+        "position": "QB"
+      },
+      {
+        "rank": 26,
+        "name": "Jake Browning",
+        "opponent": "vs. DET",
+        "position": "QB"
+      },
+      {
+        "rank": 27,
+        "name": "Cam Ward",
+        "opponent": "at ARI",
+        "position": "QB"
+      },
+      {
+        "rank": 28,
+        "name": "Dillon Gabriel",
+        "opponent": "vs. MIN",
+        "position": "QB"
+      }
+    ],
+    "FLEX": [
+      {
+        "rank": 1,
+        "name": "Jonathan Taylor",
+        "opponent": "vs. LV",
+        "position": "RB1"
+      },
+      {
+        "rank": 2,
+        "name": "Christian McCaffrey",
+        "opponent": "at LAR",
+        "position": "RB2"
+      },
+      {
+        "rank": 3,
+        "name": "Jahmyr Gibbs",
+        "opponent": "at CIN",
+        "position": "RB3"
+      },
+      {
+        "rank": 4,
+        "name": "Puka Nacua",
+        "opponent": "vs. SF",
+        "position": "WR1"
+      },
+      {
+        "rank": 5,
+        "name": "James Cook III",
+        "opponent": "vs. NE",
+        "position": "RB4"
+      },
+      {
+        "rank": 6,
+        "name": "De'Von Achane",
+        "opponent": "at CAR",
+        "position": "RB5"
+      },
+      {
+        "rank": 7,
+        "name": "Amon-Ra St. Brown",
+        "opponent": "at CIN",
+        "position": "WR2"
+      },
+      {
+        "rank": 8,
+        "name": "Saquon Barkley",
+        "opponent": "vs. DEN",
+        "position": "RB6"
+      },
+      {
+        "rank": 9,
+        "name": "Omarion Hampton",
+        "opponent": "vs. WAS",
+        "position": "RB7"
+      },
+      {
+        "rank": 10,
+        "name": "Breece Hall",
+        "opponent": "vs. DAL",
+        "position": "RB8"
+      },
+      {
+        "rank": 11,
+        "name": "Kyren Williams",
+        "opponent": "vs. SF",
+        "position": "RB9"
+      },
+      {
+        "rank": 12,
+        "name": "Jaxon Smith-Njigba",
+        "opponent": "vs. TB",
+        "position": "WR3"
+      },
+      {
+        "rank": 13,
+        "name": "Ashton Jeanty",
+        "opponent": "at IND",
+        "position": "RB10"
+      },
+      {
+        "rank": 14,
+        "name": "Garrett Wilson",
+        "opponent": "vs. DAL",
+        "position": "WR4"
+      },
+      {
+        "rank": 15,
+        "name": "Derrick Henry",
+        "opponent": "vs. HOU",
+        "position": "RB11"
+      },
+      {
+        "rank": 16,
+        "name": "Javonte Williams",
+        "opponent": "at NYJ",
+        "position": "RB12"
+      },
+      {
+        "rank": 17,
+        "name": "Nico Collins",
+        "opponent": "at BAL",
+        "position": "WR5"
+      },
+      {
+        "rank": 18,
+        "name": "Bucky Irving",
+        "opponent": "at SEA",
+        "position": "RB13"
+      },
+      {
+        "rank": 19,
+        "name": "Kenneth Walker III",
+        "opponent": "vs. TB",
+        "position": "RB14"
+      },
+      {
+        "rank": 20,
+        "name": "Travis Etienne Jr.",
+        "opponent": "vs. KC",
+        "position": "RB15"
+      },
+      {
+        "rank": 21,
+        "name": "Cam Skattebo",
+        "opponent": "at NO",
+        "position": "RB16"
+      },
+      {
+        "rank": 22,
+        "name": "Jordan Mason",
+        "opponent": "at CLE",
+        "position": "RB17"
+      },
+      {
+        "rank": 23,
+        "name": "Quinshon Judkins",
+        "opponent": "vs. MIN",
+        "position": "RB18"
+      },
+      {
+        "rank": 24,
+        "name": "Justin Jefferson",
+        "opponent": "at CLE",
+        "position": "WR6"
+      },
+      {
+        "rank": 25,
+        "name": "Trey Benson",
+        "opponent": "vs. TEN",
+        "position": "RB19"
+      },
+      {
+        "rank": 26,
+        "name": "Davante Adams",
+        "opponent": "vs. SF",
+        "position": "WR7"
+      },
+      {
+        "rank": 27,
+        "name": "George Pickens",
+        "opponent": "at NYJ",
+        "position": "WR8"
+      },
+      {
+        "rank": 28,
+        "name": "J.K. Dobbins",
+        "opponent": "at PHI",
+        "position": "RB20"
+      },
+      {
+        "rank": 29,
+        "name": "Emeka Egbuka",
+        "opponent": "at SEA",
+        "position": "WR9"
+      },
+      {
+        "rank": 30,
+        "name": "Deebo Samuel Sr.",
+        "opponent": "at LAC",
+        "position": "WR10"
+      },
+      {
+        "rank": 31,
+        "name": "Quentin Johnston",
+        "opponent": "vs. WAS",
+        "position": "WR11"
+      },
+      {
+        "rank": 32,
+        "name": "Xavier Worthy",
+        "opponent": "at JAC",
+        "position": "WR12"
+      },
+      {
+        "rank": 33,
+        "name": "Ja'Marr Chase",
+        "opponent": "vs. DET",
+        "position": "WR13"
+      },
+      {
+        "rank": 34,
+        "name": "David Montgomery",
+        "opponent": "at CIN",
+        "position": "RB21"
+      },
+      {
+        "rank": 35,
+        "name": "Trey McBride",
+        "opponent": "vs. TEN",
+        "position": "TE1"
+      },
+      {
+        "rank": 36,
+        "name": "Chuba Hubbard",
+        "opponent": "vs. MIA",
+        "position": "RB22"
+      },
+      {
+        "rank": 37,
+        "name": "Alvin Kamara",
+        "opponent": "vs. NYG",
+        "position": "RB23"
+      },
+      {
+        "rank": 38,
+        "name": "Zay Flowers",
+        "opponent": "vs. HOU",
+        "position": "WR14"
+      },
+      {
+        "rank": 39,
+        "name": "Courtland Sutton",
+        "opponent": "at PHI",
+        "position": "WR15"
+      },
+      {
+        "rank": 40,
+        "name": "Jaylen Waddle",
+        "opponent": "at CAR",
+        "position": "WR16"
+      },
+      {
+        "rank": 41,
+        "name": "Keenan Allen",
+        "opponent": "vs. WAS",
+        "position": "WR17"
+      },
+      {
+        "rank": 42,
+        "name": "Woody Marks",
+        "opponent": "at BAL",
+        "position": "RB24"
+      },
+      {
+        "rank": 43,
+        "name": "Brock Bowers",
+        "opponent": "at IND",
+        "position": "TE2"
+      },
+      {
+        "rank": 44,
+        "name": "Michael Pittman Jr.",
+        "opponent": "vs. LV",
+        "position": "WR18"
+      },
+      {
+        "rank": 45,
+        "name": "Tetairoa McMillan",
+        "opponent": "vs. MIA",
+        "position": "WR19"
+      },
+      {
+        "rank": 46,
+        "name": "A.J. Brown",
+        "opponent": "vs. DEN",
+        "position": "WR20"
+      },
+      {
+        "rank": 47,
+        "name": "Chris Olave",
+        "opponent": "vs. NYG",
+        "position": "WR21"
+      },
+      {
+        "rank": 48,
+        "name": "Marvin Harrison Jr.",
+        "opponent": "vs. TEN",
+        "position": "WR22"
+      },
+      {
+        "rank": 49,
+        "name": "Jakobi Meyers",
+        "opponent": "at IND",
+        "position": "WR23"
+      },
+      {
+        "rank": 50,
+        "name": "Tony Pollard",
+        "opponent": "at ARI",
+        "position": "RB25"
+      },
+      {
+        "rank": 51,
+        "name": "Brian Thomas Jr.",
+        "opponent": "vs. KC",
+        "position": "WR24"
+      },
+      {
+        "rank": 52,
+        "name": "Ladd McConkey",
+        "opponent": "vs. WAS",
+        "position": "WR25"
+      },
+      {
+        "rank": 53,
+        "name": "Jameson Williams",
+        "opponent": "at CIN",
+        "position": "WR26"
+      },
+      {
+        "rank": 54,
+        "name": "DeVonta Smith",
+        "opponent": "vs. DEN",
+        "position": "WR27"
+      },
+      {
+        "rank": 55,
+        "name": "Jauan Jennings",
+        "opponent": "at LAR",
+        "position": "WR28"
+      },
+      {
+        "rank": 56,
+        "name": "Tyler Warren",
+        "opponent": "vs. LV",
+        "position": "TE3"
+      },
+      {
+        "rank": 57,
+        "name": "Chase Brown",
+        "opponent": "vs. DET",
+        "position": "RB26"
+      },
+      {
+        "rank": 58,
+        "name": "Jake Ferguson",
+        "opponent": "at NYJ",
+        "position": "TE4"
+      },
+      {
+        "rank": 59,
+        "name": "Wan'Dale Robinson",
+        "opponent": "at NO",
+        "position": "WR29"
+      },
+      {
+        "rank": 60,
+        "name": "Jordan Addison",
+        "opponent": "at CLE",
+        "position": "WR30"
+      },
+      {
+        "rank": 61,
+        "name": "Tee Higgins",
+        "opponent": "vs. DET",
+        "position": "WR31"
+      },
+      {
+        "rank": 62,
+        "name": "Stefon Diggs",
+        "opponent": "at BUF",
+        "position": "WR32"
+      },
+      {
+        "rank": 63,
+        "name": "TreVeyon Henderson",
+        "opponent": "at BUF",
+        "position": "RB27"
+      },
+      {
+        "rank": 64,
+        "name": "Khalil Shakir",
+        "opponent": "vs. NE",
+        "position": "WR33"
+      },
+      {
+        "rank": 65,
+        "name": "Keon Coleman",
+        "opponent": "vs. NE",
+        "position": "WR34"
+      },
+      {
+        "rank": 66,
+        "name": "Rhamondre Stevenson",
+        "opponent": "at BUF",
+        "position": "RB28"
+      },
+      {
+        "rank": 67,
+        "name": "Hunter Henry",
+        "opponent": "at BUF",
+        "position": "TE5"
+      },
+      {
+        "rank": 68,
+        "name": "Tre Tucker",
+        "opponent": "at IND",
+        "position": "WR35"
+      },
+      {
+        "rank": 69,
+        "name": "Elic Ayomanor",
+        "opponent": "at ARI",
+        "position": "WR36"
+      },
+      {
+        "rank": 70,
+        "name": "Troy Franklin",
+        "opponent": "at PHI",
+        "position": "WR37"
       },
       {
         "rank": 71,
-        "name": "Joshua Palmer",
-        "team": "BUF",
-        "position": "WR"
+        "name": "Chris Godwin Jr.",
+        "opponent": "at SEA",
+        "position": "WR38"
       },
       {
         "rank": 72,
-        "name": "Michael Wilson",
-        "team": "ARI",
-        "position": "WR"
+        "name": "Dalton Kincaid",
+        "opponent": "vs. NE",
+        "position": "TE6"
       },
       {
         "rank": 73,
-        "name": "Rashod Bateman",
-        "team": "BAL",
-        "position": "WR"
+        "name": "Zach Charbonnet",
+        "opponent": "vs. TB",
+        "position": "RB29"
       },
       {
         "rank": 74,
-        "name": "Hunter Renfrow",
-        "team": "CAR",
-        "position": "WR"
+        "name": "Jacory Croskey-Merritt",
+        "opponent": "at LAC",
+        "position": "RB30"
       },
       {
         "rank": 75,
-        "name": "DeMario Douglas",
-        "team": "NE",
-        "position": "WR"
+        "name": "Sam LaPorta",
+        "opponent": "at CIN",
+        "position": "TE7"
       },
       {
         "rank": 76,
-        "name": "Dont'e Thornton Jr.",
-        "team": "LV",
-        "position": "WR"
+        "name": "Kareem Hunt",
+        "opponent": "at JAC",
+        "position": "RB31"
       },
       {
         "rank": 77,
-        "name": "Kendrick Bourne",
-        "team": "SF",
-        "position": "WR"
+        "name": "Isiah Pacheco",
+        "opponent": "at JAC",
+        "position": "RB32"
       },
       {
         "rank": 78,
         "name": "Darius Slayton",
-        "team": "NYG",
-        "position": "WR"
+        "opponent": "at NO",
+        "position": "WR39"
       },
       {
         "rank": 79,
-        "name": "Devontez Walker",
-        "team": "BAL",
-        "position": "WR"
+        "name": "Jerry Jeudy",
+        "opponent": "vs. MIN",
+        "position": "WR40"
       },
       {
         "rank": 80,
-        "name": "Olamide Zaccheaus",
-        "team": "CHI",
-        "position": "WR"
+        "name": "Calvin Ridley",
+        "opponent": "at ARI",
+        "position": "WR41"
       },
       {
         "rank": 81,
-        "name": "Malik Washington",
-        "team": "MIA",
-        "position": "WR"
+        "name": "Rashid Shaheed",
+        "opponent": "vs. NYG",
+        "position": "WR42"
       },
       {
         "rank": 82,
-        "name": "Isaiah Bond",
-        "team": "CLE",
-        "position": "WR"
+        "name": "Christian Kirk",
+        "opponent": "at BAL",
+        "position": "WR43"
       },
       {
         "rank": 83,
-        "name": "Jalen Nailor",
-        "team": "MIN",
-        "position": "WR"
+        "name": "Juwan Johnson",
+        "opponent": "vs. NYG",
+        "position": "TE8"
       },
       {
         "rank": 84,
-        "name": "Demarcus Robinson",
-        "team": "SF",
-        "position": "WR"
+        "name": "Nick Chubb",
+        "opponent": "at BAL",
+        "position": "RB33"
       },
       {
         "rank": 85,
-        "name": "Luke McCaffrey",
-        "team": "WAS",
-        "position": "WR"
+        "name": "Marquise Brown",
+        "opponent": "at JAC",
+        "position": "WR44"
       },
       {
         "rank": 86,
-        "name": "Adam Thielen",
-        "team": "MIN",
-        "position": "WR"
+        "name": "Travis Hunter",
+        "opponent": "vs. KC",
+        "position": "WR45"
       },
       {
         "rank": 87,
-        "name": "Brandin Cooks",
-        "team": "NO",
-        "position": "WR"
+        "name": "RJ Harvey",
+        "opponent": "at PHI",
+        "position": "RB34"
       },
       {
         "rank": 88,
-        "name": "Ray-Ray McCloud III",
-        "team": "ATL",
-        "position": "WR"
+        "name": "Cooper Kupp",
+        "opponent": "vs. TB",
+        "position": "WR46"
       },
       {
         "rank": 89,
-        "name": "Jayden Higgins",
-        "team": "HOU",
-        "position": "WR"
+        "name": "Travis Kelce",
+        "opponent": "at JAC",
+        "position": "TE9"
       },
       {
         "rank": 90,
-        "name": "Pat Bryant",
-        "team": "DEN",
-        "position": "WR"
+        "name": "Dallas Goedert",
+        "opponent": "vs. DEN",
+        "position": "TE10"
+      },
+      {
+        "rank": 91,
+        "name": "Mark Andrews",
+        "opponent": "vs. HOU",
+        "position": "TE11"
+      },
+      {
+        "rank": 92,
+        "name": "Jalen Tolbert",
+        "opponent": "at NYJ",
+        "position": "WR47"
+      },
+      {
+        "rank": 93,
+        "name": "T.J. Hockenson",
+        "opponent": "at CLE",
+        "position": "TE12"
+      },
+      {
+        "rank": 94,
+        "name": "Rachaad White",
+        "opponent": "at SEA",
+        "position": "RB35"
+      },
+      {
+        "rank": 95,
+        "name": "Josh Downs",
+        "opponent": "vs. LV",
+        "position": "WR48"
+      },
+      {
+        "rank": 96,
+        "name": "Marvin Mims Jr.",
+        "opponent": "at PHI",
+        "position": "WR49"
+      },
+      {
+        "rank": 97,
+        "name": "Malik Washington",
+        "opponent": "at CAR",
+        "position": "WR50"
+      },
+      {
+        "rank": 98,
+        "name": "Zach Ertz",
+        "opponent": "at LAC",
+        "position": "TE13"
+      },
+      {
+        "rank": 99,
+        "name": "Rashod Bateman",
+        "opponent": "vs. HOU",
+        "position": "WR51"
+      },
+      {
+        "rank": 100,
+        "name": "Brenton Strange",
+        "opponent": "vs. KC",
+        "position": "TE14"
+      },
+      {
+        "rank": 101,
+        "name": "Tory Horton",
+        "opponent": "vs. TB",
+        "position": "WR52"
+      },
+      {
+        "rank": 102,
+        "name": "Harold Fannin Jr.",
+        "opponent": "vs. MIN",
+        "position": "TE15"
+      },
+      {
+        "rank": 103,
+        "name": "Chris Rodriguez Jr.",
+        "opponent": "at LAC",
+        "position": "RB36"
+      },
+      {
+        "rank": 104,
+        "name": "David Njoku",
+        "opponent": "vs. MIN",
+        "position": "TE16"
+      },
+      {
+        "rank": 105,
+        "name": "Darren Waller",
+        "opponent": "at CAR",
+        "position": "TE17"
+      },
+      {
+        "rank": 106,
+        "name": "Tyquan Thornton",
+        "opponent": "at JAC",
+        "position": "WR53"
+      },
+      {
+        "rank": 107,
+        "name": "Kayshon Boutte",
+        "opponent": "at BUF",
+        "position": "WR54"
+      },
+      {
+        "rank": 108,
+        "name": "Bhayshul Tuten",
+        "opponent": "vs. KC",
+        "position": "RB37"
+      },
+      {
+        "rank": 109,
+        "name": "Sterling Shepard",
+        "opponent": "at SEA",
+        "position": "WR55"
+      },
+      {
+        "rank": 110,
+        "name": "JuJu Smith-Schuster",
+        "opponent": "at JAC",
+        "position": "WR56"
+      },
+      {
+        "rank": 111,
+        "name": "Alec Pierce",
+        "opponent": "vs. LV",
+        "position": "WR57"
+      },
+      {
+        "rank": 112,
+        "name": "KaVontae Turpin",
+        "opponent": "at NYJ",
+        "position": "WR58"
+      },
+      {
+        "rank": 113,
+        "name": "Justice Hill",
+        "opponent": "vs. HOU",
+        "position": "RB38"
+      },
+      {
+        "rank": 114,
+        "name": "Theo Johnson",
+        "opponent": "at NO",
+        "position": "TE18"
+      },
+      {
+        "rank": 115,
+        "name": "Kendre Miller",
+        "opponent": "vs. NYG",
+        "position": "RB39"
+      },
+      {
+        "rank": 116,
+        "name": "Isaiah Bond",
+        "opponent": "vs. MIN",
+        "position": "WR59"
+      },
+      {
+        "rank": 117,
+        "name": "Chig Okonkwo",
+        "opponent": "at ARI",
+        "position": "TE19"
+      },
+      {
+        "rank": 118,
+        "name": "Rico Dowdle",
+        "opponent": "vs. MIA",
+        "position": "RB40"
+      },
+      {
+        "rank": 119,
+        "name": "Evan Engram",
+        "opponent": "at PHI",
+        "position": "TE20"
+      },
+      {
+        "rank": 120,
+        "name": "Kendrick Bourne",
+        "opponent": "at LAR",
+        "position": "WR60"
+      },
+      {
+        "rank": 121,
+        "name": "Joshua Palmer",
+        "opponent": "vs. NE",
+        "position": "WR61"
+      },
+      {
+        "rank": 122,
+        "name": "Hunter Renfrow",
+        "opponent": "vs. MIA",
+        "position": "WR62"
+      },
+      {
+        "rank": 123,
+        "name": "Dalton Schultz",
+        "opponent": "at BAL",
+        "position": "TE21"
+      },
+      {
+        "rank": 124,
+        "name": "Mason Taylor",
+        "opponent": "vs. DAL",
+        "position": "TE22"
+      },
+      {
+        "rank": 125,
+        "name": "Ollie Gordon II",
+        "opponent": "at CAR",
+        "position": "RB41"
+      },
+      {
+        "rank": 126,
+        "name": "Michael Wilson",
+        "opponent": "vs. TEN",
+        "position": "WR63"
+      },
+      {
+        "rank": 127,
+        "name": "Blake Corum",
+        "opponent": "vs. SF",
+        "position": "RB42"
+      },
+      {
+        "rank": 128,
+        "name": "DeAndre Hopkins",
+        "opponent": "vs. HOU",
+        "position": "WR64"
+      },
+      {
+        "rank": 129,
+        "name": "Zavier Scott",
+        "opponent": "at CLE",
+        "position": "RB43"
+      },
+      {
+        "rank": 130,
+        "name": "Luke McCaffrey",
+        "opponent": "at LAC",
+        "position": "WR65"
+      },
+      {
+        "rank": 131,
+        "name": "Parker Washington",
+        "opponent": "vs. KC",
+        "position": "WR66"
+      },
+      {
+        "rank": 132,
+        "name": "Brian Robinson Jr.",
+        "opponent": "at LAR",
+        "position": "RB44"
+      },
+      {
+        "rank": 133,
+        "name": "Emari Demercado",
+        "opponent": "vs. TEN",
+        "position": "RB45"
+      },
+      {
+        "rank": 134,
+        "name": "Nick Westbrook-Ikhine",
+        "opponent": "at CAR",
+        "position": "WR67"
+      },
+      {
+        "rank": 135,
+        "name": "Jake Tonges",
+        "opponent": "at LAR",
+        "position": "TE23"
+      },
+      {
+        "rank": 136,
+        "name": "Elijah Arroyo",
+        "opponent": "vs. TB",
+        "position": "TE24"
+      },
+      {
+        "rank": 137,
+        "name": "Brandin Cooks",
+        "opponent": "vs. NYG",
+        "position": "WR68"
+      },
+      {
+        "rank": 138,
+        "name": "AJ Barner",
+        "opponent": "vs. TB",
+        "position": "TE25"
+      },
+      {
+        "rank": 139,
+        "name": "Oronde Gadsden II",
+        "opponent": "vs. WAS",
+        "position": "TE26"
+      },
+      {
+        "rank": 140,
+        "name": "Jalen Nailor",
+        "opponent": "at CLE",
+        "position": "WR69"
+      },
+      {
+        "rank": 141,
+        "name": "Jeremy McNichols",
+        "opponent": "at LAC",
+        "position": "RB46"
+      },
+      {
+        "rank": 142,
+        "name": "Devin Singletary",
+        "opponent": "at NO",
+        "position": "RB47"
+      },
+      {
+        "rank": 143,
+        "name": "Demarcus Robinson",
+        "opponent": "at LAR",
+        "position": "WR70"
+      },
+      {
+        "rank": 144,
+        "name": "Isaiah Davis",
+        "opponent": "vs. DAL",
+        "position": "RB48"
+      },
+      {
+        "rank": 145,
+        "name": "Raheem Mostert",
+        "opponent": "at IND",
+        "position": "RB49"
+      },
+      {
+        "rank": 146,
+        "name": "Tommy Tremble",
+        "opponent": "vs. MIA",
+        "position": "TE27"
+      },
+      {
+        "rank": 147,
+        "name": "Jerome Ford",
+        "opponent": "vs. MIN",
+        "position": "RB50"
+      },
+      {
+        "rank": 148,
+        "name": "Antonio Gibson",
+        "opponent": "at BUF",
+        "position": "RB51"
+      },
+      {
+        "rank": 149,
+        "name": "Ty Johnson",
+        "opponent": "vs. NE",
+        "position": "RB52"
+      },
+      {
+        "rank": 150,
+        "name": "Ray Davis",
+        "opponent": "vs. NE",
+        "position": "RB53"
+      },
+      {
+        "rank": 151,
+        "name": "Cade Otton",
+        "opponent": "at SEA",
+        "position": "TE28"
+      },
+      {
+        "rank": 152,
+        "name": "Brashard Smith",
+        "opponent": "at JAC",
+        "position": "RB54"
+      },
+      {
+        "rank": 153,
+        "name": "Tyler Higbee",
+        "opponent": "vs. SF",
+        "position": "TE29"
+      },
+      {
+        "rank": 154,
+        "name": "Isaiah Likely",
+        "opponent": "vs. HOU",
+        "position": "TE30"
+      },
+      {
+        "rank": 155,
+        "name": "DJ Giddens",
+        "opponent": "vs. LV",
+        "position": "RB55"
+      },
+      {
+        "rank": 156,
+        "name": "Dylan Sampson",
+        "opponent": "vs. MIN",
+        "position": "RB56"
+      },
+      {
+        "rank": 157,
+        "name": "Jaydon Blue",
+        "opponent": "at NYJ",
+        "position": "RB57"
+      },
+      {
+        "rank": 158,
+        "name": "Tyjae Spears",
+        "opponent": "at ARI",
+        "position": "RB58"
+      },
+      {
+        "rank": 159,
+        "name": "A.J. Dillon",
+        "opponent": "vs. DEN",
+        "position": "RB59"
+      },
+      {
+        "rank": 160,
+        "name": "LeQuint Allen Jr.",
+        "opponent": "vs. KC",
+        "position": "RB60"
+      }
+    ],
+    "RB": [
+      {
+        "rank": 1,
+        "name": "Jonathan Taylor",
+        "opponent": "vs. LV",
+        "position": "RB"
+      },
+      {
+        "rank": 2,
+        "name": "Christian McCaffrey",
+        "opponent": "at LAR",
+        "position": "RB"
+      },
+      {
+        "rank": 3,
+        "name": "Jahmyr Gibbs",
+        "opponent": "at CIN",
+        "position": "RB"
+      },
+      {
+        "rank": 4,
+        "name": "James Cook III",
+        "opponent": "vs. NE",
+        "position": "RB"
+      },
+      {
+        "rank": 5,
+        "name": "De'Von Achane",
+        "opponent": "at CAR",
+        "position": "RB"
+      },
+      {
+        "rank": 6,
+        "name": "Saquon Barkley",
+        "opponent": "vs. DEN",
+        "position": "RB"
+      },
+      {
+        "rank": 7,
+        "name": "Omarion Hampton",
+        "opponent": "vs. WAS",
+        "position": "RB"
+      },
+      {
+        "rank": 8,
+        "name": "Breece Hall",
+        "opponent": "vs. DAL",
+        "position": "RB"
+      },
+      {
+        "rank": 9,
+        "name": "Kyren Williams",
+        "opponent": "vs. SF",
+        "position": "RB"
+      },
+      {
+        "rank": 10,
+        "name": "Ashton Jeanty",
+        "opponent": "at IND",
+        "position": "RB"
+      },
+      {
+        "rank": 11,
+        "name": "Derrick Henry",
+        "opponent": "vs. HOU",
+        "position": "RB"
+      },
+      {
+        "rank": 12,
+        "name": "Javonte Williams",
+        "opponent": "at NYJ",
+        "position": "RB"
+      },
+      {
+        "rank": 13,
+        "name": "Bucky Irving",
+        "opponent": "at SEA",
+        "position": "RB"
+      },
+      {
+        "rank": 14,
+        "name": "Kenneth Walker III",
+        "opponent": "vs. TB",
+        "position": "RB"
+      },
+      {
+        "rank": 15,
+        "name": "Travis Etienne Jr.",
+        "opponent": "vs. KC",
+        "position": "RB"
+      },
+      {
+        "rank": 16,
+        "name": "Cam Skattebo",
+        "opponent": "at NO",
+        "position": "RB"
+      },
+      {
+        "rank": 17,
+        "name": "Jordan Mason",
+        "opponent": "at CLE",
+        "position": "RB"
+      },
+      {
+        "rank": 18,
+        "name": "Quinshon Judkins",
+        "opponent": "vs. MIN",
+        "position": "RB"
+      },
+      {
+        "rank": 19,
+        "name": "Trey Benson",
+        "opponent": "vs. TEN",
+        "position": "RB"
+      },
+      {
+        "rank": 20,
+        "name": "J.K. Dobbins",
+        "opponent": "at PHI",
+        "position": "RB"
+      },
+      {
+        "rank": 21,
+        "name": "David Montgomery",
+        "opponent": "at CIN",
+        "position": "RB"
+      },
+      {
+        "rank": 22,
+        "name": "Chuba Hubbard",
+        "opponent": "vs. MIA",
+        "position": "RB"
+      },
+      {
+        "rank": 23,
+        "name": "Alvin Kamara",
+        "opponent": "vs. NYG",
+        "position": "RB"
+      },
+      {
+        "rank": 24,
+        "name": "Woody Marks",
+        "opponent": "at BAL",
+        "position": "RB"
+      },
+      {
+        "rank": 25,
+        "name": "Tony Pollard",
+        "opponent": "at ARI",
+        "position": "RB"
+      },
+      {
+        "rank": 26,
+        "name": "Chase Brown",
+        "opponent": "vs. DET",
+        "position": "RB"
+      },
+      {
+        "rank": 27,
+        "name": "TreVeyon Henderson",
+        "opponent": "at BUF",
+        "position": "RB"
+      },
+      {
+        "rank": 28,
+        "name": "Rhamondre Stevenson",
+        "opponent": "at BUF",
+        "position": "RB"
+      },
+      {
+        "rank": 29,
+        "name": "Zach Charbonnet",
+        "opponent": "vs. TB",
+        "position": "RB"
+      },
+      {
+        "rank": 30,
+        "name": "Jacory Croskey-Merritt",
+        "opponent": "at LAC",
+        "position": "RB"
+      },
+      {
+        "rank": 31,
+        "name": "Kareem Hunt",
+        "opponent": "at JAC",
+        "position": "RB"
+      },
+      {
+        "rank": 32,
+        "name": "Isiah Pacheco",
+        "opponent": "at JAC",
+        "position": "RB"
+      },
+      {
+        "rank": 33,
+        "name": "Nick Chubb",
+        "opponent": "at BAL",
+        "position": "RB"
+      },
+      {
+        "rank": 34,
+        "name": "RJ Harvey",
+        "opponent": "at PHI",
+        "position": "RB"
+      },
+      {
+        "rank": 35,
+        "name": "Rachaad White",
+        "opponent": "at SEA",
+        "position": "RB"
+      },
+      {
+        "rank": 36,
+        "name": "Chris Rodriguez Jr.",
+        "opponent": "at LAC",
+        "position": "RB"
+      },
+      {
+        "rank": 37,
+        "name": "Bhayshul Tuten",
+        "opponent": "vs. KC",
+        "position": "RB"
+      },
+      {
+        "rank": 38,
+        "name": "Justice Hill",
+        "opponent": "vs. HOU",
+        "position": "RB"
+      },
+      {
+        "rank": 39,
+        "name": "Kendre Miller",
+        "opponent": "vs. NYG",
+        "position": "RB"
+      },
+      {
+        "rank": 40,
+        "name": "Rico Dowdle",
+        "opponent": "vs. MIA",
+        "position": "RB"
+      },
+      {
+        "rank": 41,
+        "name": "Ollie Gordon II",
+        "opponent": "at CAR",
+        "position": "RB"
+      },
+      {
+        "rank": 42,
+        "name": "Blake Corum",
+        "opponent": "vs. SF",
+        "position": "RB"
+      },
+      {
+        "rank": 43,
+        "name": "Zavier Scott",
+        "opponent": "at CLE",
+        "position": "RB"
+      },
+      {
+        "rank": 44,
+        "name": "Brian Robinson Jr.",
+        "opponent": "at LAR",
+        "position": "RB"
+      },
+      {
+        "rank": 45,
+        "name": "Emari Demercado",
+        "opponent": "vs. TEN",
+        "position": "RB"
+      },
+      {
+        "rank": 46,
+        "name": "Jeremy McNichols",
+        "opponent": "at LAC",
+        "position": "RB"
+      },
+      {
+        "rank": 47,
+        "name": "Devin Singletary",
+        "opponent": "at NO",
+        "position": "RB"
+      },
+      {
+        "rank": 48,
+        "name": "Isaiah Davis",
+        "opponent": "vs. DAL",
+        "position": "RB"
+      },
+      {
+        "rank": 49,
+        "name": "Raheem Mostert",
+        "opponent": "at IND",
+        "position": "RB"
+      },
+      {
+        "rank": 50,
+        "name": "Jerome Ford",
+        "opponent": "vs. MIN",
+        "position": "RB"
+      },
+      {
+        "rank": 51,
+        "name": "Antonio Gibson",
+        "opponent": "at BUF",
+        "position": "RB"
+      },
+      {
+        "rank": 52,
+        "name": "Ty Johnson",
+        "opponent": "vs. NE",
+        "position": "RB"
+      },
+      {
+        "rank": 53,
+        "name": "Ray Davis",
+        "opponent": "vs. NE",
+        "position": "RB"
+      },
+      {
+        "rank": 54,
+        "name": "Brashard Smith",
+        "opponent": "at JAC",
+        "position": "RB"
+      },
+      {
+        "rank": 55,
+        "name": "DJ Giddens",
+        "opponent": "vs. LV",
+        "position": "RB"
+      },
+      {
+        "rank": 56,
+        "name": "Dylan Sampson",
+        "opponent": "vs. MIN",
+        "position": "RB"
+      },
+      {
+        "rank": 57,
+        "name": "Jaydon Blue",
+        "opponent": "at NYJ",
+        "position": "RB"
+      },
+      {
+        "rank": 58,
+        "name": "Tyjae Spears",
+        "opponent": "at ARI",
+        "position": "RB"
+      },
+      {
+        "rank": 59,
+        "name": "A.J. Dillon",
+        "opponent": "vs. DEN",
+        "position": "RB"
+      },
+      {
+        "rank": 60,
+        "name": "LeQuint Allen Jr.",
+        "opponent": "vs. KC",
+        "position": "RB"
+      }
+    ],
+    "DST": [
+      {
+        "rank": 1,
+        "name": "Minnesota Vikings",
+        "opponent": "at CLE",
+        "position": "DST"
+      },
+      {
+        "rank": 2,
+        "name": "Detroit Lions",
+        "opponent": "at CIN",
+        "position": "DST"
+      },
+      {
+        "rank": 3,
+        "name": "Arizona Cardinals",
+        "opponent": "vs. TEN",
+        "position": "DST"
+      },
+      {
+        "rank": 4,
+        "name": "Cleveland Browns",
+        "opponent": "vs. MIN",
+        "position": "DST"
+      },
+      {
+        "rank": 5,
+        "name": "Seattle Seahawks",
+        "opponent": "vs. TB",
+        "position": "DST"
+      },
+      {
+        "rank": 6,
+        "name": "Philadelphia Eagles",
+        "opponent": "vs. DEN",
+        "position": "DST"
+      },
+      {
+        "rank": 7,
+        "name": "Buffalo Bills",
+        "opponent": "vs. NE",
+        "position": "DST"
+      },
+      {
+        "rank": 8,
+        "name": "Indianapolis Colts",
+        "opponent": "vs. LV",
+        "position": "DST"
+      },
+      {
+        "rank": 9,
+        "name": "Los Angeles Rams",
+        "opponent": "vs. SF",
+        "position": "DST"
+      },
+      {
+        "rank": 10,
+        "name": "Kansas City Chiefs",
+        "opponent": "at JAC",
+        "position": "DST"
+      },
+      {
+        "rank": 11,
+        "name": "New York Giants",
+        "opponent": "at NO",
+        "position": "DST"
+      },
+      {
+        "rank": 12,
+        "name": "Denver Broncos",
+        "opponent": "at PHI",
+        "position": "DST"
+      },
+      {
+        "rank": 13,
+        "name": "Los Angeles Chargers",
+        "opponent": "vs. WAS",
+        "position": "DST"
+      },
+      {
+        "rank": 14,
+        "name": "Baltimore Ravens",
+        "opponent": "vs. HOU",
+        "position": "DST"
+      },
+      {
+        "rank": 15,
+        "name": "New Orleans Saints",
+        "opponent": "vs. NYG",
+        "position": "DST"
+      },
+      {
+        "rank": 16,
+        "name": "Tampa Bay Buccaneers",
+        "opponent": "at SEA",
+        "position": "DST"
+      },
+      {
+        "rank": 17,
+        "name": "Houston Texans",
+        "opponent": "at BAL",
+        "position": "DST"
+      },
+      {
+        "rank": 18,
+        "name": "San Francisco 49ers",
+        "opponent": "at LAR",
+        "position": "DST"
+      },
+      {
+        "rank": 19,
+        "name": "Miami Dolphins",
+        "opponent": "at CAR",
+        "position": "DST"
+      },
+      {
+        "rank": 20,
+        "name": "Carolina Panthers",
+        "opponent": "vs. MIA",
+        "position": "DST"
+      },
+      {
+        "rank": 21,
+        "name": "Jacksonville Jaguars",
+        "opponent": "vs. KC",
+        "position": "DST"
+      },
+      {
+        "rank": 22,
+        "name": "New York Jets",
+        "opponent": "vs. DAL",
+        "position": "DST"
+      },
+      {
+        "rank": 23,
+        "name": "Washington Commanders",
+        "opponent": "at LAC",
+        "position": "DST"
+      },
+      {
+        "rank": 24,
+        "name": "Dallas Cowboys",
+        "opponent": "at NYJ",
+        "position": "DST"
+      },
+      {
+        "rank": 25,
+        "name": "Las Vegas Raiders",
+        "opponent": "at IND",
+        "position": "DST"
+      },
+      {
+        "rank": 26,
+        "name": "Tennessee Titans",
+        "opponent": "at ARI",
+        "position": "DST"
+      },
+      {
+        "rank": 27,
+        "name": "New England Patriots",
+        "opponent": "at BUF",
+        "position": "DST"
+      },
+      {
+        "rank": 28,
+        "name": "Cincinnati Bengals",
+        "opponent": "vs. DET",
+        "position": "DST"
       }
     ],
     "TE": [
       {
         "rank": 1,
         "name": "Trey McBride",
-        "team": "ARI",
+        "opponent": "vs. TEN",
         "position": "TE"
       },
       {
         "rank": 2,
         "name": "Brock Bowers",
-        "team": "LV",
+        "opponent": "at IND",
         "position": "TE"
       },
       {
         "rank": 3,
-        "name": "Tucker Kraft",
-        "team": "GB",
+        "name": "Tyler Warren",
+        "opponent": "vs. LV",
         "position": "TE"
       },
       {
         "rank": 4,
         "name": "Jake Ferguson",
-        "team": "DAL",
+        "opponent": "at NYJ",
         "position": "TE"
       },
       {
         "rank": 5,
-        "name": "Tyler Warren",
-        "team": "IND",
+        "name": "Hunter Henry",
+        "opponent": "at BUF",
         "position": "TE"
       },
       {
         "rank": 6,
-        "name": "Sam LaPorta",
-        "team": "DET",
+        "name": "Dalton Kincaid",
+        "opponent": "vs. NE",
         "position": "TE"
       },
       {
         "rank": 7,
-        "name": "Dalton Kincaid",
-        "team": "BUF",
+        "name": "Sam LaPorta",
+        "opponent": "at CIN",
         "position": "TE"
       },
       {
         "rank": 8,
-        "name": "Hunter Henry",
-        "team": "NE",
+        "name": "Juwan Johnson",
+        "opponent": "vs. NYG",
         "position": "TE"
       },
       {
         "rank": 9,
-        "name": "Juwan Johnson",
-        "team": "NO",
+        "name": "Travis Kelce",
+        "opponent": "at JAC",
         "position": "TE"
       },
       {
         "rank": 10,
-        "name": "T.J. Hockenson",
-        "team": "MIN",
+        "name": "Dallas Goedert",
+        "opponent": "vs. DEN",
         "position": "TE"
       },
       {
         "rank": 11,
-        "name": "Travis Kelce",
-        "team": "KC",
+        "name": "Mark Andrews",
+        "opponent": "vs. HOU",
         "position": "TE"
       },
       {
         "rank": 12,
-        "name": "Kyle Pitts Sr.",
-        "team": "ATL",
+        "name": "T.J. Hockenson",
+        "opponent": "at CLE",
         "position": "TE"
       },
       {
         "rank": 13,
-        "name": "Mark Andrews",
-        "team": "BAL",
+        "name": "Zach Ertz",
+        "opponent": "at LAC",
         "position": "TE"
       },
       {
         "rank": 14,
-        "name": "Harold Fannin Jr.",
-        "team": "CLE",
+        "name": "Brenton Strange",
+        "opponent": "vs. KC",
         "position": "TE"
       },
       {
         "rank": 15,
-        "name": "David Njoku",
-        "team": "CLE",
+        "name": "Harold Fannin Jr.",
+        "opponent": "vs. MIN",
         "position": "TE"
       },
       {
         "rank": 16,
-        "name": "Zach Ertz",
-        "team": "WAS",
+        "name": "David Njoku",
+        "opponent": "vs. MIN",
         "position": "TE"
       },
       {
         "rank": 17,
-        "name": "Dallas Goedert",
-        "team": "PHI",
+        "name": "Darren Waller",
+        "opponent": "at CAR",
         "position": "TE"
       },
       {
         "rank": 18,
-        "name": "Brenton Strange",
-        "team": "JAC",
-        "position": "TE"
-      },
-      {
-        "rank": 19,
-        "name": "Chig Okonkwo",
-        "team": "TEN",
-        "position": "TE"
-      },
-      {
-        "rank": 20,
-        "name": "Cade Otton",
-        "team": "TB",
-        "position": "TE"
-      },
-      {
-        "rank": 21,
-        "name": "Dalton Schultz",
-        "team": "HOU",
-        "position": "TE"
-      },
-      {
-        "rank": 22,
-        "name": "Jonnu Smith",
-        "team": "PIT",
-        "position": "TE"
-      },
-      {
-        "rank": 23,
-        "name": "Jake Tonges",
-        "team": "SF",
-        "position": "TE"
-      },
-      {
-        "rank": 24,
-        "name": "Oronde Gadsden II",
-        "team": "LAC",
-        "position": "TE"
-      },
-      {
-        "rank": 25,
-        "name": "Pat Freiermuth",
-        "team": "PIT",
-        "position": "TE"
-      },
-      {
-        "rank": 26,
-        "name": "Cole Kmet",
-        "team": "CHI",
-        "position": "TE"
-      },
-      {
-        "rank": 27,
-        "name": "Mike Gesicki",
-        "team": "CIN",
-        "position": "TE"
-      },
-      {
-        "rank": 28,
-        "name": "Mason Taylor",
-        "team": "NYJ",
-        "position": "TE"
-      },
-      {
-        "rank": 29,
         "name": "Theo Johnson",
-        "team": "NYG",
+        "opponent": "at NO",
         "position": "TE"
-      },
-      {
-        "rank": 30,
-        "name": "AJ Barner",
-        "team": "SEA",
-        "position": "TE"
-      },
-      {
-        "rank": 31,
-        "name": "Noah Gray",
-        "team": "KC",
-        "position": "TE"
-      },
-      {
-        "rank": 32,
-        "name": "Tyler Higbee",
-        "team": "LAR",
-        "position": "TE"
-      },
-      {
-        "rank": 33,
-        "name": "Adam Trautman",
-        "team": "DEN",
-        "position": "TE"
-      },
-      {
-        "rank": 34,
-        "name": "Tommy Tremble",
-        "team": "CAR",
-        "position": "TE"
-      },
-      {
-        "rank": 35,
-        "name": "Austin Hooper",
-        "team": "NE",
-        "position": "TE"
-      },
-      {
-        "rank": 36,
-        "name": "Dawson Knox",
-        "team": "BUF",
-        "position": "TE"
-      },
-      {
-        "rank": 37,
-        "name": "Tyler Conklin",
-        "team": "LAC",
-        "position": "TE"
-      },
-      {
-        "rank": 38,
-        "name": "Elijah Arroyo",
-        "team": "SEA",
-        "position": "TE"
-      },
-      {
-        "rank": 39,
-        "name": "Gunnar Helm",
-        "team": "TEN",
-        "position": "TE"
-      },
-      {
-        "rank": 40,
-        "name": "Tanner Conner",
-        "team": "MIA",
-        "position": "TE"
-      }
-    ],
-    "FLEX": [
-      {
-        "overall_rank": 1,
-        "name": "Christian McCaffrey",
-        "team": "SF",
-        "position": "RB",
-        "position_rank": "RB1"
-      },
-      {
-        "overall_rank": 2,
-        "name": "Bijan Robinson",
-        "team": "ATL",
-        "position": "RB",
-        "position_rank": "RB2"
-      },
-      {
-        "overall_rank": 3,
-        "name": "Jonathan Taylor",
-        "team": "IND",
-        "position": "RB",
-        "position_rank": "RB3"
-      },
-      {
-        "overall_rank": 4,
-        "name": "Puka Nacua",
-        "team": "LAR",
-        "position": "WR",
-        "position_rank": "WR1"
-      },
-      {
-        "overall_rank": 5,
-        "name": "James Cook III",
-        "team": "BUF",
-        "position": "RB",
-        "position_rank": "RB4"
-      },
-      {
-        "overall_rank": 6,
-        "name": "Saquon Barkley",
-        "team": "PHI",
-        "position": "RB",
-        "position_rank": "RB5"
-      },
-      {
-        "overall_rank": 7,
-        "name": "Jaxon Smith-Njigba",
-        "team": "SEA",
-        "position": "WR",
-        "position_rank": "WR2"
-      },
-      {
-        "overall_rank": 8,
-        "name": "Josh Jacobs",
-        "team": "GB",
-        "position": "RB",
-        "position_rank": "RB6"
-      },
-      {
-        "overall_rank": 9,
-        "name": "Amon-Ra St. Brown",
-        "team": "DET",
-        "position": "WR",
-        "position_rank": "WR3"
-      },
-      {
-        "overall_rank": 10,
-        "name": "Jahmyr Gibbs",
-        "team": "DET",
-        "position": "RB",
-        "position_rank": "RB7"
-      },
-      {
-        "overall_rank": 11,
-        "name": "Malik Nabers",
-        "team": "NYG",
-        "position": "WR",
-        "position_rank": "WR4"
-      },
-      {
-        "overall_rank": 12,
-        "name": "De'Von Achane",
-        "team": "MIA",
-        "position": "RB",
-        "position_rank": "RB8"
-      },
-      {
-        "overall_rank": 13,
-        "name": "Justin Jefferson",
-        "team": "MIN",
-        "position": "WR",
-        "position_rank": "WR5"
-      },
-      {
-        "overall_rank": 14,
-        "name": "Derrick Henry",
-        "team": "BAL",
-        "position": "RB",
-        "position_rank": "RB9"
-      },
-      {
-        "overall_rank": 15,
-        "name": "Jordan Mason",
-        "team": "MIN",
-        "position": "RB",
-        "position_rank": "RB10"
-      },
-      {
-        "overall_rank": 16,
-        "name": "Omarion Hampton",
-        "team": "LAC",
-        "position": "RB",
-        "position_rank": "RB11"
-      },
-      {
-        "overall_rank": 17,
-        "name": "Garrett Wilson",
-        "team": "NYJ",
-        "position": "WR",
-        "position_rank": "WR6"
-      },
-      {
-        "overall_rank": 18,
-        "name": "Davante Adams",
-        "team": "LAR",
-        "position": "WR",
-        "position_rank": "WR7"
-      },
-      {
-        "overall_rank": 19,
-        "name": "Rome Odunze",
-        "team": "CHI",
-        "position": "WR",
-        "position_rank": "WR8"
-      },
-      {
-        "overall_rank": 20,
-        "name": "Bucky Irving",
-        "team": "TB",
-        "position": "RB",
-        "position_rank": "RB12"
-      },
-      {
-        "overall_rank": 21,
-        "name": "Kyren Williams",
-        "team": "LAR",
-        "position": "RB",
-        "position_rank": "RB13"
-      },
-      {
-        "overall_rank": 22,
-        "name": "Kenneth Walker III",
-        "team": "SEA",
-        "position": "RB",
-        "position_rank": "RB14"
-      },
-      {
-        "overall_rank": 23,
-        "name": "J.K. Dobbins",
-        "team": "DEN",
-        "position": "RB",
-        "position_rank": "RB15"
-      },
-      {
-        "overall_rank": 24,
-        "name": "Breece Hall",
-        "team": "NYJ",
-        "position": "RB",
-        "position_rank": "RB16"
-      },
-      {
-        "overall_rank": 25,
-        "name": "Ja'Marr Chase",
-        "team": "CIN",
-        "position": "WR",
-        "position_rank": "WR9"
-      },
-      {
-        "overall_rank": 26,
-        "name": "Chuba Hubbard",
-        "team": "CAR",
-        "position": "RB",
-        "position_rank": "RB17"
-      },
-      {
-        "overall_rank": 27,
-        "name": "Ashton Jeanty",
-        "team": "LV",
-        "position": "RB",
-        "position_rank": "RB18"
-      },
-      {
-        "overall_rank": 28,
-        "name": "Nico Collins",
-        "team": "HOU",
-        "position": "WR",
-        "position_rank": "WR10"
-      },
-      {
-        "overall_rank": 29,
-        "name": "A.J. Brown",
-        "team": "PHI",
-        "position": "WR",
-        "position_rank": "WR11"
-      },
-      {
-        "overall_rank": 30,
-        "name": "Trey Benson",
-        "team": "ARI",
-        "position": "RB",
-        "position_rank": "RB19"
-      },
-      {
-        "overall_rank": 31,
-        "name": "Cam Skattebo",
-        "team": "NYG",
-        "position": "RB",
-        "position_rank": "RB20"
-      },
-      {
-        "overall_rank": 32,
-        "name": "Trey McBride",
-        "team": "ARI",
-        "position": "TE",
-        "position_rank": "TE1"
-      },
-      {
-        "overall_rank": 33,
-        "name": "Drake London",
-        "team": "ATL",
-        "position": "WR",
-        "position_rank": "WR12"
-      },
-      {
-        "overall_rank": 34,
-        "name": "Emeka Egbuka",
-        "team": "TB",
-        "position": "WR",
-        "position_rank": "WR13"
-      },
-      {
-        "overall_rank": 35,
-        "name": "Brock Bowers",
-        "team": "LV",
-        "position": "TE",
-        "position_rank": "TE2"
-      },
-      {
-        "overall_rank": 36,
-        "name": "Zay Flowers",
-        "team": "BAL",
-        "position": "WR",
-        "position_rank": "WR14"
-      },
-      {
-        "overall_rank": 37,
-        "name": "George Pickens",
-        "team": "DAL",
-        "position": "WR",
-        "position_rank": "WR15"
-      },
-      {
-        "overall_rank": 38,
-        "name": "Courtland Sutton",
-        "team": "DEN",
-        "position": "WR",
-        "position_rank": "WR16"
-      },
-      {
-        "overall_rank": 39,
-        "name": "Ladd McConkey",
-        "team": "LAC",
-        "position": "WR",
-        "position_rank": "WR17"
-      },
-      {
-        "overall_rank": 40,
-        "name": "Tyreek Hill",
-        "team": "MIA",
-        "position": "WR",
-        "position_rank": "WR18"
-      },
-      {
-        "overall_rank": 41,
-        "name": "Travis Etienne Jr.",
-        "team": "JAC",
-        "position": "RB",
-        "position_rank": "RB21"
-      },
-      {
-        "overall_rank": 42,
-        "name": "Tetairoa McMillan",
-        "team": "CAR",
-        "position": "WR",
-        "position_rank": "WR19"
-      },
-      {
-        "overall_rank": 43,
-        "name": "Ricky Pearsall",
-        "team": "SF",
-        "position": "WR",
-        "position_rank": "WR20"
-      },
-      {
-        "overall_rank": 44,
-        "name": "Keenan Allen",
-        "team": "LAC",
-        "position": "WR",
-        "position_rank": "WR21"
-      },
-      {
-        "overall_rank": 45,
-        "name": "Brian Thomas Jr.",
-        "team": "JAC",
-        "position": "WR",
-        "position_rank": "WR22"
-      },
-      {
-        "overall_rank": 46,
-        "name": "Deebo Samuel Sr.",
-        "team": "WAS",
-        "position": "WR",
-        "position_rank": "WR23"
-      },
-      {
-        "overall_rank": 47,
-        "name": "Alvin Kamara",
-        "team": "NO",
-        "position": "RB",
-        "position_rank": "RB22"
-      },
-      {
-        "overall_rank": 48,
-        "name": "Javonte Williams",
-        "team": "DAL",
-        "position": "RB",
-        "position_rank": "RB23"
-      },
-      {
-        "overall_rank": 49,
-        "name": "Jakobi Meyers",
-        "team": "LV",
-        "position": "WR",
-        "position_rank": "WR24"
-      },
-      {
-        "overall_rank": 50,
-        "name": "DeVonta Smith",
-        "team": "PHI",
-        "position": "WR",
-        "position_rank": "WR25"
-      },
-      {
-        "overall_rank": 51,
-        "name": "Quinshon Judkins",
-        "team": "CLE",
-        "position": "RB",
-        "position_rank": "RB24"
-      },
-      {
-        "overall_rank": 52,
-        "name": "DK Metcalf",
-        "team": "PIT",
-        "position": "WR",
-        "position_rank": "WR26"
-      },
-      {
-        "overall_rank": 53,
-        "name": "Quentin Johnston",
-        "team": "LAC",
-        "position": "WR",
-        "position_rank": "WR27"
-      },
-      {
-        "overall_rank": 54,
-        "name": "Tucker Kraft",
-        "team": "GB",
-        "position": "TE",
-        "position_rank": "TE3"
-      },
-      {
-        "overall_rank": 55,
-        "name": "Jake Ferguson",
-        "team": "DAL",
-        "position": "TE",
-        "position_rank": "TE4"
-      },
-      {
-        "overall_rank": 56,
-        "name": "Marvin Harrison Jr.",
-        "team": "ARI",
-        "position": "WR",
-        "position_rank": "WR28"
-      },
-      {
-        "overall_rank": 57,
-        "name": "Jaylen Warren",
-        "team": "PIT",
-        "position": "RB",
-        "position_rank": "RB25"
-      },
-      {
-        "overall_rank": 58,
-        "name": "Jameson Williams",
-        "team": "DET",
-        "position": "WR",
-        "position_rank": "WR29"
-      },
-      {
-        "overall_rank": 59,
-        "name": "Michael Pittman Jr.",
-        "team": "IND",
-        "position": "WR",
-        "position_rank": "WR30"
-      },
-      {
-        "overall_rank": 60,
-        "name": "Chase Brown",
-        "team": "CIN",
-        "position": "RB",
-        "position_rank": "RB26"
-      },
-      {
-        "overall_rank": 61,
-        "name": "DJ Moore",
-        "team": "CHI",
-        "position": "WR",
-        "position_rank": "WR31"
-      },
-      {
-        "overall_rank": 62,
-        "name": "Tyler Warren",
-        "team": "IND",
-        "position": "TE",
-        "position_rank": "TE5"
-      },
-      {
-        "overall_rank": 63,
-        "name": "Chris Olave",
-        "team": "NO",
-        "position": "WR",
-        "position_rank": "WR32"
-      },
-      {
-        "overall_rank": 64,
-        "name": "Jaylen Waddle",
-        "team": "MIA",
-        "position": "WR",
-        "position_rank": "WR33"
-      },
-      {
-        "overall_rank": 65,
-        "name": "D'Andre Swift",
-        "team": "CHI",
-        "position": "RB",
-        "position_rank": "RB27"
-      },
-      {
-        "overall_rank": 66,
-        "name": "Tony Pollard",
-        "team": "TEN",
-        "position": "RB",
-        "position_rank": "RB28"
-      },
-      {
-        "overall_rank": 67,
-        "name": "Jordan Addison",
-        "team": "MIN",
-        "position": "WR",
-        "position_rank": "WR34"
-      },
-      {
-        "overall_rank": 68,
-        "name": "Tee Higgins",
-        "team": "CIN",
-        "position": "WR",
-        "position_rank": "WR35"
-      },
-      {
-        "overall_rank": 69,
-        "name": "Xavier Worthy",
-        "team": "KC",
-        "position": "WR",
-        "position_rank": "WR36"
-      },
-      {
-        "overall_rank": 70,
-        "name": "Khalil Shakir",
-        "team": "BUF",
-        "position": "WR",
-        "position_rank": "WR37"
-      },
-      {
-        "overall_rank": 71,
-        "name": "Jerry Jeudy",
-        "team": "CLE",
-        "position": "WR",
-        "position_rank": "WR38"
-      },
-      {
-        "overall_rank": 72,
-        "name": "Calvin Ridley",
-        "team": "TEN",
-        "position": "WR",
-        "position_rank": "WR39"
-      },
-      {
-        "overall_rank": 73,
-        "name": "Sam LaPorta",
-        "team": "DET",
-        "position": "TE",
-        "position_rank": "TE6"
-      },
-      {
-        "overall_rank": 74,
-        "name": "Matthew Golden",
-        "team": "GB",
-        "position": "WR",
-        "position_rank": "WR40"
-      },
-      {
-        "overall_rank": 75,
-        "name": "TreVeyon Henderson",
-        "team": "NE",
-        "position": "RB",
-        "position_rank": "RB29"
-      },
-      {
-        "overall_rank": 76,
-        "name": "Dalton Kincaid",
-        "team": "BUF",
-        "position": "TE",
-        "position_rank": "TE7"
-      },
-      {
-        "overall_rank": 77,
-        "name": "Keon Coleman",
-        "team": "BUF",
-        "position": "WR",
-        "position_rank": "WR41"
-      },
-      {
-        "overall_rank": 78,
-        "name": "David Montgomery",
-        "team": "DET",
-        "position": "RB",
-        "position_rank": "RB30"
-      },
-      {
-        "overall_rank": 79,
-        "name": "Nick Chubb",
-        "team": "HOU",
-        "position": "RB",
-        "position_rank": "RB31"
-      },
-      {
-        "overall_rank": 80,
-        "name": "Jacory Croskey-Merritt",
-        "team": "WAS",
-        "position": "RB",
-        "position_rank": "RB32"
-      },
-      {
-        "overall_rank": 81,
-        "name": "Rhamondre Stevenson",
-        "team": "NE",
-        "position": "RB",
-        "position_rank": "RB33"
-      },
-      {
-        "overall_rank": 82,
-        "name": "Bhayshul Tuten",
-        "team": "JAC",
-        "position": "RB",
-        "position_rank": "RB34"
-      },
-      {
-        "overall_rank": 83,
-        "name": "Hunter Henry",
-        "team": "NE",
-        "position": "TE",
-        "position_rank": "TE8"
-      },
-      {
-        "overall_rank": 84,
-        "name": "Juwan Johnson",
-        "team": "NO",
-        "position": "TE",
-        "position_rank": "TE9"
-      },
-      {
-        "overall_rank": 85,
-        "name": "Cedric Tillman",
-        "team": "CLE",
-        "position": "WR",
-        "position_rank": "WR42"
-      },
-      {
-        "overall_rank": 86,
-        "name": "Romeo Doubs",
-        "team": "GB",
-        "position": "WR",
-        "position_rank": "WR43"
-      },
-      {
-        "overall_rank": 87,
-        "name": "Darnell Mooney",
-        "team": "ATL",
-        "position": "WR",
-        "position_rank": "WR44"
-      },
-      {
-        "overall_rank": 88,
-        "name": "Wan'Dale Robinson",
-        "team": "NYG",
-        "position": "WR",
-        "position_rank": "WR45"
-      },
-      {
-        "overall_rank": 89,
-        "name": "T.J. Hockenson",
-        "team": "MIN",
-        "position": "TE",
-        "position_rank": "TE10"
-      },
-      {
-        "overall_rank": 90,
-        "name": "Marquise Brown",
-        "team": "KC",
-        "position": "WR",
-        "position_rank": "WR46"
-      },
-      {
-        "overall_rank": 91,
-        "name": "Kayshon Boutte",
-        "team": "NE",
-        "position": "WR",
-        "position_rank": "WR47"
-      },
-      {
-        "overall_rank": 92,
-        "name": "Tre Tucker",
-        "team": "LV",
-        "position": "WR",
-        "position_rank": "WR48"
-      },
-      {
-        "overall_rank": 93,
-        "name": "Elic Ayomanor",
-        "team": "TEN",
-        "position": "WR",
-        "position_rank": "WR49"
-      },
-      {
-        "overall_rank": 94,
-        "name": "Tyquan Thornton",
-        "team": "KC",
-        "position": "WR",
-        "position_rank": "WR50"
-      },
-      {
-        "overall_rank": 95,
-        "name": "Travis Hunter",
-        "team": "JAC",
-        "position": "WR",
-        "position_rank": "WR51"
-      },
-      {
-        "overall_rank": 96,
-        "name": "Stefon Diggs",
-        "team": "NE",
-        "position": "WR",
-        "position_rank": "WR52"
-      },
-      {
-        "overall_rank": 97,
-        "name": "Isiah Pacheco",
-        "team": "KC",
-        "position": "RB",
-        "position_rank": "RB35"
-      },
-      {
-        "overall_rank": 98,
-        "name": "Josh Downs",
-        "team": "IND",
-        "position": "WR",
-        "position_rank": "WR53"
-      },
-      {
-        "overall_rank": 99,
-        "name": "Troy Franklin",
-        "team": "DEN",
-        "position": "WR",
-        "position_rank": "WR54"
-      },
-      {
-        "overall_rank": 100,
-        "name": "Christian Kirk",
-        "team": "HOU",
-        "position": "WR",
-        "position_rank": "WR55"
-      },
-      {
-        "overall_rank": 101,
-        "name": "Cooper Kupp",
-        "team": "SEA",
-        "position": "WR",
-        "position_rank": "WR56"
-      },
-      {
-        "overall_rank": 102,
-        "name": "RJ Harvey",
-        "team": "DEN",
-        "position": "RB",
-        "position_rank": "RB36"
-      },
-      {
-        "overall_rank": 103,
-        "name": "Travis Kelce",
-        "team": "KC",
-        "position": "TE",
-        "position_rank": "TE11"
-      },
-      {
-        "overall_rank": 104,
-        "name": "Kareem Hunt",
-        "team": "KC",
-        "position": "RB",
-        "position_rank": "RB37"
-      },
-      {
-        "overall_rank": 105,
-        "name": "Rashid Shaheed",
-        "team": "NO",
-        "position": "WR",
-        "position_rank": "WR57"
-      },
-      {
-        "overall_rank": 106,
-        "name": "Kyle Pitts Sr.",
-        "team": "ATL",
-        "position": "TE",
-        "position_rank": "TE12"
-      },
-      {
-        "overall_rank": 107,
-        "name": "Chris Godwin Jr.",
-        "team": "TB",
-        "position": "WR",
-        "position_rank": "WR58"
-      },
-      {
-        "overall_rank": 108,
-        "name": "Ollie Gordon II",
-        "team": "MIA",
-        "position": "RB",
-        "position_rank": "RB38"
-      },
-      {
-        "overall_rank": 109,
-        "name": "Mark Andrews",
-        "team": "BAL",
-        "position": "TE",
-        "position_rank": "TE13"
-      },
-      {
-        "overall_rank": 110,
-        "name": "Tory Horton",
-        "team": "SEA",
-        "position": "WR",
-        "position_rank": "WR59"
-      },
-      {
-        "overall_rank": 111,
-        "name": "Dontayvion Wicks",
-        "team": "GB",
-        "position": "WR",
-        "position_rank": "WR60"
-      },
-      {
-        "overall_rank": 112,
-        "name": "Calvin Austin III",
-        "team": "PIT",
-        "position": "WR",
-        "position_rank": "WR61"
-      },
-      {
-        "overall_rank": 113,
-        "name": "Harold Fannin Jr.",
-        "team": "CLE",
-        "position": "TE",
-        "position_rank": "TE14"
-      },
-      {
-        "overall_rank": 114,
-        "name": "Chris Rodriguez Jr.",
-        "team": "WAS",
-        "position": "RB",
-        "position_rank": "RB39"
-      },
-      {
-        "overall_rank": 115,
-        "name": "David Njoku",
-        "team": "CLE",
-        "position": "TE",
-        "position_rank": "TE15"
-      },
-      {
-        "overall_rank": 116,
-        "name": "Marvin Mims Jr.",
-        "team": "DEN",
-        "position": "WR",
-        "position_rank": "WR62"
-      },
-      {
-        "overall_rank": 117,
-        "name": "DeAndre Hopkins",
-        "team": "BAL",
-        "position": "WR",
-        "position_rank": "WR63"
-      },
-      {
-        "overall_rank": 118,
-        "name": "Sterling Shepard",
-        "team": "TB",
-        "position": "WR",
-        "position_rank": "WR64"
-      },
-      {
-        "overall_rank": 119,
-        "name": "Zach Charbonnet",
-        "team": "SEA",
-        "position": "RB",
-        "position_rank": "RB40"
-      },
-      {
-        "overall_rank": 120,
-        "name": "Jeremy McNichols",
-        "team": "WAS",
-        "position": "RB",
-        "position_rank": "RB41"
-      },
-      {
-        "overall_rank": 121,
-        "name": "Zach Ertz",
-        "team": "WAS",
-        "position": "TE",
-        "position_rank": "TE16"
-      },
-      {
-        "overall_rank": 122,
-        "name": "Woody Marks",
-        "team": "HOU",
-        "position": "RB",
-        "position_rank": "RB42"
-      },
-      {
-        "overall_rank": 123,
-        "name": "KaVontae Turpin",
-        "team": "DAL",
-        "position": "WR",
-        "position_rank": "WR65"
-      },
-      {
-        "overall_rank": 124,
-        "name": "Kenneth Gainwell",
-        "team": "PIT",
-        "position": "RB",
-        "position_rank": "RB43"
-      },
-      {
-        "overall_rank": 125,
-        "name": "Dallas Goedert",
-        "team": "PHI",
-        "position": "TE",
-        "position_rank": "TE17"
-      },
-      {
-        "overall_rank": 126,
-        "name": "Jalen Tolbert",
-        "team": "DAL",
-        "position": "WR",
-        "position_rank": "WR66"
-      },
-      {
-        "overall_rank": 127,
-        "name": "JuJu Smith-Schuster",
-        "team": "KC",
-        "position": "WR",
-        "position_rank": "WR67"
-      },
-      {
-        "overall_rank": 128,
-        "name": "Braelon Allen",
-        "team": "NYJ",
-        "position": "RB",
-        "position_rank": "RB44"
-      },
-      {
-        "overall_rank": 129,
-        "name": "Brenton Strange",
-        "team": "JAC",
-        "position": "TE",
-        "position_rank": "TE18"
-      },
-      {
-        "overall_rank": 130,
-        "name": "Chig Okonkwo",
-        "team": "TEN",
-        "position": "TE",
-        "position_rank": "TE19"
-      },
-      {
-        "overall_rank": 131,
-        "name": "Parker Washington",
-        "team": "JAC",
-        "position": "WR",
-        "position_rank": "WR68"
-      },
-      {
-        "overall_rank": 132,
-        "name": "Blake Corum",
-        "team": "LAR",
-        "position": "RB",
-        "position_rank": "RB45"
-      },
-      {
-        "overall_rank": 133,
-        "name": "Miles Sanders",
-        "team": "DAL",
-        "position": "RB",
-        "position_rank": "RB46"
-      },
-      {
-        "overall_rank": 134,
-        "name": "Cade Otton",
-        "team": "TB",
-        "position": "TE",
-        "position_rank": "TE20"
-      },
-      {
-        "overall_rank": 135,
-        "name": "Luther Burden III",
-        "team": "CHI",
-        "position": "WR",
-        "position_rank": "WR69"
-      },
-      {
-        "overall_rank": 136,
-        "name": "Adonai Mitchell",
-        "team": "IND",
-        "position": "WR",
-        "position_rank": "WR70"
-      },
-      {
-        "overall_rank": 137,
-        "name": "Dalton Schultz",
-        "team": "HOU",
-        "position": "TE",
-        "position_rank": "TE21"
-      },
-      {
-        "overall_rank": 138,
-        "name": "Jonnu Smith",
-        "team": "PIT",
-        "position": "TE",
-        "position_rank": "TE22"
-      },
-      {
-        "overall_rank": 139,
-        "name": "Jake Tonges",
-        "team": "SF",
-        "position": "TE",
-        "position_rank": "TE23"
-      },
-      {
-        "overall_rank": 140,
-        "name": "Joshua Palmer",
-        "team": "BUF",
-        "position": "WR",
-        "position_rank": "WR71"
-      },
-      {
-        "overall_rank": 141,
-        "name": "Oronde Gadsden II",
-        "team": "LAC",
-        "position": "TE",
-        "position_rank": "TE24"
-      },
-      {
-        "overall_rank": 142,
-        "name": "Rachaad White",
-        "team": "TB",
-        "position": "RB",
-        "position_rank": "RB47"
-      },
-      {
-        "overall_rank": 143,
-        "name": "Tyler Allgeier",
-        "team": "ATL",
-        "position": "RB",
-        "position_rank": "RB48"
-      },
-      {
-        "overall_rank": 144,
-        "name": "Michael Wilson",
-        "team": "ARI",
-        "position": "WR",
-        "position_rank": "WR72"
-      },
-      {
-        "overall_rank": 145,
-        "name": "Kyle Monangai",
-        "team": "CHI",
-        "position": "RB",
-        "position_rank": "RB49"
-      },
-      {
-        "overall_rank": 146,
-        "name": "Rashod Bateman",
-        "team": "BAL",
-        "position": "WR",
-        "position_rank": "WR73"
-      },
-      {
-        "overall_rank": 147,
-        "name": "Brian Robinson Jr.",
-        "team": "SF",
-        "position": "RB",
-        "position_rank": "RB50"
-      },
-      {
-        "overall_rank": 148,
-        "name": "Jerome Ford",
-        "team": "CLE",
-        "position": "RB",
-        "position_rank": "RB51"
-      },
-      {
-        "overall_rank": 149,
-        "name": "Pat Freiermuth",
-        "team": "PIT",
-        "position": "TE",
-        "position_rank": "TE25"
-      },
-      {
-        "overall_rank": 150,
-        "name": "Cole Kmet",
-        "team": "CHI",
-        "position": "TE",
-        "position_rank": "TE26"
-      }
-    ],
-    "DST": [
-      {
-        "rank": 1,
-        "name": "Houston Texans",
-        "team": "HOU",
-        "position": "DST",
-        "opponent": "vs TEN"
-      },
-      {
-        "rank": 2,
-        "name": "Buffalo Bills",
-        "team": "BUF",
-        "position": "DST",
-        "opponent": "vs. NO"
-      },
-      {
-        "rank": 3,
-        "name": "Denver Broncos",
-        "team": "DEN",
-        "position": "DST",
-        "opponent": "vs. CIN"
-      },
-      {
-        "rank": 4,
-        "name": "Los Angeles Chargers",
-        "team": "LAC",
-        "position": "DST",
-        "opponent": "at NYG"
-      },
-      {
-        "rank": 5,
-        "name": "Detroit Lions",
-        "team": "DET",
-        "position": "DST",
-        "opponent": "vs. CLE"
-      },
-      {
-        "rank": 6,
-        "name": "Green Bay Packers",
-        "team": "GB",
-        "position": "DST",
-        "opponent": "at DAL"
-      },
-      {
-        "rank": 7,
-        "name": "Minnesota Vikings",
-        "team": "MIN",
-        "position": "DST",
-        "opponent": "at PIT"
-      },
-      {
-        "rank": 8,
-        "name": "Philadelphia Eagles",
-        "team": "PHI",
-        "position": "DST",
-        "opponent": "at TB"
-      },
-      {
-        "rank": 9,
-        "name": "New England Patriots",
-        "team": "NE",
-        "position": "DST",
-        "opponent": "vs. CAR"
-      },
-      {
-        "rank": 10,
-        "name": "Washington Commanders",
-        "team": "WAS",
-        "position": "DST",
-        "opponent": "at ATL"
-      },
-      {
-        "rank": 11,
-        "name": "Seattle Seahawks",
-        "team": "SEA",
-        "position": "DST",
-        "opponent": "at ARI"
-      },
-      {
-        "rank": 12,
-        "name": "San Francisco 49ers",
-        "team": "SF",
-        "position": "DST",
-        "opponent": "vs. JAC"
-      },
-      {
-        "rank": 13,
-        "name": "New York Jets",
-        "team": "NYJ",
-        "position": "DST",
-        "opponent": "at MIA"
-      },
-      {
-        "rank": 14,
-        "name": "Chicago Bears",
-        "team": "CHI",
-        "position": "DST",
-        "opponent": "at LV"
-      },
-      {
-        "rank": 15,
-        "name": "Arizona Cardinals",
-        "team": "ARI",
-        "position": "DST",
-        "opponent": "vs. SEA"
-      },
-      {
-        "rank": 16,
-        "name": "Baltimore Ravens",
-        "team": "BAL",
-        "position": "DST",
-        "opponent": "at KC"
-      },
-      {
-        "rank": 17,
-        "name": "Carolina Panthers",
-        "team": "CAR",
-        "position": "DST",
-        "opponent": "at NE"
-      },
-      {
-        "rank": 18,
-        "name": "Tennessee Titans",
-        "team": "TEN",
-        "position": "DST",
-        "opponent": "at HOU"
       },
       {
         "rank": 19,
-        "name": "Pittsburgh Steelers",
-        "team": "PIT",
-        "position": "DST",
-        "opponent": "vs. MIN"
+        "name": "Chig Okonkwo",
+        "opponent": "at ARI",
+        "position": "TE"
       },
       {
         "rank": 20,
-        "name": "Miami Dolphins",
-        "team": "MIA",
-        "position": "DST",
-        "opponent": "vs. NYJ"
+        "name": "Evan Engram",
+        "opponent": "at PHI",
+        "position": "TE"
       },
       {
         "rank": 21,
-        "name": "Cleveland Browns",
-        "team": "CLE",
-        "position": "DST",
-        "opponent": "at DET"
+        "name": "Dalton Schultz",
+        "opponent": "at BAL",
+        "position": "TE"
       },
       {
         "rank": 22,
-        "name": "Atlanta Falcons",
-        "team": "ATL",
-        "position": "DST",
-        "opponent": "vs. WAS"
+        "name": "Mason Taylor",
+        "opponent": "vs. DAL",
+        "position": "TE"
       },
       {
         "rank": 23,
-        "name": "Indianapolis Colts",
-        "team": "IND",
-        "position": "DST",
-        "opponent": "at LAR"
+        "name": "Jake Tonges",
+        "opponent": "at LAR",
+        "position": "TE"
       },
       {
         "rank": 24,
-        "name": "Los Angeles Rams",
-        "team": "LAR",
-        "position": "DST",
-        "opponent": "vs. IND"
+        "name": "Elijah Arroyo",
+        "opponent": "vs. TB",
+        "position": "TE"
       },
       {
         "rank": 25,
-        "name": "Jacksonville Jaguars",
-        "team": "JAC",
-        "position": "DST",
-        "opponent": "at SF"
+        "name": "AJ Barner",
+        "opponent": "vs. TB",
+        "position": "TE"
       },
       {
         "rank": 26,
-        "name": "Kansas City Chiefs",
-        "team": "KC",
-        "position": "DST",
-        "opponent": "vs. BAL"
+        "name": "Oronde Gadsden II",
+        "opponent": "vs. WAS",
+        "position": "TE"
       },
       {
         "rank": 27,
-        "name": "New York Giants",
-        "team": "NYG",
-        "position": "DST",
-        "opponent": "vs. LAC"
+        "name": "Tommy Tremble",
+        "opponent": "vs. MIA",
+        "position": "TE"
       },
       {
         "rank": 28,
-        "name": "Cincinnati Bengals",
-        "team": "CIN",
-        "position": "DST",
-        "opponent": "at DEN"
+        "name": "Cade Otton",
+        "opponent": "at SEA",
+        "position": "TE"
       },
       {
         "rank": 29,
-        "name": "Tampa Bay Buccaneers",
-        "team": "TB",
-        "position": "DST",
-        "opponent": "vs. PHI"
+        "name": "Tyler Higbee",
+        "opponent": "vs. SF",
+        "position": "TE"
       },
       {
         "rank": 30,
-        "name": "Las Vegas Raiders",
-        "team": "LV",
-        "position": "DST",
-        "opponent": "vs. CHI"
-      },
-      {
-        "rank": 31,
-        "name": "Dallas Cowboys",
-        "team": "DAL",
-        "position": "DST",
-        "opponent": "vs. GB"
-      },
-      {
-        "rank": 32,
-        "name": "New Orleans Saints",
-        "team": "NO",
-        "position": "DST",
-        "opponent": "at BUF"
+        "name": "Isaiah Likely",
+        "opponent": "vs. HOU",
+        "position": "TE"
       }
     ],
     "K": [
       {
         "rank": 1,
-        "name": "Matt Prater",
-        "team": "BUF",
+        "name": "Brandon Aubrey",
+        "opponent": "at NYJ",
         "position": "K"
       },
       {
         "rank": 2,
-        "name": "Cameron Dicker",
-        "team": "LAC",
+        "name": "Matt Prater",
+        "opponent": "vs. NE",
         "position": "K"
       },
       {
         "rank": 3,
-        "name": "Brandon Aubrey",
-        "team": "DAL",
+        "name": "Cameron Dicker",
+        "opponent": "vs. WAS",
         "position": "K"
       },
       {
         "rank": 4,
-        "name": "Tyler Loop",
-        "team": "BAL",
+        "name": "Harrison Butker",
+        "opponent": "at JAC",
         "position": "K"
       },
       {
         "rank": 5,
-        "name": "Brandon McManus",
-        "team": "GB",
+        "name": "Joshua Karty",
+        "opponent": "vs. SF",
         "position": "K"
       },
       {
         "rank": 6,
         "name": "Spencer Shrader",
-        "team": "IND",
+        "opponent": "vs. LV",
         "position": "K"
       },
       {
         "rank": 7,
-        "name": "Jake Bates",
-        "team": "DET",
+        "name": "Tyler Loop",
+        "opponent": "vs. HOU",
         "position": "K"
       },
       {
         "rank": 8,
-        "name": "Wil Lutz",
-        "team": "DEN",
+        "name": "Jake Bates",
+        "opponent": "at CIN",
         "position": "K"
       },
       {
         "rank": 9,
-        "name": "Ka'imi Fairbairn",
-        "team": "HOU",
+        "name": "Chase McLaughlin",
+        "opponent": "at SEA",
         "position": "K"
       },
       {
         "rank": 10,
-        "name": "Jake Elliott",
-        "team": "PHI",
+        "name": "Ka'imi Fairbairn",
+        "opponent": "at BAL",
         "position": "K"
       },
       {
         "rank": 11,
-        "name": "Eddy Pineiro",
-        "team": "SF",
+        "name": "Cam Little",
+        "opponent": "vs. KC",
         "position": "K"
       },
       {
         "rank": 12,
-        "name": "Chris Boswell",
-        "team": "PIT",
+        "name": "Matt Gay",
+        "opponent": "at LAC",
         "position": "K"
       },
       {
         "rank": 13,
-        "name": "Cam Little",
-        "team": "JAC",
+        "name": "Chad Ryland",
+        "opponent": "vs. TEN",
         "position": "K"
       },
       {
         "rank": 14,
-        "name": "Harrison Butker",
-        "team": "KC",
+        "name": "Jason Myers",
+        "opponent": "vs. TB",
         "position": "K"
       },
       {
         "rank": 15,
-        "name": "Jason Myers",
-        "team": "SEA",
+        "name": "Jake Elliott",
+        "opponent": "vs. DEN",
         "position": "K"
       },
       {
         "rank": 16,
-        "name": "Joshua Karty",
-        "team": "LAR",
+        "name": "Nick Folk",
+        "opponent": "vs. DAL",
         "position": "K"
       },
       {
         "rank": 17,
-        "name": "Chad Ryland",
-        "team": "ARI",
+        "name": "Eddy Pineiro",
+        "opponent": "at LAR",
         "position": "K"
       },
       {
         "rank": 18,
-        "name": "Will Reichard",
-        "team": "MIN",
+        "name": "Daniel Carlson",
+        "opponent": "at IND",
         "position": "K"
       },
       {
         "rank": 19,
-        "name": "Cairo Santos",
-        "team": "CHI",
+        "name": "Will Reichard",
+        "opponent": "at CLE",
         "position": "K"
       },
       {
         "rank": 20,
-        "name": "Matt Gay",
-        "team": "WAS",
+        "name": "Wil Lutz",
+        "opponent": "at PHI",
         "position": "K"
       },
       {
         "rank": 21,
-        "name": "Daniel Carlson",
-        "team": "LV",
+        "name": "Joey Slye",
+        "opponent": "at ARI",
         "position": "K"
       },
       {
         "rank": 22,
-        "name": "Andy Borregales",
-        "team": "NE",
+        "name": "Riley Patterson",
+        "opponent": "at CAR",
         "position": "K"
       },
       {
         "rank": 23,
-        "name": "Chase McLaughlin",
-        "team": "TB",
+        "name": "Blake Grupe",
+        "opponent": "vs. NYG",
         "position": "K"
       },
       {
         "rank": 24,
-        "name": "Joey Slye",
-        "team": "TEN",
+        "name": "Andy Borregales",
+        "opponent": "at BUF",
         "position": "K"
       },
       {
         "rank": 25,
-        "name": "Nick Folk",
-        "team": "NYJ",
+        "name": "Ryan Fitzgerald",
+        "opponent": "vs. MIA",
         "position": "K"
       },
       {
         "rank": 26,
-        "name": "Parker Romo",
-        "team": "ATL",
+        "name": "Jude McAtamney",
+        "opponent": "at NO",
         "position": "K"
       },
       {
         "rank": 27,
         "name": "Evan McPherson",
-        "team": "CIN",
+        "opponent": "vs. DET",
         "position": "K"
       },
       {
         "rank": 28,
-        "name": "Riley Patterson",
-        "team": "MIA",
-        "position": "K"
-      },
-      {
-        "rank": 29,
-        "name": "Ryan Fitzgerald",
-        "team": "CAR",
-        "position": "K"
-      },
-      {
-        "rank": 30,
-        "name": "Graham Gano",
-        "team": "NYG",
-        "position": "K"
-      },
-      {
-        "rank": 31,
-        "name": "Blake Grupe",
-        "team": "NO",
-        "position": "K"
-      },
-      {
-        "rank": 32,
         "name": "Andre Szmyt",
-        "team": "CLE",
+        "opponent": "vs. MIN",
         "position": "K"
       }
     ]

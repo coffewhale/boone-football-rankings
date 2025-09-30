@@ -175,8 +175,10 @@ class RankingsApp {
         };
 
         const weekNumber = this.getCurrentWeekNumber();
+        // Check if weekNumber already contains "Week"
+        const weekDisplay = String(weekNumber).includes('Week') ? weekNumber : `Week ${weekNumber}`;
         document.getElementById('position-title').textContent =
-            `${positionNames[position]} Rankings - Week ${weekNumber}`;
+            `${positionNames[position]} Rankings - ${weekDisplay}`;
 
         const tbody = document.getElementById('rankings-body');
         const thead = document.querySelector('.rankings-table thead tr');
@@ -192,12 +194,14 @@ class RankingsApp {
             thead.innerHTML = `
                 <th>Rank</th>
                 <th>Player</th>
+                <th>Opponent</th>
                 <th>Position Rank</th>
             `;
         } else {
             thead.innerHTML = `
                 <th>Rank</th>
                 <th>Player</th>
+                <th>Opponent</th>
             `;
         }
 
@@ -216,12 +220,14 @@ class RankingsApp {
                 row.innerHTML = `
                     <td class="rank-cell">${player.preGameRank || player.rank}</td>
                     <td class="player-cell">${player.player}</td>
+                    <td>${player.opponent || ''}</td>
                     <td class="position-rank">${player.positionRank || ''}</td>
                 `;
             } else {
                 row.innerHTML = `
                     <td class="rank-cell">${player.preGameRank || player.rank}</td>
                     <td class="player-cell">${player.player}</td>
+                    <td>${player.opponent || ''}</td>
                 `;
             }
             tbody.appendChild(row);

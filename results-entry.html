@@ -3,195 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Results Entry</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Project Shut Down</title>
     <style>
-        .results-container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        .player-input { display: grid; grid-template-columns: 1fr 100px 100px; gap: 10px; align-items: center; margin-bottom: 10px; }
-        .player-input input { padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
-        .position-section { background: white; margin: 20px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .btn { background: #3498db; color: white; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; margin: 10px 5px; }
-        .btn:hover { background: #2980b9; }
-        .btn.success { background: #27ae60; }
-        .btn.success:hover { background: #219a52; }
-        #output { background: #f8f9fa; padding: 20px; border-radius: 4px; margin-top: 20px; white-space: pre-wrap; font-family: monospace; }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+        }
+        .message {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
-    <div class="results-container">
-        <header>
-            <h1>🏈 Final Results Entry</h1>
-            <p>Enter actual fantasy points scored by players</p>
-            <nav>
-                <a href="index.html" class="btn">← Back to Rankings</a>
-                <a href="analysis.html" class="btn">📊 View Analysis</a>
-            </nav>
-        </header>
-
-        <div class="controls">
-            <label>Week: <input type="number" id="week" value="1" min="1" max="18"></label>
-            <label>Year: <input type="number" id="year" value="2025"></label>
-            <button class="btn" onclick="loadPlayersFromSnapshot()">Load Players from Week Snapshot</button>
-        </div>
-
-        <div id="players-container">
-            <div class="position-section">
-                <h3>📋 Players will load here...</h3>
-                <p>Click "Load Players from Week Snapshot" to populate this form with players from your saved rankings.</p>
-                <p>Then enter their actual fantasy points scored.</p>
-            </div>
-        </div>
-
-        <div class="controls">
-            <button class="btn success" onclick="generateResultsJSON()">Generate Results JSON</button>
-            <button class="btn" onclick="generateDummyData()">Generate Dummy Data (for testing)</button>
-        </div>
-
-        <div id="output"></div>
+    <div class="message">
+        This toy project has been shut down. Thanks for the memories.
     </div>
-
-    <script>
-        let currentPlayers = [];
-
-        async function loadPlayersFromSnapshot() {
-            const week = document.getElementById('week').value;
-            const year = document.getElementById('year').value;
-            
-            try {
-                // Load the snapshot for this week
-                const response = await fetch(`data/snapshots/${year}/week-${week}.json`);
-                const snapshot = await response.json();
-                
-                currentPlayers = [];
-                const positions = ['qb', 'rb', 'wr', 'te'];
-                
-                positions.forEach(pos => {
-                    if (snapshot.data[pos]) {
-                        snapshot.data[pos].forEach(player => {
-                            currentPlayers.push({
-                                name: player.player,
-                                position: pos.toUpperCase(),
-                                opponent: player.opponent,
-                                preGameRank: player.preGameRank,
-                                fantasyPoints: 0
-                            });
-                        });
-                    }
-                });
-                
-                displayPlayerInputs();
-                
-            } catch (error) {
-                alert(`Could not load week ${week} snapshot. Make sure you have a saved snapshot for this week.`);
-            }
-        }
-
-        function displayPlayerInputs() {
-            const container = document.getElementById('players-container');
-            const positions = ['QB', 'RB', 'WR', 'TE'];
-            
-            container.innerHTML = '';
-            
-            positions.forEach(pos => {
-                const posPlayers = currentPlayers.filter(p => p.position === pos);
-                if (posPlayers.length === 0) return;
-                
-                const section = document.createElement('div');
-                section.className = 'position-section';
-                section.innerHTML = `<h3>${pos} (${posPlayers.length} players)</h3>`;
-                
-                posPlayers.forEach((player, index) => {
-                    const playerDiv = document.createElement('div');
-                    playerDiv.className = 'player-input';
-                    playerDiv.innerHTML = `
-                        <span>${player.name} (Rank ${player.preGameRank}) ${player.opponent}</span>
-                        <input type="number" step="0.1" placeholder="Points" 
-                               onchange="updatePlayerPoints('${player.name}', this.value)">
-                        <span>pts</span>
-                    `;
-                    section.appendChild(playerDiv);
-                });
-                
-                container.appendChild(section);
-            });
-        }
-
-        function updatePlayerPoints(playerName, points) {
-            const player = currentPlayers.find(p => p.name === playerName);
-            if (player) {
-                player.fantasyPoints = parseFloat(points) || 0;
-            }
-        }
-
-        function generateResultsJSON() {
-            if (currentPlayers.length === 0) {
-                alert('Please load players first');
-                return;
-            }
-            
-            const week = document.getElementById('week').value;
-            const year = document.getElementById('year').value;
-            
-            // Calculate actual ranks based on fantasy points
-            const sortedPlayers = [...currentPlayers].sort((a, b) => b.fantasyPoints - a.fantasyPoints);
-            sortedPlayers.forEach((player, index) => {
-                player.actualRank = index + 1;
-            });
-            
-            const resultsData = {
-                week: parseInt(week),
-                year: parseInt(year),
-                scoring: "Half PPR",
-                timestamp: new Date().toISOString(),
-                players: {},
-                metadata: {
-                    totalPlayersTracked: currentPlayers.length,
-                    dataSource: "Manual Entry",
-                    lastUpdated: new Date().toISOString()
-                }
-            };
-            
-            currentPlayers.forEach(player => {
-                resultsData.players[player.name] = {
-                    position: player.position,
-                    opponent: player.opponent,
-                    preGameRank: player.preGameRank,
-                    fantasyPoints: player.fantasyPoints,
-                    actualRank: player.actualRank
-                };
-            });
-            
-            document.getElementById('output').textContent = JSON.stringify(resultsData, null, 2);
-            alert('Results JSON generated! Copy the JSON below and save as final-results.json');
-        }
-
-        function generateDummyData() {
-            if (currentPlayers.length === 0) {
-                alert('Please load players first');
-                return;
-            }
-            
-            // Generate realistic dummy fantasy points
-            currentPlayers.forEach(player => {
-                let basePoints;
-                switch(player.position) {
-                    case 'QB': basePoints = 18; break;
-                    case 'RB': basePoints = 12; break;
-                    case 'WR': basePoints = 10; break;
-                    case 'TE': basePoints = 8; break;
-                    default: basePoints = 10;
-                }
-                
-                // Add some randomness and rank-based variation
-                const rankVariation = Math.max(0, (50 - player.preGameRank) / 10);
-                const randomness = (Math.random() - 0.5) * 10;
-                player.fantasyPoints = Math.max(0, basePoints + rankVariation + randomness);
-                player.fantasyPoints = Math.round(player.fantasyPoints * 10) / 10; // Round to 1 decimal
-            });
-            
-            displayPlayerInputs();
-            alert('Dummy data generated! You can now generate the results JSON.');
-        }
-    </script>
 </body>
 </html>
